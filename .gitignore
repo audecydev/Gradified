@@ -1,0 +1,39 @@
+# Python virtual environments
+.venv/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+.pyright/
+
+# Test and coverage output
+.coverage
+coverage.xml
+htmlcov/
+
+# Packaging/build output
+build/
+dist/
+*.egg-info/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local editor/OS state
+.vscode/
+Thumbs.db
+Desktop.ini
+
+# Temporary/log files
+*.tmp
+*.log

@@ -6,6 +6,10 @@ class InvalidScoringValueError(ScoringError):
     """Raised when a numeric scoring value is malformed or unauthorized."""
 
 
+class ScoringNumericEnvelopeError(ScoringError):
+    """Raised when a valid numeric representation exceeds Numeric Profile v1."""
+
+
 class InvalidCriterionJudgmentError(ScoringError):
     """Raised when evaluator/judgment input is invalid for scoring."""
 

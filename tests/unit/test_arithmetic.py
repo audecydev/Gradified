@@ -60,7 +60,7 @@ def test_sum_is_independent_of_input_order() -> None:
     )
 
     forward = exact_sum(values)
-    reversed_result = exact_sum(reversed(values))
+    reversed_result = exact_sum(tuple(reversed(values)))
 
     assert forward == reversed_result
     assert forward.to_canonical_string() == "101"

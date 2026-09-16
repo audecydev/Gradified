@@ -10,6 +10,10 @@ class ScoringNumericEnvelopeError(ScoringError):
     """Raised when a valid numeric representation exceeds Numeric Profile v1."""
 
 
+class ScoreOutOfRangeError(ScoringError):
+    """Raised when the final score lies outside the permitted academic range."""
+
+
 class InvalidCriterionJudgmentError(ScoringError):
     """Raised when evaluator/judgment input is invalid for scoring."""
 

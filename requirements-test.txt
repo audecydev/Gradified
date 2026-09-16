@@ -1,0 +1,14 @@
+# Gradified Slice 1 authoritative verification environment
+# Qualified runtime: Windows x64 / CPython 3.11.9
+#
+# Direct verification dependencies and their fully pinned
+# transitive closure from the accepted 430-test environment.
+
+colorama==0.4.6
+hypothesis==6.167.1
+iniconfig==2.3.0
+packaging==26.3
+pluggy==1.6.0
+Pygments==2.21.0
+pytest==9.1.1
+sortedcontainers==2.4.0

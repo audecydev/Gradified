@@ -76,3 +76,7 @@ class DuplicateJudgmentError(InvalidCriterionJudgmentError):
 
 class MissingJudgmentError(InvalidCriterionJudgmentError):
     """Raised when an atomic criterion has no supplied judgment."""
+
+
+class InvalidPaperAggregationInputError(ScoringError):
+    """Raised when admitted question results are invalid for paper aggregation."""

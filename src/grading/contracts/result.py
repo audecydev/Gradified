@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from enum import Enum
 
+from grading.contracts.numeric_profile import NUMERIC_PROFILE_VERSION
 from grading.contracts.scoring_decimal import ScoringDecimal
 
 
@@ -244,4 +245,58 @@ class QuestionScoreResult:
             self.maximum_score,
             ScoringDecimal,
             "QuestionScoreResult.maximum_score",
+        )
+
+
+# Resolve the B3 provenance type only after the B2 result contracts needed by
+# paper_aggregation have been defined.  paper_aggregation defines GradingSpecRef
+# before importing RubricRef/ScoringPolicyRef, making both clean import orders safe.
+from grading.contracts.paper_aggregation import GradingSpecRef
+
+
+@dataclass(frozen=True, slots=True)
+class PaperScoreResult:
+    """Immutable numerical result of successful B3 paper aggregation."""
+
+    grading_spec_ref: GradingSpecRef
+    numeric_profile_version: str
+    question_results: tuple[QuestionScoreResult, ...]
+    final_score: ScoringDecimal
+    minimum_score: ScoringDecimal
+    maximum_score: ScoringDecimal
+
+    def __post_init__(self) -> None:
+        _require_exact_type(
+            self.grading_spec_ref,
+            GradingSpecRef,
+            "PaperScoreResult.grading_spec_ref",
+        )
+        _require_exact_type(
+            self.numeric_profile_version,
+            str,
+            "PaperScoreResult.numeric_profile_version",
+        )
+        if self.numeric_profile_version != NUMERIC_PROFILE_VERSION:
+            raise TypeError(
+                "PaperScoreResult.numeric_profile_version must be the supported profile."
+            )
+        _require_tuple_of(
+            self.question_results,
+            QuestionScoreResult,
+            "PaperScoreResult.question_results",
+        )
+        _require_exact_type(
+            self.final_score,
+            ScoringDecimal,
+            "PaperScoreResult.final_score",
+        )
+        _require_exact_type(
+            self.minimum_score,
+            ScoringDecimal,
+            "PaperScoreResult.minimum_score",
+        )
+        _require_exact_type(
+            self.maximum_score,
+            ScoringDecimal,
+            "PaperScoreResult.maximum_score",
         )

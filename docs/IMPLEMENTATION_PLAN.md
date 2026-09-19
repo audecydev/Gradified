@@ -1,198 +1,247 @@
-# Release 1 Implementation Plan
+# Release 1 Capability Roadmap
 
 The sequence is dependency-aware. It may move faster or slower than calendar dates. Safety tests and contract validation are not removed to protect schedule.
 
-## Slice 0 — Foundation
+## Foundation — COMPLETE
 
 ### Objective
-Establish a small implementation workspace, current project state, test layout, and package conventions.
 
-### Dependencies
-None.
+Establish the implementation workspace, persistent project state, test layout, package conventions, and source-of-truth discipline.
 
-### Acceptance
-- Source-of-truth files exist.
-- Local test environment can be established.
-- No guessed OCR/backend implementation has been introduced.
+### Completed
+
+- project/source-of-truth structure established;
+- local and qualified Windows verification environments established;
+- no guessed OCR/backend implementation introduced.
 
 ---
 
-## Slice 1 — Scoring Safety Kernel
+## Deterministic Scoring Kernel — COMPLETE / FROZEN
 
 ### Objective
-Make grading marks deterministic and structurally safe before any model integration.
 
-### Inputs
-- Compiled rubric
-- Validated criterion judgments
+Make numerical grading deterministic and structurally safe before model and external-system integration.
 
-### Output
-- Deterministic question/paper score result
+### Implemented inputs
 
-### Acceptance
-- Unknown criteria/levels rejected.
-- Duplicate judgments rejected.
-- Missing required criteria cannot silently pass.
-- Rubric levels are the only source of mark effects.
-- Caps/dependencies/gates/deductions/rounding are deterministic.
-- Allowed scoring range is enforced.
-- Model-supplied numerical totals have no authority.
-- Property/boundary tests cover impossible totals.
+- compiled question rubric;
+- immutable question scoring policy;
+- validated semantic criterion judgments;
+- upstream-resolved paper scoring authority;
+- admitted deterministic question results.
 
-### Verification
-Unit tests + property/invariant tests.
+### Implemented outputs
+
+- immutable deterministic question score result;
+- immutable deterministic paper score result;
+- exact provenance for authority identity, scoring rules, scoring stages, profile, and included question results.
+
+### Verified behavior
+
+- unknown criteria and levels rejected;
+- duplicate and missing judgments rejected;
+- rubric levels are the only source of criterion numerical effects;
+- dependencies, gates, caps, deductions, and rounding are deterministic;
+- one exact numeric profile governs authoritative scoring values;
+- question and paper score ranges fail closed rather than clamp;
+- model/evaluator free-form numerical totals have no authority;
+- paper total uses question final scores only;
+- paper bounds are consumed rather than inferred;
+- caller ordering does not change numerical results;
+- immutable result/provenance contracts;
+- qualified 519-test committed acceptance;
+- targeted mutation and source-audit closure.
+
+### Important boundary
+
+This capability assumes admitted immutable authority/results. It does not authenticate upstream origin, choose optional questions, define unrestricted job cardinality, or establish academic evaluator quality.
 
 ---
 
-## Slice 2 — Rubric Safety
+## Rubric Authoring Safety & Compilation — NEXT
 
 ### Objective
-Represent generated rubrics as validated deterministic scoring data.
+
+Represent generated/edited rubrics as validated deterministic scoring authority.
 
 ### Components
-- rubric models
-- structural validator/linter
-- compiler
-- version/approval states
+
+- rubric authoring models;
+- structural validator/linter;
+- deterministic compiler to reducer-facing contracts;
+- version and approval states.
 
 ### Acceptance
-- duplicate IDs rejected
-- unknown levels/dependencies rejected
-- marks policy reconciles to question maximum
-- invalid caps/gates/deductions rejected
-- teacher approval required before ACTIVE in Release 1
+
+- duplicate IDs rejected;
+- unknown level/dependency references rejected;
+- marks/scoring policy reconcile to question maximum;
+- invalid caps/gates/deductions/rounding rejected;
+- positive-credit dependency graph validated;
+- teacher approval required before ACTIVE in Release 1;
+- meaningful change produces a new immutable version;
+- compiled output is consumable by the scoring kernel without ad-hoc transformation.
 
 ### Verification
-Contract + linter/compiler tests.
+
+Contract tests, linter/compiler tests, adversarial authority cases, and marks-reconciliation properties.
 
 ---
 
-## Slice 3 — Synthetic Vertical Grading Path
+## Synthetic End-to-End Grading Path
 
 ### Objective
+
 Prove the grading core works end to end without external APIs.
 
 ### Flow
-Synthetic evidence -> FakeProvider/evaluator -> CriterionJudgment -> verification -> reducer -> risk -> GradeResult
+
+Synthetic evidence -> FakeProvider/evaluator -> criterion judgments -> verification -> deterministic scoring -> risk -> candidate result.
 
 ### Acceptance
-- complete synthetic result is produced
-- malformed/invalid fake output fails safely
-- evidence references are validated
-- no paid provider is required
+
+- complete synthetic result is produced;
+- malformed/invalid fake output fails safely;
+- evidence references are validated;
+- real question-scoring output flows into paper aggregation;
+- no paid provider is required.
 
 ---
 
-## Slice 4 — Deterministic Evaluators
+## Deterministic Evaluators
 
 ### Objective
-Grade cases where deterministic software is sufficient.
+
+Resolve cases where deterministic software is sufficient without an LLM call.
 
 ### Initial scope
-- MCQ/exact
-- basic numeric comparison
-- tolerance
-- units where rules are defined
+
+- MCQ/exact;
+- basic numeric comparison;
+- tolerance;
+- units where rules are defined.
 
 ### Acceptance
-No LLM call is required when deterministic evaluation fully resolves the criterion.
+
+No model call is required when deterministic evaluation fully resolves the criterion.
 
 ---
 
-## Slice 5 — Subjective Evaluation
+## Semantic Evaluation
 
 ### Objective
-Return criterion-level judgments for meaning-based answers.
+
+Return criterion-level semantic judgments for meaning-based answers.
 
 ### Dependencies
-Rubric contract, evidence contract, provider interface.
+
+Compiled rubric contract, evidence contract, provider interface.
 
 ### External validation dependency
+
 Teacher-marked examples are required before academic quality can be claimed.
 
 ### Acceptance
-- structured criterion judgments
-- evidence refs
-- no direct authoritative score
-- alternative wording is allowed
-- grammar/style is not scored unless rubric says so
-- contradictory/incomplete answers represented through rubric/reason codes
+
+- structured criterion judgments;
+- evidence references;
+- no direct authoritative score;
+- alternative valid wording supported;
+- grammar/style not scored unless the rubric says so;
+- contradictory/incomplete answers represented through rubric levels/reason codes.
 
 ---
 
-## Slice 6 — Mathematics / Derivation Capability
+## Mathematical / Derivation Evaluation
 
 ### Objective
-Add deterministic numeric/symbolic/unit checks where OCR representation supports them, with semantic grading for explanation/derivation.
+
+Add deterministic numeric/symbolic/unit checks where OCR representation supports them, with semantic grading for explanation and derivation.
 
 ### Dependency
-Real OCR math output is important before finalizing parsers.
+
+Real OCR mathematical output is important before finalizing parsers.
 
 ### Acceptance
-- supported parseable subset is explicit
-- parse failure is uncertainty
-- correct method/wrong final answer can receive rubric-defined partial credit
-- alternative valid methods can be represented
+
+- supported parseable subset is explicit;
+- parse failure means uncertainty;
+- correct method/wrong final answer can receive rubric-defined partial credit;
+- alternative valid methods can be represented.
 
 ---
 
-## Slice 7 — References
+## Approved Reference Context
 
 ### Objective
-Support SRS-required reference material without forcing retrieval for every question.
+
+Support approved reference material without forcing retrieval for every question.
 
 ### Initial implementation
-- RetrievalPort
-- context policies
-- source/version/hash provenance
 
-### Final integration dependency
+- RetrievalPort;
+- context policies;
+- source/version/hash provenance.
+
+### Integration dependency
+
 Backend/reference-storage reality.
 
 ---
 
-## Slice 8 — Real Integration
+## OCR & Backend Integration
 
 ### Objective
-Connect the grading core to actual OCR/backend systems.
+
+Connect the grading core to actual OCR and backend systems through adapters.
 
 ### Dependencies
-- real OCR JSON
-- backend repository/API/data conventions
-- object/reference access patterns
+
+- real OCR JSON/schema;
+- backend repository/API/data conventions;
+- canonical object/reference access patterns;
+- authentication/tenant context.
 
 ### Acceptance
+
 One real school-style paper flows through the system without manual JSON repair.
 
 ---
 
-## Slice 9 — Reliability and Security
+## Reliability & Security
 
 ### Objective
-Prove fail-closed behavior.
+
+Prove fail-closed behavior under operational failure and hostile conditions.
 
 ### Coverage
-- idempotency
-- retries
-- provider failure
-- tenant mismatch
-- malformed output
-- audit failure
-- prompt-injection containment
-- review/regrade preservation
-- telemetry
+
+- idempotency;
+- retries;
+- provider failure;
+- tenant mismatch;
+- malformed output;
+- audit failure;
+- prompt-injection containment;
+- review/regrade preservation;
+- telemetry;
+- structural/job cardinality limits;
+- resource/backpressure controls.
 
 ---
 
-## Slice 10 — Validation
+## Release Validation & Calibration
 
 ### Objective
+
 Measure academic quality, cost, risk, and review workload on the exact release candidate.
 
 ### Dependencies
-- held-out teacher-marked data
-- approved production provider credentials
-- real OCR outputs
+
+- held-out teacher-marked data;
+- approved production provider/runtime;
+- real OCR outputs.
 
 ### Rule
-Do not tune repeatedly on the held-out test set.
+
+Do not repeatedly tune on the held-out evaluation set.

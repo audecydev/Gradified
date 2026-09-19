@@ -1,0 +1,66 @@
+"""Rubric authoring safety, deterministic compilation, and lifecycle contracts."""
+
+from grading.rubric.compiler import CompiledRubricCandidate, compile_rubric_content
+from grading.rubric.lifecycle import (
+    RubricAuthoringVersion,
+    RubricLifecycleState,
+    TeacherApproval,
+    activate_version,
+    approve_version,
+    create_initial_version,
+    get_active_scoring_authority,
+    retire_version,
+    revise_version,
+    validate_version,
+)
+from grading.rubric.linter import (
+    RubricLintIssue,
+    RubricLintResult,
+    RubricLintSeverity,
+    lint_rubric_collection,
+    lint_rubric_content,
+)
+from grading.rubric.models import (
+    AuthoringCapRule,
+    AuthoringCriterion,
+    AuthoringCriterionCondition,
+    AuthoringDeductionRule,
+    AuthoringGateRule,
+    AuthoringPerformanceLevel,
+    AuthoringPositiveCreditDependencyRule,
+    AuthoringRoundingRule,
+    FinalizedQuestionScoringBasis,
+    QuestionRubricAuthoringContent,
+    RubricCompilationLimits,
+)
+
+__all__ = [
+    "AuthoringCapRule",
+    "AuthoringCriterion",
+    "AuthoringCriterionCondition",
+    "AuthoringDeductionRule",
+    "AuthoringGateRule",
+    "AuthoringPerformanceLevel",
+    "AuthoringPositiveCreditDependencyRule",
+    "AuthoringRoundingRule",
+    "CompiledRubricCandidate",
+    "FinalizedQuestionScoringBasis",
+    "QuestionRubricAuthoringContent",
+    "RubricAuthoringVersion",
+    "RubricCompilationLimits",
+    "RubricLifecycleState",
+    "RubricLintIssue",
+    "RubricLintResult",
+    "RubricLintSeverity",
+    "TeacherApproval",
+    "activate_version",
+    "approve_version",
+    "compile_rubric_content",
+    "create_initial_version",
+    "get_active_scoring_authority",
+    "lint_rubric_collection",
+    "lint_rubric_content",
+    "retire_version",
+    "revise_version",
+    "validate_version",
+]

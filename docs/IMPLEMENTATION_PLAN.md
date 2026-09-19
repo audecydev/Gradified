@@ -58,33 +58,120 @@ This capability assumes admitted immutable authority/results. It does not authen
 
 ---
 
-## Rubric Authoring Safety & Compilation — NEXT
+## Rubric Authoring Safety & Compilation — COMPLETE / ACCEPTED / FREEZE BOUNDARY
 
 ### Objective
 
-Represent generated/edited rubrics as validated deterministic scoring authority.
+Represent generated/edited rubrics as validated deterministic scoring authority without allowing generated content to establish trusted question identity/maximum or bypass the Release 1 approval boundary.
 
-### Components
+### Implemented components
 
 - rubric authoring models;
-- structural validator/linter;
-- deterministic compiler to reducer-facing contracts;
-- version and approval states.
+- trusted finalized-question scoring basis;
+- structural/resource validator/linter;
+- deterministic compiler to reducer semantics;
+- deterministic fingerprints/provenance;
+- immutable version and approval lifecycle;
+- ACTIVE-only supported reducer-authority acquisition.
 
-### Acceptance
+### Implemented safety behavior
 
 - duplicate IDs rejected;
 - unknown level/dependency references rejected;
-- marks/scoring policy reconcile to question maximum;
+- marks/scoring policy reconcile to the trusted question maximum;
 - invalid caps/gates/deductions/rounding rejected;
 - positive-credit dependency graph validated;
+- authoring content cannot establish trusted `question_id`, `max_marks`, or scoring-semantics identity;
+- no hidden/default production compilation limits;
+- configured structural/resource limits fail closed;
+- pathological reconciliation state spaces are rejected before enumeration;
 - teacher approval required before ACTIVE in Release 1;
 - meaningful change produces a new immutable version;
-- compiled output is consumable by the scoring kernel without ad-hoc transformation.
+- approval is bound to exact question/content/compiled-authority/compiler-profile identity;
+- unexpected technical `ValueError` from projection remains a technical failure rather than being disguised as a lint error;
+- reducer-facing authority is obtained only through the supported ACTIVE lifecycle path.
 
-### Verification
+### Current verification
 
-Contract tests, linter/compiler tests, adversarial authority cases, and marks-reconciliation properties.
+Qualified Windows / CPython 3.11.9 evidence:
+
+- Rubric Authoring target: **78/78 passed**;
+- frozen scoring regression: **519/519 passed**;
+- full suite: **597/597 passed**;
+- selected mutation baseline: **52/52 passed**;
+- selected adversarial mutations M01-M08: **8/8 genuine kills** after JUnit/log inspection;
+- frozen `contracts` and `scoring` source unchanged.
+
+### Acceptance closure
+
+- fresh independent source/contract review: **PASS WITH NON-BLOCKING FOLLOW-UPS**; no confirmed source defect found;
+- exact staging/source audit: **PASS**;
+- staged source/test identity was tied to the reviewed and mutation-verified candidate;
+- qualified 78/519/597 verification passed on the staged-identical working tree;
+- frozen `contracts` and `scoring` source remained unchanged.
+
+This boundary is accepted for the freeze commit. Later provider/generator work must consume it rather than silently redefining its authority semantics.
+
+### Important boundary
+
+This capability validates and compiles candidate rubric content. It does **not** generate academic rubric content, authenticate teachers, provide global persistence/concurrency guarantees, or establish academic rubric quality.
+
+---
+
+## Rubric Generation — NEXT
+
+### Objective
+
+Generate a candidate rubric from finalized school-authorized assessment inputs while preserving the distinction between probabilistic candidate interpretation and deterministic scoring authority.
+
+### Required inputs
+
+- finalized question identity/text;
+- authoritative maximum marks;
+- school-authored model answer or marking scheme;
+- optional approved reference context when available.
+
+Do not invent OCR/backend/provider persistence schemas to implement this capability.
+
+### Initial implementation direction
+
+- provider-neutral `RubricGenerator` contract;
+- strict structured candidate output mapped into the existing authoring models;
+- Fake/ReplayProvider path before paid/production provider use;
+- explicit generator/provider/model provenance;
+- deterministic linter/compiler immediately downstream;
+- teacher review/edit and Release 1 approval before ACTIVE.
+
+### Acceptance
+
+- model output remains candidate content and never directly becomes scoring authority;
+- generated criteria/levels/rules are structurally valid after deterministic validation;
+- generated marks reconcile to the trusted finalized-question maximum;
+- invalid/ambiguous/malformed provider output fails safely;
+- alternative valid methods can be represented where assessment authority permits;
+- meaningful generated/teacher-edited changes produce a new immutable version;
+- no provider-generated free-form score becomes authoritative.
+
+### Development verification
+
+Use real finalized question/model-answer fixtures as development cases.
+
+A single paper is useful for integration but is not enough to establish rubric-generation quality.
+
+### Academic-quality verification
+
+Build an initial teacher-reviewed development/benchmark corpus of roughly 30-50+ finalized questions across theory and mathematics.
+
+Track:
+
+- structural validity;
+- marks reconciliation;
+- criterion coverage;
+- teacher acceptance/edit rate;
+- ambiguity/missing criteria;
+- alternative-method coverage.
+
+Do not claim academic rubric-generation quality before representative teacher-reviewed evidence exists.
 
 ---
 

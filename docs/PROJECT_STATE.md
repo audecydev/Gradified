@@ -4,7 +4,7 @@ Status date: 2026-09-21
 
 ## Current milestone
 
-**Synthetic E2E S1 remains closed/frozen. Synthetic E2E S2a is closed/frozen at commit `61ce96d62774a78f4019c4905421324f614a7422` after a clean post-commit 727/727 regression. S2b has not started and is the next implementation slice.**
+**Synthetic E2E S1 and S2a remain closed/frozen. Synthetic E2E S2b-1 risk-observation extraction is now implemented and accepted at commit `3f789a70443c3b9810c63b15bccb8dc4f5d889e5` (tree `99758c27b9890ba7e65ad0667c71db502e6071c7`) with a post-commit 743/743 regression. Recommendation policy, risk tiers, review routing, and candidate `GradeResult` remain blocked/deferred pending explicit authority.**
 
 Current immutable S1 anchor:
 
@@ -19,7 +19,7 @@ Current immutable S1 anchor:
 - committed acceptance artifact SHA-256:
   `7ff52d81346094f9c361ce9625107a4dfe1330a947f18a482f4599a3d5382f32`
 
-The immediate task is this governance-only milestone closure, followed by S2b design/implementation from the frozen S2a anchor. No S2a source/test change is authorized without a verified defect, authority contradiction, or changed requirement.
+The immediate task after this governance closure is a short authority inspection for executable S2b recommendation/review policy. Do not invent thresholds, risk tiers, or `AUTO_CANDIDATE | SECOND_CHECK | HUMAN_REVIEW` mappings if authority remains insufficient. No S1/B2/B3/S2a/S2b-1 source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
 
 ## Frozen / accepted boundaries
 
@@ -157,6 +157,66 @@ Final qualified evidence:
 
 The code/test-only tree/hash above are retained as intermediate forensic history. The authoritative frozen S2a implementation identity is commit `61ce96d62774a78f4019c4905421324f614a7422`, tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`.
 
+
+### Synthetic E2E S2b-1 — risk observations closed/frozen
+
+Branch:
+
+`synthetic-e2e-s2b`
+
+Implementation commit:
+
+`3f789a70443c3b9810c63b15bccb8dc4f5d889e5`
+
+Tree:
+
+`99758c27b9890ba7e65ad0667c71db502e6071c7`
+
+Parent / frozen S2a governance anchor:
+
+`ca2c27b7d2958eb8f9e170120ad2f758e0f5bc61`
+
+S2b-1 implements deterministic extraction of a deliberately narrow, versioned risk-observation profile from supplied internal execution/evidence data without making a review recommendation.
+
+Supported observation codes in profile v1:
+
+- `OCR_CONFIDENCE_UNKNOWN`, emitted only from active evidence blocks whose semantic `confidence_status` is `UNAVAILABLE`;
+- `EVALUATOR_UNCERTAINTY_REPORTED`, emitted only when the matched rich evaluated criterion judgment has a non-empty `uncertainties` tuple.
+
+S2b-1 admission/continuity guarantees include:
+
+- execution `submission_ref` binds to the supplied evidence bundle;
+- each rich verified record's `submission_ref` binds to execution context;
+- rich verified question identity binds to the numerical question result;
+- execution question/result order and numerical question results bind exactly to `PaperScoreResult.question_results`;
+- duplicate execution questions are rejected;
+- scoring-judgment and numerical criterion-effect universes are exact, duplicate-free, and agree on `selected_level` by `criterion_id`;
+- every executed question has exactly one matching `QuestionEvidence`;
+- unrelated evidence questions are ignored;
+- crossed-out evidence remains inactive under the current profile;
+- observation ordering is deterministic: execution-question order, then evidence-block order for OCR observations, then numerical criterion-effect order for evaluator observations.
+
+Final qualified evidence on Windows / CPython 3.11.9:
+
+- S2b-1 targeted/acceptance: **16/16**;
+- inherited frozen suite: **727/727**;
+- complete suite: **743/743**;
+- frozen S2a diff check: clean before commit;
+- implementation commit: `3f789a70443c3b9810c63b15bccb8dc4f5d889e5`;
+- implementation parent: `ca2c27b7d2958eb8f9e170120ad2f758e0f5bc61`;
+- implementation tree: `99758c27b9890ba7e65ad0667c71db502e6071c7`;
+- pre-test post-commit working tree: clean.
+
+S2b-1 non-claims:
+
+- no numeric risk score, qualitative risk tier, review recommendation, workflow state, second-evaluator action, publication decision, or `GradeResult` is produced;
+- numeric OCR confidence is not thresholded locally, and no school/platform threshold is invented;
+- free-form evidence warnings, evaluator `reason_codes`, and uncertainty text are not interpreted as policy/recommendation authority;
+- `grading_run_id`, `submission_ref`, question IDs, criterion IDs, and evidence-block IDs provide correlation/contextual traceability, not authentication credentials;
+- S2b-1 cannot prove that the separately supplied `AnswerEvidenceBundle` is byte-for-byte or semantically the exact immutable artifact consumed by the earlier S2a execution; stronger cross-stage artifact identity requires an upstream workflow/artifact identity contract;
+- S2b-1 consumes internal domain values and does not treat Python object/class identity as proof of execution provenance;
+- criterion-level `awarded_marks` remains unresolved and untouched.
+
 ## Current architecture boundary
 
 Frozen numerical path:
@@ -211,7 +271,7 @@ No authoritative redistribution rule has yet been verified. Do not invent one. P
 The current project does not yet establish:
 
 - final candidate `GradeResult`;
-- risk/review engine;
+- deterministic risk/review recommendation engine (S2b-1 observations exist, but recommendation policy is not yet implemented);
 - whole-answer `answer_scope_ref` verification;
 - evidence-type compatibility;
 - real OCR/backend integration;
@@ -255,12 +315,13 @@ S1's earlier empty-evidence defect remains the standing example that full-suite 
 
 ## Next task
 
-Begin **S2b only** from the frozen S2a anchor after this governance-only closure commit. S2b may add risk/review recommendation and candidate-result composition around the frozen numerical/execution outputs, but must not reopen S1/B2/B3/S2a or invent criterion-level `awarded_marks` redistribution.
+Perform a short authority inspection for **S2b recommendation/review policy only**. S2b-1 observation extraction is frozen. If the current SRS/Engineering Source of Truth still lacks executable threshold/default-policy and observation-to-recommendation mapping semantics, record that gate and move to another implementable Release-1 capability rather than inventing policy.
 
-S2b must continue to keep separate:
+Continue to keep separate:
 
 - numerical result;
-- risk/review recommendation;
+- S2b-1 risk observations;
+- future risk/review recommendation;
 - grading workflow/result status;
 - official backend publication.
 

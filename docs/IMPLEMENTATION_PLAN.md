@@ -60,7 +60,7 @@ S1 is not the complete evidence subsystem.
 
 ## Synthetic E2E S2 — IN PROGRESS
 
-S2a is closed/frozen at commit `61ce96d62774a78f4019c4905421324f614a7422` (tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`) after a clean post-commit **727/727** regression. S2b is next.
+S2a is closed/frozen at commit `61ce96d62774a78f4019c4905421324f614a7422` (tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`). S2b-1 risk-observation extraction is closed/frozen at commit `3f789a70443c3b9810c63b15bccb8dc4f5d889e5` (tree `99758c27b9890ba7e65ad0667c71db502e6071c7`) after a **743/743** complete regression.
 
 ### S2a — execution integrity and context continuity
 
@@ -133,24 +133,55 @@ S2a freeze rule:
 
 S2a is closed. Do not change `src/grading/execution.py` or its accepted S2a tests unless a verified defect, authority contradiction, or changed requirement requires the milestone to be explicitly reopened.
 
-### S2b — risk, review and candidate GradeResult
+### S2b — risk/review around the frozen execution result
 
-S2a is frozen. S2b is the next implementation slice.
+#### S2b-1 — deterministic risk observations — COMPLETE / FROZEN
 
-Objective:
+Implementation commit:
 
-Add deterministic/explicit risk inputs and review recommendation around the frozen numerical output without giving risk/review authority to modify marks.
+`3f789a70443c3b9810c63b15bccb8dc4f5d889e5`
+
+Tree:
+
+`99758c27b9890ba7e65ad0667c71db502e6071c7`
+
+S2b-1 consumes internal `GradingExecutionResult` + `AnswerEvidenceBundle` data and emits a versioned immutable `RiskObservationSet` only.
+
+Profile-v1 observations are intentionally narrow:
+
+- `OCR_CONFIDENCE_UNKNOWN` from active blocks with semantic confidence status `UNAVAILABLE`;
+- `EVALUATOR_UNCERTAINTY_REPORTED` from matched rich evaluated criteria with non-empty `uncertainties`.
+
+The extractor validates only the associations needed for safe observation attribution: submission binding, question/result continuity, exact paper-result continuity, duplicate-question rejection, rich/numerical criterion continuity, exact evidence-question coverage, unrelated-evidence isolation and deterministic ordering.
+
+It does not:
+
+- apply numeric OCR thresholds;
+- derive risk tiers or calibrated probabilities;
+- interpret arbitrary warning/reason/uncertainty strings as policy;
+- emit `AUTO_CANDIDATE`, `SECOND_CHECK`, or `HUMAN_REVIEW`;
+- mutate question/paper numerical results;
+- execute a second evaluator;
+- create workflow/job state or publication decisions;
+- construct `GradeResult`.
+
+Qualified evidence: **16/16 S2b-1 / 727/727 inherited / 743/743 full**.
+
+#### S2b-2 — recommendation/review policy — AUTHORITY GATE
+
+Do not implement a deterministic recommendation engine until an admitted policy/configuration contract authoritatively supplies the missing executable semantics, including threshold/default-policy values and the mapping from supported observations/risk-impact inputs to recommendation outcomes.
+
+The SRS requires configurable confidence/routing behavior, but S2b must not invent school thresholds, platform-default values, qualitative risk derivation, or `AUTO_CANDIDATE | SECOND_CHECK | HUMAN_REVIEW` mapping.
 
 Keep separate:
 
 - numerical outcome;
-- risk/review recommendation (`AUTO_CANDIDATE | SECOND_CHECK | HUMAN_REVIEW`);
+- S2b-1 observations;
+- future risk/review recommendation;
 - grading job/result workflow status;
 - official backend publication.
 
-Candidate `GradeResult` must preserve workflow identity, rich evidence/audit context, provenance/usage and the numerical total sourced from `PaperScoreResult`.
-
-Do not claim candidate == published result.
+Do not create a partial `GradeResult` merely to bypass unresolved schema semantics.
 
 ### Decision gate before final rich GradeResult
 

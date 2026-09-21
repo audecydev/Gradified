@@ -238,6 +238,66 @@ Code/test staging evidence before governance update:
 
 The frozen S2a implementation identity is commit `61ce96d62774a78f4019c4905421324f614a7422`, tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`, with final staged acceptance patch SHA-256 `0015fdb2b26ec2667d94cdce00f6104750d497cc42f467221161f112bf41c56a`.
 
+
+## Synthetic E2E S2b-1 — risk observations frozen
+
+Branch:
+
+`synthetic-e2e-s2b`
+
+Implementation commit:
+
+`3f789a70443c3b9810c63b15bccb8dc4f5d889e5`
+
+Tree:
+
+`99758c27b9890ba7e65ad0667c71db502e6071c7`
+
+Parent / S2a governance anchor:
+
+`ca2c27b7d2958eb8f9e170120ad2f758e0f5bc61`
+
+Qualified Windows / CPython 3.11.9 evidence:
+
+- S2b-1 targeted/acceptance: **16/16**;
+- inherited frozen regression: **727/727**;
+- full suite: **743/743**;
+- frozen S2a diff check before commit: clean;
+- post-commit HEAD: `3f789a70443c3b9810c63b15bccb8dc4f5d889e5`;
+- post-commit tree: `99758c27b9890ba7e65ad0667c71db502e6071c7`;
+- parent: `ca2c27b7d2958eb8f9e170120ad2f758e0f5bc61`;
+- working tree was clean immediately before the post-commit 743/743 regression.
+
+S2b-1 contract coverage includes:
+
+- execution/evidence submission binding;
+- rich verified submission/question continuity with numerical question results;
+- exact execution-score tuple continuity with `PaperScoreResult.question_results` in authoritative order;
+- duplicate execution-question rejection;
+- duplicate scoring/numerical criterion rejection;
+- exact scoring-judgment/numerical-effect criterion universe equality and selected-level agreement;
+- exactly one matching evidence question per executed question;
+- unrelated evidence-question isolation;
+- crossed-out evidence inactivity under the current profile;
+- `OCR_CONFIDENCE_UNKNOWN` only from semantic confidence status `UNAVAILABLE`, one observation per affected active evidence block;
+- `EVALUATOR_UNCERTAINTY_REPORTED` only from non-empty rich evaluator `uncertainties` for the canonically matched criterion;
+- deterministic observation order;
+- arbitrary numeric confidence is not thresholded into `OCR_LOW_CONFIDENCE`;
+- free-form warnings/reason strings do not become normalized policy observations;
+- ordinary malformed top-level inputs fail through the S2b-owned admission error;
+- repeated extraction is deterministic and does not mutate the supplied execution/evidence values.
+
+Source audit establishes no risk arithmetic, no recommendation/risk-tier mapping, no score mutation, no `GradeResult`, no `awarded_marks` logic, no S1/S2a/scoring calls, and no modification to frozen S2a source/tests.
+
+Important non-claims:
+
+- S2b-1 is an observation extractor, not a recommendation engine;
+- numeric OCR thresholds, school/platform defaults, calibrated risk tiers and recommendation mappings remain unimplemented pending authority;
+- `grading_run_id`, `submission_ref`, question/criterion/block IDs are correlation/contextual traceability, not authentication credentials;
+- supplied `AnswerEvidenceBundle` identity is not cryptographically bound to the exact artifact used by S2a; stronger cross-stage artifact identity is a future workflow/artifact contract;
+- Python object identity does not prove S2a/S2b execution provenance;
+- no review/job-state/publication semantics are established.
+
 ## S2 test-design rules
 
 Do not test implementation trivia such as whether a dataclass is artificially “unforgeable.”

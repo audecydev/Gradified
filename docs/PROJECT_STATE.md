@@ -19,7 +19,7 @@ Current immutable S1 anchor:
 - committed acceptance artifact SHA-256:
   `7ff52d81346094f9c361ce9625107a4dfe1330a947f18a482f4599a3d5382f32`
 
-The immediate task after this governance closure is a short authority inspection for executable S2b recommendation/review policy. Do not invent thresholds, risk tiers, or `AUTO_CANDIDATE | SECOND_CHECK | HUMAN_REVIEW` mappings if authority remains insufficient. No S1/B2/B3/S2a/S2b-1 source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
+The S2b-2 recommendation/review-policy authority inspection is complete. Executable S2b-2 policy authority remains insufficient, so S2b-2 implementation and behavior-defining RED are blocked. The immediate next task is a short authority/dependency/prerequisite inspection of one candidate Release-1 capability; roadmap order alone does not select or authorize that candidate. No S1/B2/B3/S2a/S2b-1 source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
 
 ## Frozen / accepted boundaries
 

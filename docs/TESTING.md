@@ -159,13 +159,21 @@ S1 does not prove:
 - risk/review/candidate result;
 - real evaluator/provider quality.
 
-## Synthetic E2E S2a acceptance candidate
+## Synthetic E2E S2a — frozen
 
 Branch:
 
 `synthetic-e2e-s2`
 
-Base S1 commit:
+Implementation commit:
+
+`61ce96d62774a78f4019c4905421324f614a7422`
+
+Tree:
+
+`ced53127e566902050d47fe6b0a1bac921a0c9c3`
+
+Parent / frozen S1 base:
 
 `456a6248e9d28ec083e7503c3a9ad9385de47c7d`
 
@@ -186,7 +194,10 @@ Qualified Windows / CPython 3.11.9 sequence:
 - acceptance-hardening: **8/8**;
 - all S2a contract + acceptance tests: **18/18**;
 - complete suite after acceptance: **727/727**;
-- complete suite after code/test staging: **727/727**.
+- complete suite after code/test staging: **727/727**;
+- final governance-inclusive staged suite: **727/727**;
+- post-commit complete suite: **727/727**;
+- post-commit working tree: clean.
 
 Acceptance-hardening covers:
 
@@ -225,7 +236,7 @@ Code/test staging evidence before governance update:
 - acceptance-test blob: `4fd1091d3c89a5fb42dec770e21b7f077e4f652c`;
 - original S2a contract-test blob: `fd96c6c7ba6e26f1482f89d2aea14a10ffe9329e`.
 
-The final S2a tree/patch identities must be captured again after governance documents are staged.
+The frozen S2a implementation identity is commit `61ce96d62774a78f4019c4905421324f614a7422`, tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`, with final staged acceptance patch SHA-256 `0015fdb2b26ec2667d94cdce00f6104750d497cc42f467221161f112bf41c56a`.
 
 ## S2 test-design rules
 

@@ -4,7 +4,7 @@ Status date: 2026-09-21
 
 ## Current milestone
 
-**Synthetic E2E S1 remains closed/frozen. Synthetic E2E S2a has passed functional, adversarial acceptance, source, and code/test staging review and is pending the final governance-inclusive staged-tree audit and freeze commit. S2b has not started.**
+**Synthetic E2E S1 remains closed/frozen. Synthetic E2E S2a is closed/frozen at commit `61ce96d62774a78f4019c4905421324f614a7422` after a clean post-commit 727/727 regression. S2b has not started and is the next implementation slice.**
 
 Current immutable S1 anchor:
 
@@ -19,7 +19,7 @@ Current immutable S1 anchor:
 - committed acceptance artifact SHA-256:
   `7ff52d81346094f9c361ce9625107a4dfe1330a947f18a482f4599a3d5382f32`
 
-The immediate task is to integrate the accepted S2a governance update into the staged candidate, rerun the complete suite, audit the final staged tree/patch identities, and freeze S2a only if that final gate remains clean.
+The immediate task is this governance-only milestone closure, followed by S2b design/implementation from the frozen S2a anchor. No S2a source/test change is authorized without a verified defect, authority contradiction, or changed requirement.
 
 ## Frozen / accepted boundaries
 
@@ -100,13 +100,21 @@ Key properties:
 
 `VerifiedCriterionJudgments` is a non-authoritative result container; later orchestration must not trust its class identity as proof that verification ran.
 
-### Synthetic E2E S2a — qualified acceptance candidate, pending freeze commit
+### Synthetic E2E S2a — closed/frozen
 
 Branch:
 
 `synthetic-e2e-s2`
 
-Base commit:
+Implementation commit:
+
+`61ce96d62774a78f4019c4905421324f614a7422`
+
+Tree:
+
+`ced53127e566902050d47fe6b0a1bac921a0c9c3`
+
+Parent / frozen S1 base:
 
 `456a6248e9d28ec083e7503c3a9ad9385de47c7d`
 
@@ -125,7 +133,7 @@ S2a implements a narrow in-memory orchestration boundary:
 - downstream S1/B2/B3 failures remain native rather than being wrapped as S2 admission failures;
 - a successful `execute_grading_from_evaluations(...)` return occurs only after every expected question has completed S1+B2 and B3 aggregation has succeeded.
 
-Qualified acceptance evidence before governance staging:
+Final qualified evidence:
 
 - inherited S1 regression: **709/709**;
 - original S2a contract: **10/10**;
@@ -133,14 +141,21 @@ Qualified acceptance evidence before governance staging:
 - all S2a tests: **18/18**;
 - complete suite: **727/727**;
 - post-code/test-staging complete suite: **727/727**;
-- code/test candidate tree: `804a28a1041b264ad150638a3267d6cf69802354`;
-- code/test staged patch SHA-256: `1bbf993078166ee4b07e627cbaf30927bd559b527ee5b5a91806e0ab5d5e19eb`;
+- final governance-inclusive staged suite: **727/727**;
+- final staged tree / committed tree: `ced53127e566902050d47fe6b0a1bac921a0c9c3`;
+- final staged acceptance patch SHA-256: `0015fdb2b26ec2667d94cdce00f6104750d497cc42f467221161f112bf41c56a`;
+- implementation commit: `61ce96d62774a78f4019c4905421324f614a7422`;
+- implementation parent: `456a6248e9d28ec083e7503c3a9ad9385de47c7d`;
+- post-commit complete suite: **727/727**;
+- post-commit working tree: clean;
+- historical code/test-only candidate tree: `804a28a1041b264ad150638a3267d6cf69802354`;
+- historical code/test-only staged patch SHA-256: `1bbf993078166ee4b07e627cbaf30927bd559b527ee5b5a91806e0ab5d5e19eb`;
 - `src/grading/execution.py` blob: `d6d8ef44b8b9df49fee9f9d9fd6a3396aaea1711`;
 - acceptance-test blob: `4fd1091d3c89a5fb42dec770e21b7f077e4f652c`;
 - S2a contract-test blob: `fd96c6c7ba6e26f1482f89d2aea14a10ffe9329e`;
 - frozen S1/B2/B3/rubric tracked source remained unchanged during the S2a source/test candidate audit.
 
-The code/test candidate tree above is an intermediate forensic identity only. The final S2a commit tree must be captured again after this governance update is staged.
+The code/test-only tree/hash above are retained as intermediate forensic history. The authoritative frozen S2a implementation identity is commit `61ce96d62774a78f4019c4905421324f614a7422`, tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`.
 
 ## Current architecture boundary
 
@@ -174,9 +189,7 @@ Workflow identity stays outside the frozen B2/B3 numerical contracts.
 
 ### S2 execution integrity
 
-S2a has passed its functional/adversarial acceptance and source/code-test staging review.
-
-The remaining gate is the governance-inclusive final staged-tree audit and freeze commit. S2b must not begin until S2a is frozen.
+S2a is closed/frozen. Its functional/adversarial acceptance, final staged-tree audit, commit identity, clean post-commit state, and 727/727 post-commit regression are complete. S2b is now the next execution slice.
 
 S2a establishes only the relationships supported by current authority:
 
@@ -230,28 +243,33 @@ S2a qualified evidence on Windows / CPython 3.11.9:
 - all S2a tests: **18/18**;
 - complete suite: **727/727**;
 - post-code/test-staging complete suite: **727/727**;
+- final governance-inclusive staged suite: **727/727**;
+- implementation commit: `61ce96d62774a78f4019c4905421324f614a7422`;
+- implementation tree: `ced53127e566902050d47fe6b0a1bac921a0c9c3`;
+- final staged acceptance patch SHA-256: `0015fdb2b26ec2667d94cdce00f6104750d497cc42f467221161f112bf41c56a`;
+- post-commit complete suite: **727/727**;
+- post-commit working tree: clean;
 - final code/test source audit found no numerical-authority duplication, no exception wrapping, no new dependency framework, and no frozen-source modification.
 
 S1's earlier empty-evidence defect remains the standing example that full-suite green does not replace hostile source review.
 
 ## Next task
 
-Stage this governance update on top of the already-reviewed S2a source/tests, rerun the complete suite, and perform the final governance-inclusive staged audit:
+Begin **S2b only** from the frozen S2a anchor after this governance-only closure commit. S2b may add risk/review recommendation and candidate-result composition around the frozen numerical/execution outputs, but must not reopen S1/B2/B3/S2a or invent criterion-level `awarded_marks` redistribution.
 
-- only `src/grading/execution.py`, the two S2a integration-test files, and `docs/PROJECT_STATE.md`, `docs/IMPLEMENTATION_PLAN.md`, `docs/TESTING.md` may be staged;
-- capture the final staged tree, final complete staged patch SHA-256, and final blob identities;
-- require no unstaged/untracked repository changes;
-- require **727 passed** on the final staged-identical working tree;
-- freeze/commit S2a only if that evidence is clean.
+S2b must continue to keep separate:
 
-S2b begins only after the S2a acceptance commit/freeze is established.
+- numerical result;
+- risk/review recommendation;
+- grading workflow/result status;
+- official backend publication.
 
 ## Documentation rule
 
 Update `PROJECT_STATE.md` at subsystem milestone closure, material blocker/assumption change, and before implementation-chat handoff. Do not use it as a turn-by-turn diary.
 
-`IMPLEMENTATION_PLAN.md` records the S2a/S2b split and the S2a acceptance candidate.
+`IMPLEMENTATION_PLAN.md` records the S2a/S2b split, the frozen S2a implementation anchor, and S2b as next.
 
-`TESTING.md` records the qualified S2a verification sequence and remaining post-commit freeze gate.
+`TESTING.md` records the complete qualified S2a verification/freeze sequence and the frozen implementation identity.
 
 Do not alter the SRS/Engineering Source of Truth merely to report implementation progress.

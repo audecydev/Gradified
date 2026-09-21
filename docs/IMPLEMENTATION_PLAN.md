@@ -60,7 +60,7 @@ S1 is not the complete evidence subsystem.
 
 ## Synthetic E2E S2 — IN PROGRESS
 
-S2a has completed implementation, adversarial acceptance, and the code/test source-staging audit. The final governance-inclusive staged-tree audit and freeze commit remain.
+S2a is closed/frozen at commit `61ce96d62774a78f4019c4905421324f614a7422` (tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`) after a clean post-commit **727/727** regression. S2b is next.
 
 ### S2a — execution integrity and context continuity
 
@@ -103,17 +103,22 @@ Implemented S2a invariants:
 - B3 retains rubric/policy/result admission and paper arithmetic;
 - native S1/B2/B3 failures propagate unchanged.
 
-Qualified pre-freeze evidence:
+Qualified final evidence:
 
 - inherited S1 regression: **709/709**;
 - original S2a contract: **10/10**;
 - acceptance-hardening: **8/8**;
 - all S2a tests: **18/18**;
-- complete suite: **727/727**;
-- code/test candidate tree: `804a28a1041b264ad150638a3267d6cf69802354`;
-- code/test staged patch SHA-256: `1bbf993078166ee4b07e627cbaf30927bd559b527ee5b5a91806e0ab5d5e19eb`.
+- complete suite before final staging: **727/727**;
+- final governance-inclusive staged suite: **727/727**;
+- implementation commit: `61ce96d62774a78f4019c4905421324f614a7422`;
+- parent / frozen S1 base: `456a6248e9d28ec083e7503c3a9ad9385de47c7d`;
+- committed tree: `ced53127e566902050d47fe6b0a1bac921a0c9c3`;
+- final staged acceptance patch SHA-256: `0015fdb2b26ec2667d94cdce00f6104750d497cc42f467221161f112bf41c56a`;
+- post-commit complete suite: **727/727**;
+- post-commit working tree: clean.
 
-The code/test tree is not the final commit tree because governance documentation is intentionally added before freeze.
+Historical code/test-only forensic identities remain `804a28a1041b264ad150638a3267d6cf69802354` and patch SHA-256 `1bbf993078166ee4b07e627cbaf30927bd559b527ee5b5a91806e0ab5d5e19eb`.
 
 S2a non-claims:
 
@@ -124,19 +129,13 @@ S2a non-claims:
 - `GradingExecutionResult` object/class identity is not proof that the public execution path ran;
 - S2a does not provide persistence, rollback, exactly-once execution, publication authority, or transaction semantics.
 
-Remaining S2a acceptance sequencing:
+S2a freeze rule:
 
-1. stage only the three governance documents on top of the reviewed source/tests;
-2. rerun the complete suite on the staged-identical working tree;
-3. inspect complete staged diff and frozen-source integrity;
-4. capture final tree/blob/patch identities;
-5. commit;
-6. rerun post-commit full regression and require a clean working tree;
-7. freeze S2a.
+S2a is closed. Do not change `src/grading/execution.py` or its accepted S2a tests unless a verified defect, authority contradiction, or changed requirement requires the milestone to be explicitly reopened.
 
 ### S2b — risk, review and candidate GradeResult
 
-Start only after S2a is frozen.
+S2a is frozen. S2b is the next implementation slice.
 
 Objective:
 

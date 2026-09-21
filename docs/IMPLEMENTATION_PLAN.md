@@ -60,7 +60,7 @@ S1 is not the complete evidence subsystem.
 
 ## Synthetic E2E S2 — IN PROGRESS
 
-S2a is closed/frozen at commit `61ce96d62774a78f4019c4905421324f614a7422` (tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`). S2b-1 risk-observation extraction is closed/frozen at commit `3f789a70443c3b9810c63b15bccb8dc4f5d889e5` (tree `99758c27b9890ba7e65ad0667c71db502e6071c7`) after a **743/743** complete regression.
+S2a is closed/frozen at commit `61ce96d62774a78f4019c4905421324f614a7422` (tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`). S2b-1 risk-observation extraction is closed/frozen at implementation commit `3f789a70443c3b9810c63b15bccb8dc4f5d889e5` (tree `99758c27b9890ba7e65ad0667c71db502e6071c7`), with governance closure commit `5838eac38a7a9df256a8ed0d5880a80e76b39128`, after a **743/743** complete regression. The later S2b-2 recommendation-policy slice is blocked on missing executable policy authority; downstream capabilities require individual dependency inspection rather than a blanket S2b-2 prerequisite.
 
 ### S2a — execution integrity and context continuity
 
@@ -167,11 +167,23 @@ It does not:
 
 Qualified evidence: **16/16 S2b-1 / 727/727 inherited / 743/743 full**.
 
-#### S2b-2 — recommendation/review policy — AUTHORITY GATE
+#### S2b-2 — recommendation/review policy — ELIGIBILITY INSPECTION COMPLETE / BLOCKED
 
-Do not implement a deterministic recommendation engine until an admitted policy/configuration contract authoritatively supplies the missing executable semantics, including threshold/default-policy values and the mapping from supported observations/risk-impact inputs to recommendation outcomes.
+The implementation-eligibility inspection is complete.
 
-The SRS requires configurable confidence/routing behavior, but S2b must not invent school thresholds, platform-default values, qualitative risk derivation, or `AUTO_CANDIDATE | SECOND_CHECK | HUMAN_REVIEW` mapping.
+Routing intent is authoritative, but executable recommendation-policy authority is insufficient. S2b-2 implementation has **not started**, and behavior-defining RED is **not authorized**.
+
+The missing prerequisite is broader than threshold values. It includes:
+
+- admitted release-policy identity/version and binding to the grading run/spec;
+- approved school/platform threshold values and default-policy semantics;
+- confidence/risk derivation and aggregation;
+- impact derivation;
+- deterministic recommendation mapping;
+- explicit `SECOND_CHECK` semantics;
+- precedence/override/conflict behavior.
+
+Do not invent school thresholds, platform defaults, qualitative risk derivation, or `AUTO_CANDIDATE | SECOND_CHECK | HUMAN_REVIEW` mapping.
 
 Keep separate:
 
@@ -189,9 +201,22 @@ Resolve criterion-level `awarded_marks` semantics for cases where question-level
 
 Until authority defines that mapping, preserve reducer-native criterion effects and question-level stage effects rather than inventing redistribution.
 
-## Deterministic Evaluators — AFTER S2 EXECUTION BOUNDARY
+## Deterministic Evaluators — CANDIDATE AREA / PREREQUISITE INSPECTION REQUIRED
 
-Implement validated exact/MCQ/basic numeric evaluator capability on top of the stable evidence/orchestration contracts.
+Roadmap order does not authorize deterministic-evaluator RED or implementation.
+
+Before selecting an evaluator capability, establish whether that capability depends on blocked S2b-2 or whether frozen S2a is sufficient, and verify that the capability's own behavior is authoritative enough to define observable RED.
+
+For evaluator candidates, use the actual frozen runtime boundary:
+
+- S1 accepts rich `EvaluatedCriterionJudgment` values;
+- runtime `CriterionJudgment` is only the narrow post-verification scoring projection;
+- S1 verifies evidence relationships but does not independently establish semantic correctness of `selected_level`;
+- semantic outcome-to-rich-judgment ownership must therefore be explicit in the evaluator capability or an admitted projection boundary.
+
+Do not infer official answers, answer types, normalization, criterion-level mappings, numeric tolerances, units, or unsupported-input behavior from scoring marks or authoring-generation provenance.
+
+If one deterministic capability passes its authority/dependency/prerequisite gate, implement only that smallest validated slice.
 
 ## Semantic Evaluation — OPEN
 

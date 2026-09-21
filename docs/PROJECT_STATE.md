@@ -168,6 +168,10 @@ Implementation commit:
 
 `3f789a70443c3b9810c63b15bccb8dc4f5d889e5`
 
+Governance closure commit:
+
+`5838eac38a7a9df256a8ed0d5880a80e76b39128`
+
 Tree:
 
 `99758c27b9890ba7e65ad0667c71db502e6071c7`
@@ -249,7 +253,7 @@ Workflow identity stays outside the frozen B2/B3 numerical contracts.
 
 ### S2 execution integrity
 
-S2a is closed/frozen. Its functional/adversarial acceptance, final staged-tree audit, commit identity, clean post-commit state, and 727/727 post-commit regression are complete. S2b is now the next execution slice.
+S2a is closed/frozen. Its functional/adversarial acceptance, final staged-tree audit, commit identity, clean post-commit state, and 727/727 post-commit regression are complete. S2b-1 is also closed/frozen. S2b-2 recommendation implementation is blocked by an unresolved executable policy-authority prerequisite.
 
 S2a establishes only the relationships supported by current authority:
 
@@ -259,6 +263,28 @@ S2a establishes only the relationships supported by current authority:
 - `grading_run_id` and `exam_ref` are validated/preserved context values but are not authenticated against an upstream workflow authority;
 - expected execution work comes from the resolved paper composition;
 - rich and numerical outputs remain parallel and are not positionally merged.
+
+### S2b-2 recommendation/review policy — implementation-eligibility inspection complete / blocked
+
+The S2b-2 authority inspection is complete.
+
+Authoritative routing intent exists, but the executable recommendation policy does not yet exist in a form that can be implemented without inventing grading/release policy.
+
+Missing prerequisite authority includes:
+
+- admitted release-policy identity/version and run-bound policy binding;
+- approved school/platform threshold values and default-policy semantics;
+- confidence/risk derivation and aggregation semantics;
+- impact derivation semantics;
+- deterministic mapping to `AUTO_CANDIDATE | SECOND_CHECK | HUMAN_REVIEW`;
+- explicit `SECOND_CHECK` semantics;
+- precedence/override/conflict rules.
+
+S2b-2 implementation has **not started**. Behavior-defining RED is **not authorized** until this prerequisite authority exists.
+
+Do not collapse future recommendation into workflow/job state or official publication. S2b-1 observations, future recommendation, workflow state, and backend publication remain separate concepts.
+
+Downstream Release-1 capabilities are not globally blocked by S2b-2. Each candidate must be inspected individually to establish whether it actually depends on S2b-2 or whether the frozen S2a boundary is sufficient.
 
 ### Criterion-level `awarded_marks`
 
@@ -270,6 +296,7 @@ No authoritative redistribution rule has yet been verified. Do not invent one. P
 
 The current project does not yet establish:
 
+- executable S2b-2 recommendation policy or calibrated recommendation mapping;
 - final candidate `GradeResult`;
 - deterministic risk/review recommendation engine (S2b-1 observations exist, but recommendation policy is not yet implemented);
 - whole-answer `answer_scope_ref` verification;
@@ -315,15 +342,30 @@ S1's earlier empty-evidence defect remains the standing example that full-suite 
 
 ## Next task
 
-Perform a short authority inspection for **S2b recommendation/review policy only**. S2b-1 observation extraction is frozen. If the current SRS/Engineering Source of Truth still lacks executable threshold/default-policy and observation-to-recommendation mapping semantics, record that gate and move to another implementable Release-1 capability rather than inventing policy.
+Perform a short authority/dependency/prerequisite inspection of **one candidate Release-1 capability**.
 
-Continue to keep separate:
+Before behavior-defining RED, establish:
 
-- numerical result;
-- S2b-1 risk observations;
-- future risk/review recommendation;
-- grading workflow/result status;
-- official backend publication.
+1. the candidate's authoritative source-of-truth requirements;
+2. whether it depends on blocked S2b-2 or whether frozen S2a is sufficient;
+3. its concrete input and output contracts;
+4. its authority boundary and semantic owner;
+5. unsupported/ambiguous-input behavior;
+6. its integration point with the frozen runtime;
+7. the minimum acceptance tests required to prove the behavior.
+
+Roadmap order alone does not select or authorize the candidate.
+
+For evaluator candidates specifically, design against the actual frozen runtime:
+
+- S1 consumes rich `EvaluatedCriterionJudgment` values;
+- runtime `CriterionJudgment` is the narrow post-verification scoring projection;
+- S1 verifies evidence relationships but does not independently prove semantic correctness of `selected_level`;
+- the evaluator or an explicit projection boundary must own the semantic mapping that produces the rich judgment.
+
+Do not modify S1, B2, B3, frozen S2a, or frozen S2b-1 merely to make the next capability easier to implement.
+
+If the candidate gate passes, write behavior-defining RED and proceed to causal RED / minimal GREEN. If it does not pass, record the blocker and inspect another candidate rather than inventing missing domain/policy semantics.
 
 ## Documentation rule
 

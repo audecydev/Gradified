@@ -1,334 +1,217 @@
 # Release 1 Capability Roadmap
 
-The sequence is dependency-aware. It may move faster or slower than calendar dates. Safety tests and contract validation are not removed to protect schedule.
+Status date: 2026-09-21
 
 ## Foundation — COMPLETE
 
-### Objective
-
-Establish the implementation workspace, persistent project state, test layout, package conventions, and source-of-truth discipline.
-
-### Completed
-
-- project/source-of-truth structure established;
-- local and qualified Windows verification environments established;
-- no guessed OCR/backend implementation introduced.
-
----
+Project skeleton, strict contracts, deterministic decimal/numeric profile, validation/error foundations and qualified verification environment are established.
 
 ## Deterministic Scoring Kernel — COMPLETE / FROZEN
 
-### Objective
+Question scoring and paper aggregation are frozen. They remain the sole numerical authorities.
 
-Make numerical grading deterministic and structurally safe before model and external-system integration.
+Frozen anchor:
 
-### Implemented inputs
+`178668b9b735ef369825c86d16db7999b8d3c784`
 
-- compiled question rubric;
-- immutable question scoring policy;
-- validated semantic criterion judgments;
-- upstream-resolved paper scoring authority;
-- admitted deterministic question results.
+Do not reopen without a verified defect, authority contradiction or changed requirement.
 
-### Implemented outputs
+## Rubric Authoring Safety & Compilation — COMPLETE / FROZEN
 
-- immutable deterministic question score result;
-- immutable deterministic paper score result;
-- exact provenance for authority identity, scoring rules, scoring stages, profile, and included question results.
+Acceptance commit:
 
-### Verified behavior
+`5f3ee013bc9f732f469104a5f6c6dc151cad3402`
 
-- unknown criteria and levels rejected;
-- duplicate and missing judgments rejected;
-- rubric levels are the only source of criterion numerical effects;
-- dependencies, gates, caps, deductions, and rounding are deterministic;
-- one exact numeric profile governs authoritative scoring values;
-- question and paper score ranges fail closed rather than clamp;
-- model/evaluator free-form numerical totals have no authority;
-- paper total uses question final scores only;
-- paper bounds are consumed rather than inferred;
-- caller ordering does not change numerical results;
-- immutable result/provenance contracts;
-- qualified 519-test committed acceptance;
-- targeted mutation and source-audit closure.
+Release 1 still requires explicit teacher approval before ACTIVE authority.
 
-### Important boundary
+## Rubric Generation Safety Boundary — COMPLETE / FROZEN BASELINE
 
-This capability assumes admitted immutable authority/results. It does not authenticate upstream origin, choose optional questions, define unrestricted job cardinality, or establish academic evaluator quality.
+### G1a deterministic composition
 
----
+Commit:
 
-## Rubric Authoring Safety & Compilation — COMPLETE / ACCEPTED / FREEZE BOUNDARY
+`a6f0388f137226fb2125a07c6f01f424bafc5d58`
 
-### Objective
+### G1b hostile provider ingress
 
-Represent generated/edited rubrics as validated deterministic scoring authority without allowing generated content to establish trusted question identity/maximum or bypass the Release 1 approval boundary.
+Commit:
 
-### Implemented components
+`c7a3ae3592b6ad0f6120178ddf9015e5ac10bdf0`
 
-- rubric authoring models;
-- trusted finalized-question scoring basis;
-- structural/resource validator/linter;
-- deterministic compiler to reducer semantics;
-- deterministic fingerprints/provenance;
-- immutable version and approval lifecycle;
-- ACTIVE-only supported reducer-authority acquisition.
+### Provider abstraction / Replay
 
-### Implemented safety behavior
+Commit:
 
-- duplicate IDs rejected;
-- unknown level/dependency references rejected;
-- marks/scoring policy reconcile to the trusted question maximum;
-- invalid caps/gates/deductions/rounding rejected;
-- positive-credit dependency graph validated;
-- authoring content cannot establish trusted `question_id`, `max_marks`, or scoring-semantics identity;
-- no hidden/default production compilation limits;
-- configured structural/resource limits fail closed;
-- pathological reconciliation state spaces are rejected before enumeration;
-- teacher approval required before ACTIVE in Release 1;
-- meaningful change produces a new immutable version;
-- approval is bound to exact question/content/compiled-authority/compiler-profile identity;
-- unexpected technical `ValueError` from projection remains a technical failure rather than being disguised as a lint error;
-- reducer-facing authority is obtained only through the supported ACTIVE lifecycle path.
+`c48c813fb0eb64013fc7265ed0d14f64dd9d3d57`
 
-### Current verification
+This closes the deterministic/no-network provider boundary, including replay provenance consistency. It does not establish a production network provider or academic rubric-generation quality.
 
-Qualified Windows / CPython 3.11.9 evidence:
+## Synthetic E2E S1 — COMPLETE / FROZEN
 
-- Rubric Authoring target: **78/78 passed**;
-- frozen scoring regression: **519/519 passed**;
-- full suite: **597/597 passed**;
-- selected mutation baseline: **52/52 passed**;
-- selected adversarial mutations M01-M08: **8/8 genuine kills** after JUnit/log inspection;
-- frozen `contracts` and `scoring` source unchanged.
+Commit:
 
-### Acceptance closure
+`456a6248e9d28ec083e7503c3a9ad9385de47c7d`
 
-- fresh independent source/contract review: **PASS WITH NON-BLOCKING FOLLOW-UPS**; no confirmed source defect found;
-- exact staging/source audit: **PASS**;
-- staged source/test identity was tied to the reviewed and mutation-verified candidate;
-- qualified 78/519/597 verification passed on the staged-identical working tree;
-- frozen `contracts` and `scoring` source remained unchanged.
+S1 proves block-grounded evidence contract/admission, evidence-reference verification, rich evaluator judgment preservation, narrow scoring projection and real deterministic question reduction.
 
-This boundary is accepted for the freeze commit. Later provider/generator work must consume it rather than silently redefining its authority semantics.
+Final complete suite: **709 passed**.
 
-### Important boundary
+S1 is not the complete evidence subsystem.
 
-This capability validates and compiles candidate rubric content. It does **not** generate academic rubric content, authenticate teachers, provide global persistence/concurrency guarantees, or establish academic rubric quality.
+## Synthetic E2E S2 — IN PROGRESS
 
----
+S2a has completed implementation, adversarial acceptance, and the code/test source-staging audit. The final governance-inclusive staged-tree audit and freeze commit remain.
 
-## Rubric Generation — NEXT
+### S2a — execution integrity and context continuity
 
-### Objective
+Objective:
 
-Generate a candidate rubric from finalized school-authorized assessment inputs while preserving the distinction between probabilistic candidate interpretation and deterministic scoring authority.
+Prove that one coherent grading execution invokes the real S1 verifier, real frozen question reducer and real frozen paper aggregator, while preserving workflow/audit identity outside the numerical kernel.
 
-### Required inputs
+Required high-level flow:
 
-- finalized question identity/text;
-- authoritative maximum marks;
-- school-authored model answer or marking scheme;
-- optional approved reference context when available.
+```text
+GradingExecutionContext
++ AnswerEvidenceBundle
++ per-question EvaluatedCriterionJudgments
++ already-admitted QuestionScoringAuthorities
++ already-admitted ResolvedPaperScoringAuthority
+        ↓
+verify_evaluated_judgments()
+        ↓
+reduce_question()
+        ↓
+QuestionScoreResult
+        ↓
+aggregate_paper()
+        ↓
+PaperScoreResult
++ preserved rich per-question audit/context
+```
 
-Do not invent OCR/backend/provider persistence schemas to implement this capability.
+Implemented S2a invariants:
 
-### Initial implementation direction
+- the public execution path accepts pre-execution inputs rather than caller-supplied `VerifiedCriterionJudgments`, `QuestionScoreResult`, or `PaperScoreResult`;
+- S2 owns the real verifier/reducer/aggregator calls;
+- context `submission_ref` binds to the evidence bundle;
+- context `grading_spec_ref` binds to the resolved paper authority;
+- raw work is rejected for duplicate/missing/unexpected question IDs before execution;
+- execution order is canonicalized from authoritative paper composition;
+- work `question_id` binds to rubric/policy question identity before S1/B2;
+- rich verified judgments and B2 numerical results remain parallel rather than being positionally merged or reconstructed;
+- no S2 arithmetic duplicates reducer or paper aggregation behavior;
+- B3 retains rubric/policy/result admission and paper arithmetic;
+- native S1/B2/B3 failures propagate unchanged.
 
-- provider-neutral `RubricGenerator` contract;
-- strict structured candidate output mapped into the existing authoring models;
-- Fake/ReplayProvider path before paid/production provider use;
-- explicit generator/provider/model provenance;
-- deterministic linter/compiler immediately downstream;
-- teacher review/edit and Release 1 approval before ACTIVE.
+Qualified pre-freeze evidence:
 
-### Acceptance
+- inherited S1 regression: **709/709**;
+- original S2a contract: **10/10**;
+- acceptance-hardening: **8/8**;
+- all S2a tests: **18/18**;
+- complete suite: **727/727**;
+- code/test candidate tree: `804a28a1041b264ad150638a3267d6cf69802354`;
+- code/test staged patch SHA-256: `1bbf993078166ee4b07e627cbaf30927bd559b527ee5b5a91806e0ab5d5e19eb`.
 
-- model output remains candidate content and never directly becomes scoring authority;
-- generated criteria/levels/rules are structurally valid after deterministic validation;
-- generated marks reconcile to the trusted finalized-question maximum;
-- invalid/ambiguous/malformed provider output fails safely;
-- alternative valid methods can be represented where assessment authority permits;
-- meaningful generated/teacher-edited changes produce a new immutable version;
-- no provider-generated free-form score becomes authoritative.
+The code/test tree is not the final commit tree because governance documentation is intentionally added before freeze.
 
-### Development verification
+S2a non-claims:
 
-Use real finalized question/model-answer fixtures as development cases.
+- `GradingExecutionContext` is a data container, not a trust token;
+- `grading_run_id` and `exam_ref` are preserved/validated but not authenticated by S2a;
+- supplied scoring authorities are already-admitted trusted upstream domain inputs; S2a does not authenticate their backend/lifecycle origin;
+- supplied `EvaluatedCriterionJudgment` values are not proven to have been created for this exact run/spec; evaluator-attempt provenance is deferred;
+- `GradingExecutionResult` object/class identity is not proof that the public execution path ran;
+- S2a does not provide persistence, rollback, exactly-once execution, publication authority, or transaction semantics.
 
-A single paper is useful for integration but is not enough to establish rubric-generation quality.
+Remaining S2a acceptance sequencing:
 
-### Academic-quality verification
+1. stage only the three governance documents on top of the reviewed source/tests;
+2. rerun the complete suite on the staged-identical working tree;
+3. inspect complete staged diff and frozen-source integrity;
+4. capture final tree/blob/patch identities;
+5. commit;
+6. rerun post-commit full regression and require a clean working tree;
+7. freeze S2a.
 
-Build an initial teacher-reviewed development/benchmark corpus of roughly 30-50+ finalized questions across theory and mathematics.
+### S2b — risk, review and candidate GradeResult
 
-Track:
+Start only after S2a is frozen.
 
-- structural validity;
-- marks reconciliation;
-- criterion coverage;
-- teacher acceptance/edit rate;
-- ambiguity/missing criteria;
-- alternative-method coverage.
+Objective:
 
-Do not claim academic rubric-generation quality before representative teacher-reviewed evidence exists.
+Add deterministic/explicit risk inputs and review recommendation around the frozen numerical output without giving risk/review authority to modify marks.
 
----
+Keep separate:
 
-## Synthetic End-to-End Grading Path
+- numerical outcome;
+- risk/review recommendation (`AUTO_CANDIDATE | SECOND_CHECK | HUMAN_REVIEW`);
+- grading job/result workflow status;
+- official backend publication.
 
-### Objective
+Candidate `GradeResult` must preserve workflow identity, rich evidence/audit context, provenance/usage and the numerical total sourced from `PaperScoreResult`.
 
-Prove the grading core works end to end without external APIs.
+Do not claim candidate == published result.
 
-### Flow
+### Decision gate before final rich GradeResult
 
-Synthetic evidence -> FakeProvider/evaluator -> criterion judgments -> verification -> deterministic scoring -> risk -> candidate result.
+Resolve criterion-level `awarded_marks` semantics for cases where question-level dependencies/gates/caps/deductions/rounding make the final score differ from the sum of criterion effects.
 
-### Acceptance
+Until authority defines that mapping, preserve reducer-native criterion effects and question-level stage effects rather than inventing redistribution.
 
-- complete synthetic result is produced;
-- malformed/invalid fake output fails safely;
-- evidence references are validated;
-- real question-scoring output flows into paper aggregation;
-- no paid provider is required.
+## Deterministic Evaluators — AFTER S2 EXECUTION BOUNDARY
 
----
+Implement validated exact/MCQ/basic numeric evaluator capability on top of the stable evidence/orchestration contracts.
 
-## Deterministic Evaluators
+## Semantic Evaluation — OPEN
 
-### Objective
+Requires provider boundary, compiled rubric, evidence contract, capability routing and representative benchmark evidence.
 
-Resolve cases where deterministic software is sufficient without an LLM call.
+## Mathematical / Derivation Evaluation — OPEN
 
-### Initial scope
+Implement only the capability subset supported by explicit contracts and benchmark data. Unsupported patterns must fail/review safely.
 
-- MCQ/exact;
-- basic numeric comparison;
-- tolerance;
-- units where rules are defined.
+## Approved Reference Context — OPEN
 
-### Acceptance
+Reference retrieval must be tenant/version scoped and record exact source provenance. Do not invent retrieval infrastructure before real backend/reference contracts are available.
 
-No model call is required when deterministic evaluation fully resolves the criterion.
+## Production Provider Adapter — OPEN
 
----
+Release 1 needs one real production provider adapter.
 
-## Semantic Evaluation
+Mandatory later requirements include:
 
-### Objective
+- transport-level response bounding before full body materialization;
+- timeout/failure behavior;
+- configured provider/model provenance and usage telemetry;
+- authenticated/traceable acquisition evidence appropriate to the provider;
+- no provider output becomes scoring authority directly.
 
-Return criterion-level semantic judgments for meaning-based answers.
+## OCR & Backend Integration — OPEN
 
-### Dependencies
+Wait for real schemas/auth/tenant behavior. Do not invent them.
 
-Compiled rubric contract, evidence contract, provider interface.
+## Risk / Review / Regrade / Publication — OPEN
 
-### External validation dependency
+Implement in the layer that owns workflow state and persistence. Regrade creates a new linked run/result and does not silently overwrite history.
 
-Teacher-marked examples are required before academic quality can be claimed.
+## Reliability & Security — ONGOING / RELEASE GATE OPEN
 
-### Acceptance
+Continue fail-closed contract/adversarial testing per capability. Do not weaken frozen boundaries to meet schedule.
 
-- structured criterion judgments;
-- evidence references;
-- no direct authoritative score;
-- alternative valid wording supported;
-- grammar/style not scored unless the rubric says so;
-- contradictory/incomplete answers represented through rubric levels/reason codes.
+## Release Validation & Calibration — OPEN
 
----
+Before Release 1 production claim:
 
-## Mathematical / Derivation Evaluation
+- representative rubric-generation teacher review;
+- evaluator benchmark;
+- real subjective school paper E2E;
+- real numerical/math school paper E2E;
+- cost/provider/model/latency/retry/evaluator telemetry;
+- risk threshold calibration from held-out data;
+- regression/adversarial release-candidate gate;
+- future-engineer documentation.
 
-### Objective
+## Scheduling rule
 
-Add deterministic numeric/symbolic/unit checks where OCR representation supports them, with semantic grading for explanation and derivation.
-
-### Dependency
-
-Real OCR mathematical output is important before finalizing parsers.
-
-### Acceptance
-
-- supported parseable subset is explicit;
-- parse failure means uncertainty;
-- correct method/wrong final answer can receive rubric-defined partial credit;
-- alternative valid methods can be represented.
-
----
-
-## Approved Reference Context
-
-### Objective
-
-Support approved reference material without forcing retrieval for every question.
-
-### Initial implementation
-
-- RetrievalPort;
-- context policies;
-- source/version/hash provenance.
-
-### Integration dependency
-
-Backend/reference-storage reality.
-
----
-
-## OCR & Backend Integration
-
-### Objective
-
-Connect the grading core to actual OCR and backend systems through adapters.
-
-### Dependencies
-
-- real OCR JSON/schema;
-- backend repository/API/data conventions;
-- canonical object/reference access patterns;
-- authentication/tenant context.
-
-### Acceptance
-
-One real school-style paper flows through the system without manual JSON repair.
-
----
-
-## Reliability & Security
-
-### Objective
-
-Prove fail-closed behavior under operational failure and hostile conditions.
-
-### Coverage
-
-- idempotency;
-- retries;
-- provider failure;
-- tenant mismatch;
-- malformed output;
-- audit failure;
-- prompt-injection containment;
-- review/regrade preservation;
-- telemetry;
-- structural/job cardinality limits;
-- resource/backpressure controls.
-
----
-
-## Release Validation & Calibration
-
-### Objective
-
-Measure academic quality, cost, risk, and review workload on the exact release candidate.
-
-### Dependencies
-
-- held-out teacher-marked data;
-- approved production provider/runtime;
-- real OCR outputs.
-
-### Rule
-
-Do not repeatedly tune on the held-out evaluation set.
+Move forward as soon as a gate closes. If time is tight, defer unsupported breadth; do not remove safety tests, identity checks, or contract verification.

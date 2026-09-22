@@ -1,10 +1,10 @@
 # Project State
 
-Status date: 2026-09-21
+Status date: 2026-09-22
 
 ## Current milestone
 
-**Synthetic E2E S1 and S2a remain closed/frozen. Synthetic E2E S2b-1 risk-observation extraction is now implemented and accepted at commit `3f789a70443c3b9810c63b15bccb8dc4f5d889e5` (tree `99758c27b9890ba7e65ad0667c71db502e6071c7`) with a post-commit 743/743 regression. Recommendation policy, risk tiers, review routing, and candidate `GradeResult` remain blocked/deferred pending explicit authority.**
+**Synthetic E2E S1, S2a, and S2b-1 remain closed/frozen. Deterministic single-select CHOICE v1 is now closed/frozen: contract commit `cdc8817ed6f370c699f1c3d272f03ea8aeafc665`; evaluator commit `1fe26f959249a7f8ab9cb1acce89769996622f43`; evaluator tree `1d5239434e959fcdf51eda8304a6d9b234e6c3df`; qualified post-commit complete regression **853/853** with a clean working tree. S2b-2 recommendation behavior, final `GradeResult`, theory/semantic evaluation, numeric/math evaluation, OCR/backend integration, and production release validation remain open.**
 
 Current immutable S1 anchor:
 
@@ -19,7 +19,7 @@ Current immutable S1 anchor:
 - committed acceptance artifact SHA-256:
   `7ff52d81346094f9c361ce9625107a4dfe1330a947f18a482f4599a3d5382f32`
 
-The S2b-2 recommendation/review-policy authority inspection is complete. Executable S2b-2 policy authority remains insufficient, so S2b-2 implementation and behavior-defining RED are blocked. The immediate next task is a short authority/dependency/prerequisite inspection of one candidate Release-1 capability; roadmap order alone does not select or authorize that candidate. No S1/B2/B3/S2a/S2b-1 source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
+The earlier S2b-2 implementation-eligibility inspection is complete, but S2b-2 remains incomplete as an executable Release-1 capability: Gradified still needs an explicit versioned platform/default policy decision and the current S2b-1 observation profile is intentionally narrower than the complete risk/impact input space described by the Engineering Source of Truth. No recommendation behavior is frozen. The immediate next task is a short prerequisite inspection of the Release-1 EXACT capability, including whether it is merely canonical-token equality already covered by CHOICE semantics or instead requires a separate normalized free-text authority/normalization contract. No S1/B2/B3/S2a/S2b-1/CHOICE frozen source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
 
 ## Frozen / accepted boundaries
 
@@ -249,11 +249,68 @@ S2 must answer:
 
 Workflow identity stays outside the frozen B2/B3 numerical contracts.
 
+### Deterministic single-select CHOICE v1 — closed/frozen
+
+Branch:
+
+`deterministic-choice-v1`
+
+Contract commit:
+
+`cdc8817ed6f370c699f1c3d272f03ea8aeafc665`
+
+Contract tree:
+
+`736c4edee091d797a2faa971bb29c6ddff140644`
+
+Evaluator commit:
+
+`1fe26f959249a7f8ab9cb1acce89769996622f43`
+
+Evaluator tree:
+
+`1d5239434e959fcdf51eda8304a6d9b234e6c3df`
+
+Evaluator parent / frozen contract anchor:
+
+`cdc8817ed6f370c699f1c3d272f03ea8aeafc665`
+
+CHOICE v1 implements deterministic semantic evaluation for one deliberately narrow capability:
+
+- single-select only;
+- canonical opaque option IDs;
+- exact option-ID equality only;
+- admitted `ChoiceEvaluationAuthority` bound by the existing compiled scoring-authority fingerprint;
+- complete match/mismatch projections across the full scoring criterion universe;
+- rich `EvaluatedCriterionJudgment` output in scoring-rubric order;
+- canonical evidence references are carried through for later S1 verification;
+- known-but-wrong admitted option and unsupported/unknown option remain distinct outcomes;
+- malformed public top-level inputs fail through explicit CHOICE-domain errors rather than leaking `AttributeError`.
+
+Qualified Windows / CPython 3.11.9 evidence:
+
+- contract tests: **94/94**;
+- pre-evaluator complete baseline: **837/837**;
+- evaluator/hardening tests: **16/16**;
+- complete post-commit suite: **853/853**;
+- evaluator staged tree == committed tree: `1d5239434e959fcdf51eda8304a6d9b234e6c3df`;
+- post-commit working tree: clean.
+
+CHOICE v1 non-claims:
+
+- consumes already-admitted canonical selection data; it does not parse OCR or perform fuzzy text normalization;
+- carries evidence references but does not verify evidence relationships; existing S1 owns that verification;
+- produces semantic criterion judgments only; B2 remains the sole question-level numerical scoring authority;
+- performs no mark arithmetic, negative-marking logic, risk/review recommendation, workflow transition, publication decision, or `GradeResult` construction;
+- does not authenticate ACTIVE grading-spec provenance, scoring-authority lifecycle origin, or evaluator-attempt/run provenance;
+- does not implement blank/no-selection, ambiguous extraction, multi-select, ranking, free-text EXACT, numeric/unit, semantic/theory, or mathematical-derivation evaluation.
+
+
 ## Current blockers / open decisions
 
 ### S2 execution integrity
 
-S2a is closed/frozen. Its functional/adversarial acceptance, final staged-tree audit, commit identity, clean post-commit state, and 727/727 post-commit regression are complete. S2b-1 is also closed/frozen. S2b-2 recommendation implementation is blocked by an unresolved executable policy-authority prerequisite.
+S2a is closed/frozen. Its functional/adversarial acceptance, final staged-tree audit, commit identity, clean post-commit state, and 727/727 post-commit regression are complete. S2b-1 is also closed/frozen. S2b-2 recommendation implementation has not started; remaining work includes an explicit Gradified-owned versioned policy/default decision plus the broader risk/impact signal coverage required by the Engineering Source of Truth.
 
 S2a establishes only the relationships supported by current authority:
 
@@ -264,27 +321,27 @@ S2a establishes only the relationships supported by current authority:
 - expected execution work comes from the resolved paper composition;
 - rich and numerical outputs remain parallel and are not positionally merged.
 
-### S2b-2 recommendation/review policy — implementation-eligibility inspection complete / blocked
+### S2b-2 recommendation/review policy — product-policy / signal-breadth gate
 
-The S2b-2 authority inspection is complete.
+The earlier eligibility inspection correctly rejected inventing school-specific thresholds or recommendation mappings inside implementation code. The higher-authority SRS also assigns Gradified responsibility for confidence/routing behavior and requires a sensible configurable platform default.
 
-Authoritative routing intent exists, but the executable recommendation policy does not yet exist in a form that can be implemented without inventing grading/release policy.
+Current state:
 
-Missing prerequisite authority includes:
+- S2b-2 implementation has **not started** and no recommendation behavior is frozen;
+- a versioned Gradified platform/default policy decision is still required;
+- school-specific overrides remain configuration, not hidden code constants;
+- the current S2b-1 observation profile is intentionally narrow and does not yet cover the full risk/impact input space described by the Engineering Source of Truth;
+- numeric thresholds or auto-release settings must not be presented as calibrated quality claims without held-out evidence.
 
-- admitted release-policy identity/version and run-bound policy binding;
-- approved school/platform threshold values and default-policy semantics;
-- confidence/risk derivation and aggregation semantics;
-- impact derivation semantics;
-- deterministic mapping to `AUTO_CANDIDATE | SECOND_CHECK | HUMAN_REVIEW`;
-- explicit `SECOND_CHECK` semantics;
-- precedence/override/conflict rules.
+Keep separate:
 
-S2b-2 implementation has **not started**. Behavior-defining RED is **not authorized** until this prerequisite authority exists.
+- numerical outcome;
+- S2b-1 observations;
+- future risk/review recommendation;
+- grading job/result workflow status;
+- official backend publication.
 
-Do not collapse future recommendation into workflow/job state or official publication. S2b-1 observations, future recommendation, workflow state, and backend publication remain separate concepts.
-
-Downstream Release-1 capabilities are not globally blocked by S2b-2. Each candidate must be inspected individually to establish whether it actually depends on S2b-2 or whether the frozen S2a boundary is sufficient.
+Downstream Release-1 capabilities are not globally blocked by S2b-2.
 
 ### Criterion-level `awarded_marks`
 
@@ -304,7 +361,7 @@ The current project does not yet establish:
 - real OCR/backend integration;
 - approved reference retrieval;
 - one production live-provider adapter with transport-level bounding;
-- production evaluator quality;
+- production evaluator quality beyond the frozen narrow CHOICE v1 capability; theory/semantic and numeric/math evaluator quality remain unestablished;
 - supported math/derivation evaluator benchmark;
 - review/regrade persistence and official publication;
 - evaluator-attempt provenance binding supplied judgments to a specific run/spec at judgment-creation time;
@@ -338,41 +395,53 @@ S2a qualified evidence on Windows / CPython 3.11.9:
 - post-commit working tree: clean;
 - final code/test source audit found no numerical-authority duplication, no exception wrapping, no new dependency framework, and no frozen-source modification.
 
+
+Deterministic CHOICE v1 qualified evidence on Windows / CPython 3.11.9:
+
+- semantic/executable contract commit: `cdc8817ed6f370c699f1c3d272f03ea8aeafc665`;
+- contract tree: `736c4edee091d797a2faa971bb29c6ddff140644`;
+- contract tests: **94/94**;
+- pre-evaluator complete baseline: **837/837**;
+- evaluator causal RED: **12 failed / 1 passed** at the intentional behavior stub;
+- initial evaluator GREEN: **13/13**;
+- hostile public-boundary hardening RED: **3 failed / 13 passed**;
+- hardened evaluator targeted: **16/16**;
+- evaluator implementation commit: `1fe26f959249a7f8ab9cb1acce89769996622f43`;
+- evaluator tree: `1d5239434e959fcdf51eda8304a6d9b234e6c3df`;
+- post-commit complete suite: **853/853**;
+- post-commit working tree: clean.
+
 S1's earlier empty-evidence defect remains the standing example that full-suite green does not replace hostile source review.
 
 ## Next task
 
-Perform a short authority/dependency/prerequisite inspection of **one candidate Release-1 capability**.
+Perform a short authority/dependency/prerequisite inspection of **Release-1 EXACT evaluation**.
+
+The inspection must first determine whether authoritative Release-1 EXACT means:
+
+1. canonical token/string equality that can reuse the frozen CHOICE comparison/binding pattern without duplicating evaluator code; or
+2. normalized free-text exact-answer evaluation that requires a separate accepted-answer and normalization/equivalence contract.
 
 Before behavior-defining RED, establish:
 
-1. the candidate's authoritative source-of-truth requirements;
-2. whether it depends on blocked S2b-2 or whether frozen S2a is sufficient;
-3. its concrete input and output contracts;
-4. its authority boundary and semantic owner;
-5. unsupported/ambiguous-input behavior;
-6. its integration point with the frozen runtime;
-7. the minimum acceptance tests required to prove the behavior.
+- the exact admitted student value;
+- the exact authoritative answer value(s);
+- normalization/equivalence semantics, if any;
+- outcome-to-rich-judgment projection ownership;
+- scoring-authority binding;
+- unsupported/invalid behavior;
+- real composition through the frozen S1 → B2 runtime.
 
-Roadmap order alone does not select or authorize the candidate.
+Do not implement EXACT merely because it appears next in the roadmap. If the semantics are not sufficiently specified, record the blocker promptly and inspect the next candidate rather than inventing normalization rules.
 
-For evaluator candidates specifically, design against the actual frozen runtime:
-
-- S1 consumes rich `EvaluatedCriterionJudgment` values;
-- runtime `CriterionJudgment` is the narrow post-verification scoring projection;
-- S1 verifies evidence relationships but does not independently prove semantic correctness of `selected_level`;
-- the evaluator or an explicit projection boundary must own the semantic mapping that produces the rich judgment.
-
-Do not modify S1, B2, B3, frozen S2a, or frozen S2b-1 merely to make the next capability easier to implement.
-
-If the candidate gate passes, write behavior-defining RED and proceed to causal RED / minimal GREEN. If it does not pass, record the blocker and inspect another candidate rather than inventing missing domain/policy semantics.
+Do not modify S1, B2, B3, frozen S2a/S2b-1, or frozen CHOICE merely to make EXACT easier to implement.
 
 ## Documentation rule
 
 Update `PROJECT_STATE.md` at subsystem milestone closure, material blocker/assumption change, and before implementation-chat handoff. Do not use it as a turn-by-turn diary.
 
-`IMPLEMENTATION_PLAN.md` records the S2a/S2b split, the frozen S2a implementation anchor, and S2b as next.
+`IMPLEMENTATION_PLAN.md` records the frozen S2/CHOICE milestones and the next candidate-capability sequence.
 
-`TESTING.md` records the complete qualified S2a verification/freeze sequence and the frozen implementation identity.
+`TESTING.md` records the qualified S2 and deterministic CHOICE verification/freeze evidence.
 
 Do not alter the SRS/Engineering Source of Truth merely to report implementation progress.

@@ -1,6 +1,6 @@
 # Testing Strategy and Verification Status
 
-Status date: 2026-09-21
+Status date: 2026-09-22
 
 ## Verification principle
 
@@ -297,6 +297,66 @@ Important non-claims:
 - supplied `AnswerEvidenceBundle` identity is not cryptographically bound to the exact artifact used by S2a; stronger cross-stage artifact identity is a future workflow/artifact contract;
 - Python object identity does not prove S2a/S2b execution provenance;
 - no review/job-state/publication semantics are established.
+
+## Deterministic single-select CHOICE v1 — frozen
+
+Branch:
+
+`deterministic-choice-v1`
+
+Contract commit:
+
+`cdc8817ed6f370c699f1c3d272f03ea8aeafc665`
+
+Contract tree:
+
+`736c4edee091d797a2faa971bb29c6ddff140644`
+
+Evaluator commit:
+
+`1fe26f959249a7f8ab9cb1acce89769996622f43`
+
+Evaluator tree:
+
+`1d5239434e959fcdf51eda8304a6d9b234e6c3df`
+
+Qualified Windows / CPython 3.11.9 evidence:
+
+- contract RED: **87 failed / 7 passed**, with failures caused by missing local admission validation rather than collection/import/setup errors;
+- contract GREEN: **94/94**;
+- inherited pre-evaluator complete baseline: **837/837**;
+- evaluator behavior RED: **12 failed / 1 passed** at the intentional evaluator stub;
+- initial evaluator GREEN: **13/13**;
+- hostile public-boundary hardening RED: **3 failed / 13 passed**, exposing uncontrolled `AttributeError` on malformed top-level inputs;
+- hardened evaluator targeted: **16/16**;
+- complete pre-commit suite: **853/853**;
+- staged evaluator tree: `1d5239434e959fcdf51eda8304a6d9b234e6c3df`;
+- committed evaluator tree: `1d5239434e959fcdf51eda8304a6d9b234e6c3df`;
+- post-commit complete suite: **853/853**;
+- post-commit working tree: clean.
+
+Accepted behavior includes:
+
+- exact public top-level type admission with CHOICE-domain failures;
+- known correct canonical option → exact match projection;
+- known wrong but admitted option → exact mismatch projection;
+- unknown option → `UnsupportedChoiceInputError`;
+- selection/question and scoring-authority/fingerprint binding;
+- both match and mismatch projections validated against the complete scoring criterion universe and admitted levels;
+- deterministic rich `EvaluatedCriterionJudgment` output in scoring-rubric order;
+- canonical evidence refs carried unchanged for later S1 verification;
+- real CHOICE → S1 → B2 composition for the supported fixture;
+- hallucinated/invalid evidence remains S1-owned and fails there rather than being reverified by CHOICE;
+- no score arithmetic, OCR parsing, provider calls, risk/recommendation logic, mutation, or generic evaluator framework.
+
+Important non-claims:
+
+- CHOICE v1 is single-select only and does not implement blank/no-selection, ambiguous extraction, multi-select, ranking, free-text EXACT, numeric/unit, semantic/theory, or mathematical-derivation evaluation;
+- CHOICE does not authenticate ACTIVE grading-spec provenance, scoring-authority lifecycle origin, evidence semantic origin, or evaluator-attempt/run provenance;
+- CHOICE does not establish production grading quality beyond its frozen deterministic contract/behavior scope.
+
+Current complete regression baseline after CHOICE evaluator freeze: **853/853**.
+
 
 ## S2 test-design rules
 

@@ -1,6 +1,6 @@
 # Release 1 Capability Roadmap
 
-Status date: 2026-09-21
+Status date: 2026-09-22
 
 ## Foundation — COMPLETE
 
@@ -60,7 +60,7 @@ S1 is not the complete evidence subsystem.
 
 ## Synthetic E2E S2 — IN PROGRESS
 
-S2a is closed/frozen at commit `61ce96d62774a78f4019c4905421324f614a7422` (tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`). S2b-1 risk-observation extraction is closed/frozen at implementation commit `3f789a70443c3b9810c63b15bccb8dc4f5d889e5` (tree `99758c27b9890ba7e65ad0667c71db502e6071c7`), with governance closure commit `5838eac38a7a9df256a8ed0d5880a80e76b39128`, after a **743/743** complete regression. The later S2b-2 recommendation-policy slice is blocked on missing executable policy authority; downstream capabilities require individual dependency inspection rather than a blanket S2b-2 prerequisite.
+S2a is closed/frozen at commit `61ce96d62774a78f4019c4905421324f614a7422` (tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`). S2b-1 risk-observation extraction is closed/frozen at implementation commit `3f789a70443c3b9810c63b15bccb8dc4f5d889e5` (tree `99758c27b9890ba7e65ad0667c71db502e6071c7`), with governance closure commit `5838eac38a7a9df256a8ed0d5880a80e76b39128`, after a **743/743** complete regression. S2b-2 recommendation behavior is not implemented; remaining work is a Gradified-owned versioned platform/default policy decision plus broader risk/impact input coverage. Downstream evaluator capabilities are not globally blocked by S2b-2.
 
 ### S2a — execution integrity and context continuity
 
@@ -167,33 +167,19 @@ It does not:
 
 Qualified evidence: **16/16 S2b-1 / 727/727 inherited / 743/743 full**.
 
-#### S2b-2 — recommendation/review policy — ELIGIBILITY INSPECTION COMPLETE / BLOCKED
+#### S2b-2 — recommendation/review policy — PRODUCT-POLICY / SIGNAL-BREADTH GATE
 
-The implementation-eligibility inspection is complete.
+Plan update 2026-09-22: the earlier inspection correctly rejected inventing school-specific recommendation policy in evaluator code. The higher-authority SRS assigns Gradified responsibility for confidence/routing and requires a configurable sensible platform default.
 
-Routing intent is authoritative, but executable recommendation-policy authority is insufficient. S2b-2 implementation has **not started**, and behavior-defining RED is **not authorized**.
+Remaining work before complete Release-1 recommendation behavior:
 
-The missing prerequisite is broader than threshold values. It includes:
+- define a versioned Gradified platform/default policy mechanism and explicit default behavior;
+- preserve school-specific thresholds/overrides as configuration rather than hidden constants;
+- expand supported risk/impact inputs beyond the deliberately narrow S2b-1 observation profile where required by the Engineering Source of Truth;
+- keep any numeric threshold or auto-release setting separate from claims of calibration until held-out evidence exists;
+- keep recommendation separate from workflow state and official publication.
 
-- admitted release-policy identity/version and binding to the grading run/spec;
-- approved school/platform threshold values and default-policy semantics;
-- confidence/risk derivation and aggregation;
-- impact derivation;
-- deterministic recommendation mapping;
-- explicit `SECOND_CHECK` semantics;
-- precedence/override/conflict behavior.
-
-Do not invent school thresholds, platform defaults, qualitative risk derivation, or `AUTO_CANDIDATE | SECOND_CHECK | HUMAN_REVIEW` mapping.
-
-Keep separate:
-
-- numerical outcome;
-- S2b-1 observations;
-- future risk/review recommendation;
-- grading job/result workflow status;
-- official backend publication.
-
-Do not create a partial `GradeResult` merely to bypass unresolved schema semantics.
+S2b-2 implementation has not started. Do not retrofit recommendation logic into S2b-1.
 
 ### Decision gate before final rich GradeResult
 
@@ -201,22 +187,49 @@ Resolve criterion-level `awarded_marks` semantics for cases where question-level
 
 Until authority defines that mapping, preserve reducer-native criterion effects and question-level stage effects rather than inventing redistribution.
 
-## Deterministic Evaluators — CANDIDATE AREA / PREREQUISITE INSPECTION REQUIRED
+## Deterministic Evaluators — IN PROGRESS
 
-Roadmap order does not authorize deterministic-evaluator RED or implementation.
+### Single-select CHOICE v1 — COMPLETE / FROZEN
 
-Before selecting an evaluator capability, establish whether that capability depends on blocked S2b-2 or whether frozen S2a is sufficient, and verify that the capability's own behavior is authoritative enough to define observable RED.
+Contract commit:
 
-For evaluator candidates, use the actual frozen runtime boundary:
+`cdc8817ed6f370c699f1c3d272f03ea8aeafc665`
 
-- S1 accepts rich `EvaluatedCriterionJudgment` values;
-- runtime `CriterionJudgment` is only the narrow post-verification scoring projection;
-- S1 verifies evidence relationships but does not independently establish semantic correctness of `selected_level`;
-- semantic outcome-to-rich-judgment ownership must therefore be explicit in the evaluator capability or an admitted projection boundary.
+Evaluator commit:
 
-Do not infer official answers, answer types, normalization, criterion-level mappings, numeric tolerances, units, or unsupported-input behavior from scoring marks or authoring-generation provenance.
+`1fe26f959249a7f8ab9cb1acce89769996622f43`
 
-If one deterministic capability passes its authority/dependency/prerequisite gate, implement only that smallest validated slice.
+Evaluator tree:
+
+`1d5239434e959fcdf51eda8304a6d9b234e6c3df`
+
+Qualified evidence:
+
+- contract tests: **94/94**;
+- pre-evaluator complete baseline: **837/837**;
+- evaluator/hardening tests: **16/16**;
+- post-commit complete suite: **853/853**.
+
+Frozen scope:
+
+- single-select only;
+- canonical option IDs and exact equality;
+- explicit match/mismatch criterion projections bound to the compiled scoring-authority fingerprint;
+- rich `EvaluatedCriterionJudgment` output only;
+- no OCR parsing, score arithmetic, risk/review logic, `GradeResult`, workflow, or publication authority.
+
+Do not modify the frozen CHOICE contract/evaluator unless a verified defect, authority contradiction, or changed requirement requires explicit reopening.
+
+### EXACT — NEXT CANDIDATE / PREREQUISITE INSPECTION REQUIRED
+
+Before creating another evaluator, determine whether Release-1 EXACT is:
+
+- canonical token/string equality whose comparison/binding machinery should reuse the frozen CHOICE pattern; or
+- normalized free-text exact-answer evaluation requiring a distinct accepted-answer and normalization/equivalence contract.
+
+Do not infer normalization, accepted alternatives, criterion mappings, or unsupported-input behavior from scoring marks or model-answer prose.
+
+If the prerequisite gate closes, implement only the smallest non-duplicative EXACT slice and proceed immediately through contract RED/GREEN and behavior RED/GREEN. If it does not close, record the blocker and inspect the next deterministic candidate.
 
 ## Semantic Evaluation — OPEN
 

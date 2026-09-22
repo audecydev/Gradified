@@ -220,16 +220,58 @@ Frozen scope:
 
 Do not modify the frozen CHOICE contract/evaluator unless a verified defect, authority contradiction, or changed requirement requires explicit reopening.
 
-### EXACT — NEXT CANDIDATE / PREREQUISITE INSPECTION REQUIRED
+### EXACT — DEFERRED / PREREQUISITE INSPECTION CLOSED
 
-Before creating another evaluator, determine whether Release-1 EXACT is:
+Decision: `DEFER_EXACT`.
 
-- canonical token/string equality whose comparison/binding machinery should reuse the frozen CHOICE pattern; or
-- normalized free-text exact-answer evaluation requiring a distinct accepted-answer and normalization/equivalence contract.
+The accepted Release-1 architecture includes EXACT within deterministic evaluation scope but does not establish that EXACT requires a distinct evaluator. Current authority does not provide sufficient executable semantics to implement a distinct EXACT capability without invention.
 
-Do not infer normalization, accepted alternatives, criterion mappings, or unsupported-input behavior from scoring marks or model-answer prose.
+Hard semantic-contract blocker:
 
-If the prerequisite gate closes, implement only the smallest non-duplicative EXACT slice and proceed immediately through contract RED/GREEN and behavior RED/GREEN. If it does not close, record the blocker and inspect the next deterministic candidate.
+- admitted student-side EXACT representation is undefined;
+- deterministic authoritative-answer runtime representation/binding is undefined;
+- normalization/equivalence semantics, if any, are undefined;
+- participation of accepted alternatives/equivalents, if any, is undefined;
+- criterion-projection authority and blank/ambiguous/malformed/unsupported behavior are not sufficiently defined.
+
+Separate BUILD-value evidence gap:
+
+- approved/anonymized evidence has not yet established the amount and nature of distinct EXACT workload demand sufficient to justify a separate capability; this is not evidence that demand is low.
+
+Frozen consequences:
+
+- do not modify or reopen CHOICE merely to serve EXACT;
+- CHOICE's proven binding/projection design may inform later work, but no generic abstraction extraction is authorized merely by this deferred candidate;
+- do not create EXACT RED, implementation, or normalization infrastructure;
+- reopen EXACT only if new authoritative, approved-workload, or verified-integration evidence materially changes a recorded defer basis.
+
+### NUMERIC / UNIT — DEFERRED / PREREQUISITE INSPECTION CLOSED
+
+Decision: `DEFER`.
+
+Release-1 NUMERIC remains architecturally authorized. However, in the inspected integrated runtime state, the executable contracts and retained rubric-authoring data do not provide sufficient structured answer-domain authority to implement deterministic NUMERIC evaluation without inventing academic semantics.
+
+Recorded `DEFER` bases:
+
+- the inspected runtime does not currently establish a sufficiently defined admitted numeric/quantity input;
+- structured expected-value/tolerance/unit/conversion authority and binding are not established for deterministic NUMERIC evaluation;
+- criterion-level NUMERIC authority is not established;
+- no already-authorized composition boundary was found in the inspected evaluator → S1 → B2 runtime contracts/path that would allow partial NUMERIC judgments to be combined into the complete required criterion universe for a supported question;
+- approved/anonymized workload evidence has not yet bounded the minimum representative NUMERIC scope for a first implementation; this is not evidence that NUMERIC lacks Release-1 product value.
+
+Consequences:
+
+- do not create NUMERIC behavior-defining RED or implementation under the current executable authority;
+- Numeric Profile v1 remains the frozen scoring-number/execution boundary and must not be treated as academic-answer semantics;
+- do not modify frozen CHOICE, S1, B2/B3, or their accepted tests merely to make NUMERIC easier to implement;
+- do not invent a generic evaluator/composition framework merely to work around the current contract-state gap;
+- reopen NUMERIC only if new authoritative, runtime-contract, approved-workload, or verified-integration evidence materially changes a recorded `DEFER` basis.
+
+### NEXT PREREQUISITE CANDIDATE — DELIBERATE SELECTION REQUIRED
+
+Do not freeze a new evaluator candidate merely from architectural ordering.
+
+Select the next Release-1 prerequisite candidate from the pre-existing implementation sequence and current dependency state, then apply the active prerequisite-gate rule independently. No behavior-defining RED or implementation begins unless that candidate earns `BUILD`.
 
 ## Semantic Evaluation — OPEN
 

@@ -4,7 +4,7 @@ Status date: 2026-09-22
 
 ## Current milestone
 
-**Synthetic E2E S1, S2a, and S2b-1 remain closed/frozen. Deterministic single-select CHOICE v1 is now closed/frozen: contract commit `cdc8817ed6f370c699f1c3d272f03ea8aeafc665`; evaluator commit `1fe26f959249a7f8ab9cb1acce89769996622f43`; evaluator tree `1d5239434e959fcdf51eda8304a6d9b234e6c3df`; qualified post-commit complete regression **853/853** with a clean working tree. S2b-2 recommendation behavior, final `GradeResult`, theory/semantic evaluation, numeric/math evaluation, OCR/backend integration, and production release validation remain open.**
+**Synthetic E2E S1, S2a, and S2b-1 remain closed/frozen. Deterministic single-select CHOICE v1 remains closed/frozen: contract commit `cdc8817ed6f370c699f1c3d272f03ea8aeafc665`; evaluator commit `1fe26f959249a7f8ab9cb1acce89769996622f43`; evaluator tree `1d5239434e959fcdf51eda8304a6d9b234e6c3df`; qualified post-commit complete regression **853/853** with a clean working tree. The Release-1 EXACT prerequisite inspection remains closed with `DEFER_EXACT`. The Release-1 NUMERIC/UNIT prerequisite inspection is closed at `DEFER`; no NUMERIC behavior-defining RED or implementation is authorized under the current executable authority. S2b-2 recommendation behavior, final `GradeResult`, theory/semantic evaluation, numeric/math implementation/validation, OCR/backend integration, and production release validation remain open.**
 
 Current immutable S1 anchor:
 
@@ -19,7 +19,7 @@ Current immutable S1 anchor:
 - committed acceptance artifact SHA-256:
   `7ff52d81346094f9c361ce9625107a4dfe1330a947f18a482f4599a3d5382f32`
 
-The earlier S2b-2 implementation-eligibility inspection is complete, but S2b-2 remains incomplete as an executable Release-1 capability: Gradified still needs an explicit versioned platform/default policy decision and the current S2b-1 observation profile is intentionally narrower than the complete risk/impact input space described by the Engineering Source of Truth. No recommendation behavior is frozen. The immediate next task is a short prerequisite inspection of the Release-1 EXACT capability, including whether it is merely canonical-token equality already covered by CHOICE semantics or instead requires a separate normalized free-text authority/normalization contract. No S1/B2/B3/S2a/S2b-1/CHOICE frozen source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
+The earlier S2b-2 implementation-eligibility inspection is complete, but S2b-2 remains incomplete as an executable Release-1 capability: Gradified still needs an explicit versioned platform/default policy decision and the current S2b-1 observation profile is intentionally narrower than the complete risk/impact input space described by the Engineering Source of Truth. No recommendation behavior is frozen. The Release-1 EXACT prerequisite inspection remains closed with `DEFER_EXACT`. The Release-1 NUMERIC/UNIT prerequisite inspection is now closed at `DEFER`: Release-1 NUMERIC remains architecturally authorized, but the inspected executable contracts and retained rubric-authoring data do not provide sufficient structured answer-domain authority to implement deterministic NUMERIC evaluation without inventing academic semantics. Frozen CHOICE, S1, B2/B3, and Numeric Profile v1 remain unchanged. The next task is to deliberately select the next Release-1 prerequisite candidate from the pre-existing implementation sequence and dependency state; do not preselect a candidate merely because it appears next in architectural prose. No frozen source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
 
 ## Frozen / accepted boundaries
 
@@ -305,6 +305,55 @@ CHOICE v1 non-claims:
 - does not authenticate ACTIVE grading-spec provenance, scoring-authority lifecycle origin, or evaluator-attempt/run provenance;
 - does not implement blank/no-selection, ambiguous extraction, multi-select, ranking, free-text EXACT, numeric/unit, semantic/theory, or mathematical-derivation evaluation.
 
+### Release-1 EXACT — prerequisite inspection closed / deferred
+
+Decision: `DEFER_EXACT`.
+
+The accepted Release-1 architecture includes EXACT within deterministic evaluation scope but does not establish that EXACT requires a distinct evaluator. Current authority does not provide sufficient executable semantics to implement a distinct EXACT capability without invention.
+
+Hard semantic-contract blocker:
+
+- the admitted student-side EXACT representation is not defined;
+- the deterministic authoritative-answer runtime representation and binding are not defined;
+- applicable normalization/equivalence semantics, if any, are not defined;
+- participation of alternative accepted answers/equivalents, if any, is not defined;
+- criterion-projection authority is not defined for a distinct EXACT path;
+- blank/ambiguous/malformed/unsupported behavior is not sufficiently defined.
+
+Separate BUILD-value evidence gap:
+
+- approved/anonymized workload evidence has not yet established the amount and nature of distinct EXACT demand sufficient to justify a separate capability; this is not evidence that demand is low.
+
+Freeze consequences:
+
+- frozen CHOICE remains unchanged;
+- CHOICE's proven authority-binding/projection design may inform a future capability, but no CHOICE semantic extension, refactor, or generic abstraction extraction is authorized merely for EXACT;
+- no EXACT RED, implementation, or normalization framework is authorized;
+- reopen EXACT only when new authoritative, approved-workload, or verified-integration evidence materially changes a recorded `DEFER_EXACT` basis.
+
+
+### Release-1 NUMERIC / UNIT — prerequisite inspection closed / deferred
+
+Decision: `DEFER`.
+
+Release-1 NUMERIC remains architecturally authorized. However, in the inspected integrated runtime state, the executable contracts and retained rubric-authoring data do not provide sufficient structured answer-domain authority to implement deterministic NUMERIC evaluation without inventing academic semantics.
+
+Recorded `DEFER` bases:
+
+- the inspected runtime does not currently establish a sufficiently defined admitted numeric/quantity input;
+- structured expected-value/tolerance/unit/conversion authority and binding are not established for deterministic NUMERIC evaluation;
+- criterion-level NUMERIC authority is not established;
+- no already-authorized composition boundary was found in the inspected evaluator → S1 → B2 runtime contracts/path that would allow partial NUMERIC judgments to be combined into the complete required criterion universe for a supported question;
+- approved/anonymized workload evidence has not yet bounded the minimum representative NUMERIC scope for a first implementation; this is not evidence that NUMERIC lacks Release-1 product value.
+
+Freeze consequences:
+
+- no NUMERIC behavior-defining RED or implementation is authorized under the current executable authority;
+- Numeric Profile v1 remains the frozen scoring-number/execution boundary and is not academic-answer semantics;
+- frozen CHOICE, S1, B2/B3, and their accepted tests remain unchanged;
+- no generic evaluator/composition framework is authorized merely to work around the current contract-state gap;
+- reopen NUMERIC only if new authoritative, runtime-contract, approved-workload, or verified-integration evidence materially changes a recorded `DEFER` basis.
+
 
 ## Current blockers / open decisions
 
@@ -415,26 +464,11 @@ S1's earlier empty-evidence defect remains the standing example that full-suite 
 
 ## Next task
 
-Perform a short authority/dependency/prerequisite inspection of **Release-1 EXACT evaluation**.
+Deliberately select the next **Release-1 prerequisite candidate** from the pre-existing implementation sequence and current dependency state.
 
-The inspection must first determine whether authoritative Release-1 EXACT means:
+Do not preselect SHORT_TEXT/LONG_TEXT, mathematical/derivation evaluation, S2b-2, or any other capability merely because it appears next in architectural prose. The selection must be justified from current authority, dependencies, unresolved blockers, and actual implemented/frozen boundaries.
 
-1. canonical token/string equality that can reuse the frozen CHOICE comparison/binding pattern without duplicating evaluator code; or
-2. normalized free-text exact-answer evaluation that requires a separate accepted-answer and normalization/equivalence contract.
-
-Before behavior-defining RED, establish:
-
-- the exact admitted student value;
-- the exact authoritative answer value(s);
-- normalization/equivalence semantics, if any;
-- outcome-to-rich-judgment projection ownership;
-- scoring-authority binding;
-- unsupported/invalid behavior;
-- real composition through the frozen S1 → B2 runtime.
-
-Do not implement EXACT merely because it appears next in the roadmap. If the semantics are not sufficiently specified, record the blocker promptly and inspect the next candidate rather than inventing normalization rules.
-
-Do not modify S1, B2, B3, frozen S2a/S2b-1, or frozen CHOICE merely to make EXACT easier to implement.
+After selecting a candidate, perform only the minimum prerequisite inspection required by the active workflow. Do not begin behavior-defining RED or implementation unless that candidate independently earns `BUILD`.
 
 ## Documentation rule
 

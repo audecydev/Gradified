@@ -1,6 +1,6 @@
 # Release 1 Capability Roadmap
 
-Status date: 2026-09-22
+Status date: 2026-09-23
 
 ## Foundation — COMPLETE
 
@@ -45,6 +45,43 @@ Commit:
 `c48c813fb0eb64013fc7265ed0d14f64dd9d3d57`
 
 This closes the deterministic/no-network provider boundary, including replay provenance consistency. It does not establish a production network provider or academic rubric-generation quality.
+
+## ACTIVE Grading Authority / Evaluator Authority — BUILD AUTHORIZED / NOT YET IMPLEMENTED
+
+Decision: `BUILD`.
+
+Purpose:
+
+Implement the smallest immutable, read-only evaluator-facing ACTIVE question-authority boundary required by the accepted architecture. This is a cross-cutting authority prerequisite, not an evaluator capability and not a second lifecycle.
+
+Required design constraints:
+
+- consume only legitimately admitted ACTIVE question/spec context, the existing teacher-approved ACTIVE rubric authority, and the existing reducer-facing scoring authority;
+- preserve exact binding among grading-spec identity, question identity, rubric authority and the existing reducer-facing scoring authority;
+- expose a read-only immutable projection/view only; do not add independent authoring, approval, activation, retirement or mutation semantics;
+- do not duplicate or implement a second GradingSpec/rubric lifecycle; the accepted architecture assigns the authoritative GradingSpec lifecycle to the trusted workflow/spec boundary;
+- bind academic/question-context inputs to the exact ACTIVE authority by contained immutable values or explicit immutable/versioned references; never fall back to inferred, stale, `latest`, or unbound context;
+- keep evaluator/provider/runtime configuration outside academic authority and record its exact identity against evaluation-attempt provenance in the later layer that owns attempts; provenance is audit evidence, not a deterministic-replay guarantee;
+- allow approved reference material to establish academic validity only when the ACTIVE context policy permits it; reference material cannot independently create criteria, marks, levels, caps, deductions or other scoring consequences.
+
+Explicit exclusions for this BUILD batch:
+
+- no capability registry/router implementation or capability-status state in the new authority boundary;
+- no evaluator implementation and no semantic/math composition framework;
+- no production-provider, OCR, backend, retrieval, risk/review, `GradeResult`, persistence or publication implementation;
+- no EXACT normalization/equivalence semantics;
+- no NUMERIC expected-value/tolerance/unit/conversion semantics;
+- no mathematical-equivalence or derivation semantics not already authorized;
+- no change to S1, B2/B3, CHOICE, Numeric Profile v1, or their accepted tests/behavior merely to serve this boundary.
+
+State discipline:
+
+- **AUTHORIZED — NOT YET IMPLEMENTED**;
+- governance persistence precedes behavior-defining RED;
+- the first source/test batch must begin with one causal RED for the smallest missing authority-resolution/binding behavior;
+- the first GREEN must implement only that behavior before hostile binding/mutation/version-mismatch cases are added separately.
+
+EXACT remains `DEFER_EXACT`. NUMERIC remains `DEFER`. This decision does not select or authorize another evaluator capability.
 
 ## Synthetic E2E S1 — COMPLETE / FROZEN
 
@@ -267,11 +304,11 @@ Consequences:
 - do not invent a generic evaluator/composition framework merely to work around the current contract-state gap;
 - reopen NUMERIC only if new authoritative, runtime-contract, approved-workload, or verified-integration evidence materially changes a recorded `DEFER` basis.
 
-### NEXT PREREQUISITE CANDIDATE — DELIBERATE SELECTION REQUIRED
+### CROSS-CUTTING AUTHORITY PREREQUISITE — SELECTED
 
-Do not freeze a new evaluator candidate merely from architectural ordering.
+The deliberate-selection step is closed for the current batch. The selected cross-cutting prerequisite is the evaluator-facing ACTIVE question-authority boundary documented above, and it earned `BUILD`.
 
-Select the next Release-1 prerequisite candidate from the pre-existing implementation sequence and current dependency state, then apply the active prerequisite-gate rule independently. No behavior-defining RED or implementation begins unless that candidate earns `BUILD`.
+This does not select or authorize CHOICE expansion, EXACT, NUMERIC, semantic, math/derivation, or any other evaluator capability. Do not start another evaluator implementation merely because the shared authority boundary earned `BUILD`.
 
 ## Semantic Evaluation — OPEN
 

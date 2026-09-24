@@ -1,10 +1,10 @@
 # Project State
 
-Status date: 2026-09-23
+Status date: 2026-09-24
 
 ## Current milestone
 
-**Synthetic E2E S1, S2a, and S2b-1 remain closed/frozen. Deterministic single-select CHOICE v1 remains closed/frozen: contract commit `cdc8817ed6f370c699f1c3d272f03ea8aeafc665`; evaluator commit `1fe26f959249a7f8ab9cb1acce89769996622f43`; evaluator tree `1d5239434e959fcdf51eda8304a6d9b234e6c3df`; qualified post-commit complete regression **853/853** with a clean working tree. Release-1 EXACT remains closed at `DEFER_EXACT`, and NUMERIC/UNIT remains closed at `DEFER`. The cross-cutting ACTIVE Grading Authority / Evaluator Authority prerequisite inspection is closed at `BUILD`: only the smallest immutable, read-only evaluator-facing ACTIVE question-authority boundary is authorized, and it is **NOT YET IMPLEMENTED**. No behavior-defining RED, source/schema/runtime change, evaluator implementation, capability registry/router, or deferred-capability reopening has occurred under this decision. S2b-2 recommendation behavior, final `GradeResult`, theory/semantic evaluation, numeric/math implementation/validation, OCR/backend integration, and production release validation remain open.**
+**Synthetic E2E S1, S2a, and S2b-1 remain closed/frozen. Deterministic single-select CHOICE v1 remains closed/frozen at its historical **853/853** post-commit baseline. Release-1 EXACT remains closed at `DEFER_EXACT`, and NUMERIC/UNIT remains closed at `DEFER`. The evaluator-facing ACTIVE question-authority boundary and the first DIRECT-text semantic-evaluator slice are now closed/frozen together at commit `82588a4df5d77f9b88dac3b19c34728dc0ad697e` (parent `7ea8fbb88e2e4edd83b7ca80f14b53eddcff601f`, tree `c0d68f97433cefb4f3d06fd86fb10b2db6215413`) after **155/155** authority/semantic/composition targeted checks, **26/26** related regression, and **1008/1008** complete pre-commit and post-commit regressions with a clean working tree. This freezes only the read-only ACTIVE authority projection plus DIRECT-only text semantic evaluation and verified semantic → S1 → B2/B3 composition. Broader Release-1 semantic/theory capability, production-provider quality/integration, mathematical/derivation evaluation, approved reference context, OCR/backend integration, S2b-2 recommendation behavior, final `GradeResult`, and production release validation remain open. No next implementation target is yet authorized.**
 
 Current immutable S1 anchor:
 
@@ -19,7 +19,7 @@ Current immutable S1 anchor:
 - committed acceptance artifact SHA-256:
   `7ff52d81346094f9c361ce9625107a4dfe1330a947f18a482f4599a3d5382f32`
 
-The earlier S2b-2 implementation-eligibility inspection is complete, but S2b-2 remains incomplete as an executable Release-1 capability: Gradified still needs an explicit versioned platform/default policy decision and the current S2b-1 observation profile is intentionally narrower than the complete risk/impact input space described by the Engineering Source of Truth. No recommendation behavior is frozen. Release-1 EXACT remains closed with `DEFER_EXACT`. Release-1 NUMERIC/UNIT remains closed at `DEFER`: Release-1 NUMERIC remains architecturally authorized, but the inspected executable contracts and retained rubric-authoring data do not provide sufficient structured answer-domain authority to implement deterministic NUMERIC evaluation without inventing academic semantics. A later cross-cutting prerequisite inspection established `BUILD` for a bounded evaluator-facing ACTIVE question-authority projection because the accepted architecture requires an immutable ACTIVE question/spec authority for evaluator use while the current executable path exposes only narrower rubric/scoring authority. This `BUILD` decision authorizes that boundary only; it does not authorize any evaluator capability or reopen a deferred one. Frozen CHOICE, S1, B2/B3, and Numeric Profile v1 remain unchanged. No frozen source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
+The earlier S2b-2 implementation-eligibility inspection is complete, but S2b-2 remains incomplete as an executable Release-1 capability: Gradified still needs an explicit versioned platform/default policy decision and the current S2b-1 observation profile is intentionally narrower than the complete risk/impact input space described by the Engineering Source of Truth. No recommendation behavior is frozen. Release-1 EXACT remains closed with `DEFER_EXACT`. Release-1 NUMERIC/UNIT remains closed at `DEFER`: Release-1 NUMERIC remains architecturally authorized, but the inspected executable contracts and retained rubric-authoring data do not provide sufficient structured answer-domain authority to implement deterministic NUMERIC evaluation without inventing academic semantics. The earlier cross-cutting `BUILD` decision for a bounded evaluator-facing ACTIVE question-authority projection has now been fulfilled. A later, separately scoped DIRECT-text semantic-evaluator slice was also designed, adversarially hardened, composed through real S1 and frozen B2/B3, and frozen in the same acceptance commit. That later evaluator slice does not retroactively broaden the earlier authority-only `BUILD` decision and does not reopen deferred EXACT or NUMERIC. Frozen CHOICE, S1, B2/B3, and Numeric Profile v1 remain unchanged. No frozen source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
 
 ## Frozen / accepted boundaries
 
@@ -79,13 +79,27 @@ Qualified evidence: **22 targeted / 676 inherited / 698 full**.
 
 Replay fixtures are now provenance-consistent with configured provider/model identity. This does not provide cryptographic proof of external historical origin.
 
-### ACTIVE Grading Authority / Evaluator Authority — BUILD authorized / not yet implemented
+### ACTIVE Grading Authority / Evaluator Authority — COMPLETE / FROZEN
 
-Decision: `BUILD`.
+Original prerequisite decision: `BUILD` — fulfilled.
 
-Status: **AUTHORIZED — NOT YET IMPLEMENTED**.
+Status: **IMPLEMENTED / CLOSED / FROZEN**.
 
-Authorized scope:
+Frozen implementation identity:
+
+- commit: `82588a4df5d77f9b88dac3b19c34728dc0ad697e`;
+- parent: `7ea8fbb88e2e4edd83b7ca80f14b53eddcff601f`;
+- tree: `c0d68f97433cefb4f3d06fd86fb10b2db6215413`.
+
+Qualified closure evidence:
+
+- authority/semantic/composition targeted gate: **155/155**;
+- related regression: **26/26**;
+- complete pre-commit regression: **1008/1008**;
+- complete post-commit regression: **1008/1008**;
+- post-commit working tree: clean.
+
+Original authorized authority scope, preserved as frozen boundary constraints:
 
 - implement only the smallest immutable, read-only evaluator-facing ACTIVE question-authority boundary required by the accepted architecture;
 - the boundary must resolve legitimately admitted question/spec context together with the existing teacher-approved ACTIVE rubric and preserve exact binding among grading-spec identity, question identity, rubric authority and the existing reducer-facing scoring authority;
@@ -94,7 +108,7 @@ Authorized scope:
 - approved reference material may establish academic validity only where the ACTIVE context policy permits its use; reference material does not independently create criteria, marks, levels, caps, deductions or other scoring consequences;
 - missing required authority must fail safely; no implicit `latest`, stale, inferred, or unbound context fallback is authorized.
 
-This decision does **not** authorize:
+Original authority-only `BUILD` exclusions, preserved as historical scope constraints:
 
 - a second GradingSpec or rubric lifecycle;
 - capability-registry status or routing decisions inside academic authority;
@@ -102,7 +116,32 @@ This decision does **not** authorize:
 - EXACT normalization, NUMERIC tolerance/unit/conversion rules, mathematical-equivalence semantics, or any other academic semantics not already authorized;
 - changes to frozen S1, B2/B3, CHOICE, Numeric Profile v1, or their accepted behavior/tests merely to make this boundary easier to implement.
 
-EXACT remains `DEFER_EXACT`. NUMERIC remains `DEFER`. This governance decision records implementation authority only; it does not claim that an evaluator-facing resolver, object, API, schema, test, or runtime path already exists.
+EXACT remains `DEFER_EXACT`. NUMERIC remains `DEFER`. The authority boundary now exists and is frozen at the identity above. The later DIRECT-text semantic slice below was separately scoped and does not retroactively broaden the original authority-only `BUILD` decision.
+
+### DIRECT-text semantic evaluator — COMPLETE / FROZEN SLICE
+
+Frozen in the same acceptance commit/tree above.
+
+Frozen scope:
+
+- `ContextPolicy.DIRECT` only;
+- composition-owned model-answer source, semantic provider, limits and evaluator identity;
+- exact grading-spec/submission/question binding before provider execution;
+- ACTIVE TEXT evidence projection with crossed-out isolation and fail-closed rejection of unsupported/uncertain evidence for this v1 slice;
+- structured semantic request containing academic context but no score/mark arithmetic authority;
+- strict bounded raw-byte/UTF-8/JSON/schema ingress for provider output;
+- frozen criterion-universe validation plus criterion-ID-based rich-field reassociation;
+- system-owned `EvaluatedCriterionJudgment` metadata and attempt-bound `SemanticEvaluationResult`;
+- real DIRECT semantic → S1 evidence verification → frozen B2 question scoring → frozen B3 paper aggregation composition.
+
+Frozen-slice non-claims:
+
+- no production-provider academic-quality claim or production network-adapter closure;
+- no semantic benchmark or real subjective school-paper E2E claim;
+- no capability-registry/routing completion or answer-type/language validation claim;
+- no `DIRECT_PLUS_REFERENCE`, `HYBRID_RETRIEVAL`, or `REFERENCE_ONLY` support;
+- no OCR/backend integration, retry/idempotency/exactly-once guarantee, risk/review recommendation, workflow transition or publication authority;
+- no claim that broader Release-1 semantic/theory grading is complete.
 
 ### Synthetic E2E S1
 
@@ -427,7 +466,7 @@ No authoritative redistribution rule has yet been verified. Do not invent one. P
 
 The current project does not yet establish:
 
-- an implemented evaluator-facing ACTIVE question-authority resolver/projection; the `BUILD` decision is governance-only at this state;
+- production integration and broader capability work beyond the now-frozen evaluator-facing ACTIVE question-authority projection;
 - executable S2b-2 recommendation policy or calibrated recommendation mapping;
 - final candidate `GradeResult`;
 - deterministic risk/review recommendation engine (S2b-1 observations exist, but recommendation policy is not yet implemented);
@@ -436,7 +475,7 @@ The current project does not yet establish:
 - real OCR/backend integration;
 - approved reference retrieval;
 - one production live-provider adapter with transport-level bounding;
-- production evaluator quality beyond the frozen narrow CHOICE v1 capability; theory/semantic and numeric/math evaluator quality remain unestablished;
+- production evaluator quality beyond the frozen DIRECT-text semantic plumbing slice; semantic academic benchmark quality and numeric/math evaluator quality remain unestablished;
 - supported math/derivation evaluator benchmark;
 - review/regrade persistence and official publication;
 - evaluator-attempt provenance binding supplied judgments to a specific run/spec at judgment-creation time;
@@ -486,22 +525,41 @@ Deterministic CHOICE v1 qualified evidence on Windows / CPython 3.11.9:
 - post-commit complete suite: **853/853**;
 - post-commit working tree: clean.
 
+ACTIVE authority + DIRECT-text semantic slice qualified evidence on Windows / CPython 3.11.9:
+
+- implementation commit: `82588a4df5d77f9b88dac3b19c34728dc0ad697e`;
+- parent: `7ea8fbb88e2e4edd83b7ca80f14b53eddcff601f`;
+- committed tree: `c0d68f97433cefb4f3d06fd86fb10b2db6215413`;
+- authority/semantic/composition targeted gate: **155/155**;
+- related rubric-lifecycle/paper-aggregation regression: **26/26**;
+- complete pre-commit regression: **1008/1008**;
+- exact 13-path staged custody audit: passed;
+- final staged tree matched the committed tree;
+- complete post-commit regression: **1008/1008**;
+- post-commit working tree: clean.
+
 S1's earlier empty-evidence defect remains the standing example that full-suite green does not replace hostile source review.
 
 ## Next task
 
-Before any source/test change, close this governance-only decision by verifying that its committed diff is limited to `docs/PROJECT_STATE.md` and `docs/IMPLEMENTATION_PLAN.md`, then verify the resulting commit parent/tree/HEAD and clean working tree.
+Perform one short authority/dependency/prerequisite **selection inspection** for the next Release-1 capability or integration slice.
 
-Only after that governance commit is verified, define the **smallest causal RED** for the authorized evaluator-facing ACTIVE question-authority boundary. The first RED must target one missing contract behavior only: resolving a read-only evaluator-facing question authority from explicitly admitted ACTIVE question/spec context plus the existing ACTIVE rubric while preserving the existing scoring-authority binding.
+Do not assume that any previously deferred capability is now buildable. In particular, EXACT remains `DEFER_EXACT` and NUMERIC/UNIT remains `DEFER` unless new authoritative, runtime-contract, approved-workload, or verified-integration evidence materially changes a recorded defer basis.
 
-Do not implement an evaluator, capability registry/router, reference-retrieval system, generic composition framework, EXACT, NUMERIC, or any frozen-boundary change in that first RED batch.
+The selection inspection must:
+
+- preserve the frozen ACTIVE-authority + DIRECT-text semantic slice at commit `82588a4df5d77f9b88dac3b19c34728dc0ad697e`;
+- identify the next candidate from the remaining open Release-1 work using current authority, actual runtime dependencies and immediate integration value rather than stale sequencing;
+- state whether the candidate reuses the frozen DIRECT semantic slice or requires a distinct authority/integration boundary;
+- terminate in a concrete `REUSE_EXISTING`, `BUILD`, or `DEFER` decision before any behavior-defining RED or implementation;
+- avoid modifying frozen S1, B2/B3, CHOICE, Numeric Profile v1, or the frozen ACTIVE/DIRECT slice unless a verified defect, authority contradiction or changed requirement explicitly justifies reopening.
 
 ## Documentation rule
 
 Update `PROJECT_STATE.md` at subsystem milestone closure, material blocker/assumption change, and before implementation-chat handoff. Do not use it as a turn-by-turn diary.
 
-`IMPLEMENTATION_PLAN.md` records the frozen S2/CHOICE milestones, prerequisite-gate decisions, and the currently authorized implementation sequence.
+`IMPLEMENTATION_PLAN.md` records the frozen S2/CHOICE/ACTIVE-DIRECT milestones, prerequisite-gate decisions, and the currently authorized implementation sequence.
 
-`TESTING.md` records the qualified S2 and deterministic CHOICE verification/freeze evidence.
+`TESTING.md` records the qualified S2, deterministic CHOICE, and ACTIVE/DIRECT semantic verification/freeze evidence.
 
 Do not alter the SRS/Engineering Source of Truth merely to report implementation progress.

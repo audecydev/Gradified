@@ -1,6 +1,6 @@
 # Testing Strategy and Verification Status
 
-Status date: 2026-09-22
+Status date: 2026-09-24
 
 ## Verification principle
 
@@ -355,7 +355,59 @@ Important non-claims:
 - CHOICE does not authenticate ACTIVE grading-spec provenance, scoring-authority lifecycle origin, evidence semantic origin, or evaluator-attempt/run provenance;
 - CHOICE does not establish production grading quality beyond its frozen deterministic contract/behavior scope.
 
-Current complete regression baseline after CHOICE evaluator freeze: **853/853**.
+Historical complete regression baseline at CHOICE evaluator freeze: **853/853**.
+
+## ACTIVE authority + DIRECT-text semantic evaluator — frozen slice
+
+Branch:
+
+`active-grading-authority-boundary`
+
+Implementation commit:
+
+`82588a4df5d77f9b88dac3b19c34728dc0ad697e`
+
+Parent:
+
+`7ea8fbb88e2e4edd83b7ca80f14b53eddcff601f`
+
+Committed tree:
+
+`c0d68f97433cefb4f3d06fd86fb10b2db6215413`
+
+Qualified Windows / CPython 3.11.9 evidence:
+
+- initial DIRECT semantic causal RED: **1 failed** at the missing `grading.semantic_evaluator` module, followed by the intended happy-path GREEN;
+- concentrated semantic hostile campaign: **101/101** after hardening malformed UTF-8/JSON/schema/resource, criterion-order/duplication, evidence-visibility and output-smuggling cases;
+- model-answer materialization hardening regression plus real semantic → S1 → B2/B3 composition: **8/8**;
+- ACTIVE-authority hardening file after source-execution/materialization containment: **18/18**;
+- authority/semantic/composition accumulated gate: **155/155**;
+- related rubric-lifecycle/paper-aggregation regression: **26/26**;
+- complete pre-commit repository regression: **1008/1008**;
+- exact 13-path staging/blob/tree custody audit: passed;
+- committed tree matched the staged tree above;
+- complete post-commit repository regression: **1008/1008**;
+- post-commit working tree: clean.
+
+Accepted frozen behavior includes:
+
+- immutable evaluator-facing ACTIVE question authority bound to grading-spec/question/context-policy/teacher-approved rubric/scoring authority;
+- source execution/materialization failures contained without changing existing rubric-lifecycle failure semantics;
+- `ContextPolicy.DIRECT` text-only semantic evaluation with explicit unsupported evidence/policy rejection;
+- strict bounded provider-response admission before trusted judgment construction;
+- duplicate criterion rejection before mapping and criterion-ID-based rich-field reassociation;
+- system-owned evaluator metadata and attempt correlation outside provider control;
+- evidence references preserved for independent S1 verification;
+- real semantic → S1 → frozen B2/B3 composition with no semantic-provider numerical authority.
+
+Important non-claims:
+
+- this does not establish production-provider academic quality, provider network-adapter completion, semantic benchmark quality, or real subjective school-paper E2E;
+- it does not implement `DIRECT_PLUS_REFERENCE`, `HYBRID_RETRIEVAL`, `REFERENCE_ONLY`, general capability routing, OCR/backend integration, retry/idempotency/exactly-once behavior, risk/review recommendation, workflow state, publication, numeric/unit evaluation, or mathematical/derivation evaluation;
+- `SemanticEvaluationResult` and ACTIVE-authority object identity are not authentication or execution-provenance tokens;
+- broader Release-1 semantic/theory capability remains open.
+
+Current complete regression baseline after ACTIVE/DIRECT semantic freeze: **1008/1008**.
 
 
 ## S2 test-design rules

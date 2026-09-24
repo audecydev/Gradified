@@ -377,3 +377,26 @@ def test_h18_selection_accessor_failure_is_normalized_and_chained() -> None:
     assert type(excinfo.value).__name__ == "ActiveQuestionAuthoritySourceExecutionError"
     assert excinfo.value.__cause__ is failure
     assert source.calls == [(paper.grading_spec_ref, "Q1")]
+
+
+def test_h19_corrupted_active_rubric_fails_before_resolved_projection_is_emitted() -> None:
+    paper = _paper()
+    active = _active()
+    first_criterion = active.content.criteria[0]
+    changed_level = replace(
+        first_criterion.performance_levels[0],
+        operational_description="Post-approval semantic substitution.",
+    )
+    changed_criterion = replace(
+        first_criterion,
+        performance_levels=(changed_level, *first_criterion.performance_levels[1:]),
+    )
+    changed_content = replace(
+        active.content,
+        criteria=(changed_criterion, *active.content.criteria[1:]),
+    )
+    object.__setattr__(active, "content", changed_content)
+    source = _source_for(paper, active)
+
+    with pytest.raises(RubricLifecycleError):
+        _resolve(paper=paper, source=source)

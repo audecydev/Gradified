@@ -7,6 +7,7 @@ from grading.contracts.authority import QuestionScoringAuthority
 from grading.rubric.compiler import CompiledRubricCandidate, compile_rubric_content
 from grading.rubric.errors import (
     InvalidRubricAuthoringInputError,
+    RubricAuthoringError,
     NoMeaningfulRubricChangeError,
     RubricLifecycleError,
     RubricResourceLimitError,
@@ -430,6 +431,40 @@ def activate_version(
     )
 
 
+def _require_active_exposure_integrity(version: RubricAuthoringVersion) -> None:
+    """Re-establish current ACTIVE lifecycle integrity before authority exposure.
+
+    Frozen dataclasses prevent ordinary mutation but are not an integrity boundary.
+    Re-run the existing lifecycle invariants from the current object graph instead
+    of trusting construction history.  This intentionally does not re-run the
+    full rubric linter/reconciliation campaign at grading time; compilation-time
+    diagnostics that do not affect ACTIVE exposure remain compilation provenance.
+    """
+
+    if type(version.compilation) is not CompiledRubricCandidate:
+        raise RubricLifecycleError(
+            "ACTIVE rubric version is missing an exact compiled candidate."
+        )
+    if type(version.approval) is not TeacherApproval:
+        raise RubricLifecycleError(
+            "ACTIVE rubric version is missing exact teacher-approval evidence."
+        )
+
+    try:
+        # TeacherApproval.__post_init__ owns the local shape/profile contract for
+        # the approval object. RubricAuthoringVersion.__post_init__ then
+        # recomputes current question/content fingerprints and re-establishes the
+        # compilation, approval, activation-policy, and compiled-authority
+        # relationships used by ACTIVE exposure.
+        version.approval.__post_init__()
+        version.__post_init__()
+    except RubricAuthoringError:
+        raise
+    except Exception as exc:
+        raise RubricLifecycleError(
+            "ACTIVE rubric integrity revalidation failed on malformed current state."
+        ) from exc
+
 def get_active_scoring_authority(
     version: RubricAuthoringVersion,
 ) -> QuestionScoringAuthority:
@@ -441,17 +476,8 @@ def get_active_scoring_authority(
         raise RubricLifecycleError(
             "Reducer authority is available only from an ACTIVE rubric version."
         )
-    if version.compilation is None or version.approval is None:
-        raise RubricLifecycleError(
-            "ACTIVE rubric version is missing compiled/approval state."
-        )
-    if (
-        version.compilation.compiler_profile_version
-        not in SUPPORTED_RUBRIC_COMPILER_PROFILE_VERSIONS
-    ):
-        raise RubricLifecycleError(
-            "ACTIVE rubric compiler profile is not supported by this runtime."
-        )
+
+    _require_active_exposure_integrity(version)
 
     authority = _build_reducer_authority(
         version.content,

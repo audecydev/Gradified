@@ -95,7 +95,7 @@ Closure discipline:
 - the later DIRECT-text semantic-evaluator slice was separately scoped, adversarially hardened and frozen in the same acceptance commit/tree; it does not retroactively broaden the original authority-only decision;
 - no later capability may treat the ACTIVE-authority object itself as capability-routing, workflow, publication or provenance authority.
 
-EXACT remains `DEFER_EXACT`. NUMERIC remains `DEFER`. This closure does not select or authorize another evaluator capability.
+At this historical ACTIVE-boundary closure, EXACT remained `DEFER_EXACT` and NUMERIC remained `DEFER`; the later N1 authority decision below supersedes only the NUMERIC prerequisite status and does not broaden this historical scope.
 
 ## Synthetic E2E S1 — COMPLETE / FROZEN
 
@@ -296,33 +296,54 @@ Frozen consequences:
 - do not create EXACT RED, implementation, or normalization infrastructure;
 - reopen EXACT only if new authoritative, approved-workload, or verified-integration evidence materially changes a recorded defer basis.
 
-### NUMERIC / UNIT — DEFERRED / PREREQUISITE INSPECTION CLOSED
+### NUMERIC / UNIT — N1 AUTHORITY BUILD AUTHORIZED
 
-Decision: `DEFER`.
+Decision: `BUILD` for N1 authority only. N2/N3/N4 remain unauthorized.
 
-Release-1 NUMERIC remains architecturally authorized. However, in the inspected integrated runtime state, the executable contracts and retained rubric-authoring data do not provide sufficient structured answer-domain authority to implement deterministic NUMERIC evaluation without inventing academic semantics.
+Qualified prerequisite baseline:
 
-Recorded `DEFER` bases:
+- ACTIVE-exposure integrity repair commit: `ba951af9081a5459464f4985074f5f113e62ad6b`;
+- parent: `f8efd180611246d3a2c847b26316e5dadbabee1a`;
+- tree: `687e4049630135bd3fd0d06db1218169df06a550`;
+- targeted repair/hardening: **99/99**;
+- qualified complete pre-commit regression: **1037/1037**;
+- qualified complete post-commit regression: **1037/1037**;
+- post-commit working tree: clean.
 
-- the inspected runtime does not currently establish a sufficiently defined admitted numeric/quantity input;
-- structured expected-value/tolerance/unit/conversion authority and binding are not established for deterministic NUMERIC evaluation;
-- criterion-level NUMERIC authority is not established;
-- no already-authorized composition boundary was found in the inspected evaluator → S1 → B2 runtime contracts/path that would allow partial NUMERIC judgments to be combined into the complete required criterion universe for a supported question;
-- approved/anonymized workload evidence has not yet bounded the minimum representative NUMERIC scope for a first implementation; this is not evidence that NUMERIC lacks Release-1 product value.
+N1 objective:
 
-Consequences:
+Build the smallest immutable subordinate NUMERIC academic-authority boundary for one exact ACTIVE question. Profile v1 is unitless finite-decimal scalar only and supports finite approved `EXACT` and inclusive `ABSOLUTE_TOLERANCE` conditions, complete binary criterion projections, exact configuration binding, canonical fingerprinting and subordinate approval.
 
-- do not create NUMERIC behavior-defining RED or implementation under the current executable authority;
-- Numeric Profile v1 remains the frozen scoring-number/execution boundary and must not be treated as academic-answer semantics;
-- do not modify frozen CHOICE, S1, B2/B3, or their accepted tests merely to make NUMERIC easier to implement;
-- do not invent a generic evaluator/composition framework merely to work around the current contract-state gap;
-- reopen NUMERIC only if new authoritative, runtime-contract, approved-workload, or verified-integration evidence materially changes a recorded `DEFER` basis.
+N1 required sequence:
+
+```text
+closed contract
+→ causal positive/hostile RED
+→ verify causal failure
+→ minimal GREEN
+→ targeted hostile hardening
+→ related/full regression
+→ source/custody audit
+→ freeze N1
+```
+
+N1 exclusions:
+
+- no student numeric parsing/admission;
+- no execution of student-vs-authority numeric comparison;
+- no units/conversion/relative tolerance/significant figures/symbolic math/derivation;
+- no mark arithmetic or score totals;
+- no S1/B2/B3 changes;
+- no generic partial-judgment merger or capability framework;
+- no changes to frozen ACTIVE/DIRECT/G1/CHOICE/scoring Numeric Profile merely for convenience.
+
+Historical workload evidence remains required for N2/N3 breadth, benchmark coverage and production-readiness claims, but no longer blocks construction of this narrow authority primitive.
 
 ### CROSS-CUTTING AUTHORITY PREREQUISITE — COMPLETE / FROZEN
 
-The selected evaluator-facing ACTIVE question-authority prerequisite earned `BUILD` and is now implemented/frozen at commit `82588a4df5d77f9b88dac3b19c34728dc0ad697e`.
+The evaluator-facing ACTIVE question-authority prerequisite remains implemented/frozen. A verified post-construction exposure-integrity defect was repaired/frozen at commit `ba951af9081a5459464f4985074f5f113e62ad6b` (parent `f8efd180611246d3a2c847b26316e5dadbabee1a`, tree `687e4049630135bd3fd0d06db1218169df06a550`) after 99/99 targeted checks and 1037/1037 qualified complete pre/post-commit regression.
 
-This closure does not reopen CHOICE expansion, EXACT or NUMERIC, and it does not by itself authorize another evaluator capability.
+The repair closes only current authority-bearing lifecycle/approval integrity; it does not create cryptographic source authentication or historical persistence guarantees. This qualified prerequisite plus the closed N1 semantic contract now authorizes N1 BUILD only.
 
 ## Semantic Evaluation — PARTIALLY IMPLEMENTED / BROADER RELEASE-1 OPEN
 
@@ -354,11 +375,11 @@ Broader semantic Release-1 work remains open and still requires production provi
 
 Do not interpret this slice as academic-quality validation, production-provider closure, retry/idempotency closure, OCR/backend integration, or review/publication authority.
 
-### NEXT CANDIDATE — PREREQUISITE SELECTION REQUIRED
+### NEXT CANDIDATE — N1 NUMERIC AUTHORITY RED AUTHORIZED
 
-No next implementation target is authorized by this plan update.
+N1 is the selected next capability gate. Begin causal contract RED against the frozen prerequisite repair baseline. The RED batch must cover local authority/profile representation, canonical fingerprinting, explicit `NOT_AUTHORIZED | BOUND` binding, exact source materialization, subordinate approval, ACTIVE identity cross-checks, complete legal projections and fail-closed resource/profile/malformed cases.
 
-Perform a short authority/dependency/prerequisite selection inspection using current authority and actual runtime dependencies. Preserve existing `DEFER_EXACT` and NUMERIC `DEFER` decisions unless new evidence materially changes their recorded bases. The selected candidate must terminate in `REUSE_EXISTING`, `BUILD`, or `DEFER` before behavior-defining RED or implementation begins.
+Do not start N2/N3/N4 or broaden profile v1 during N1. If the closed N1 contract cannot be implemented additively around frozen boundaries, stop on the concrete contradiction.
 
 ## Mathematical / Derivation Evaluation — OPEN
 

@@ -4,7 +4,7 @@ Status date: 2026-09-24
 
 ## Current milestone
 
-**Synthetic E2E S1, S2a, and S2b-1 remain closed/frozen. Deterministic single-select CHOICE v1 remains closed/frozen at its historical **853/853** post-commit baseline. Release-1 EXACT remains closed at `DEFER_EXACT`, and NUMERIC/UNIT remains closed at `DEFER`. The evaluator-facing ACTIVE question-authority boundary and the first DIRECT-text semantic-evaluator slice are now closed/frozen together at commit `82588a4df5d77f9b88dac3b19c34728dc0ad697e` (parent `7ea8fbb88e2e4edd83b7ca80f14b53eddcff601f`, tree `c0d68f97433cefb4f3d06fd86fb10b2db6215413`) after **155/155** authority/semantic/composition targeted checks, **26/26** related regression, and **1008/1008** complete pre-commit and post-commit regressions with a clean working tree. This freezes only the read-only ACTIVE authority projection plus DIRECT-only text semantic evaluation and verified semantic → S1 → B2/B3 composition. Broader Release-1 semantic/theory capability, production-provider quality/integration, mathematical/derivation evaluation, approved reference context, OCR/backend integration, S2b-2 recommendation behavior, final `GradeResult`, and production release validation remain open. No next implementation target is yet authorized.**
+**Synthetic E2E S1, S2a, and S2b-1 remain closed/frozen. Deterministic single-select CHOICE v1 remains closed/frozen at its historical **853/853** post-commit baseline. Release-1 EXACT remains closed at `DEFER_EXACT`. The evaluator-facing ACTIVE question-authority boundary and DIRECT-text semantic slice remain frozen; the verified ACTIVE-exposure integrity defect is now repaired/frozen at commit `ba951af9081a5459464f4985074f5f113e62ad6b` (parent `f8efd180611246d3a2c847b26316e5dadbabee1a`, tree `687e4049630135bd3fd0d06db1218169df06a550`) after **99/99** targeted hostile checks, **1037/1037** qualified complete pre-commit regression, and **1037/1037** qualified complete post-commit regression with a clean working tree. Release-1 NUMERIC/UNIT is not implemented, but the bounded N1 NUMERIC academic-authority prerequisite has now earned `BUILD`: N1 causal RED is authorized for the closed unitless finite-decimal exact/inclusive-absolute-tolerance authority contract. N2 student-evidence admission, N3 deterministic numeric evaluation, N4 composition, UNIT support, and production NUMERIC quality remain unauthorized.**
 
 Current immutable S1 anchor:
 
@@ -19,7 +19,7 @@ Current immutable S1 anchor:
 - committed acceptance artifact SHA-256:
   `7ff52d81346094f9c361ce9625107a4dfe1330a947f18a482f4599a3d5382f32`
 
-The earlier S2b-2 implementation-eligibility inspection is complete, but S2b-2 remains incomplete as an executable Release-1 capability: Gradified still needs an explicit versioned platform/default policy decision and the current S2b-1 observation profile is intentionally narrower than the complete risk/impact input space described by the Engineering Source of Truth. No recommendation behavior is frozen. Release-1 EXACT remains closed with `DEFER_EXACT`. Release-1 NUMERIC/UNIT remains closed at `DEFER`: Release-1 NUMERIC remains architecturally authorized, but the inspected executable contracts and retained rubric-authoring data do not provide sufficient structured answer-domain authority to implement deterministic NUMERIC evaluation without inventing academic semantics. The earlier cross-cutting `BUILD` decision for a bounded evaluator-facing ACTIVE question-authority projection has now been fulfilled. A later, separately scoped DIRECT-text semantic-evaluator slice was also designed, adversarially hardened, composed through real S1 and frozen B2/B3, and frozen in the same acceptance commit. That later evaluator slice does not retroactively broaden the earlier authority-only `BUILD` decision and does not reopen deferred EXACT or NUMERIC. Frozen CHOICE, S1, B2/B3, and Numeric Profile v1 remain unchanged. No frozen source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
+The earlier S2b-2 implementation-eligibility inspection is complete, but S2b-2 remains incomplete as an executable Release-1 capability: Gradified still needs an explicit versioned platform/default policy decision and the current S2b-1 observation profile is intentionally narrower than the complete risk/impact input space described by the Engineering Source of Truth. No recommendation behavior is frozen. Release-1 EXACT remains closed with `DEFER_EXACT`. For NUMERIC/UNIT, new authority and verification evidence changes only the N1 prerequisite decision: the exact ACTIVE exposure defect required by N1 has been repaired/frozen, and the N1 semantic contract is closed for a deliberately narrow unitless finite-decimal scalar profile. N1 therefore earns `BUILD`; this does not authorize N2/N3/N4, UNIT semantics, or a production-readiness claim. Representative workload evidence remains a gate for evaluator/parser breadth, benchmark coverage and production-quality claims. Frozen CHOICE, S1, B2/B3, DIRECT, G1 and scoring Numeric Profile v1 remain unchanged. No frozen source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
 
 ## Frozen / accepted boundaries
 
@@ -116,7 +116,21 @@ Original authority-only `BUILD` exclusions, preserved as historical scope constr
 - EXACT normalization, NUMERIC tolerance/unit/conversion rules, mathematical-equivalence semantics, or any other academic semantics not already authorized;
 - changes to frozen S1, B2/B3, CHOICE, Numeric Profile v1, or their accepted behavior/tests merely to make this boundary easier to implement.
 
-EXACT remains `DEFER_EXACT`. NUMERIC remains `DEFER`. The authority boundary now exists and is frozen at the identity above. The later DIRECT-text semantic slice below was separately scoped and does not retroactively broaden the original authority-only `BUILD` decision.
+EXACT remains `DEFER_EXACT`. The authority boundary exists and remains frozen. The verified post-construction ACTIVE-exposure integrity defect was later repaired at commit `ba951af9081a5459464f4985074f5f113e62ad6b` without broadening the original authority-only scope. The repair re-establishes current authority-bearing lifecycle/approval integrity before scoring-authority exposure; it does not claim cryptographic authentication or historical backend immutability. NUMERIC N1 now has a separately authorized bounded authority contract; N2/N3/N4 remain gated.
+
+#### ACTIVE exposure integrity repair — CLOSED / FROZEN
+
+- commit: `ba951af9081a5459464f4985074f5f113e62ad6b`;
+- parent: `f8efd180611246d3a2c847b26316e5dadbabee1a`;
+- tree: `687e4049630135bd3fd0d06db1218169df06a550`;
+- candidate/committed patch SHA-256: `f9489d737593679e0accb7cc2e2b11d4500e53c7ff9292ebbb91434658ffe414`;
+- qualified environment: Windows x64 / CPython 3.11.9, pytest 9.1.1, hypothesis 6.167.1, clean `pip check`;
+- targeted integrity/hardening campaign: **99/99**;
+- qualified complete pre-commit regression: **1037/1037**;
+- qualified complete post-commit regression: **1037/1037**;
+- post-commit working tree: clean.
+
+The repair is intentionally limited to current authority-bearing ACTIVE lifecycle/approval integrity. Compilation-time diagnostic/resource provenance that does not participate in the exposed scoring authority is not reauthenticated at grading-time exposure.
 
 ### DIRECT-text semantic evaluator — COMPLETE / FROZEN SLICE
 
@@ -396,28 +410,46 @@ Freeze consequences:
 - reopen EXACT only when new authoritative, approved-workload, or verified-integration evidence materially changes a recorded `DEFER_EXACT` basis.
 
 
-### Release-1 NUMERIC / UNIT — prerequisite inspection closed / deferred
+### Release-1 NUMERIC / UNIT — N1 authority prerequisite BUILD authorized
 
-Decision: `DEFER`.
+Decision: `BUILD` for **N1 authority only**. N2/N3/N4 remain unauthorized.
 
-Release-1 NUMERIC remains architecturally authorized. However, in the inspected integrated runtime state, the executable contracts and retained rubric-authoring data do not provide sufficient structured answer-domain authority to implement deterministic NUMERIC evaluation without inventing academic semantics.
+The historical NUMERIC `DEFER` was correct for the earlier executable state. New source/contract inspection and the qualified ACTIVE-exposure repair now establish a safe, additive prerequisite boundary for a deliberately narrow N1 authority profile without modifying frozen scoring/evaluator paths.
 
-Recorded `DEFER` bases:
+Closed N1 semantic scope:
 
-- the inspected runtime does not currently establish a sufficiently defined admitted numeric/quantity input;
-- structured expected-value/tolerance/unit/conversion authority and binding are not established for deterministic NUMERIC evaluation;
-- criterion-level NUMERIC authority is not established;
-- no already-authorized composition boundary was found in the inspected evaluator → S1 → B2 runtime contracts/path that would allow partial NUMERIC judgments to be combined into the complete required criterion universe for a supported question;
-- approved/anonymized workload evidence has not yet bounded the minimum representative NUMERIC scope for a first implementation; this is not evidence that NUMERIC lacks Release-1 product value.
+- immutable subordinate NUMERIC authority bound to one exact admitted ACTIVE grading configuration;
+- explicit configuration state: `NOT_AUTHORIZED` or exact `BOUND(profile, fingerprint)`; missing binding is an integrity/configuration failure, not `NOT_AUTHORIZED`;
+- non-circular exact-fingerprint materialization; no `latest`, `current`, `first`, highest-version or heuristic selection;
+- unitless finite-decimal scalar authority only;
+- approved `EXACT` or inclusive `ABSOLUTE_TOLERANCE` conditions over finite approved alternatives;
+- one complete `satisfied_projection` and one complete `not_satisfied_projection`, each covering the exact scoring criterion universe/order with legal levels and no marks;
+- subordinate immutable approval of the recomputed NUMERIC authority fingerprint;
+- exact binding to current rubric ID/version plus recomputed finalized-question, authoring-content and compiled-scoring fingerprints;
+- reproducible versioned canonical encoding/fingerprinting with profile-owned resource bounds;
+- pure whole-question applicability only where the approved NUMERIC relation is academically sufficient for every projected criterion.
 
-Freeze consequences:
+Still explicitly outside N1:
 
-- no NUMERIC behavior-defining RED or implementation is authorized under the current executable authority;
-- Numeric Profile v1 remains the frozen scoring-number/execution boundary and is not academic-answer semantics;
-- frozen CHOICE, S1, B2/B3, and their accepted tests remain unchanged;
-- no generic evaluator/composition framework is authorized merely to work around the current contract-state gap;
-- reopen NUMERIC only if new authoritative, runtime-contract, approved-workload, or verified-integration evidence materially changes a recorded `DEFER` basis.
+- student evidence parsing/admission (N2);
+- numeric comparison execution against student evidence (N3);
+- S1/B2/B3 composition (N4);
+- units/conversion, relative tolerance, significant figures, symbolic math, derivation/method criteria, partial-distance bands, mixed-capability composition, generic numeric DSLs, provider calls or mark arithmetic.
 
+Historical `DEFER` disposition:
+
+- missing typed authority/binding is resolved for the narrow N1 profile, so N1 itself may be built;
+- admitted student numeric/quantity input remains unresolved and gates N2;
+- deterministic student-vs-authority comparison remains unresolved and gates N3;
+- composition remains gated until N3 produces complete authorized judgments;
+- representative approved/anonymized workload evidence remains required for N2/N3 scope, benchmark coverage, supported-case breadth and any production-readiness/quality claim; it does not block this foundational N1 authority primitive.
+
+Implementation consequence:
+
+- N1 causal positive/hostile RED is now authorized against the exact repair baseline;
+- implementation must remain additive around frozen ACTIVE/DIRECT/G1/CHOICE/S1/B2/B3/scoring Numeric Profile paths;
+- if N1 cannot satisfy the closed contract without modifying a frozen path beyond the already-qualified ACTIVE repair, stop and record the concrete contradiction;
+- N2/N3/N4 remain unauthorized until their prerequisites are separately earned.
 
 ## Current blockers / open decisions
 
@@ -538,21 +570,26 @@ ACTIVE authority + DIRECT-text semantic slice qualified evidence on Windows / CP
 - complete post-commit regression: **1008/1008**;
 - post-commit working tree: clean.
 
+ACTIVE exposure integrity repair qualified evidence on Windows / CPython 3.11.9:
+
+- repair commit: `ba951af9081a5459464f4985074f5f113e62ad6b`;
+- parent: `f8efd180611246d3a2c847b26316e5dadbabee1a`;
+- committed tree: `687e4049630135bd3fd0d06db1218169df06a550`;
+- candidate/committed patch SHA-256: `f9489d737593679e0accb7cc2e2b11d4500e53c7ff9292ebbb91434658ffe414`;
+- targeted lifecycle/ACTIVE hostile campaign: **99/99**;
+- complete qualified pre-commit regression: **1037/1037**;
+- complete qualified post-commit regression: **1037/1037**;
+- post-commit working tree: clean.
+
 S1's earlier empty-evidence defect remains the standing example that full-suite green does not replace hostile source review.
 
 ## Next task
 
-Perform one short authority/dependency/prerequisite **selection inspection** for the next Release-1 capability or integration slice.
+Begin the **N1 NUMERIC authority causal RED batch** against the exact frozen prerequisite baseline `ba951af9081a5459464f4985074f5f113e62ad6b` / tree `687e4049630135bd3fd0d06db1218169df06a550`.
 
-Do not assume that any previously deferred capability is now buildable. In particular, EXACT remains `DEFER_EXACT` and NUMERIC/UNIT remains `DEFER` unless new authoritative, runtime-contract, approved-workload, or verified-integration evidence materially changes a recorded defer basis.
+The RED batch must encode the closed N1 contract before production implementation, including positive construction/fingerprinting/resolution and hostile malformed, substitution, binding, approval, projection, canonicalization and resource cases. The first RED must be causal for the missing N1 production boundary rather than a failure in existing fixtures.
 
-The selection inspection must:
-
-- preserve the frozen ACTIVE-authority + DIRECT-text semantic slice at commit `82588a4df5d77f9b88dac3b19c34728dc0ad697e`;
-- identify the next candidate from the remaining open Release-1 work using current authority, actual runtime dependencies and immediate integration value rather than stale sequencing;
-- state whether the candidate reuses the frozen DIRECT semantic slice or requires a distinct authority/integration boundary;
-- terminate in a concrete `REUSE_EXISTING`, `BUILD`, or `DEFER` decision before any behavior-defining RED or implementation;
-- avoid modifying frozen S1, B2/B3, CHOICE, Numeric Profile v1, or the frozen ACTIVE/DIRECT slice unless a verified defect, authority contradiction or changed requirement explicitly justifies reopening.
+Do not start N2 student parsing/admission, N3 numeric comparison, N4 composition, UNIT support, or any generic evaluator/composition framework. Preserve frozen ACTIVE/DIRECT/G1/CHOICE/S1/B2/B3/scoring Numeric Profile behavior. If RED exposes an actual contradiction with those frozen contracts, stop and resolve that contradiction rather than weakening the N1 contract.
 
 ## Documentation rule
 
@@ -560,6 +597,6 @@ Update `PROJECT_STATE.md` at subsystem milestone closure, material blocker/assum
 
 `IMPLEMENTATION_PLAN.md` records the frozen S2/CHOICE/ACTIVE-DIRECT milestones, prerequisite-gate decisions, and the currently authorized implementation sequence.
 
-`TESTING.md` records the qualified S2, deterministic CHOICE, and ACTIVE/DIRECT semantic verification/freeze evidence.
+`TESTING.md` records the qualified S2, deterministic CHOICE, ACTIVE/DIRECT semantic, and ACTIVE-exposure repair verification/freeze evidence.
 
 Do not alter the SRS/Engineering Source of Truth merely to report implementation progress.

@@ -409,6 +409,34 @@ Important non-claims:
 
 Current complete regression baseline after ACTIVE/DIRECT semantic freeze: **1008/1008**.
 
+## ACTIVE exposure integrity prerequisite repair — frozen
+
+Repair identity:
+
+- repair commit: `ba951af9081a5459464f4985074f5f113e62ad6b`;
+- parent: `f8efd180611246d3a2c847b26316e5dadbabee1a`;
+- committed tree: `687e4049630135bd3fd0d06db1218169df06a550`;
+- candidate/committed patch SHA-256: `f9489d737593679e0accb7cc2e2b11d4500e53c7ff9292ebbb91434658ffe414`.
+
+Qualified Windows x64 / CPython 3.11.9 evidence:
+
+- pytest `9.1.1`;
+- hypothesis `6.167.1`;
+- `pip check`: clean;
+- causal defect reproduced before repair: post-construction teacher-approved authoring semantics could change while reducer-facing compiled authority remained exposable;
+- targeted lifecycle/ACTIVE hostile campaign: **99/99**;
+- qualified complete pre-commit repository regression: **1037/1037**;
+- staged candidate tree matched `687e4049630135bd3fd0d06db1218169df06a550`;
+- committed path set was exactly `src/grading/rubric/lifecycle.py`, `tests/unit/test_active_question_authority_hardening_red.py`, and `tests/unit/test_active_scoring_authority_integrity_red.py`;
+- qualified complete post-commit repository regression: **1037/1037**;
+- post-commit working tree: clean.
+
+Accepted repair claim: before exposing scoring authority from an ACTIVE rubric version, the boundary re-establishes current authority-bearing lifecycle/teacher-approval integrity from the current object graph. This is not a cryptographic signature and does not authenticate backend history, approver identity, or compilation-time diagnostic/resource provenance that does not participate in the exposed scoring authority.
+
+The repair qualifies the prerequisite baseline for N1 authority-contract implementation. It does not implement NUMERIC evidence admission, numeric comparison, scoring composition, UNIT semantics, or production NUMERIC quality.
+
+Current complete qualified regression baseline after the ACTIVE exposure repair: **1037/1037**.
+
 
 ## S2 test-design rules
 

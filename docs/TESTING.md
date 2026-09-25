@@ -461,7 +461,31 @@ Accepted test claim: N1 provides immutable/fingerprintable unitless finite-decim
 
 Current complete qualified regression baseline after N1 freeze: **1147/1147**.
 
-N2 evidence admission has earned BUILD by prerequisite inspection but has no qualified executable evidence yet; planned N2 results must not be recorded here until run in the qualified environment.
+## NUMERIC N2 student evidence-admission boundary — frozen
+
+Implementation identity:
+
+- commit: `455d7cf1b20c2479fd9d702cb2f4a9c140672559`;
+- parent: `7a6bdaef828b80b58fc77b454f72ed20d3a98ea0`;
+- committed tree: `bf529655c7527a12e1f005486f49f1db81448fa6`.
+
+Qualified Windows x64 / CPython 3.11.9 evidence:
+
+- pytest `9.1.1`;
+- Hypothesis `6.167.1`;
+- `pip check`: clean;
+- targeted N2 admission + hostile hardening: **95/95**;
+- complete qualified pre-commit repository regression: **1242/1242**;
+- exact five-path staged/committed tree matched `bf529655c7527a12e1f005486f49f1db81448fa6`;
+- committed path set was exactly the two N2 production files and three N2 test files;
+- complete qualified post-commit repository regression: **1242/1242**;
+- post-commit working tree: clean.
+
+Accepted test claim: N2 admits one bounded canonical unitless finite-decimal student observation from already-normalized evidence, preserves evidence provenance, rejects ambiguity/unsupported/malformed current state fail-closed, and does not convert technical/admission failures into academic correctness. It does not perform numeric comparison, units, criterion projection, scoring, OCR/backend authentication or establish production NUMERIC quality.
+
+Current complete qualified regression baseline after N2 freeze: **1242/1242**.
+
+N3 deterministic comparison has earned BUILD by prerequisite inspection but has no qualified executable evidence yet; planned N3 results must not be recorded here until run in the qualified environment.
 
 
 ## S2 test-design rules

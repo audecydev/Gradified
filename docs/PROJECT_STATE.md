@@ -4,7 +4,7 @@ Status date: 2026-09-25
 
 ## Current milestone
 
-**Synthetic E2E S1, S2a, and S2b-1 remain closed/frozen. Deterministic single-select CHOICE v1 remains closed/frozen at its historical **853/853** post-commit baseline. Release-1 EXACT remains closed at `DEFER_EXACT`. The evaluator-facing ACTIVE question-authority boundary and DIRECT-text semantic slice remain frozen; the verified ACTIVE-exposure integrity defect remains repaired/frozen at commit `ba951af9081a5459464f4985074f5f113e62ad6b`. NUMERIC N1 academic authority is now CLOSED/FROZEN at commit `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f` / tree `d5410673f76b321e19ae97cc75b5aa538e11e135`, with **110/110** targeted hostile qualification and **1147/1147** complete qualified pre/post-commit regression. A bounded N2 student numeric evidence-admission primitive now earns `BUILD`; N3 deterministic comparison, N4 composition, UNIT support, production NUMERIC quality and auto-release remain unauthorized.**
+**Synthetic E2E S1, S2a, and S2b-1 remain closed/frozen. Deterministic single-select CHOICE v1 remains closed/frozen at its historical **853/853** post-commit baseline. Release-1 EXACT remains closed at `DEFER_EXACT`. The evaluator-facing ACTIVE question-authority boundary and DIRECT-text semantic slice remain frozen; the verified ACTIVE-exposure integrity defect remains repaired/frozen at commit `ba951af9081a5459464f4985074f5f113e62ad6b`. NUMERIC N1 academic authority remains CLOSED/FROZEN at commit `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f` / tree `d5410673f76b321e19ae97cc75b5aa538e11e135`. NUMERIC N2 student evidence admission is now CLOSED/FROZEN at commit `455d7cf1b20c2479fd9d702cb2f4a9c140672559` / tree `bf529655c7527a12e1f005486f49f1db81448fa6`, with **95/95** targeted hostile qualification and **1242/1242** complete qualified pre/post-commit regression. A bounded N3 deterministic unitless scalar comparison primitive now earns `BUILD`; N4 composition, UNIT support, production NUMERIC quality and auto-release remain unauthorized.**
 
 Current immutable S1 anchor:
 
@@ -19,7 +19,7 @@ Current immutable S1 anchor:
 - committed acceptance artifact SHA-256:
   `7ff52d81346094f9c361ce9625107a4dfe1330a947f18a482f4599a3d5382f32`
 
-The earlier S2b-2 implementation-eligibility inspection is complete, but S2b-2 remains incomplete as an executable Release-1 capability: Gradified still needs an explicit versioned platform/default policy decision and the current S2b-1 observation profile is intentionally narrower than the complete risk/impact input space described by the Engineering Source of Truth. No recommendation behavior is frozen. Release-1 EXACT remains closed with `DEFER_EXACT`. NUMERIC N1 is now frozen and supplies the approved unitless scalar academic-authority side. The next bounded prerequisite, N2 student evidence admission, earns `BUILD` because the existing normalized `AnswerEvidenceBundle` plus the N1 scalar domain are sufficient to define a conservative parser without inventing academic correctness. N3/N4, UNIT semantics and production-readiness claims remain gated. Representative workload evidence remains required for parser/evaluator breadth, benchmark coverage and production-quality claims. Frozen CHOICE, S1, B2/B3, DIRECT, G1 and scoring Numeric Profile v1 remain unchanged. No frozen source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
+The earlier S2b-2 implementation-eligibility inspection is complete, but S2b-2 remains incomplete as an executable Release-1 capability: Gradified still needs an explicit versioned platform/default policy decision and the current S2b-1 observation profile is intentionally narrower than the complete risk/impact input space described by the Engineering Source of Truth. No recommendation behavior is frozen. Release-1 EXACT remains closed with `DEFER_EXACT`. NUMERIC N1 remains frozen and supplies the approved unitless scalar academic-authority side. N2 is now frozen and supplies one conservative admitted unitless finite-decimal student observation with evidence provenance. N3 now earns `BUILD` for deterministic execution of only the already-approved N1 `EXACT` and inclusive `ABSOLUTE_TOLERANCE` conditions against the already-admitted N2 scalar. N4, UNIT semantics and production-readiness claims remain gated. Representative workload evidence remains required for parser/evaluator breadth, benchmark coverage and production-quality claims. Frozen CHOICE, S1, B2/B3, DIRECT, G1 and scoring Numeric Profile v1 remain unchanged. No frozen source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
 
 ## Frozen / accepted boundaries
 
@@ -116,7 +116,7 @@ Original authority-only `BUILD` exclusions, preserved as historical scope constr
 - EXACT normalization, NUMERIC tolerance/unit/conversion rules, mathematical-equivalence semantics, or any other academic semantics not already authorized;
 - changes to frozen S1, B2/B3, CHOICE, Numeric Profile v1, or their accepted behavior/tests merely to make this boundary easier to implement.
 
-EXACT remains `DEFER_EXACT`. The authority boundary exists and remains frozen. The verified post-construction ACTIVE-exposure integrity defect was later repaired at commit `ba951af9081a5459464f4985074f5f113e62ad6b` without broadening the original authority-only scope. The repair re-establishes current authority-bearing lifecycle/approval integrity before scoring-authority exposure; it does not claim cryptographic authentication or historical backend immutability. NUMERIC N1 now has a separately authorized bounded authority contract; N2/N3/N4 remain gated.
+EXACT remains `DEFER_EXACT`. The authority boundary exists and remains frozen. The verified post-construction ACTIVE-exposure integrity defect was later repaired at commit `ba951af9081a5459464f4985074f5f113e62ad6b` without broadening the original authority-only scope. The repair re-establishes current authority-bearing lifecycle/approval integrity before scoring-authority exposure; it does not claim cryptographic authentication or historical backend immutability. NUMERIC N1 and N2 now have separately authorized bounded contracts; N3 deterministic comparison is the currently authorized BUILD candidate, while N4/UNIT remain gated.
 
 #### ACTIVE exposure integrity repair — CLOSED / FROZEN
 
@@ -410,53 +410,62 @@ Freeze consequences:
 - reopen EXACT only when new authoritative, approved-workload, or verified-integration evidence materially changes a recorded `DEFER_EXACT` basis.
 
 
-### Release-1 NUMERIC / UNIT — N1 frozen; N2 evidence admission BUILD authorized
+### Release-1 NUMERIC / UNIT — N1 + N2 frozen; N3 deterministic comparison BUILD authorized
 
 N1 authority decision: `CLOSED / FROZEN`.
 
 Frozen N1 identity and qualification:
 
 - implementation commit: `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f`;
-- parent governance checkpoint: `328f131281c554f798e944c27a5177a43900f3bd`;
 - committed tree: `d5410673f76b321e19ae97cc75b5aa538e11e135`;
 - targeted N1 authority + hostile qualification: **110/110**;
-- exact related selector: **515/515 selected**, with **606 deselected**;
-- complete qualified pre-commit regression: **1147/1147**;
-- complete qualified post-commit regression: **1147/1147**;
+- complete qualified pre/post-commit regression: **1147/1147**.
+
+N2 student evidence-admission decision: `CLOSED / FROZEN`.
+
+Frozen N2 identity and qualification:
+
+- implementation commit: `455d7cf1b20c2479fd9d702cb2f4a9c140672559`;
+- parent governance checkpoint: `7a6bdaef828b80b58fc77b454f72ed20d3a98ea0`;
+- committed tree: `bf529655c7527a12e1f005486f49f1db81448fa6`;
+- qualified environment: Windows x64 / CPython **3.11.9**, pytest **9.1.1**, Hypothesis **6.167.1**, `pip check` clean;
+- targeted N2 admission + hostile hardening: **95/95**;
+- complete qualified pre-commit regression: **1242/1242**;
+- complete qualified post-commit regression: **1242/1242**;
 - post-commit working tree: clean.
 
-N1 remains authority-only: unitless finite-decimal scalar authority, finite approved `EXACT` / inclusive `ABSOLUTE_TOLERANCE` conditions, complete satisfied/not-satisfied criterion projections, exact ACTIVE configuration binding, subordinate approval, canonical fingerprinting and fail-closed exact-fingerprint resolution. It does not parse student evidence or execute academic comparison.
+N2 remains evidence-admission only. It admits one bounded unitless finite-decimal scalar from an already-normalized exact `AnswerEvidenceBundle`, preserves submission/OCR/question/answer-scope/evidence references, and fails without converting parser/resource/binding problems into academic correctness. It does not authenticate OCR/backend provenance or perform academic comparison.
 
-N2 prerequisite decision: `BUILD` for **narrow student numeric evidence admission only**. N3/N4 and UNIT remain unauthorized.
+N3 prerequisite decision: `BUILD` for **narrow deterministic unitless scalar comparison only**. N4 and UNIT remain unauthorized.
 
-Why N2 now earns BUILD:
+Why N3 now earns BUILD:
 
-- the frozen `AnswerEvidenceBundle` already provides the normalized submission/question/block boundary, so N2 does not need to invent or depend on OCR-vendor JSON;
-- the accepted architecture explicitly requires NUMERIC value parsing before deterministic comparison;
-- N1 now provides the exact unitless scalar domain to which an admitted student value can later be compared;
-- a bounded N2 parser can establish a student-side scalar observation without inventing expected answers, tolerances, criterion levels, marks, units, or review policy.
+- N1 freezes the complete approved academic comparison universe for v1: finite `EXACT` conditions and inclusive positive `ABSOLUTE_TOLERANCE` conditions, all mapping to one complete satisfied projection and one complete not-satisfied projection;
+- N2 supplies one already-admitted canonical unitless finite-decimal observation with evidence provenance;
+- those two frozen inputs are sufficient to define exact deterministic comparison without inventing normalization, units, scoring, partial-credit composition, review policy or academic semantics;
+- condition ordering is non-authoritative and all alternatives share the same satisfied projection, so N3 needs only determine whether at least one already-approved condition is satisfied; it must not choose a winning condition or assign marks.
 
-Closed N2 v1 scope for the next implementation batch:
+Closed N3 v1 scope for the next implementation batch:
 
-- consume an already-normalized exact `AnswerEvidenceBundle`;
-- target one exact question identity and require exactly one matching `QuestionEvidence`;
-- require exactly one evidence block for the question; no first/latest/best-block selection;
-- admit only an `ACTIVE` `TEXT` or `MATH` block; crossed-out/uncertain evidence does not become a scalar;
-- accept only bounded unitless ASCII finite-decimal syntax and deterministically canonicalize it into the same finite-decimal lexical domain used by N1;
-- preserve submission/OCR/question/answer-scope/evidence references in the admitted observation;
-- treat malformed, ambiguous, unsupported, unit-bearing, resource-exceeding, or unassessable evidence as non-academic admission failures, never as `not_satisfied`;
-- revalidate current normalized-evidence and admitted-observation state rather than trusting dataclass construction history.
+- consume one exact current `ResolvedNumericAuthority` and one exact current `AdmittedNumericScalar`;
+- revalidate both current object graphs and exact authority fingerprint/binding before comparison;
+- require exact question binding between authority and admitted evidence;
+- evaluate canonical finite-decimal values with exact deterministic arithmetic independent of binary float and ambient decimal context;
+- `EXACT`: numerical equality of the admitted scalar and approved expected value;
+- `ABSOLUTE_TOLERANCE`: inclusive `abs(observed - expected) <= tolerance` using the approved strictly-positive tolerance;
+- alternatives are OR semantics only; zero matches => `NOT_SATISFIED`, one or more matches => `SATISFIED`;
+- produce a bounded immutable N3 result carrying authority/evidence provenance and only `SATISFIED | NOT_SATISFIED`, not criterion levels, marks, score or publication/review state;
+- malformed/forged/binding/technical failures remain errors and must never be converted into `NOT_SATISFIED`.
 
-N2 does **not** establish:
+N3 does **not** establish:
 
-- numeric correctness or tolerance evaluation (N3);
-- any criterion projection or marks;
-- UNIT parsing/conversion;
-- scientific notation, fractions, symbolic expressions, locale-specific numbers or generic quantity algebra;
-- OCR/backend adapter completion or trust in question mapping/provenance beyond the already-admitted `AnswerEvidenceBundle`;
-- evidence-artifact cryptographic identity, whole-answer `answer_scope_ref` verification, calibrated OCR confidence policy, capability routing, production benchmark quality or auto-release eligibility.
+- criterion-judgment composition or scoring integration (N4);
+- UNIT parsing/conversion or quantity algebra;
+- scientific notation, fractions, symbolic expressions or relative tolerance;
+- OCR/backend trust, whole-answer scope verification or evaluator-attempt provenance;
+- benchmark/calibration breadth, production NUMERIC quality or auto-release eligibility.
 
-Representative approved/anonymized workload evidence remains required to broaden N2 syntax/evidence shapes, define production NUMERIC coverage and benchmark N3 quality. The deliberately narrow N2 v1 admission primitive may be built without pretending that breadth has been established.
+Representative approved/anonymized workload and numeric benchmark evidence remain required before broadening NUMERIC scope or claiming production auto-release quality. The deterministic N3 mechanism may be built now without making those claims.
 
 ## Current blockers / open decisions
 

@@ -136,7 +136,14 @@ GREEN must enforce deterministic versioned bounds for at least:
 - maximum provenance-field characters;
 - maximum total materialized chunk-content characters.
 
-Those limits are Gradified resource-safety policy, not academic semantics. Exact v1 values must be frozen before GREEN implementation and tested at the boundary and boundary + 1.
+Those limits are Gradified resource-safety policy, not academic semantics. REF-1 v1 freezes these resource-safety limits before GREEN implementation:
+
+- maximum chunks: `32`;
+- maximum individual chunk content: `8192` characters;
+- maximum each provenance field (`source_id`, `source_version`, `provenance_hash`): `128` characters;
+- maximum total materialized chunk content: `65536` characters.
+
+These values are Gradified-owned resource-safety policy, not academic semantics, and GREEN must test each at the boundary and boundary + 1.
 
 Cheap cardinality/field-size checks must precede expensive copying/materialization where practical.
 

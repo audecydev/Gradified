@@ -2,7 +2,7 @@
 
 This document is the canonical **Release 1 target architecture** for the grading engine and also records the narrower path that is already implemented in this repository.
 
-The diagram below is kept as Mermaid source inside Markdown so every arrow is reviewable in Git history. We intentionally do **not** publish the earlier raster architecture images because they contained ambiguous/misleading arrows.
+The diagram below is kept as Mermaid source inside Markdown so every arrow is reviewable in Git history.
 
 ```mermaid
 flowchart TB
@@ -37,7 +37,7 @@ flowchart TB
     DET[Deterministic Evaluators<br/>CHOICE / exact / bounded numeric and other validated deterministic checks]
     SEM[Semantic Evaluator<br/>structured criterion-level judgments only]
     DOMAIN[Math / Domain Checks<br/>independent unit / symbolic / reference / domain verification]
-    J[CriterionJudgment[]<br/>criterion · approved level · evidence refs · reason codes · uncertainty]
+    J[CriterionJudgment array<br/>criterion · approved level · evidence refs · reason codes · uncertainty]
     VERIFY[Judgment + Evidence / Domain Verification<br/>exact criterion correspondence · evidence ownership/existence · independent checks]
     KERNEL[Frozen Deterministic Scoring Kernel<br/>rubric authority -> marks · caps · dependencies · gates · deductions · rounding · bounds]
     SCORE[Candidate Score]
@@ -79,7 +79,8 @@ flowchart TB
 
     BADAPTER --> PERSIST --> PUB
     PERSIST --> REVIEW
-    REVIEW --> NEWRUN
+    REVIEW -. accepted/allowed override outcome .-> PUB
+    REVIEW -. correction or regrade requested .-> NEWRUN
     NEWRUN --> JOB
   end
 
@@ -88,13 +89,16 @@ flowchart TB
   ACTIVE --> PRE
   EVIDENCE --> PRE
   TENANT -. trusted tenant context .-> PRE
-  STORE -. authorized asset/spec/reference access .-> OCRA
 
-  %% Provider paths: provider may propose/interpret, never score directly
+  %% Provider paths: rubric/semantic components invoke a configured provider; provider output never scores directly
+  RGEN -. provider request .-> PROVIDER
   PROVIDER -. structured rubric proposal .-> RGEN
+  SEM -. provider request .-> PROVIDER
   PROVIDER -. structured semantic output .-> SEM
 
   %% Reference context is separate from student evidence
+  RGEN -. authoring reference request .-> RETRIEVAL
+  PRE -. grading-policy reference request .-> RETRIEVAL
   REFCTX -. when authoring policy requires reference context .-> RGEN
   REFCTX -. when grading policy requires reference context .-> PRE
 
@@ -123,7 +127,7 @@ flowchart TB
 
 ## Why this diagram is canonical
 
-The earlier raster architecture drawings were useful design references, but they had arrow-level ambiguity. In particular:
+ In particular:
 
 1. **Reference context is not student evidence.** `RetrievalPort` / reference context must never feed `AnswerEvidenceBundle`. Student/OCR evidence and reference context remain separate inputs.
 2. **Selection, registry resolution, and evaluator execution are distinct.** The target architecture now shows `Selection Policy -> Capability Registry -> Evaluator Execution Boundary` explicitly. The current repository implements the registry, not the generic selector.

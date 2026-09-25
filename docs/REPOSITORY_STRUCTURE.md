@@ -66,4 +66,4 @@ Gradified/
 
 ## What must stay outside the public repository?
 
-Private evidence bundles, mutation logs, local F-drive organization files, virtual environments, credentials, private learning documents, real student/school data, and private publication handoffs are not public repository content.
+Evidence bundles, mutation logs, local workspace-organization files, virtual environments, credentials, learning material, and real student/school data are not repository content.

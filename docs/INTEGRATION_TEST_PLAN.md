@@ -16,7 +16,7 @@ python -m pytest -q
 python -m pip check
 ```
 
-Expected qualified baseline from the frozen handoff candidate:
+Expected qualified baseline from the frozen integration candidate:
 
 ```text
 1499 passed
@@ -27,7 +27,7 @@ Record Python, pytest, Hypothesis, commit SHA, tree SHA, and clean/dirty status 
 
 ## Phase 1 — contract smoke tests
 
-Before using real external systems, prove that your adapter can construct the real Gradified contracts.
+Before using real external systems, prove that each adapter can construct the real Gradified contracts.
 
 Test:
 

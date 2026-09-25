@@ -1,7 +1,5 @@
 # Testing Strategy and Verification Status
 
-> **Public-history note:** Git author/committer metadata was privacy-normalized for first public publication. Commit identifiers shown in this public document refer to the privacy-normalized public history. Private verification packages retain the corresponding internal evidence identities.
-
 
 Status date: 2026-09-25
 
@@ -82,7 +80,7 @@ Full suite at closure: **676 passed**.
 
 Verified behaviors include strict bounded raw-byte/schema admission, authority-field rejection, exact admitted type construction, subclass/replace smuggling resistance, deterministic behavior and exception transparency.
 
-Use the verified G1b commit/tree values; earlier manually transcribed values were wrong.
+The G1b commit/tree values recorded below are the canonical verified identifiers.
 
 ## Provider abstraction / Replay
 

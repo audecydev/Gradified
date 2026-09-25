@@ -19,7 +19,7 @@ The following internal slices are implemented, verified, and frozen unless a ver
 - exact versioned evaluator-capability record resolution;
 - reference-context materialization/provenance boundary.
 
-## Qualified handoff baseline
+## Qualified verification baseline
 
 The verified internal candidate used for this publication passed:
 
@@ -30,7 +30,6 @@ The verified internal candidate used for this publication passed:
 - `pip check` clean;
 - clean working tree at verification.
 
-The public Git history has privacy-normalized author metadata. Exact private forensic commit identities are kept in the private delivery/evidence package.
 
 ## Not yet production-complete
 

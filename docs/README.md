@@ -57,21 +57,13 @@ The canonical Release 1 architecture is rendered directly from Mermaid source in
 
 This repository inherited an engineering convention where durable control documents and frozen contracts use uppercase names, for example `PROJECT_STATE.md`, `TESTING.md`, and `SCORING_KERNEL_BLACK_BOX.md`.
 
-There is no technical requirement for uppercase filenames. We keep established names because other documents and engineering evidence already reference them. Renaming them only for appearance would create broken links and unnecessary churn.
+There is no technical requirement for uppercase filenames. Established names are retained because other documents and engineering evidence already reference them. Renaming them only for appearance would create broken links and unnecessary churn.
 
 `README.md` is also conventionally uppercase on GitHub because GitHub renders it automatically.
 
-## Markdown versus Word documents
+## Documentation format
 
-Public repository engineering documentation is kept in **Markdown (`.md`)** because it:
-
-- renders directly on GitHub;
-- can be reviewed in pull requests as plain text;
-- produces readable diffs;
-- is easy for engineers to search and link;
-- does not require Microsoft Word.
-
-Private learning material is different. The project's learning guides remain private `.docx` files and are **not part of this public GitHub repository**.
+Repository engineering documentation is kept in **Markdown (`.md`)** because it renders directly on GitHub, produces readable diffs, and is easy to search and link.
 
 ## Test support helpers
 

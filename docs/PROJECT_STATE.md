@@ -1,7 +1,5 @@
 # Project State
 
-> **Public-history note:** Git author/committer metadata was privacy-normalized for first public publication. Commit identifiers shown in this public document refer to the privacy-normalized public history. Private verification packages retain the corresponding internal evidence identities.
-
 
 Status date: 2026-09-25
 
@@ -22,7 +20,7 @@ Current immutable S1 anchor:
 - committed acceptance artifact SHA-256:
   `7ff52d81346094f9c361ce9625107a4dfe1330a947f18a482f4599a3d5382f32`
 
-The earlier S2b-2 implementation-eligibility inspection is complete, but S2b-2 remains incomplete as an executable Release-1 capability: Gradified still needs an explicit versioned platform/default policy decision and the current S2b-1 observation profile is intentionally narrower than the complete risk/impact input space described by the Engineering Source of Truth. No recommendation behavior is frozen. Release-1 EXACT remains closed with `DEFER_EXACT`. NUMERIC N1, N2, N3 and N4 are now frozen: N1 supplies the exact approved unitless scalar academic authority, N2 supplies one conservative admitted unitless finite-decimal observation with evidence provenance, N3 proves only `SATISFIED | NOT_SATISFIED` for the approved exact/inclusive-absolute-tolerance relation, and N4 maps only that actual N3 result to the already-approved complete N1 projection before unchanged S1/B2/B3 processing. UNIT semantics, mixed/partial composition and production-readiness claims remain gated. IF1 remains frozen at its qualified 1404/1404 baseline; IF2 routing selection remains deferred for a Gradified-owned authority gap; REF-1 is now frozen at its qualified 1499/1499 baseline. Representative workload evidence remains required for parser/evaluator breadth, benchmark coverage and production-quality claims. Frozen CHOICE, S1, B2/B3, DIRECT, G1 and scoring Numeric Profile v1 remain unchanged. No frozen source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
+The S2b-2 implementation-eligibility inspection is complete, but S2b-2 remains incomplete as an executable Release-1 capability: Gradified still needs an explicit versioned platform/default policy decision and the current S2b-1 observation profile is intentionally narrower than the complete risk/impact input space described by the Engineering Source of Truth. No recommendation behavior is frozen. Release-1 EXACT remains closed with `DEFER_EXACT`. NUMERIC N1, N2, N3 and N4 are now frozen: N1 supplies the exact approved unitless scalar academic authority, N2 supplies one conservative admitted unitless finite-decimal observation with evidence provenance, N3 proves only `SATISFIED | NOT_SATISFIED` for the approved exact/inclusive-absolute-tolerance relation, and N4 maps only that actual N3 result to the already-approved complete N1 projection before unchanged S1/B2/B3 processing. UNIT semantics, mixed/partial composition and production-readiness claims remain gated. IF1 remains frozen at its qualified 1404/1404 baseline; IF2 routing selection remains deferred for a Gradified-owned authority gap; REF-1 is now frozen at its qualified 1499/1499 baseline. Representative workload evidence remains required for parser/evaluator breadth, benchmark coverage and production-quality claims. Frozen CHOICE, S1, B2/B3, DIRECT, G1 and scoring Numeric Profile v1 remain unchanged. No frozen source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
 
 ## Frozen / accepted boundaries
 
@@ -66,7 +64,6 @@ Verified tree:
 
 Full suite at closure: **676 passed**.
 
-Important: earlier manually transcribed G1b commit/tree values were wrong. Use only the values above.
 
 ### Provider abstraction / Replay
 
@@ -298,7 +295,7 @@ S2b-1 non-claims:
 - numeric OCR confidence is not thresholded locally, and no school/platform threshold is invented;
 - free-form evidence warnings, evaluator `reason_codes`, and uncertainty text are not interpreted as policy/recommendation authority;
 - `grading_run_id`, `submission_ref`, question IDs, criterion IDs, and evidence-block IDs provide correlation/contextual traceability, not authentication credentials;
-- S2b-1 cannot prove that the separately supplied `AnswerEvidenceBundle` is byte-for-byte or semantically the exact immutable artifact consumed by the earlier S2a execution; stronger cross-stage artifact identity requires an upstream workflow/artifact identity contract;
+- S2b-1 cannot prove that the separately supplied `AnswerEvidenceBundle` is byte-for-byte or semantically the exact immutable artifact consumed by the S2a execution; stronger cross-stage artifact identity requires an upstream workflow/artifact identity contract;
 - S2b-1 consumes internal domain values and does not treat Python object/class identity as proof of execution provenance;
 - criterion-level `awarded_marks` remains unresolved and untouched.
 
@@ -509,7 +506,7 @@ S2a establishes only the relationships supported by current authority:
 
 ### S2b-2 recommendation/review policy — product-policy / signal-breadth gate
 
-The earlier eligibility inspection correctly rejected inventing school-specific thresholds or recommendation mappings inside implementation code. The higher-authority SRS also assigns Gradified responsibility for confidence/routing behavior and requires a sensible configurable platform default.
+The eligibility decision rejects school-specific thresholds or recommendation mappings inside evaluator implementation code. The higher-authority SRS also assigns Gradified responsibility for confidence/routing behavior and requires a sensible configurable platform default.
 
 Current state:
 
@@ -634,19 +631,19 @@ NUMERIC N1 authority qualified evidence on Windows / CPython 3.11.9:
 - complete qualified post-commit regression: **1147/1147**;
 - post-commit working tree: clean.
 
-S1's earlier empty-evidence defect remains the standing example that full-suite green does not replace hostile source review.
+The S1 empty-evidence defect remains a standing regression example that full-suite green does not replace hostile source review.
 
 ## Next task
 
-Prepare the **deadline integration handoff and evidence package** from frozen REF-1 implementation commit `409f9215d218f76a39514c43afa8a1e4858b4a92` / tree `fa2c047e5891e9930512c245ba7e8231532e21bd` and the final governance-reconciled state.
+Proceed with **production integration and release-gap closure** from the frozen REF-1 implementation and governance-reconciled state.
 
-The handoff must clearly distinguish frozen internal capabilities from still-open production integration/release work. Do not automatically authorize another medium-sized implementation slice merely because time remains. Real OCR/backend/provider/retrieval adapters, evaluator routing, execution-attempt provenance, review/publication workflow and production benchmark/E2E evidence remain open unless separately gated from authoritative inputs.
+Integration work must clearly distinguish frozen internal capabilities from still-open production work. Real OCR/backend/provider/retrieval adapters, evaluator routing, execution-attempt provenance, review/publication workflow and production benchmark/E2E evidence remain open unless separately gated from authoritative inputs.
 
 Preserve a verification buffer for the final complete regression, exact Git custody, documentation truth reconciliation and packaging.
 
 ## Documentation rule
 
-Update `PROJECT_STATE.md` at subsystem milestone closure, material blocker/assumption change, and before implementation-chat handoff. Do not use it as a turn-by-turn diary.
+Update `PROJECT_STATE.md` at subsystem milestone closure, material blocker/assumption change, and before an engineering handoff. Do not use it as an activity log.
 
 `IMPLEMENTATION_PLAN.md` records the frozen S2/CHOICE/ACTIVE-DIRECT milestones, prerequisite-gate decisions, and the currently authorized implementation sequence.
 

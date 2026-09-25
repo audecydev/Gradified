@@ -1,7 +1,5 @@
 # Release 1 Capability Roadmap
 
-> **Public-history note:** Git author/committer metadata was privacy-normalized for first public publication. Commit identifiers shown in this public document refer to the privacy-normalized public history. Private verification packages retain the corresponding internal evidence identities.
-
 
 Status date: 2026-09-25
 
@@ -223,7 +221,7 @@ Qualified evidence: **16/16 S2b-1 / 727/727 inherited / 743/743 full**.
 
 #### S2b-2 — recommendation/review policy — PRODUCT-POLICY / SIGNAL-BREADTH GATE
 
-Plan update 2026-09-22: the earlier inspection correctly rejected inventing school-specific recommendation policy in evaluator code. The higher-authority SRS assigns Gradified responsibility for confidence/routing and requires a configurable sensible platform default.
+Policy boundary: school-specific recommendation policy must not be invented inside evaluator code. The SRS assigns Gradified responsibility for confidence/routing behavior and requires a configurable platform default.
 
 Remaining work before complete Release-1 recommendation behavior:
 
@@ -378,11 +376,11 @@ Broader semantic Release-1 work remains open and still requires production provi
 
 Do not interpret this slice as academic-quality validation, production-provider closure, retry/idempotency closure, OCR/backend integration, or review/publication authority.
 
-### NEXT MILESTONE — DEADLINE INTEGRATION HANDOFF / RELEASE-GAP RECONCILIATION
+### NEXT MILESTONE — PRODUCTION INTEGRATION / RELEASE-GAP CLOSURE
 
-Do not automatically start another medium-sized feature after REF-1 freeze. Prepare the integration handoff from the exact frozen capabilities, record what external adapters and release evidence remain open, run the final qualified complete regression, capture exact Git custody, and package reproducible evidence.
+Integrate external systems against the exact frozen capabilities and close release gaps in dependency order. Record which adapters and release evidence remain open, preserve qualified regression and Git custody, and keep reproducible verification evidence.
 
-A further implementation slice requires its own authority/dependency gate and must not consume the protected verification/handoff buffer.
+Each further implementation slice requires its own authority/dependency gate.
 
 ## Mathematical / Derivation Evaluation — OPEN
 

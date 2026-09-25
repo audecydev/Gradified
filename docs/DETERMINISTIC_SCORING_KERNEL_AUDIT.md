@@ -1,7 +1,5 @@
 # Deterministic Scoring Kernel — Closure Audit
 
-> **Public-history note:** Git author/committer metadata was privacy-normalized for first public publication. Commit identifiers shown in this public document refer to the privacy-normalized public history. Private verification packages retain the corresponding internal evidence identities.
-
 
 Date: 2026-09-18
 Status: technically accepted and frozen within the declared boundary.

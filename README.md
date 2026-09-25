@@ -1,79 +1,65 @@
 # Gradified Grading Core
 
-Gradified's grading core turns **school-authorized grading rules** and **admitted student evidence** into **deterministic, auditable candidate scores**.
+Gradified's grading core converts **school-approved grading rules** and **student answer evidence** into **checked, deterministic candidate scores**.
 
-This repository contains the verified internal grading core for the currently completed Release 1 scope. It is ready for **integration testing** with OCR, backend/workflow, reference-retrieval, and semantic-provider systems.
+This repository contains the completed grading-core work for the current Release 1 integration scope. It is ready for integration testing with OCR, backend/workflow, reference-retrieval, and semantic-model systems.
 
-It is **not** the complete production Gradified platform. In particular, this repository does not by itself provide authentication, database persistence, official-result publication, a production OCR adapter, a production model-provider adapter, or a production reference-retrieval adapter.
+This is **not the complete Gradified production platform**. Authentication, production persistence, official result publication, and the real OCR, model-provider, and reference-retrieval adapters belong to the surrounding platform and integration work.
 
 ## Start here
 
-If you are new to the project, read these documents in this order:
+If you are joining the project for the first time, read these documents in this order:
 
-1. [`docs/README.md`](docs/README.md) — documentation map: what every document is for and who should read it.
-2. [`docs/INTEGRATION_START_HERE.md`](docs/INTEGRATION_START_HERE.md) — plain-language system overview and integration order.
-3. [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — the corrected final Release 1 target architecture, current implemented path, and open boundaries.
-4. [`docs/REPOSITORY_STRUCTURE.md`](docs/REPOSITORY_STRUCTURE.md) — where code, contracts, tests, shared test helpers, and engineering documents live.
-5. [`docs/INTEGRATION_TEST_PLAN.md`](docs/INTEGRATION_TEST_PLAN.md) — step-by-step tests the integration team should run.
-6. Your integration-specific guide:
+1. [`docs/README.md`](docs/README.md) — explains what every document is for.
+2. [`docs/INTEGRATION_START_HERE.md`](docs/INTEGRATION_START_HERE.md) — simple overview of the system and integration order.
+3. [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — Release 1 target architecture, current implemented path, and open boundaries.
+4. [`docs/REPOSITORY_STRUCTURE.md`](docs/REPOSITORY_STRUCTURE.md) — explains where source code, tests, contracts, and support files live.
+5. [`docs/INTEGRATION_REQUIREMENTS.md`](docs/INTEGRATION_REQUIREMENTS.md) — requirements each external integration must satisfy.
+6. [`docs/INTEGRATION_TEST_PLAN.md`](docs/INTEGRATION_TEST_PLAN.md) — step-by-step integration tests and expected results.
+7. Read the guide for the system being integrated:
    - [`docs/OCR_INTEGRATION_GUIDE.md`](docs/OCR_INTEGRATION_GUIDE.md)
    - [`docs/BACKEND_INTEGRATION_GUIDE.md`](docs/BACKEND_INTEGRATION_GUIDE.md)
    - [`docs/REFERENCE_INTEGRATION_GUIDE.md`](docs/REFERENCE_INTEGRATION_GUIDE.md)
    - [`docs/SEMANTIC_PROVIDER_INTEGRATION_GUIDE.md`](docs/SEMANTIC_PROVIDER_INTEGRATION_GUIDE.md)
-7. [`docs/SCORING_KERNEL_BLACK_BOX.md`](docs/SCORING_KERNEL_BLACK_BOX.md) — deterministic scoring boundary and invariants.
-8. [`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md) and [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) — exact engineering state and remaining Release 1 work.
-9. [`docs/TESTING.md`](docs/TESTING.md) — detailed verification history and non-claims.
+8. [`docs/SCORING_KERNEL_BLACK_BOX.md`](docs/SCORING_KERNEL_BLACK_BOX.md) — scoring-kernel rules and invariants.
+9. [`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md) — what exists now.
+10. [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) — remaining Release 1 work.
+11. [`docs/TESTING.md`](docs/TESTING.md) — verification scope, test history, and what the tests do not prove.
 
-## What is implemented and frozen
+## What is implemented
 
-The completed scope includes:
+The current repository includes:
 
 - deterministic question scoring and paper aggregation;
-- exact decimal scoring profile and controlled rounding;
-- rubric authoring safety, linting, compilation, fingerprinting, versioning, and ACTIVE lifecycle controls;
+- exact decimal score handling and controlled rounding;
+- rubric generation boundaries, linting, deterministic compilation, fingerprinting, versioning, teacher approval, and ACTIVE lifecycle controls;
 - ACTIVE question-authority resolution;
 - evidence contracts and evidence-to-judgment verification;
-- synthetic execution composition through verification, deterministic question scoring, and deterministic paper aggregation;
-- deterministic risk-observation extraction for the currently supported observation profile;
+- deterministic risk-observation extraction for the implemented observation profile;
 - single-select CHOICE evaluation;
-- DIRECT text semantic evaluation through a provider boundary with strict response admission;
+- DIRECT text semantic evaluation through a bounded provider interface;
 - bounded unitless NUMERIC authority, evidence admission, deterministic comparison, and judgment composition;
-- exact evaluator-capability-record resolution;
-- reference-context materialization and provenance preservation through a backend-independent source boundary.
+- exact versioned evaluator-capability-record resolution;
+- bounded reference-context materialization with provenance preservation.
 
-The verified Release 1 integration baseline before the public documentation/privacy-normalization step is:
+The grading core is designed so that external systems provide trusted inputs through explicit boundaries. External systems do not become scoring authority simply because they connect to the core.
 
-- qualified environment: Windows x64, CPython 3.11.9
-- pytest: 9.1.1
-- Hypothesis: 6.167.1
-- complete qualified regression: **1499 / 1499 passed**
-- dependency check: clean
-- working tree at verification: clean
-
-Exact private forensic commit identities are retained in the private delivery/evidence package rather than used as public-history authority.
-
-This publication branch does not modify production grading source or scoring behavior. It adds public integration documentation and performs one test-only repository-structure cleanup: shared pytest helper modules live under `tests/support/` instead of loose at the `tests/` root. The helper move does not change grading semantics and must still pass the complete qualified regression before push.
-
-## Important architectural rule
-
-A model, OCR system, backend, or retrieval system does **not** become scoring authority merely because it integrates with this core.
-
-The intended flow is:
+## Main grading flow
 
 ```text
-trusted workflow / school authority
+school-approved grading authority
+        +
+student answer evidence
         ↓
-ACTIVE grading authority
+pre-evaluation validation
         ↓
-admitted student evidence
-        ↓
-bounded evaluator capability
+supported evaluator path
         ↓
 criterion judgments
         ↓
-evidence verification
+evidence and judgment verification
         ↓
-deterministic scoring reducer
+deterministic question scoring
         ↓
 deterministic paper aggregation
         ↓
@@ -82,52 +68,128 @@ candidate result
 backend review / publication workflow
 ```
 
-The numerical scoring reducer remains the only authority that calculates authoritative marks inside the grading core.
+The model may interpret content, but it does not own the final numerical score.
+
+The backend may publish an official result, but the grading core only produces a candidate result.
+
+## Current supported evaluator paths
+
+### CHOICE
+
+Single-select choice answers are evaluated deterministically against the approved authority.
+
+### DIRECT semantic text
+
+Supported text criteria can be evaluated through the semantic-provider boundary. Provider output is admitted into structured criterion judgments and still passes through verification and deterministic scoring.
+
+### NUMERIC
+
+The implemented numeric path supports a deliberately bounded unitless numeric profile:
+
+```text
+approved numeric authority
+        ↓
+student numeric evidence admission
+        ↓
+deterministic exact / absolute-tolerance comparison
+        ↓
+approved criterion projection
+        ↓
+criterion judgment
+        ↓
+verification and deterministic scoring
+```
+
+Unsupported numeric formats or semantics do not silently become academic judgments.
+
+## Reference context
+
+The repository includes a reference-context boundary that preserves source identity, source version, and provenance information.
+
+It does **not** implement the production retrieval system itself.
+
+A real reference integration must still prove tenant/version isolation, approved-source access, and correct provenance behavior.
+
+## Architecture rule
+
+The following responsibilities stay separate:
+
+- **School / teacher authority** defines the approved grading content.
+- **OCR** provides student evidence.
+- **Evaluators** interpret supported answer types.
+- **Verification** checks evidence and judgment relationships.
+- **Deterministic scoring code** calculates marks.
+- **Backend / institution policy** controls official publication.
+
+See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for the full target architecture and the narrower path implemented today.
 
 ## What is still open
 
-The major Release 1 gaps are intentionally visible:
+The main Release 1 gaps are:
 
-- exact question-classification → evaluator-capability routing policy;
-- evaluator-execution / attempt provenance through the complete workflow;
-- real OCR adapter against real OCR payloads;
+- versioned evaluator-selection/routing policy;
+- evaluator-execution and attempt provenance through the complete workflow;
+- real OCR adapter against the OCR team's production payload;
 - real backend/workflow adapter, persistence, idempotency, and transaction behavior;
-- real reference-retrieval adapter with tenant/version isolation and provenance conformance;
-- production semantic-provider adapter, cost/latency telemetry, and benchmark evidence;
-- recommendation/review/regrade/publication workflow completion;
-- UNIT support and broader math/derivation/composite capabilities;
+- real reference-retrieval adapter with tenant/version isolation;
+- production semantic-provider adapter, telemetry, and benchmark evidence;
+- recommendation, review, regrade, and publication workflow completion;
+- units and broader mathematical / derivation / composite evaluator support;
 - real subjective-paper and numeric/math-paper end-to-end runs;
 - held-out academic-quality validation and production reliability evidence.
 
-Do not interpret a green core regression as proof that those external systems are correct.
+A green core test suite proves the tested grading-core behavior. It does not prove that an external OCR, backend, model provider, or retrieval system is correct.
 
-## Run the verified test suite
+## Testing
 
-From the repository root on Windows:
+The qualified environment is:
+
+- CPython 3.11.9
+- pytest 9.1.1
+- Hypothesis 6.167.1
+
+The complete integration baseline contains **1499 tests**.
+
+Before a publication or integration candidate is accepted, the exact candidate must pass the full suite:
 
 ```bat
-py -3.11 -m venv .venv
-.venv\Scripts\activate
-python -m pip install -r requirements-test.txt
+python -m pip check
 python -m pytest -q
 ```
 
-The qualified baseline uses **CPython 3.11.9** and the exact package versions in `requirements-test.txt`.
-
-For the integration handoff baseline, the expected complete result is:
+Expected result:
 
 ```text
 1499 passed
 ```
 
-A different Python/dependency environment is useful for extra compatibility testing, but it is not the qualified baseline unless separately verified.
+See [`docs/TESTING.md`](docs/TESTING.md) for the detailed test history and limits of the evidence.
 
-## Repository usage notes
+## Repository layout
 
-- The project is currently a Python grading-core library plus tests and engineering contracts, not a deployable HTTP service.
-- Run tests from the repository root; pytest adds `src` to the Python path through `pyproject.toml`.
-- Do not place secrets, private student data, school-private reference material, `.env` files, or production credentials in this repository.
-- Do not change frozen scoring behavior merely to make an external integration easier. Adapt external systems at their explicit integration boundaries.
+```text
+src/grading/        grading-core source
+tests/contracts/    contract tests
+tests/unit/         focused unit tests
+tests/integration/  cross-component tests
+tests/property/     property-based invariant tests
+tests/support/      shared test-only helpers
+docs/               engineering, architecture, integration, and verification documentation
+```
+
+The Python modules directly under `src/grading/` are top-level grading capabilities and orchestration modules. Cohesive subsystems such as contracts, rubric logic, scoring, providers, and verification have their own subpackages.
+
+See [`docs/REPOSITORY_STRUCTURE.md`](docs/REPOSITORY_STRUCTURE.md) for the full explanation.
+
+## Integration safety rules
+
+- Do not place secrets, API keys, private student data, or school-private reference material in this repository.
+- Do not derive tenant authority from student content or model output.
+- Do not allow OCR or model output to publish grades directly.
+- Do not convert technical failures into student mistakes.
+- Do not change frozen scoring behavior merely to make an external integration easier.
+- Adapt external systems at the documented integration boundaries.
+- Stop safely when required authority, evidence, capability, or provenance is missing or invalid.
 
 ## License
 

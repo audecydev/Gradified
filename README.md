@@ -1,90 +1,132 @@
 # Gradified Grading Core
 
-The Gradified grading core converts school-authorized scoring rules and admitted semantic judgments into deterministic, auditable candidate scores.
+Gradified's grading core turns **school-authorized grading rules** and **admitted student evidence** into **deterministic, auditable candidate scores**.
 
-The implemented numerical kernel is intentionally isolated from OCR vendors, backend persistence, model-provider SDKs, authentication systems, and publication workflow. Those systems integrate through explicit boundaries rather than becoming scoring authority.
+This repository contains the verified internal grading core for the currently completed Release 1 scope. It is ready for **integration testing** with OCR, backend/workflow, reference-retrieval, and semantic-provider systems.
 
-## Current implemented capability
+It is **not** the complete production Gradified platform. In particular, this repository does not by itself provide authentication, database persistence, official-result publication, a production OCR adapter, a production model-provider adapter, or a production reference-retrieval adapter.
 
-The deterministic scoring kernel is complete and technically accepted.
+## Start here
 
-It includes:
+If you are new to the project, read these documents in this order:
 
-- **Numeric Profile v1** for exact finite decimal scoring values;
-- deterministic question scoring from an immutable compiled rubric, scoring policy, and one semantic judgment per atomic criterion;
-- positive-credit dependencies, gates, caps, deductions, and exactly one question-boundary rounding stage;
-- deterministic paper aggregation from an upstream-resolved exact question composition;
-- typed failure rather than clamping, fabricated zero scores, or partial successful results;
-- immutable result/provenance contracts;
-- exact runtime-type boundaries at safety-critical contract edges;
-- a qualified reproducible verification environment.
+1. [`docs/INTEGRATION_START_HERE.md`](docs/INTEGRATION_START_HERE.md) — plain-language system overview and integration order.
+2. [`docs/REPOSITORY_STRUCTURE.md`](docs/REPOSITORY_STRUCTURE.md) — where code, contracts, tests, and engineering documents live.
+3. [`docs/INTEGRATION_TEST_PLAN.md`](docs/INTEGRATION_TEST_PLAN.md) — step-by-step tests the integration team should run.
+4. Your integration-specific guide:
+   - [`docs/OCR_INTEGRATION_GUIDE.md`](docs/OCR_INTEGRATION_GUIDE.md)
+   - [`docs/BACKEND_INTEGRATION_GUIDE.md`](docs/BACKEND_INTEGRATION_GUIDE.md)
+   - [`docs/REFERENCE_INTEGRATION_GUIDE.md`](docs/REFERENCE_INTEGRATION_GUIDE.md)
+   - [`docs/SEMANTIC_PROVIDER_INTEGRATION_GUIDE.md`](docs/SEMANTIC_PROVIDER_INTEGRATION_GUIDE.md)
+5. [`docs/SCORING_KERNEL_BLACK_BOX.md`](docs/SCORING_KERNEL_BLACK_BOX.md) — deterministic scoring boundary and invariants.
+6. [`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md) and [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) — exact engineering state and remaining Release 1 work.
+7. [`docs/TESTING.md`](docs/TESTING.md) — detailed verification history and non-claims.
 
-The numerical kernel does **not** decide which questions belong to a paper, authenticate upstream authority, interpret OCR, judge answer meaning, publish results, or define unlimited production job sizes.
+## What is implemented and frozen
 
-## Verified implementation identity
+The completed scope includes:
 
-Current deterministic paper-aggregation commit:
+- deterministic question scoring and paper aggregation;
+- exact decimal scoring profile and controlled rounding;
+- rubric authoring safety, linting, compilation, fingerprinting, versioning, and ACTIVE lifecycle controls;
+- ACTIVE question-authority resolution;
+- evidence contracts and evidence-to-judgment verification;
+- synthetic execution composition through verification, deterministic question scoring, and deterministic paper aggregation;
+- deterministic risk-observation extraction for the currently supported observation profile;
+- single-select CHOICE evaluation;
+- DIRECT text semantic evaluation through a provider boundary with strict response admission;
+- bounded unitless NUMERIC authority, evidence admission, deterministic comparison, and judgment composition;
+- exact evaluator-capability-record resolution;
+- reference-context materialization and provenance preservation through a backend-independent source boundary.
 
-`e6c7cb71b33120b6cdeeb2b4176a3f33a8580869`
+The verified Release 1 integration baseline before this publication-documentation commit is:
 
-Current tree:
+- commit: `359a20f95d854c7c8ac7511906010423d5f21e26`
+- tree: `dc96a19d92ce9ce78f2379abacc5dac4aa1b8892`
+- qualified environment: Windows x64, CPython 3.11.9
+- pytest: 9.1.1
+- Hypothesis: 6.167.1
+- complete qualified regression: **1499 / 1499 passed**
+- dependency check: clean
+- working tree at verification: clean
 
-`0fc3601fbf0bfacaacfc378aa0ce9313ffa45313`
+This publication branch adds documentation only. It does not modify frozen grading source or tests.
 
-Qualified final verification:
+## Important architectural rule
 
-- Windows x64;
-- CPython 3.11.9;
-- version-pinned eight-package verification dependency closure;
-- 519/519 tests passed;
-- 0 failures;
-- 0 errors;
-- 0 skips;
-- exact testcase identity reconciliation;
-- clean repository before and after verification.
+A model, OCR system, backend, or retrieval system does **not** become scoring authority merely because it integrates with this core.
 
-See `docs/DETERMINISTIC_SCORING_KERNEL_AUDIT.md` for the evidence summary and non-claims.
+The intended flow is:
 
-## Authority model
+```text
+trusted workflow / school authority
+        ↓
+ACTIVE grading authority
+        ↓
+admitted student evidence
+        ↓
+bounded evaluator capability
+        ↓
+criterion judgments
+        ↓
+evidence verification
+        ↓
+deterministic scoring reducer
+        ↓
+deterministic paper aggregation
+        ↓
+candidate result
+        ↓
+backend review / publication workflow
+```
 
-Numerical scoring authority flows from approved scoring data, never from a model-produced total.
+The numerical scoring reducer remains the only authority that calculates authoritative marks inside the grading core.
 
-At question scope:
+## What is still open
 
-`CompiledQuestionRubric + QuestionScoringPolicy + CriterionJudgment tuple -> deterministic question score`
+The major Release 1 gaps are intentionally visible:
 
-At paper scope:
+- exact question-classification → evaluator-capability routing policy;
+- evaluator-execution / attempt provenance through the complete workflow;
+- real OCR adapter against real OCR payloads;
+- real backend/workflow adapter, persistence, idempotency, and transaction behavior;
+- real reference-retrieval adapter with tenant/version isolation and provenance conformance;
+- production semantic-provider adapter, cost/latency telemetry, and benchmark evidence;
+- recommendation/review/regrade/publication workflow completion;
+- UNIT support and broader math/derivation/composite capabilities;
+- real subjective-paper and numeric/math-paper end-to-end runs;
+- held-out academic-quality validation and production reliability evidence.
 
-`ResolvedPaperScoringAuthority + QuestionScoreResult tuple -> deterministic paper score`
+Do not interpret a green core regression as proof that those external systems are correct.
 
-The semantic evaluator may select an approved rubric level. It cannot directly set the authoritative numerical total.
+## Run the verified test suite
 
-## Primary sources
+From the repository root on Windows:
 
-1. Gradified Software Requirements Specification v1.0, 31 August 2026.
-2. Verification-First Adaptive Grading Engine Version 2 — SRS-Aligned Engineering Source of Truth.
-3. Authoritative Scoring Numeric Profile v1.
+```bat
+py -3.11 -m venv .venv
+.venv\Scripts\activate
+python -m pip install -r requirements-test.txt
+python -m pytest -q
+```
 
-## Engineering documentation
+The qualified baseline uses **CPython 3.11.9** and the exact package versions in `requirements-test.txt`.
 
-- `docs/PROJECT_STATE.md` — current verified implementation state and next work.
-- `docs/ARCHITECTURE.md` — cross-system grading boundaries and invariants.
-- `docs/IMPLEMENTATION_PLAN.md` — dependency-aware Release 1 capability roadmap.
-- `docs/SRS_TRACEABILITY.md` — requirements mapped to implementation and verification.
-- `docs/TESTING.md` — verification strategy and executed evidence.
-- `docs/SCORING_KERNEL_BLACK_BOX.md` — future-engineer interface, authority, failure, and non-claim reference.
-- `docs/NUMERIC_PROFILE_V1.md` — concise normative numeric-profile reference.
-- `docs/DETERMINISTIC_SCORING_KERNEL_AUDIT.md` — final kernel evidence and closure audit.
+For the integration handoff baseline, the expected complete result is:
 
-## Next implementation capability
+```text
+1499 passed
+```
 
-The next dependency-aware capability is **Rubric Authoring Safety & Compilation**:
+A different Python/dependency environment is useful for extra compatibility testing, but it is not the qualified baseline unless separately verified.
 
-- immutable rubric authoring models;
-- deterministic structural validation/linting;
-- marks reconciliation to question maximum;
-- dependency/cap/gate/deduction validation;
-- version and activation state;
-- teacher approval before ACTIVE for Release 1.
+## Repository usage notes
 
-No OCR schema, backend table, provider API, authentication rule, or production resource limit should be invented in advance of real integration evidence.
+- The project is currently a Python grading-core library plus tests and engineering contracts, not a deployable HTTP service.
+- Run tests from the repository root; pytest adds `src` to the Python path through `pyproject.toml`.
+- Do not place secrets, private student data, school-private reference material, `.env` files, or production credentials in this repository.
+- Do not change frozen scoring behavior merely to make an external integration easier. Adapt external systems at their explicit integration boundaries.
+
+## License
+
+No project license has been established in this repository. Consult the repository owner before reuse or redistribution outside the Gradified project.

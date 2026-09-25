@@ -1,6 +1,6 @@
 # Release 1 Capability Roadmap
 
-Status date: 2026-09-24
+Status date: 2026-09-25
 
 ## Foundation — COMPLETE
 
@@ -296,48 +296,59 @@ Frozen consequences:
 - do not create EXACT RED, implementation, or normalization infrastructure;
 - reopen EXACT only if new authoritative, approved-workload, or verified-integration evidence materially changes a recorded defer basis.
 
-### NUMERIC / UNIT — N1 AUTHORITY BUILD AUTHORIZED
+### NUMERIC / UNIT — N1 FROZEN; N2 EVIDENCE ADMISSION BUILD AUTHORIZED
 
-Decision: `BUILD` for N1 authority only. N2/N3/N4 remain unauthorized.
+N1 authority is CLOSED/FROZEN.
 
-Qualified prerequisite baseline:
+Frozen N1 identity:
 
-- ACTIVE-exposure integrity repair commit: `ba951af9081a5459464f4985074f5f113e62ad6b`;
-- parent: `f8efd180611246d3a2c847b26316e5dadbabee1a`;
-- tree: `687e4049630135bd3fd0d06db1218169df06a550`;
-- targeted repair/hardening: **99/99**;
-- qualified complete pre-commit regression: **1037/1037**;
-- qualified complete post-commit regression: **1037/1037**;
-- post-commit working tree: clean.
+- commit: `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f`;
+- parent: `328f131281c554f798e944c27a5177a43900f3bd`;
+- tree: `d5410673f76b321e19ae97cc75b5aa538e11e135`;
+- targeted/hostile: **110/110**;
+- complete qualified pre/post-commit regression: **1147/1147**;
+- clean post-commit working tree.
 
-N1 objective:
+N2 prerequisite decision: `BUILD` for a narrow student scalar-admission boundary only. N3/N4/UNIT remain unauthorized.
 
-Build the smallest immutable subordinate NUMERIC academic-authority boundary for one exact ACTIVE question. Profile v1 is unitless finite-decimal scalar only and supports finite approved `EXACT` and inclusive `ABSOLUTE_TOLERANCE` conditions, complete binary criterion projections, exact configuration binding, canonical fingerprinting and subordinate approval.
+N2 objective:
 
-N1 required sequence:
+Build the smallest deterministic admission primitive that converts one unambiguous already-normalized question evidence block into a traceable canonical unitless finite-decimal scalar observation. It must not compare against N1 authority or emit criterion levels/marks.
 
-```text
-closed contract
-→ causal positive/hostile RED
-→ verify causal failure
+N2 required v1 behavior:
+
+- exact `AnswerEvidenceBundle` boundary; no OCR-vendor JSON parsing;
+- exactly one target `QuestionEvidence`;
+- exactly one evidence block; no hidden first/latest/best selection;
+- `ACTIVE` `TEXT`/`MATH` only;
+- bounded ASCII decimal grammar with deterministic string-only canonicalization;
+- preserve submission/OCR/question/answer-scope/evidence references;
+- revalidate current input/output state;
+- reject ambiguity, unsupported syntax/types, units, non-active evidence and resource excess without producing an academic outcome.
+
+N2 exclusions:
+
+- N1 authority resolution changes;
+- numeric exact/tolerance comparison;
+- projections/marks/scoring;
+- UNIT/conversion, exponent/fraction/symbolic/locale parsing;
+- OCR/backend adapters, capability registry or generic quantity framework;
+- production benchmark/auto-release claims.
+
+N2 sequence:
+
+contract closure + governance checkpoint
+→ causal RED
+→ verify failure is the missing N2 boundary
 → minimal GREEN
-→ targeted hostile hardening
-→ related/full regression
-→ source/custody audit
-→ freeze N1
-```
+→ hostile current-state/resource/ambiguity hardening
+→ N1/S1/S2 related regression
+→ complete regression
+→ exact source/staging/tree custody
+→ commit + post-commit complete regression
+→ freeze N2
 
-N1 exclusions:
-
-- no student numeric parsing/admission;
-- no execution of student-vs-authority numeric comparison;
-- no units/conversion/relative tolerance/significant figures/symbolic math/derivation;
-- no mark arithmetic or score totals;
-- no S1/B2/B3 changes;
-- no generic partial-judgment merger or capability framework;
-- no changes to frozen ACTIVE/DIRECT/G1/CHOICE/scoring Numeric Profile merely for convenience.
-
-Historical workload evidence remains required for N2/N3 breadth, benchmark coverage and production-readiness claims, but no longer blocks construction of this narrow authority primitive.
+Only after N2 freezes should N3 receive a fresh prerequisite gate for deterministic exact/absolute-tolerance comparison.
 
 ### CROSS-CUTTING AUTHORITY PREREQUISITE — COMPLETE / FROZEN
 
@@ -375,11 +386,11 @@ Broader semantic Release-1 work remains open and still requires production provi
 
 Do not interpret this slice as academic-quality validation, production-provider closure, retry/idempotency closure, OCR/backend integration, or review/publication authority.
 
-### NEXT CANDIDATE — N1 NUMERIC AUTHORITY RED AUTHORIZED
+### NEXT CANDIDATE — N2 NUMERIC EVIDENCE ADMISSION RED AUTHORIZED
 
-N1 is the selected next capability gate. Begin causal contract RED against the frozen prerequisite repair baseline. The RED batch must cover local authority/profile representation, canonical fingerprinting, explicit `NOT_AUTHORIZED | BOUND` binding, exact source materialization, subordinate approval, ACTIVE identity cross-checks, complete legal projections and fail-closed resource/profile/malformed cases.
+N2 is the selected next capability gate against frozen N1 commit `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f`. Begin causal RED for the bounded normalized-evidence-to-unitless-scalar admission contract above.
 
-Do not start N2/N3/N4 or broaden profile v1 during N1. If the closed N1 contract cannot be implemented additively around frozen boundaries, stop on the concrete contradiction.
+Do not start N3/N4/UNIT or broaden N2 during this batch. If existing evidence contracts expose a concrete contradiction, stop on that contradiction rather than weakening the fail-closed scope.
 
 ## Mathematical / Derivation Evaluation — OPEN
 

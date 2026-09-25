@@ -1,6 +1,6 @@
 # Testing Strategy and Verification Status
 
-Status date: 2026-09-24
+Status date: 2026-09-25
 
 ## Verification principle
 
@@ -436,6 +436,32 @@ Accepted repair claim: before exposing scoring authority from an ACTIVE rubric v
 The repair qualifies the prerequisite baseline for N1 authority-contract implementation. It does not implement NUMERIC evidence admission, numeric comparison, scoring composition, UNIT semantics, or production NUMERIC quality.
 
 Current complete qualified regression baseline after the ACTIVE exposure repair: **1037/1037**.
+
+## NUMERIC N1 academic-authority boundary — frozen
+
+Implementation identity:
+
+- commit: `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f`;
+- parent: `328f131281c554f798e944c27a5177a43900f3bd`;
+- committed tree: `d5410673f76b321e19ae97cc75b5aa538e11e135`;
+- reviewed candidate patch SHA-256: `da7dc648ee8673e9e6ece5d3d188bf2dccfd9c9d5ccc867d23ee1eeb27128c8c`.
+
+Qualified Windows x64 / CPython 3.11.9 evidence:
+
+- targeted N1 authority + hostile hardening: **110/110**;
+- exact related selector: **515/515 selected**, with **606 deselected**;
+- complete qualified pre-commit repository regression: **1147/1147**;
+- exact five-path staged candidate tree matched `d5410673f76b321e19ae97cc75b5aa538e11e135`;
+- committed path set was exactly the two N1 production files and three reviewed N1 test files;
+- committed tree matched the reviewed staged tree;
+- complete qualified post-commit repository regression: **1147/1147**;
+- post-commit working tree: clean.
+
+Accepted test claim: N1 provides immutable/fingerprintable unitless finite-decimal NUMERIC academic authority, explicit `NOT_AUTHORIZED | BOUND` configuration, subordinate approval and exact ACTIVE/projection cross-checking. It does not parse student evidence, execute comparison, produce marks, implement units or establish production NUMERIC quality.
+
+Current complete qualified regression baseline after N1 freeze: **1147/1147**.
+
+N2 evidence admission has earned BUILD by prerequisite inspection but has no qualified executable evidence yet; planned N2 results must not be recorded here until run in the qualified environment.
 
 
 ## S2 test-design rules

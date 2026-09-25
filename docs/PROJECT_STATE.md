@@ -1,10 +1,10 @@
 # Project State
 
-Status date: 2026-09-24
+Status date: 2026-09-25
 
 ## Current milestone
 
-**Synthetic E2E S1, S2a, and S2b-1 remain closed/frozen. Deterministic single-select CHOICE v1 remains closed/frozen at its historical **853/853** post-commit baseline. Release-1 EXACT remains closed at `DEFER_EXACT`. The evaluator-facing ACTIVE question-authority boundary and DIRECT-text semantic slice remain frozen; the verified ACTIVE-exposure integrity defect is now repaired/frozen at commit `ba951af9081a5459464f4985074f5f113e62ad6b` (parent `f8efd180611246d3a2c847b26316e5dadbabee1a`, tree `687e4049630135bd3fd0d06db1218169df06a550`) after **99/99** targeted hostile checks, **1037/1037** qualified complete pre-commit regression, and **1037/1037** qualified complete post-commit regression with a clean working tree. Release-1 NUMERIC/UNIT is not implemented, but the bounded N1 NUMERIC academic-authority prerequisite has now earned `BUILD`: N1 causal RED is authorized for the closed unitless finite-decimal exact/inclusive-absolute-tolerance authority contract. N2 student-evidence admission, N3 deterministic numeric evaluation, N4 composition, UNIT support, and production NUMERIC quality remain unauthorized.**
+**Synthetic E2E S1, S2a, and S2b-1 remain closed/frozen. Deterministic single-select CHOICE v1 remains closed/frozen at its historical **853/853** post-commit baseline. Release-1 EXACT remains closed at `DEFER_EXACT`. The evaluator-facing ACTIVE question-authority boundary and DIRECT-text semantic slice remain frozen; the verified ACTIVE-exposure integrity defect remains repaired/frozen at commit `ba951af9081a5459464f4985074f5f113e62ad6b`. NUMERIC N1 academic authority is now CLOSED/FROZEN at commit `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f` / tree `d5410673f76b321e19ae97cc75b5aa538e11e135`, with **110/110** targeted hostile qualification and **1147/1147** complete qualified pre/post-commit regression. A bounded N2 student numeric evidence-admission primitive now earns `BUILD`; N3 deterministic comparison, N4 composition, UNIT support, production NUMERIC quality and auto-release remain unauthorized.**
 
 Current immutable S1 anchor:
 
@@ -19,7 +19,7 @@ Current immutable S1 anchor:
 - committed acceptance artifact SHA-256:
   `7ff52d81346094f9c361ce9625107a4dfe1330a947f18a482f4599a3d5382f32`
 
-The earlier S2b-2 implementation-eligibility inspection is complete, but S2b-2 remains incomplete as an executable Release-1 capability: Gradified still needs an explicit versioned platform/default policy decision and the current S2b-1 observation profile is intentionally narrower than the complete risk/impact input space described by the Engineering Source of Truth. No recommendation behavior is frozen. Release-1 EXACT remains closed with `DEFER_EXACT`. For NUMERIC/UNIT, new authority and verification evidence changes only the N1 prerequisite decision: the exact ACTIVE exposure defect required by N1 has been repaired/frozen, and the N1 semantic contract is closed for a deliberately narrow unitless finite-decimal scalar profile. N1 therefore earns `BUILD`; this does not authorize N2/N3/N4, UNIT semantics, or a production-readiness claim. Representative workload evidence remains a gate for evaluator/parser breadth, benchmark coverage and production-quality claims. Frozen CHOICE, S1, B2/B3, DIRECT, G1 and scoring Numeric Profile v1 remain unchanged. No frozen source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
+The earlier S2b-2 implementation-eligibility inspection is complete, but S2b-2 remains incomplete as an executable Release-1 capability: Gradified still needs an explicit versioned platform/default policy decision and the current S2b-1 observation profile is intentionally narrower than the complete risk/impact input space described by the Engineering Source of Truth. No recommendation behavior is frozen. Release-1 EXACT remains closed with `DEFER_EXACT`. NUMERIC N1 is now frozen and supplies the approved unitless scalar academic-authority side. The next bounded prerequisite, N2 student evidence admission, earns `BUILD` because the existing normalized `AnswerEvidenceBundle` plus the N1 scalar domain are sufficient to define a conservative parser without inventing academic correctness. N3/N4, UNIT semantics and production-readiness claims remain gated. Representative workload evidence remains required for parser/evaluator breadth, benchmark coverage and production-quality claims. Frozen CHOICE, S1, B2/B3, DIRECT, G1 and scoring Numeric Profile v1 remain unchanged. No frozen source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
 
 ## Frozen / accepted boundaries
 
@@ -410,46 +410,53 @@ Freeze consequences:
 - reopen EXACT only when new authoritative, approved-workload, or verified-integration evidence materially changes a recorded `DEFER_EXACT` basis.
 
 
-### Release-1 NUMERIC / UNIT — N1 authority prerequisite BUILD authorized
+### Release-1 NUMERIC / UNIT — N1 frozen; N2 evidence admission BUILD authorized
 
-Decision: `BUILD` for **N1 authority only**. N2/N3/N4 remain unauthorized.
+N1 authority decision: `CLOSED / FROZEN`.
 
-The historical NUMERIC `DEFER` was correct for the earlier executable state. New source/contract inspection and the qualified ACTIVE-exposure repair now establish a safe, additive prerequisite boundary for a deliberately narrow N1 authority profile without modifying frozen scoring/evaluator paths.
+Frozen N1 identity and qualification:
 
-Closed N1 semantic scope:
+- implementation commit: `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f`;
+- parent governance checkpoint: `328f131281c554f798e944c27a5177a43900f3bd`;
+- committed tree: `d5410673f76b321e19ae97cc75b5aa538e11e135`;
+- targeted N1 authority + hostile qualification: **110/110**;
+- exact related selector: **515/515 selected**, with **606 deselected**;
+- complete qualified pre-commit regression: **1147/1147**;
+- complete qualified post-commit regression: **1147/1147**;
+- post-commit working tree: clean.
 
-- immutable subordinate NUMERIC authority bound to one exact admitted ACTIVE grading configuration;
-- explicit configuration state: `NOT_AUTHORIZED` or exact `BOUND(profile, fingerprint)`; missing binding is an integrity/configuration failure, not `NOT_AUTHORIZED`;
-- non-circular exact-fingerprint materialization; no `latest`, `current`, `first`, highest-version or heuristic selection;
-- unitless finite-decimal scalar authority only;
-- approved `EXACT` or inclusive `ABSOLUTE_TOLERANCE` conditions over finite approved alternatives;
-- one complete `satisfied_projection` and one complete `not_satisfied_projection`, each covering the exact scoring criterion universe/order with legal levels and no marks;
-- subordinate immutable approval of the recomputed NUMERIC authority fingerprint;
-- exact binding to current rubric ID/version plus recomputed finalized-question, authoring-content and compiled-scoring fingerprints;
-- reproducible versioned canonical encoding/fingerprinting with profile-owned resource bounds;
-- pure whole-question applicability only where the approved NUMERIC relation is academically sufficient for every projected criterion.
+N1 remains authority-only: unitless finite-decimal scalar authority, finite approved `EXACT` / inclusive `ABSOLUTE_TOLERANCE` conditions, complete satisfied/not-satisfied criterion projections, exact ACTIVE configuration binding, subordinate approval, canonical fingerprinting and fail-closed exact-fingerprint resolution. It does not parse student evidence or execute academic comparison.
 
-Still explicitly outside N1:
+N2 prerequisite decision: `BUILD` for **narrow student numeric evidence admission only**. N3/N4 and UNIT remain unauthorized.
 
-- student evidence parsing/admission (N2);
-- numeric comparison execution against student evidence (N3);
-- S1/B2/B3 composition (N4);
-- units/conversion, relative tolerance, significant figures, symbolic math, derivation/method criteria, partial-distance bands, mixed-capability composition, generic numeric DSLs, provider calls or mark arithmetic.
+Why N2 now earns BUILD:
 
-Historical `DEFER` disposition:
+- the frozen `AnswerEvidenceBundle` already provides the normalized submission/question/block boundary, so N2 does not need to invent or depend on OCR-vendor JSON;
+- the accepted architecture explicitly requires NUMERIC value parsing before deterministic comparison;
+- N1 now provides the exact unitless scalar domain to which an admitted student value can later be compared;
+- a bounded N2 parser can establish a student-side scalar observation without inventing expected answers, tolerances, criterion levels, marks, units, or review policy.
 
-- missing typed authority/binding is resolved for the narrow N1 profile, so N1 itself may be built;
-- admitted student numeric/quantity input remains unresolved and gates N2;
-- deterministic student-vs-authority comparison remains unresolved and gates N3;
-- composition remains gated until N3 produces complete authorized judgments;
-- representative approved/anonymized workload evidence remains required for N2/N3 scope, benchmark coverage, supported-case breadth and any production-readiness/quality claim; it does not block this foundational N1 authority primitive.
+Closed N2 v1 scope for the next implementation batch:
 
-Implementation consequence:
+- consume an already-normalized exact `AnswerEvidenceBundle`;
+- target one exact question identity and require exactly one matching `QuestionEvidence`;
+- require exactly one evidence block for the question; no first/latest/best-block selection;
+- admit only an `ACTIVE` `TEXT` or `MATH` block; crossed-out/uncertain evidence does not become a scalar;
+- accept only bounded unitless ASCII finite-decimal syntax and deterministically canonicalize it into the same finite-decimal lexical domain used by N1;
+- preserve submission/OCR/question/answer-scope/evidence references in the admitted observation;
+- treat malformed, ambiguous, unsupported, unit-bearing, resource-exceeding, or unassessable evidence as non-academic admission failures, never as `not_satisfied`;
+- revalidate current normalized-evidence and admitted-observation state rather than trusting dataclass construction history.
 
-- N1 causal positive/hostile RED is now authorized against the exact repair baseline;
-- implementation must remain additive around frozen ACTIVE/DIRECT/G1/CHOICE/S1/B2/B3/scoring Numeric Profile paths;
-- if N1 cannot satisfy the closed contract without modifying a frozen path beyond the already-qualified ACTIVE repair, stop and record the concrete contradiction;
-- N2/N3/N4 remain unauthorized until their prerequisites are separately earned.
+N2 does **not** establish:
+
+- numeric correctness or tolerance evaluation (N3);
+- any criterion projection or marks;
+- UNIT parsing/conversion;
+- scientific notation, fractions, symbolic expressions, locale-specific numbers or generic quantity algebra;
+- OCR/backend adapter completion or trust in question mapping/provenance beyond the already-admitted `AnswerEvidenceBundle`;
+- evidence-artifact cryptographic identity, whole-answer `answer_scope_ref` verification, calibrated OCR confidence policy, capability routing, production benchmark quality or auto-release eligibility.
+
+Representative approved/anonymized workload evidence remains required to broaden N2 syntax/evidence shapes, define production NUMERIC coverage and benchmark N3 quality. The deliberately narrow N2 v1 admission primitive may be built without pretending that breadth has been established.
 
 ## Current blockers / open decisions
 
@@ -581,15 +588,27 @@ ACTIVE exposure integrity repair qualified evidence on Windows / CPython 3.11.9:
 - complete qualified post-commit regression: **1037/1037**;
 - post-commit working tree: clean.
 
+NUMERIC N1 authority qualified evidence on Windows / CPython 3.11.9:
+
+- implementation commit: `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f`;
+- parent: `328f131281c554f798e944c27a5177a43900f3bd`;
+- committed tree: `d5410673f76b321e19ae97cc75b5aa538e11e135`;
+- reviewed candidate patch SHA-256: `da7dc648ee8673e9e6ece5d3d188bf2dccfd9c9d5ccc867d23ee1eeb27128c8c`;
+- targeted N1 + hostile qualification: **110/110**;
+- exact related selector: **515/515 selected**, **606 deselected**;
+- complete qualified pre-commit regression: **1147/1147**;
+- complete qualified post-commit regression: **1147/1147**;
+- post-commit working tree: clean.
+
 S1's earlier empty-evidence defect remains the standing example that full-suite green does not replace hostile source review.
 
 ## Next task
 
-Begin the **N1 NUMERIC authority causal RED batch** against the exact frozen prerequisite baseline `ba951af9081a5459464f4985074f5f113e62ad6b` / tree `687e4049630135bd3fd0d06db1218169df06a550`.
+Begin the **N2 NUMERIC student-evidence admission causal RED batch** from the exact frozen N1 baseline `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f` / tree `d5410673f76b321e19ae97cc75b5aa538e11e135`.
 
-The RED batch must encode the closed N1 contract before production implementation, including positive construction/fingerprinting/resolution and hostile malformed, substitution, binding, approval, projection, canonicalization and resource cases. The first RED must be causal for the missing N1 production boundary rather than a failure in existing fixtures.
+The RED batch must establish the bounded v1 admission contract above before production implementation. The first RED must fail causally at the missing N2 production boundary after existing `AnswerEvidenceBundle` fixtures construct successfully.
 
-Do not start N2 student parsing/admission, N3 numeric comparison, N4 composition, UNIT support, or any generic evaluator/composition framework. Preserve frozen ACTIVE/DIRECT/G1/CHOICE/S1/B2/B3/scoring Numeric Profile behavior. If RED exposes an actual contradiction with those frozen contracts, stop and resolve that contradiction rather than weakening the N1 contract.
+Do not start N3 comparison, N4 composition, UNIT support, capability routing, OCR/backend adapters or generic numeric frameworks in this batch. Unsupported/malformed/unassessable evidence must remain non-academic failure, never an implicit incorrect-answer projection.
 
 ## Documentation rule
 

@@ -51,7 +51,7 @@ The verified Release 1 integration baseline before the public documentation/priv
 
 Exact private forensic commit identities are retained in the private delivery/evidence package rather than used as public-history authority.
 
-This publication branch adds documentation only. It does not modify frozen grading source or tests.
+This publication branch does not modify production grading source or scoring behavior. It adds public integration documentation and performs one test-only repository-structure cleanup: shared pytest helper modules live under `tests/support/` instead of loose at the `tests/` root. The helper move does not change grading semantics and must still pass the complete qualified regression before push.
 
 ## Important architectural rule
 

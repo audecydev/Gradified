@@ -6,19 +6,16 @@ The canonical diagram is:
 
 ![Gradified Release 1 target architecture](assets/release-1-target-architecture.png)
 
-A scalable SVG copy is also available at [`assets/release-1-target-architecture.svg`](assets/release-1-target-architecture.svg).
+The diagram preserves the original Release 1 layout. Three arrow corrections are important:
 
-## What changed from the earlier draft diagram
+1. **Reference context is not student evidence.** `RetrievalPort` / approved reference context does not feed `AnswerEvidenceBundle`. Student/OCR evidence stays separate. Reference context is admitted separately and reaches grading only through the pre-evaluation/context boundary when the grading policy requires it.
+2. **Math/domain checks verify; they do not silently author semantic judgments.** Independent unit/symbolic/reference/domain checks feed the `Judgment + Evidence / Domain Verification` stage. Deterministic or semantic evaluators create criterion judgments; independent checks verify them or supply deterministic evidence according to the selected capability.
+3. **A regrade creates a new grading run.** Review/regrade workflow can request a new run through the async/reliability path. Existing historical results are not silently mutated.
 
-The corrected architecture makes several important boundaries explicit:
+Two labels in the visual are high-level groupings, not permission to collapse responsibilities:
 
-1. **Reference context is not student evidence.** `AnswerEvidenceBundle` contains OCR/student evidence only. Approved reference context is materialized separately and is supplied to rubric authoring or evaluation only when policy requires it.
-2. **Capability registry and evaluator routing are separate.** The registry resolves an exact versioned capability record. A separate versioned selection policy chooses the exact evaluator capability for a question/criterion.
-3. **Evaluator execution has its own provenance boundary.** The target architecture records an `evaluation_attempt_id`, selected capability identity/version, and execution provenance before judgments are accepted.
-4. **Backend technology is not hard-coded.** The architecture uses a generic backend/API/workflow boundary rather than assuming Django/DRF.
-5. **Regrade does not bypass grading.** A regrade creates a new run. A rubric correction creates a new rubric/spec version and then a new run. Historical results are not silently mutated.
-6. **Technical failures do not become student errors.** Pre-evaluation, provider, execution, and verification failures fail closed into controlled workflow states.
-7. **The backend publishes.** The grading core produces candidate results; institution/backend policy controls official publication.
+- **`Capability Registry + Router`** groups the target selection/routing area visually. In engineering contracts, versioned evaluator selection and exact capability-registry resolution remain separate responsibilities. The current repository implements the registry; generic routing remains open work.
+- **`Django DRF / Backend API Boundary`** names the expected platform integration boundary. The grading-core contracts remain backend-technology independent; adapters must preserve the same trust, authority, idempotency, and publication responsibilities even if the concrete backend interface changes.
 
 ## Final Release 1 target flow
 

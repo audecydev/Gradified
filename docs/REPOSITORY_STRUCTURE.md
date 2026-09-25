@@ -46,8 +46,7 @@ Gradified/
     ├── PROJECT_STATE.md
     ├── TESTING.md
     └── assets/
-        ├── release-1-target-architecture.png
-        └── release-1-target-architecture.svg
+        └── release-1-target-architecture.png
 ```
 
 ## Why `tests/support/` exists

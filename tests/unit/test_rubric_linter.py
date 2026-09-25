@@ -17,7 +17,7 @@ from grading.rubric.models import (
     AuthoringRoundingRule,
     QuestionRubricAuthoringContent,
 )
-from tests._rubric_authoring_support import (
+from tests.support.rubric_authoring import (
     criterion,
     sd,
     simple_basis,

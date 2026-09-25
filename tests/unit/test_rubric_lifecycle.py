@@ -24,7 +24,7 @@ from grading.rubric.lifecycle import (
 )
 from grading.rubric.profile import RUBRIC_COMPILER_PROFILE_VERSION
 from grading.scoring.reducer import reduce_question
-from tests._rubric_authoring_support import (
+from tests.support.rubric_authoring import (
     criterion,
     simple_basis,
     simple_content,
@@ -245,7 +245,7 @@ def test_non_scoring_rubric_content_change_still_invalidates_approval_binding() 
 
 def test_canonical_rule_reordering_is_not_a_meaningful_new_version() -> None:
     from grading.rubric.models import AuthoringCapRule, AuthoringCriterionCondition
-    from tests._rubric_authoring_support import sd
+    from tests.support.rubric_authoring import sd
 
     c1 = AuthoringCriterionCondition("C1", ("FULL",))
     c2 = AuthoringCriterionCondition("C2", ("FULL",))

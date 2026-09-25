@@ -4,7 +4,7 @@ import pytest
 
 from grading.contracts.errors import ScoreOutOfRangeError, ScoringNumericEnvelopeError
 from grading.contracts.numeric_profile import MAX_SCORING_CANONICAL_DIGITS
-from tests._b3_red_support import (
+from tests.support.b3 import (
     authority,
     expected_question,
     load_b3,

@@ -18,7 +18,7 @@ from grading.rubric.lifecycle import (
     get_active_scoring_authority,
     validate_version,
 )
-from tests._rubric_authoring_support import (
+from tests.support.rubric_authoring import (
     authoring_test_limits,
     simple_basis,
     simple_content,

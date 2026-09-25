@@ -5,7 +5,7 @@ from decimal import localcontext
 from hypothesis import given, strategies as st
 
 from grading.scoring.arithmetic import exact_sum
-from tests._b3_red_support import (
+from tests.support.b3 import (
     context_snapshot,
     fraction_from_sd,
     hostile_context,

@@ -12,7 +12,7 @@ from grading.contracts.errors import ScoreOutOfRangeError, ScoringNumericEnvelop
 from grading.contracts.numeric_profile import MAX_SCORING_CANONICAL_DIGITS
 from grading.contracts.result import QuestionScoreResult, RubricRef
 import grading.scoring.arithmetic as arithmetic_module
-from tests._b3_red_support import (
+from tests.support.b3 import (
     authority,
     expected_question,
     grading_spec_ref,

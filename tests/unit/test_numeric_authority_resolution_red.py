@@ -31,7 +31,7 @@ from grading.rubric.lifecycle import (
     validate_version,
 )
 from grading.rubric.models import FinalizedQuestionScoringBasis
-from tests._rubric_authoring_support import authoring_test_limits, simple_basis, simple_content
+from tests.support.rubric_authoring import authoring_test_limits, simple_basis, simple_content
 
 
 def _contract():

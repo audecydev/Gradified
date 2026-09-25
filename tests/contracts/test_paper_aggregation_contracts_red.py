@@ -8,7 +8,7 @@ import pytest
 from grading.contracts.errors import InvalidScoringAuthorityError
 from grading.contracts.result import QuestionScoreResult, RubricRef, ScoringPolicyRef
 from grading.contracts.scoring_decimal import ScoringDecimal
-from tests._b3_red_support import (
+from tests.support.b3 import (
     authority,
     authority_field_names,
     expected_question,

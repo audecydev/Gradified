@@ -11,7 +11,7 @@ from grading.rubric.compiler import CompiledRubricCandidate, compile_rubric_cont
 from grading.rubric.errors import RubricCompilationError
 from grading.rubric.models import AuthoringCapRule, AuthoringCriterionCondition
 from grading.rubric.profile import RUBRIC_COMPILER_PROFILE_VERSION
-from tests._rubric_authoring_support import (
+from tests.support.rubric_authoring import (
     sd,
     simple_basis,
     simple_content,
@@ -97,7 +97,7 @@ def test_compiler_refuses_lint_errors_and_preserves_result_for_diagnostics() -> 
 def test_compiler_fingerprints_are_stable_across_hash_seeds() -> None:
     code = r'''
 import grading.rubric as r
-from tests._rubric_authoring_support import simple_content, simple_basis, authoring_test_limits
+from tests.support.rubric_authoring import simple_content, simple_basis, authoring_test_limits
 c = r.compile_rubric_content(simple_content(), finalized_question=simple_basis(), version=7, limits=authoring_test_limits())
 print(c.source_content_hash)
 print(c.finalized_question_hash)

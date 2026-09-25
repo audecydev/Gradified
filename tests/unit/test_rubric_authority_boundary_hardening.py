@@ -17,7 +17,7 @@ from grading.contracts.judgment import CriterionJudgment
 from grading.rubric.errors import RubricCompilationError, RubricLifecycleError
 from grading.rubric.fingerprint import compiled_authority_fingerprint
 from grading.scoring.reducer import reduce_question
-from tests._rubric_authoring_support import criterion, level, sd, simple_content
+from tests.support.rubric_authoring import criterion, level, sd, simple_content
 
 
 _REQUIRED_PUBLIC_API = (
@@ -573,7 +573,7 @@ def test_compiler_fingerprints_are_stable_across_fresh_process_hash_seeds() -> N
     )
     code = r'''
 import grading.rubric as r
-from tests._rubric_authoring_support import simple_content, sd
+from tests.support.rubric_authoring import simple_content, sd
 basis = r.FinalizedQuestionScoringBasis("Q1", sd(5))
 limits = r.RubricCompilationLimits(
     max_criteria=20,

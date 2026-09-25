@@ -21,7 +21,7 @@ from grading.rubric.lifecycle import (
     create_initial_version,
     validate_version,
 )
-from tests._rubric_authoring_support import (
+from tests.support.rubric_authoring import (
     authoring_test_limits,
     simple_basis,
     simple_content,

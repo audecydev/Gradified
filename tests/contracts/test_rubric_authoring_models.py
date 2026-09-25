@@ -13,7 +13,7 @@ from grading.rubric.models import (
     QuestionRubricAuthoringContent,
     RubricCompilationLimits,
 )
-from tests._rubric_authoring_support import sd, simple_content
+from tests.support.rubric_authoring import sd, simple_content
 
 
 def test_authoring_contracts_are_deeply_immutable() -> None:

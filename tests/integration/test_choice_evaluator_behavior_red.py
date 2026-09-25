@@ -48,7 +48,7 @@ from grading.rubric.lifecycle import (
 )
 from grading.scoring.reducer import reduce_question
 from grading.verification.evidence import EvidenceVerificationError, verify_evaluated_judgments
-from tests._rubric_authoring_support import authoring_test_limits, simple_basis, simple_content
+from tests.support.rubric_authoring import authoring_test_limits, simple_basis, simple_content
 
 
 def _active_authority() -> QuestionScoringAuthority:

@@ -9,7 +9,7 @@ from grading.rubric.models import (
     AuthoringCriterionCondition,
     QuestionRubricAuthoringContent,
 )
-from tests._rubric_authoring_support import criterion, sd, simple_basis, authoring_test_limits
+from tests.support.rubric_authoring import criterion, sd, simple_basis, authoring_test_limits
 
 
 def lint(content, *, max_marks: object):

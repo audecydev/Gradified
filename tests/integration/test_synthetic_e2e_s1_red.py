@@ -17,7 +17,7 @@ from grading.rubric.lifecycle import (
     validate_version,
 )
 from grading.scoring.reducer import reduce_question
-from tests._rubric_authoring_support import authoring_test_limits, simple_basis, simple_content
+from tests.support.rubric_authoring import authoring_test_limits, simple_basis, simple_content
 
 
 EVIDENCE_MODULE = "grading.contracts.evidence"

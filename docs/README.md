@@ -74,3 +74,7 @@ Public repository engineering documentation is kept in **Markdown (`.md`)** beca
 - does not require Microsoft Word.
 
 Private learning material is different. The project's learning guides remain private `.docx` files and are **not part of this public GitHub repository**.
+
+## Test support helpers
+
+Shared pytest helper modules live under [`../tests/support/`](../tests/support/) rather than loose at the `tests/` root. They are fixtures/builders used by multiple test categories and are not production modules.

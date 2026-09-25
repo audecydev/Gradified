@@ -1,5 +1,8 @@
 # Release 1 Capability Roadmap
 
+> **Public-history note:** Git author/committer metadata was privacy-normalized for first public publication. Commit identifiers shown in this public document refer to the privacy-normalized public history. Private verification packages retain the corresponding internal evidence identities.
+
+
 Status date: 2026-09-25
 
 ## Foundation — COMPLETE
@@ -12,7 +15,7 @@ Question scoring and paper aggregation are frozen. They remain the sole numerica
 
 Frozen anchor:
 
-`178668b9b735ef369825c86d16db7999b8d3c784`
+`5c32de738978739af04fa3b38f1c051cc40ba0b5`
 
 Do not reopen without a verified defect, authority contradiction or changed requirement.
 
@@ -20,7 +23,7 @@ Do not reopen without a verified defect, authority contradiction or changed requ
 
 Acceptance commit:
 
-`5f3ee013bc9f732f469104a5f6c6dc151cad3402`
+`bbaa7c528b9c1310452cba7e75b38acec51da3ed`
 
 Release 1 still requires explicit teacher approval before ACTIVE authority.
 
@@ -30,19 +33,19 @@ Release 1 still requires explicit teacher approval before ACTIVE authority.
 
 Commit:
 
-`a6f0388f137226fb2125a07c6f01f424bafc5d58`
+`de8a0af6c637cd24179d1fdcf5c4837c514a8896`
 
 ### G1b hostile provider ingress
 
 Commit:
 
-`c7a3ae3592b6ad0f6120178ddf9015e5ac10bdf0`
+`ead80e5ff85b68dfd7310e6251e4a5ad65b1aff1`
 
 ### Provider abstraction / Replay
 
 Commit:
 
-`c48c813fb0eb64013fc7265ed0d14f64dd9d3d57`
+`1b823ae441bfba01436085cc266b578c2d7c17af`
 
 This closes the deterministic/no-network provider boundary, including replay provenance consistency. It does not establish a production network provider or academic rubric-generation quality.
 
@@ -52,8 +55,8 @@ Original prerequisite decision: `BUILD` — fulfilled.
 
 Frozen implementation identity:
 
-- commit: `82588a4df5d77f9b88dac3b19c34728dc0ad697e`;
-- parent: `7ea8fbb88e2e4edd83b7ca80f14b53eddcff601f`;
+- commit: `19ebbb3365af4de5fcf135bb019c05eafb03ddf1`;
+- parent: `3775d5771c2fe1c5dc75538b01a068b6418e7b6b`;
 - tree: `c0d68f97433cefb4f3d06fd86fb10b2db6215413`.
 
 Qualified closure evidence:
@@ -101,7 +104,7 @@ At this historical ACTIVE-boundary closure, EXACT remained `DEFER_EXACT` and NUM
 
 Commit:
 
-`456a6248e9d28ec083e7503c3a9ad9385de47c7d`
+`a831b1145f13e3eaeef29f9a0c1530da57ecbedc`
 
 S1 proves block-grounded evidence contract/admission, evidence-reference verification, rich evaluator judgment preservation, narrow scoring projection and real deterministic question reduction.
 
@@ -111,7 +114,7 @@ S1 is not the complete evidence subsystem.
 
 ## Synthetic E2E S2 — IN PROGRESS
 
-S2a is closed/frozen at commit `61ce96d62774a78f4019c4905421324f614a7422` (tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`). S2b-1 risk-observation extraction is closed/frozen at implementation commit `3f789a70443c3b9810c63b15bccb8dc4f5d889e5` (tree `99758c27b9890ba7e65ad0667c71db502e6071c7`), with governance closure commit `5838eac38a7a9df256a8ed0d5880a80e76b39128`, after a **743/743** complete regression. S2b-2 recommendation behavior is not implemented; remaining work is a Gradified-owned versioned platform/default policy decision plus broader risk/impact input coverage. Downstream evaluator capabilities are not globally blocked by S2b-2.
+S2a is closed/frozen at commit `a3577f92c6ff151a129ca96f6dea578c15cefea3` (tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`). S2b-1 risk-observation extraction is closed/frozen at implementation commit `3d21e23df3e9ba8f007938dcae8c0d067b8cd47c` (tree `99758c27b9890ba7e65ad0667c71db502e6071c7`), with governance closure commit `efc22ef7120a30a2d3dd2fbcbe21ce0b543640d9`, after a **743/743** complete regression. S2b-2 recommendation behavior is not implemented; remaining work is a Gradified-owned versioned platform/default policy decision plus broader risk/impact input coverage. Downstream evaluator capabilities are not globally blocked by S2b-2.
 
 ### S2a — execution integrity and context continuity
 
@@ -162,8 +165,8 @@ Qualified final evidence:
 - all S2a tests: **18/18**;
 - complete suite before final staging: **727/727**;
 - final governance-inclusive staged suite: **727/727**;
-- implementation commit: `61ce96d62774a78f4019c4905421324f614a7422`;
-- parent / frozen S1 base: `456a6248e9d28ec083e7503c3a9ad9385de47c7d`;
+- implementation commit: `a3577f92c6ff151a129ca96f6dea578c15cefea3`;
+- parent / frozen S1 base: `a831b1145f13e3eaeef29f9a0c1530da57ecbedc`;
 - committed tree: `ced53127e566902050d47fe6b0a1bac921a0c9c3`;
 - final staged acceptance patch SHA-256: `0015fdb2b26ec2667d94cdce00f6104750d497cc42f467221161f112bf41c56a`;
 - post-commit complete suite: **727/727**;
@@ -190,7 +193,7 @@ S2a is closed. Do not change `src/grading/execution.py` or its accepted S2a test
 
 Implementation commit:
 
-`3f789a70443c3b9810c63b15bccb8dc4f5d889e5`
+`3d21e23df3e9ba8f007938dcae8c0d067b8cd47c`
 
 Tree:
 
@@ -244,11 +247,11 @@ Until authority defines that mapping, preserve reducer-native criterion effects 
 
 Contract commit:
 
-`cdc8817ed6f370c699f1c3d272f03ea8aeafc665`
+`18f80eee43372b65f84336a2d9d0e84a13705203`
 
 Evaluator commit:
 
-`1fe26f959249a7f8ab9cb1acce89769996622f43`
+`3f516b574378dfd99b99c3c0991278dfdfb1eaa4`
 
 Evaluator tree:
 
@@ -298,13 +301,13 @@ Frozen consequences:
 
 ### NUMERIC / UNIT — N1 + N2 + N3 + N4 FROZEN
 
-N1 authority is frozen at commit `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f` / tree `d5410673f76b321e19ae97cc75b5aa538e11e135`.
+N1 authority is frozen at commit `05809a4f33f343b06ed4e77eca6ffde58fc8344b` / tree `d5410673f76b321e19ae97cc75b5aa538e11e135`.
 
-N2 student evidence admission is frozen at commit `455d7cf1b20c2479fd9d702cb2f4a9c140672559` / tree `bf529655c7527a12e1f005486f49f1db81448fa6` after 95/95 targeted and 1242/1242 complete qualified pre/post-commit regression.
+N2 student evidence admission is frozen at commit `8c966ef4b3d93fe3c1d22ed4ff2b3f4762a2c023` / tree `bf529655c7527a12e1f005486f49f1db81448fa6` after 95/95 targeted and 1242/1242 complete qualified pre/post-commit regression.
 
-N3 deterministic unitless comparison is frozen at commit `490c94751ea330ff31b298477f2507500d75bef8` / tree `edf2c4ee7c320b4257cd9f4187163e459a7e79f6` after 57/57 targeted and 1299/1299 complete qualified pre/post-commit regression.
+N3 deterministic unitless comparison is frozen at commit `df89dd05a86093ded7c06565eba7456b6bdd96cc` / tree `edf2c4ee7c320b4257cd9f4187163e459a7e79f6` after 57/57 targeted and 1299/1299 complete qualified pre/post-commit regression.
 
-N4 whole-question judgment composition is frozen at commit `0f926c4055f71bbca80e507a6729db95b5fff525` / tree `5afa6521f1a0ccea6ac3d613bce18109983f8724` after 18/18 targeted qualification and 1317/1317 complete qualified pre/post-commit regression.
+N4 whole-question judgment composition is frozen at commit `56a5c2a1081e20bd8a65f9d4cf84516ce7bc7f1a` / tree `5afa6521f1a0ccea6ac3d613bce18109983f8724` after 18/18 targeted qualification and 1317/1317 complete qualified pre/post-commit regression.
 
 N4 runs the actual N1 -> N2 -> N3 path and maps only the actual deterministic outcome to the corresponding already-approved whole-question N1 projection before unchanged S1/B2/B3 processing. It does not add score arithmetic, accept a caller-supplied N3 result as execution proof, implement UNIT semantics or create a generic merger.
 
@@ -312,7 +315,7 @@ After N4 freeze, the dependency/value gate selected IF1 over UNIT expansion.
 
 ### IF1 — VERSIONED EVALUATOR CAPABILITY RECORD + EXACT RESOLUTION FROZEN
 
-IF1 is CLOSED/FROZEN at commit `60caf64f77120bb91434dcd4fe95d1981b405e68` / tree `db932cc7c1f444bd4fdaf171718256da6e126161`. Qualified evidence is 87/87 targeted plus 1404/1404 complete pre/post-commit regression with a clean final tree.
+IF1 is CLOSED/FROZEN at commit `54f4e43a0a9e7f3fe50a3bf7527761acb421657d` / tree `db932cc7c1f444bd4fdaf171718256da6e126161`. Qualified evidence is 87/87 targeted plus 1404/1404 complete pre/post-commit regression with a clean final tree.
 
 The frozen scope is versioned capability-record validation and exact caller-selected record resolution only. IF1 is not question routing, execution authorization, benchmark truth, evaluator-execution proof or publication authority.
 
@@ -322,7 +325,7 @@ Decision: `DEFER` implementation because the Gradified-owned deterministic/versi
 
 ### REF-1 — REFERENCE CONTEXT MATERIALIZATION + PROVENANCE FROZEN
 
-REF-1 is CLOSED/FROZEN at commit `70235688c18d584efb4084cbb246fc6b573ba0dc` / tree `fa2c047e5891e9930512c245ba7e8231532e21bd`. Qualified evidence is **95/95** targeted plus **1499/1499** complete pre/post-commit regression with a clean final working tree.
+REF-1 is CLOSED/FROZEN at commit `409f9215d218f76a39514c43afa8a1e4858b4a92` / tree `fa2c047e5891e9930512c245ba7e8231532e21bd`. Qualified evidence is **95/95** targeted plus **1499/1499** complete pre/post-commit regression with a clean final working tree.
 
 The frozen v1 boundary derives an exact request from `ResolvedQuestionAuthority`, rejects `ContextPolicy.DIRECT` before source invocation, invokes a configured polymorphic source for reference-aware policies, cross-checks returned spec/question/policy binding, preserves per-chunk `content + source_id + source_version + opaque provenance_hash`, enforces versioned resource bounds, and returns an independent immutable snapshot. A successful empty chunk tuple is a valid factual context result.
 
@@ -341,7 +344,7 @@ Still open after REF-1:
 
 ### CROSS-CUTTING AUTHORITY PREREQUISITE — COMPLETE / FROZEN
 
-The evaluator-facing ACTIVE question-authority prerequisite remains implemented/frozen. A verified post-construction exposure-integrity defect was repaired/frozen at commit `ba951af9081a5459464f4985074f5f113e62ad6b` (parent `f8efd180611246d3a2c847b26316e5dadbabee1a`, tree `687e4049630135bd3fd0d06db1218169df06a550`) after 99/99 targeted checks and 1037/1037 qualified complete pre/post-commit regression.
+The evaluator-facing ACTIVE question-authority prerequisite remains implemented/frozen. A verified post-construction exposure-integrity defect was repaired/frozen at commit `d934010b3acea1bbc566d4cb7522f34a96fc3728` (parent `25a5ccdecc0f9af877c492c67db70735b369c0d0`, tree `687e4049630135bd3fd0d06db1218169df06a550`) after 99/99 targeted checks and 1037/1037 qualified complete pre/post-commit regression.
 
 The repair closes only current authority-bearing lifecycle/approval integrity; it does not create cryptographic source authentication or historical persistence guarantees. This historical prerequisite remains frozen. Current downstream authorization is tracked in the NUMERIC section above; it does not by itself authorize any new evaluator behavior.
 
@@ -351,7 +354,7 @@ The repair closes only current authority-bearing lifecycle/approval integrity; i
 
 Frozen identity:
 
-- commit: `82588a4df5d77f9b88dac3b19c34728dc0ad697e`;
+- commit: `19ebbb3365af4de5fcf135bb019c05eafb03ddf1`;
 - tree: `c0d68f97433cefb4f3d06fd86fb10b2db6215413`.
 
 Qualified evidence:
@@ -387,7 +390,7 @@ Implement only the capability subset supported by explicit contracts and benchma
 
 ## Reference Context Materialization / Provenance — REF-1 COMPLETE / FROZEN
 
-The backend-independent REF-1 boundary is frozen at commit `70235688c18d584efb4084cbb246fc6b573ba0dc` / tree `fa2c047e5891e9930512c245ba7e8231532e21bd`. Concrete retrieval/search/backend adapters remain open and must later prove tenant/version scope and real provenance against actual integration contracts.
+The backend-independent REF-1 boundary is frozen at commit `409f9215d218f76a39514c43afa8a1e4858b4a92` / tree `fa2c047e5891e9930512c245ba7e8231532e21bd`. Concrete retrieval/search/backend adapters remain open and must later prove tenant/version scope and real provenance against actual integration contracts.
 
 ## Production Provider Adapter — OPEN
 

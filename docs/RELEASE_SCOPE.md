@@ -21,16 +21,16 @@ The following internal slices are implemented, verified, and frozen unless a ver
 
 ## Qualified handoff baseline
 
-Before this publication-documentation commit:
+The verified internal candidate used for this publication passed:
 
-- commit: `359a20f95d854c7c8ac7511906010423d5f21e26`
-- tree: `dc96a19d92ce9ce78f2379abacc5dac4aa1b8892`
-- complete qualified regression: **1499 / 1499 passed**
-- Windows x64 / CPython 3.11.9
-- pytest 9.1.1
-- Hypothesis 6.167.1
-- `pip check` clean
-- working tree clean
+- complete qualified regression: **1499 / 1499 passed**;
+- Windows x64 / CPython 3.11.9;
+- pytest 9.1.1;
+- Hypothesis 6.167.1;
+- `pip check` clean;
+- clean working tree at verification.
+
+The public Git history has privacy-normalized author metadata. Exact private forensic commit identities are kept in the private delivery/evidence package.
 
 ## Not yet production-complete
 

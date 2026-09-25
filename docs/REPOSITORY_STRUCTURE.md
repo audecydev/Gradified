@@ -31,18 +31,21 @@ This repository is intentionally small. Most files are either production grading
 │   ├── integration/                multi-component composition tests
 │   └── property/                   Hypothesis/property tests
 └── docs/
-    ├── ARCHITECTURE.md
+    ├── README.md                       documentation index / purpose map
+    ├── ARCHITECTURE.md                 current-vs-target architecture explanation
     ├── PROJECT_STATE.md
     ├── IMPLEMENTATION_PLAN.md
     ├── TESTING.md
     ├── SCORING_KERNEL_BLACK_BOX.md
     ├── NUMERIC_PROFILE_V1.md
     ├── SRS_TRACEABILITY.md
+    ├── INTEGRATION_REQUIREMENTS.md      external-system requirements checklist
     ├── DETERMINISTIC_SCORING_KERNEL_AUDIT.md
     ├── CHOICE_EVALUATION_CONTRACT_V1.md
     ├── IF1_EVALUATOR_CAPABILITY_REGISTRY_CONTRACT_V1.md
     ├── REF1_REFERENCE_CONTEXT_CONTRACT_V1.md
-    └── integration guides added for this handoff
+    ├── integration guides added for this handoff
+    └── assets/release-1-target-architecture.png
 ```
 
 ## Production-code ownership by concern

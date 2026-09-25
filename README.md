@@ -10,17 +10,18 @@ It is **not** the complete production Gradified platform. In particular, this re
 
 If you are new to the project, read these documents in this order:
 
-1. [`docs/INTEGRATION_START_HERE.md`](docs/INTEGRATION_START_HERE.md) — plain-language system overview and integration order.
-2. [`docs/REPOSITORY_STRUCTURE.md`](docs/REPOSITORY_STRUCTURE.md) — where code, contracts, tests, and engineering documents live.
-3. [`docs/INTEGRATION_TEST_PLAN.md`](docs/INTEGRATION_TEST_PLAN.md) — step-by-step tests the integration team should run.
-4. Your integration-specific guide:
+1. [`docs/README.md`](docs/README.md) — documentation map: what every document is for and who should read it.
+2. [`docs/INTEGRATION_START_HERE.md`](docs/INTEGRATION_START_HERE.md) — plain-language system overview and integration order.
+3. [`docs/REPOSITORY_STRUCTURE.md`](docs/REPOSITORY_STRUCTURE.md) — where code, contracts, tests, and engineering documents live.
+4. [`docs/INTEGRATION_TEST_PLAN.md`](docs/INTEGRATION_TEST_PLAN.md) — step-by-step tests the integration team should run.
+5. Your integration-specific guide:
    - [`docs/OCR_INTEGRATION_GUIDE.md`](docs/OCR_INTEGRATION_GUIDE.md)
    - [`docs/BACKEND_INTEGRATION_GUIDE.md`](docs/BACKEND_INTEGRATION_GUIDE.md)
    - [`docs/REFERENCE_INTEGRATION_GUIDE.md`](docs/REFERENCE_INTEGRATION_GUIDE.md)
    - [`docs/SEMANTIC_PROVIDER_INTEGRATION_GUIDE.md`](docs/SEMANTIC_PROVIDER_INTEGRATION_GUIDE.md)
-5. [`docs/SCORING_KERNEL_BLACK_BOX.md`](docs/SCORING_KERNEL_BLACK_BOX.md) — deterministic scoring boundary and invariants.
-6. [`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md) and [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) — exact engineering state and remaining Release 1 work.
-7. [`docs/TESTING.md`](docs/TESTING.md) — detailed verification history and non-claims.
+6. [`docs/SCORING_KERNEL_BLACK_BOX.md`](docs/SCORING_KERNEL_BLACK_BOX.md) — deterministic scoring boundary and invariants.
+7. [`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md) and [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) — exact engineering state and remaining Release 1 work.
+8. [`docs/TESTING.md`](docs/TESTING.md) — detailed verification history and non-claims.
 
 ## What is implemented and frozen
 
@@ -39,16 +40,16 @@ The completed scope includes:
 - exact evaluator-capability-record resolution;
 - reference-context materialization and provenance preservation through a backend-independent source boundary.
 
-The verified Release 1 integration baseline before this publication-documentation commit is:
+The verified Release 1 integration baseline before the public documentation/privacy-normalization step is:
 
-- commit: `359a20f95d854c7c8ac7511906010423d5f21e26`
-- tree: `dc96a19d92ce9ce78f2379abacc5dac4aa1b8892`
 - qualified environment: Windows x64, CPython 3.11.9
 - pytest: 9.1.1
 - Hypothesis: 6.167.1
 - complete qualified regression: **1499 / 1499 passed**
 - dependency check: clean
 - working tree at verification: clean
+
+Exact private forensic commit identities are retained in the private delivery/evidence package rather than used as public-history authority.
 
 This publication branch adds documentation only. It does not modify frozen grading source or tests.
 

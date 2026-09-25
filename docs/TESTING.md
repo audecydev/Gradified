@@ -1,5 +1,8 @@
 # Testing Strategy and Verification Status
 
+> **Public-history note:** Git author/committer metadata was privacy-normalized for first public publication. Commit identifiers shown in this public document refer to the privacy-normalized public history. Private verification packages retain the corresponding internal evidence identities.
+
+
 Status date: 2026-09-25
 
 ## Verification principle
@@ -24,7 +27,7 @@ contract
 
 Frozen anchor:
 
-`178668b9b735ef369825c86d16db7999b8d3c784`
+`5c32de738978739af04fa3b38f1c051cc40ba0b5`
 
 Qualified regression baseline inherited by Rubric Authoring: **519 tests**.
 
@@ -34,7 +37,7 @@ The kernel includes deterministic question scoring and paper aggregation and rem
 
 Acceptance commit:
 
-`5f3ee013bc9f732f469104a5f6c6dc151cad3402`
+`bbaa7c528b9c1310452cba7e75b38acec51da3ed`
 
 Qualified final evidence:
 
@@ -54,7 +57,7 @@ Committed acceptance patch SHA-256:
 
 Commit:
 
-`a6f0388f137226fb2125a07c6f01f424bafc5d58`
+`de8a0af6c637cd24179d1fdcf5c4837c514a8896`
 
 Qualified evidence:
 
@@ -73,7 +76,7 @@ Committed acceptance patch SHA-256:
 
 Commit:
 
-`c7a3ae3592b6ad0f6120178ddf9015e5ac10bdf0`
+`ead80e5ff85b68dfd7310e6251e4a5ad65b1aff1`
 
 Full suite at closure: **676 passed**.
 
@@ -85,7 +88,7 @@ Use the verified G1b commit/tree values; earlier manually transcribed values wer
 
 Commit:
 
-`c48c813fb0eb64013fc7265ed0d14f64dd9d3d57`
+`1b823ae441bfba01436085cc266b578c2d7c17af`
 
 Qualified final evidence:
 
@@ -103,7 +106,7 @@ This establishes internal provenance consistency, not external cryptographic aut
 
 Commit:
 
-`456a6248e9d28ec083e7503c3a9ad9385de47c7d`
+`a831b1145f13e3eaeef29f9a0c1530da57ecbedc`
 
 Tree:
 
@@ -167,7 +170,7 @@ Branch:
 
 Implementation commit:
 
-`61ce96d62774a78f4019c4905421324f614a7422`
+`a3577f92c6ff151a129ca96f6dea578c15cefea3`
 
 Tree:
 
@@ -175,7 +178,7 @@ Tree:
 
 Parent / frozen S1 base:
 
-`456a6248e9d28ec083e7503c3a9ad9385de47c7d`
+`a831b1145f13e3eaeef29f9a0c1530da57ecbedc`
 
 Qualified Windows / CPython 3.11.9 sequence:
 
@@ -236,7 +239,7 @@ Code/test staging evidence before governance update:
 - acceptance-test blob: `4fd1091d3c89a5fb42dec770e21b7f077e4f652c`;
 - original S2a contract-test blob: `fd96c6c7ba6e26f1482f89d2aea14a10ffe9329e`.
 
-The frozen S2a implementation identity is commit `61ce96d62774a78f4019c4905421324f614a7422`, tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`, with final staged acceptance patch SHA-256 `0015fdb2b26ec2667d94cdce00f6104750d497cc42f467221161f112bf41c56a`.
+The frozen S2a implementation identity is commit `a3577f92c6ff151a129ca96f6dea578c15cefea3`, tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`, with final staged acceptance patch SHA-256 `0015fdb2b26ec2667d94cdce00f6104750d497cc42f467221161f112bf41c56a`.
 
 
 ## Synthetic E2E S2b-1 — risk observations frozen
@@ -247,7 +250,7 @@ Branch:
 
 Implementation commit:
 
-`3f789a70443c3b9810c63b15bccb8dc4f5d889e5`
+`3d21e23df3e9ba8f007938dcae8c0d067b8cd47c`
 
 Tree:
 
@@ -255,7 +258,7 @@ Tree:
 
 Parent / S2a governance anchor:
 
-`ca2c27b7d2958eb8f9e170120ad2f758e0f5bc61`
+`61b84a23f99c1f4b80d058c8fcbef8b2e2de9fd5`
 
 Qualified Windows / CPython 3.11.9 evidence:
 
@@ -263,9 +266,9 @@ Qualified Windows / CPython 3.11.9 evidence:
 - inherited frozen regression: **727/727**;
 - full suite: **743/743**;
 - frozen S2a diff check before commit: clean;
-- post-commit HEAD: `3f789a70443c3b9810c63b15bccb8dc4f5d889e5`;
+- post-commit HEAD: `3d21e23df3e9ba8f007938dcae8c0d067b8cd47c`;
 - post-commit tree: `99758c27b9890ba7e65ad0667c71db502e6071c7`;
-- parent: `ca2c27b7d2958eb8f9e170120ad2f758e0f5bc61`;
+- parent: `61b84a23f99c1f4b80d058c8fcbef8b2e2de9fd5`;
 - working tree was clean immediately before the post-commit 743/743 regression.
 
 S2b-1 contract coverage includes:
@@ -306,7 +309,7 @@ Branch:
 
 Contract commit:
 
-`cdc8817ed6f370c699f1c3d272f03ea8aeafc665`
+`18f80eee43372b65f84336a2d9d0e84a13705203`
 
 Contract tree:
 
@@ -314,7 +317,7 @@ Contract tree:
 
 Evaluator commit:
 
-`1fe26f959249a7f8ab9cb1acce89769996622f43`
+`3f516b574378dfd99b99c3c0991278dfdfb1eaa4`
 
 Evaluator tree:
 
@@ -365,11 +368,11 @@ Branch:
 
 Implementation commit:
 
-`82588a4df5d77f9b88dac3b19c34728dc0ad697e`
+`19ebbb3365af4de5fcf135bb019c05eafb03ddf1`
 
 Parent:
 
-`7ea8fbb88e2e4edd83b7ca80f14b53eddcff601f`
+`3775d5771c2fe1c5dc75538b01a068b6418e7b6b`
 
 Committed tree:
 
@@ -413,8 +416,8 @@ Current complete regression baseline after ACTIVE/DIRECT semantic freeze: **1008
 
 Repair identity:
 
-- repair commit: `ba951af9081a5459464f4985074f5f113e62ad6b`;
-- parent: `f8efd180611246d3a2c847b26316e5dadbabee1a`;
+- repair commit: `d934010b3acea1bbc566d4cb7522f34a96fc3728`;
+- parent: `25a5ccdecc0f9af877c492c67db70735b369c0d0`;
 - committed tree: `687e4049630135bd3fd0d06db1218169df06a550`;
 - candidate/committed patch SHA-256: `f9489d737593679e0accb7cc2e2b11d4500e53c7ff9292ebbb91434658ffe414`.
 
@@ -441,8 +444,8 @@ Current complete qualified regression baseline after the ACTIVE exposure repair:
 
 Implementation identity:
 
-- commit: `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f`;
-- parent: `328f131281c554f798e944c27a5177a43900f3bd`;
+- commit: `05809a4f33f343b06ed4e77eca6ffde58fc8344b`;
+- parent: `d33490d39a815cb07ce3b3227eb24a52793ca92d`;
 - committed tree: `d5410673f76b321e19ae97cc75b5aa538e11e135`;
 - reviewed candidate patch SHA-256: `da7dc648ee8673e9e6ece5d3d188bf2dccfd9c9d5ccc867d23ee1eeb27128c8c`.
 
@@ -465,8 +468,8 @@ Current complete qualified regression baseline after N1 freeze: **1147/1147**.
 
 Implementation identity:
 
-- commit: `455d7cf1b20c2479fd9d702cb2f4a9c140672559`;
-- parent: `7a6bdaef828b80b58fc77b454f72ed20d3a98ea0`;
+- commit: `8c966ef4b3d93fe3c1d22ed4ff2b3f4762a2c023`;
+- parent: `bc1d7f8904828bf3cbb7e16f363a6c96a8a25eab`;
 - committed tree: `bf529655c7527a12e1f005486f49f1db81448fa6`.
 
 Qualified Windows x64 / CPython 3.11.9 evidence:
@@ -489,8 +492,8 @@ Current complete qualified regression baseline after N2 freeze: **1242/1242**.
 
 Implementation identity:
 
-- commit: `490c94751ea330ff31b298477f2507500d75bef8`;
-- parent: `9034fc96e3b2c5fd068ff4828b368cf5ae88da62`;
+- commit: `df89dd05a86093ded7c06565eba7456b6bdd96cc`;
+- parent: `5f60da2f28bfe85acc7b487ecca828e06eb1047b`;
 - committed tree: `edf2c4ee7c320b4257cd9f4187163e459a7e79f6`.
 
 Qualified Windows x64 / CPython 3.11.9 evidence:
@@ -510,8 +513,8 @@ Current complete qualified regression baseline after N3 freeze: **1299/1299**.
 
 Implementation identity:
 
-- commit: `0f926c4055f71bbca80e507a6729db95b5fff525`;
-- parent: `04a106f0818fe115776cb63b731ac31980f87640`;
+- commit: `56a5c2a1081e20bd8a65f9d4cf84516ce7bc7f1a`;
+- parent: `9863ccb376475d820240fc6a9cbe84bdfba168d8`;
 - committed tree: `5afa6521f1a0ccea6ac3d613bce18109983f8724`.
 
 Qualified Windows x64 / CPython 3.11.9 evidence:
@@ -535,8 +538,8 @@ Current complete qualified regression baseline after N4 freeze: **1317/1317**.
 
 Implementation identity:
 
-- commit: `60caf64f77120bb91434dcd4fe95d1981b405e68`;
-- parent: `17cb1a6360fb4d97ff147745a913bb2a5a1bafeb`;
+- commit: `54f4e43a0a9e7f3fe50a3bf7527761acb421657d`;
+- parent: `d5311306c4b0ef8a632d4653024e7782145db02a`;
 - committed tree: `db932cc7c1f444bd4fdaf171718256da6e126161`.
 
 Qualified Windows x64 / CPython 3.11.9 evidence:
@@ -558,8 +561,8 @@ Current complete qualified regression baseline after IF1 freeze: **1404/1404**.
 
 Implementation identity:
 
-- commit: `70235688c18d584efb4084cbb246fc6b573ba0dc`;
-- parent: `ae60373c20f1193c2324e8fc72ddc46236f49c57`;
+- commit: `409f9215d218f76a39514c43afa8a1e4858b4a92`;
+- parent: `c0010dd1f63c2f1c9ba7d0b4faabc3ca9d10949b`;
 - committed tree: `fa2c047e5891e9930512c245ba7e8231532e21bd`.
 
 Qualified Windows x64 / CPython 3.11.9 evidence:

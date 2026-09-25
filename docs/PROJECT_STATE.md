@@ -1,16 +1,19 @@
 # Project State
 
+> **Public-history note:** Git author/committer metadata was privacy-normalized for first public publication. Commit identifiers shown in this public document refer to the privacy-normalized public history. Private verification packages retain the corresponding internal evidence identities.
+
+
 Status date: 2026-09-25
 
 ## Current milestone
 
-**Synthetic E2E S1, S2a, and S2b-1 remain closed/frozen. Deterministic single-select CHOICE v1 remains closed/frozen at its historical **853/853** post-commit baseline. Release-1 EXACT remains closed at `DEFER_EXACT`. The evaluator-facing ACTIVE question-authority boundary and DIRECT-text semantic slice remain frozen; the verified ACTIVE-exposure integrity defect remains repaired/frozen at commit `ba951af9081a5459464f4985074f5f113e62ad6b`. NUMERIC N1 academic authority remains CLOSED/FROZEN at commit `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f` / tree `d5410673f76b321e19ae97cc75b5aa538e11e135`. NUMERIC N2 student evidence admission remains CLOSED/FROZEN at commit `455d7cf1b20c2479fd9d702cb2f4a9c140672559` / tree `bf529655c7527a12e1f005486f49f1db81448fa6`. NUMERIC N3 deterministic unitless comparison remains CLOSED/FROZEN at commit `490c94751ea330ff31b298477f2507500d75bef8` / tree `edf2c4ee7c320b4257cd9f4187163e459a7e79f6`. NUMERIC N4 whole-question judgment composition is CLOSED/FROZEN at commit `0f926c4055f71bbca80e507a6729db95b5fff525` / tree `5afa6521f1a0ccea6ac3d613bce18109983f8724`, with **18/18** targeted qualification and **1317/1317** complete qualified pre/post-commit regression. IF1 evaluator-capability record validation/exact resolution is now CLOSED/FROZEN at commit `60caf64f77120bb91434dcd4fe95d1981b405e68` / tree `db932cc7c1f444bd4fdaf171718256da6e126161`, with 87/87 targeted and 1404/1404 complete qualified pre/post-commit regression. IF2 exact question-classification -> capability selection is deferred for a Gradified-owned routing-policy authority gap. REF-1 reference-context materialization/provenance is CLOSED/FROZEN at implementation commit `70235688c18d584efb4084cbb246fc6b573ba0dc` / tree `fa2c047e5891e9930512c245ba7e8231532e21bd`, with **95/95** targeted qualification and **1499/1499** complete qualified pre/post-commit regression. Automatic routing, execution-attempt provenance, UNIT support, mixed partial composition, production NUMERIC quality and auto-release remain unauthorized.**
+**Synthetic E2E S1, S2a, and S2b-1 remain closed/frozen. Deterministic single-select CHOICE v1 remains closed/frozen at its historical **853/853** post-commit baseline. Release-1 EXACT remains closed at `DEFER_EXACT`. The evaluator-facing ACTIVE question-authority boundary and DIRECT-text semantic slice remain frozen; the verified ACTIVE-exposure integrity defect remains repaired/frozen at commit `d934010b3acea1bbc566d4cb7522f34a96fc3728`. NUMERIC N1 academic authority remains CLOSED/FROZEN at commit `05809a4f33f343b06ed4e77eca6ffde58fc8344b` / tree `d5410673f76b321e19ae97cc75b5aa538e11e135`. NUMERIC N2 student evidence admission remains CLOSED/FROZEN at commit `8c966ef4b3d93fe3c1d22ed4ff2b3f4762a2c023` / tree `bf529655c7527a12e1f005486f49f1db81448fa6`. NUMERIC N3 deterministic unitless comparison remains CLOSED/FROZEN at commit `df89dd05a86093ded7c06565eba7456b6bdd96cc` / tree `edf2c4ee7c320b4257cd9f4187163e459a7e79f6`. NUMERIC N4 whole-question judgment composition is CLOSED/FROZEN at commit `56a5c2a1081e20bd8a65f9d4cf84516ce7bc7f1a` / tree `5afa6521f1a0ccea6ac3d613bce18109983f8724`, with **18/18** targeted qualification and **1317/1317** complete qualified pre/post-commit regression. IF1 evaluator-capability record validation/exact resolution is now CLOSED/FROZEN at commit `54f4e43a0a9e7f3fe50a3bf7527761acb421657d` / tree `db932cc7c1f444bd4fdaf171718256da6e126161`, with 87/87 targeted and 1404/1404 complete qualified pre/post-commit regression. IF2 exact question-classification -> capability selection is deferred for a Gradified-owned routing-policy authority gap. REF-1 reference-context materialization/provenance is CLOSED/FROZEN at implementation commit `409f9215d218f76a39514c43afa8a1e4858b4a92` / tree `fa2c047e5891e9930512c245ba7e8231532e21bd`, with **95/95** targeted qualification and **1499/1499** complete qualified pre/post-commit regression. Automatic routing, execution-attempt provenance, UNIT support, mixed partial composition, production NUMERIC quality and auto-release remain unauthorized.**
 
 Current immutable S1 anchor:
 
-- commit: `456a6248e9d28ec083e7503c3a9ad9385de47c7d`
+- commit: `a831b1145f13e3eaeef29f9a0c1530da57ecbedc`
 - tree: `e9898d00850890840ebd04c284993a81d9b5cc4a`
-- parent: `c48c813fb0eb64013fc7265ed0d14f64dd9d3d57`
+- parent: `1b823ae441bfba01436085cc266b578c2d7c17af`
 - final targeted: **11/11**
 - inherited regression: **698/698**
 - full pre-commit: **709/709**
@@ -27,7 +30,7 @@ The earlier S2b-2 implementation-eligibility inspection is complete, but S2b-2 r
 
 Frozen anchor:
 
-`178668b9b735ef369825c86d16db7999b8d3c784`
+`5c32de738978739af04fa3b38f1c051cc40ba0b5`
 
 Question scoring and paper aggregation remain the sole numerical authorities. Do not reopen without a verified defect, authority contradiction or changed requirement.
 
@@ -35,7 +38,7 @@ Question scoring and paper aggregation remain the sole numerical authorities. Do
 
 Commit:
 
-`5f3ee013bc9f732f469104a5f6c6dc151cad3402`
+`bbaa7c528b9c1310452cba7e75b38acec51da3ed`
 
 Final qualified evidence: **78 targeted / 519 inherited / 597 full**, selected mutation campaign **8/8 genuine kills**, exception-transparency regression green, independent review/staging audit passed.
 
@@ -45,7 +48,7 @@ Release 1 continues to require teacher approval before ACTIVE rubric authority.
 
 Commit:
 
-`a6f0388f137226fb2125a07c6f01f424bafc5d58`
+`de8a0af6c637cd24179d1fdcf5c4837c514a8896`
 
 Qualified evidence: **27 targeted / 597 inherited / 624 full**, including targeted checks under multiple `PYTHONHASHSEED` values.
 
@@ -55,7 +58,7 @@ G1a composes trusted source data with admitted untrusted proposal data into an u
 
 Commit:
 
-`c7a3ae3592b6ad0f6120178ddf9015e5ac10bdf0`
+`ead80e5ff85b68dfd7310e6251e4a5ad65b1aff1`
 
 Verified tree:
 
@@ -69,7 +72,7 @@ Important: earlier manually transcribed G1b commit/tree values were wrong. Use o
 
 Commit:
 
-`c48c813fb0eb64013fc7265ed0d14f64dd9d3d57`
+`1b823ae441bfba01436085cc266b578c2d7c17af`
 
 Tree:
 
@@ -87,8 +90,8 @@ Status: **IMPLEMENTED / CLOSED / FROZEN**.
 
 Frozen implementation identity:
 
-- commit: `82588a4df5d77f9b88dac3b19c34728dc0ad697e`;
-- parent: `7ea8fbb88e2e4edd83b7ca80f14b53eddcff601f`;
+- commit: `19ebbb3365af4de5fcf135bb019c05eafb03ddf1`;
+- parent: `3775d5771c2fe1c5dc75538b01a068b6418e7b6b`;
 - tree: `c0d68f97433cefb4f3d06fd86fb10b2db6215413`.
 
 Qualified closure evidence:
@@ -116,12 +119,12 @@ Original authority-only `BUILD` exclusions, preserved as historical scope constr
 - EXACT normalization, NUMERIC tolerance/unit/conversion rules, mathematical-equivalence semantics, or any other academic semantics not already authorized;
 - changes to frozen S1, B2/B3, CHOICE, Numeric Profile v1, or their accepted behavior/tests merely to make this boundary easier to implement.
 
-EXACT remains `DEFER_EXACT`. The authority boundary exists and remains frozen. The verified post-construction ACTIVE-exposure integrity defect was later repaired at commit `ba951af9081a5459464f4985074f5f113e62ad6b` without broadening the original authority-only scope. The repair re-establishes current authority-bearing lifecycle/approval integrity before scoring-authority exposure; it does not claim cryptographic authentication or historical backend immutability. NUMERIC N1 and N2 now have separately authorized bounded contracts; N3 deterministic comparison is the currently authorized BUILD candidate, while N4/UNIT remain gated.
+EXACT remains `DEFER_EXACT`. The authority boundary exists and remains frozen. The verified post-construction ACTIVE-exposure integrity defect was later repaired at commit `d934010b3acea1bbc566d4cb7522f34a96fc3728` without broadening the original authority-only scope. The repair re-establishes current authority-bearing lifecycle/approval integrity before scoring-authority exposure; it does not claim cryptographic authentication or historical backend immutability. NUMERIC N1 and N2 now have separately authorized bounded contracts; N3 deterministic comparison is the currently authorized BUILD candidate, while N4/UNIT remain gated.
 
 #### ACTIVE exposure integrity repair — CLOSED / FROZEN
 
-- commit: `ba951af9081a5459464f4985074f5f113e62ad6b`;
-- parent: `f8efd180611246d3a2c847b26316e5dadbabee1a`;
+- commit: `d934010b3acea1bbc566d4cb7522f34a96fc3728`;
+- parent: `25a5ccdecc0f9af877c492c67db70735b369c0d0`;
 - tree: `687e4049630135bd3fd0d06db1218169df06a550`;
 - candidate/committed patch SHA-256: `f9489d737593679e0accb7cc2e2b11d4500e53c7ff9292ebbb91434658ffe414`;
 - qualified environment: Windows x64 / CPython 3.11.9, pytest 9.1.1, hypothesis 6.167.1, clean `pip check`;
@@ -161,7 +164,7 @@ Frozen-slice non-claims:
 
 Commit:
 
-`456a6248e9d28ec083e7503c3a9ad9385de47c7d`
+`a831b1145f13e3eaeef29f9a0c1530da57ecbedc`
 
 S1 establishes the block-grounded evidence-verification → deterministic question-score baseline.
 
@@ -186,7 +189,7 @@ Branch:
 
 Implementation commit:
 
-`61ce96d62774a78f4019c4905421324f614a7422`
+`a3577f92c6ff151a129ca96f6dea578c15cefea3`
 
 Tree:
 
@@ -194,7 +197,7 @@ Tree:
 
 Parent / frozen S1 base:
 
-`456a6248e9d28ec083e7503c3a9ad9385de47c7d`
+`a831b1145f13e3eaeef29f9a0c1530da57ecbedc`
 
 S2a implements a narrow in-memory orchestration boundary:
 
@@ -222,8 +225,8 @@ Final qualified evidence:
 - final governance-inclusive staged suite: **727/727**;
 - final staged tree / committed tree: `ced53127e566902050d47fe6b0a1bac921a0c9c3`;
 - final staged acceptance patch SHA-256: `0015fdb2b26ec2667d94cdce00f6104750d497cc42f467221161f112bf41c56a`;
-- implementation commit: `61ce96d62774a78f4019c4905421324f614a7422`;
-- implementation parent: `456a6248e9d28ec083e7503c3a9ad9385de47c7d`;
+- implementation commit: `a3577f92c6ff151a129ca96f6dea578c15cefea3`;
+- implementation parent: `a831b1145f13e3eaeef29f9a0c1530da57ecbedc`;
 - post-commit complete suite: **727/727**;
 - post-commit working tree: clean;
 - historical code/test-only candidate tree: `804a28a1041b264ad150638a3267d6cf69802354`;
@@ -233,7 +236,7 @@ Final qualified evidence:
 - S2a contract-test blob: `fd96c6c7ba6e26f1482f89d2aea14a10ffe9329e`;
 - frozen S1/B2/B3/rubric tracked source remained unchanged during the S2a source/test candidate audit.
 
-The code/test-only tree/hash above are retained as intermediate forensic history. The authoritative frozen S2a implementation identity is commit `61ce96d62774a78f4019c4905421324f614a7422`, tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`.
+The code/test-only tree/hash above are retained as intermediate forensic history. The authoritative frozen S2a implementation identity is commit `a3577f92c6ff151a129ca96f6dea578c15cefea3`, tree `ced53127e566902050d47fe6b0a1bac921a0c9c3`.
 
 
 ### Synthetic E2E S2b-1 — risk observations closed/frozen
@@ -244,11 +247,11 @@ Branch:
 
 Implementation commit:
 
-`3f789a70443c3b9810c63b15bccb8dc4f5d889e5`
+`3d21e23df3e9ba8f007938dcae8c0d067b8cd47c`
 
 Governance closure commit:
 
-`5838eac38a7a9df256a8ed0d5880a80e76b39128`
+`efc22ef7120a30a2d3dd2fbcbe21ce0b543640d9`
 
 Tree:
 
@@ -256,7 +259,7 @@ Tree:
 
 Parent / frozen S2a governance anchor:
 
-`ca2c27b7d2958eb8f9e170120ad2f758e0f5bc61`
+`61b84a23f99c1f4b80d058c8fcbef8b2e2de9fd5`
 
 S2b-1 implements deterministic extraction of a deliberately narrow, versioned risk-observation profile from supplied internal execution/evidence data without making a review recommendation.
 
@@ -284,8 +287,8 @@ Final qualified evidence on Windows / CPython 3.11.9:
 - inherited frozen suite: **727/727**;
 - complete suite: **743/743**;
 - frozen S2a diff check: clean before commit;
-- implementation commit: `3f789a70443c3b9810c63b15bccb8dc4f5d889e5`;
-- implementation parent: `ca2c27b7d2958eb8f9e170120ad2f758e0f5bc61`;
+- implementation commit: `3d21e23df3e9ba8f007938dcae8c0d067b8cd47c`;
+- implementation parent: `61b84a23f99c1f4b80d058c8fcbef8b2e2de9fd5`;
 - implementation tree: `99758c27b9890ba7e65ad0667c71db502e6071c7`;
 - pre-test post-commit working tree: clean.
 
@@ -335,7 +338,7 @@ Branch:
 
 Contract commit:
 
-`cdc8817ed6f370c699f1c3d272f03ea8aeafc665`
+`18f80eee43372b65f84336a2d9d0e84a13705203`
 
 Contract tree:
 
@@ -343,7 +346,7 @@ Contract tree:
 
 Evaluator commit:
 
-`1fe26f959249a7f8ab9cb1acce89769996622f43`
+`3f516b574378dfd99b99c3c0991278dfdfb1eaa4`
 
 Evaluator tree:
 
@@ -351,7 +354,7 @@ Evaluator tree:
 
 Evaluator parent / frozen contract anchor:
 
-`cdc8817ed6f370c699f1c3d272f03ea8aeafc665`
+`18f80eee43372b65f84336a2d9d0e84a13705203`
 
 CHOICE v1 implements deterministic semantic evaluation for one deliberately narrow capability:
 
@@ -414,14 +417,14 @@ Freeze consequences:
 
 N1 authority decision: `CLOSED / FROZEN`.
 
-- commit: `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f`;
+- commit: `05809a4f33f343b06ed4e77eca6ffde58fc8344b`;
 - tree: `d5410673f76b321e19ae97cc75b5aa538e11e135`;
 - targeted: **110/110**;
 - complete qualified pre/post-commit regression: **1147/1147**.
 
 N2 student evidence-admission decision: `CLOSED / FROZEN`.
 
-- commit: `455d7cf1b20c2479fd9d702cb2f4a9c140672559`;
+- commit: `8c966ef4b3d93fe3c1d22ed4ff2b3f4762a2c023`;
 - tree: `bf529655c7527a12e1f005486f49f1db81448fa6`;
 - targeted: **95/95**;
 - complete qualified pre/post-commit regression: **1242/1242**;
@@ -429,8 +432,8 @@ N2 student evidence-admission decision: `CLOSED / FROZEN`.
 
 N3 deterministic unitless comparison decision: `CLOSED / FROZEN`.
 
-- implementation commit: `490c94751ea330ff31b298477f2507500d75bef8`;
-- parent governance checkpoint: `9034fc96e3b2c5fd068ff4828b368cf5ae88da62`;
+- implementation commit: `df89dd05a86093ded7c06565eba7456b6bdd96cc`;
+- parent governance checkpoint: `5f60da2f28bfe85acc7b487ecca828e06eb1047b`;
 - committed tree: `edf2c4ee7c320b4257cd9f4187163e459a7e79f6`;
 - targeted N3 deterministic comparison + hostile hardening: **57/57**;
 - complete qualified pre-commit regression: **1299/1299**;
@@ -441,8 +444,8 @@ N3 consumes only an exact current resolved N1 authority and admitted N2 scalar, 
 
 N4 whole-question judgment-composition decision: `CLOSED / FROZEN`.
 
-- implementation commit: `0f926c4055f71bbca80e507a6729db95b5fff525`;
-- parent governance checkpoint: `04a106f0818fe115776cb63b731ac31980f87640`;
+- implementation commit: `56a5c2a1081e20bd8a65f9d4cf84516ce7bc7f1a`;
+- parent governance checkpoint: `9863ccb376475d820240fc6a9cbe84bdfba168d8`;
 - committed tree: `5afa6521f1a0ccea6ac3d613bce18109983f8724`;
 - targeted N4 composition + integration qualification: **18/18**;
 - complete qualified pre-commit regression: **1317/1317**;
@@ -463,8 +466,8 @@ N4 does **not** establish:
 
 IF1 decision: `CLOSED / FROZEN`.
 
-- implementation commit: `60caf64f77120bb91434dcd4fe95d1981b405e68`;
-- parent governance checkpoint: `17cb1a6360fb4d97ff147745a913bb2a5a1bafeb`;
+- implementation commit: `54f4e43a0a9e7f3fe50a3bf7527761acb421657d`;
+- parent governance checkpoint: `d5311306c4b0ef8a632d4653024e7782145db02a`;
 - committed tree: `db932cc7c1f444bd4fdaf171718256da6e126161`;
 - targeted IF1 contract + resolver + hostile hardening: **87/87**;
 - complete qualified pre-commit regression: **1404/1404**;
@@ -481,7 +484,7 @@ Execution-attempt/judgment provenance remains causally downstream of authoritati
 
 ### REF-1 reference context materialization + provenance — CLOSED / FROZEN
 
-REF-1 implementation is CLOSED/FROZEN at commit `70235688c18d584efb4084cbb246fc6b573ba0dc` (parent `ae60373c20f1193c2324e8fc72ddc46236f49c57`) / tree `fa2c047e5891e9930512c245ba7e8231532e21bd`. Qualified evidence is **95/95** targeted plus **1499/1499** complete pre/post-commit regression with a clean final working tree.
+REF-1 implementation is CLOSED/FROZEN at commit `409f9215d218f76a39514c43afa8a1e4858b4a92` (parent `c0010dd1f63c2f1c9ba7d0b4faabc3ca9d10949b`) / tree `fa2c047e5891e9930512c245ba7e8231532e21bd`. Qualified evidence is **95/95** targeted plus **1499/1499** complete pre/post-commit regression with a clean final working tree.
 
 The frozen v1 boundary derives an immutable request from the exact current `ResolvedQuestionAuthority`; rejects `DIRECT` before source invocation; invokes a configured polymorphic source for the three reference-aware policies; exact-type admits and binding-checks returned Gradified-owned materialization/chunks; preserves opaque provenance and source order; enforces frozen resource limits (32 chunks, 8192 characters per chunk, 128 characters per provenance field, 65536 aggregate content characters); and returns an independent immutable context snapshot. Empty chunks are a valid factual result.
 
@@ -558,7 +561,7 @@ The current project does not yet establish:
 
 ## Verification status
 
-Frozen S1 baseline: **709 passed** at commit `456a624...`.
+Frozen S1 baseline: **709 passed** at commit `a831b11...`.
 
 S2a qualified evidence on Windows / CPython 3.11.9:
 
@@ -572,7 +575,7 @@ S2a qualified evidence on Windows / CPython 3.11.9:
 - complete suite: **727/727**;
 - post-code/test-staging complete suite: **727/727**;
 - final governance-inclusive staged suite: **727/727**;
-- implementation commit: `61ce96d62774a78f4019c4905421324f614a7422`;
+- implementation commit: `a3577f92c6ff151a129ca96f6dea578c15cefea3`;
 - implementation tree: `ced53127e566902050d47fe6b0a1bac921a0c9c3`;
 - final staged acceptance patch SHA-256: `0015fdb2b26ec2667d94cdce00f6104750d497cc42f467221161f112bf41c56a`;
 - post-commit complete suite: **727/727**;
@@ -582,7 +585,7 @@ S2a qualified evidence on Windows / CPython 3.11.9:
 
 Deterministic CHOICE v1 qualified evidence on Windows / CPython 3.11.9:
 
-- semantic/executable contract commit: `cdc8817ed6f370c699f1c3d272f03ea8aeafc665`;
+- semantic/executable contract commit: `18f80eee43372b65f84336a2d9d0e84a13705203`;
 - contract tree: `736c4edee091d797a2faa971bb29c6ddff140644`;
 - contract tests: **94/94**;
 - pre-evaluator complete baseline: **837/837**;
@@ -590,15 +593,15 @@ Deterministic CHOICE v1 qualified evidence on Windows / CPython 3.11.9:
 - initial evaluator GREEN: **13/13**;
 - hostile public-boundary hardening RED: **3 failed / 13 passed**;
 - hardened evaluator targeted: **16/16**;
-- evaluator implementation commit: `1fe26f959249a7f8ab9cb1acce89769996622f43`;
+- evaluator implementation commit: `3f516b574378dfd99b99c3c0991278dfdfb1eaa4`;
 - evaluator tree: `1d5239434e959fcdf51eda8304a6d9b234e6c3df`;
 - post-commit complete suite: **853/853**;
 - post-commit working tree: clean.
 
 ACTIVE authority + DIRECT-text semantic slice qualified evidence on Windows / CPython 3.11.9:
 
-- implementation commit: `82588a4df5d77f9b88dac3b19c34728dc0ad697e`;
-- parent: `7ea8fbb88e2e4edd83b7ca80f14b53eddcff601f`;
+- implementation commit: `19ebbb3365af4de5fcf135bb019c05eafb03ddf1`;
+- parent: `3775d5771c2fe1c5dc75538b01a068b6418e7b6b`;
 - committed tree: `c0d68f97433cefb4f3d06fd86fb10b2db6215413`;
 - authority/semantic/composition targeted gate: **155/155**;
 - related rubric-lifecycle/paper-aggregation regression: **26/26**;
@@ -610,8 +613,8 @@ ACTIVE authority + DIRECT-text semantic slice qualified evidence on Windows / CP
 
 ACTIVE exposure integrity repair qualified evidence on Windows / CPython 3.11.9:
 
-- repair commit: `ba951af9081a5459464f4985074f5f113e62ad6b`;
-- parent: `f8efd180611246d3a2c847b26316e5dadbabee1a`;
+- repair commit: `d934010b3acea1bbc566d4cb7522f34a96fc3728`;
+- parent: `25a5ccdecc0f9af877c492c67db70735b369c0d0`;
 - committed tree: `687e4049630135bd3fd0d06db1218169df06a550`;
 - candidate/committed patch SHA-256: `f9489d737593679e0accb7cc2e2b11d4500e53c7ff9292ebbb91434658ffe414`;
 - targeted lifecycle/ACTIVE hostile campaign: **99/99**;
@@ -621,8 +624,8 @@ ACTIVE exposure integrity repair qualified evidence on Windows / CPython 3.11.9:
 
 NUMERIC N1 authority qualified evidence on Windows / CPython 3.11.9:
 
-- implementation commit: `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f`;
-- parent: `328f131281c554f798e944c27a5177a43900f3bd`;
+- implementation commit: `05809a4f33f343b06ed4e77eca6ffde58fc8344b`;
+- parent: `d33490d39a815cb07ce3b3227eb24a52793ca92d`;
 - committed tree: `d5410673f76b321e19ae97cc75b5aa538e11e135`;
 - reviewed candidate patch SHA-256: `da7dc648ee8673e9e6ece5d3d188bf2dccfd9c9d5ccc867d23ee1eeb27128c8c`;
 - targeted N1 + hostile qualification: **110/110**;
@@ -635,7 +638,7 @@ S1's earlier empty-evidence defect remains the standing example that full-suite 
 
 ## Next task
 
-Prepare the **deadline integration handoff and evidence package** from frozen REF-1 implementation commit `70235688c18d584efb4084cbb246fc6b573ba0dc` / tree `fa2c047e5891e9930512c245ba7e8231532e21bd` and the final governance-reconciled state.
+Prepare the **deadline integration handoff and evidence package** from frozen REF-1 implementation commit `409f9215d218f76a39514c43afa8a1e4858b4a92` / tree `fa2c047e5891e9930512c245ba7e8231532e21bd` and the final governance-reconciled state.
 
 The handoff must clearly distinguish frozen internal capabilities from still-open production integration/release work. Do not automatically authorize another medium-sized implementation slice merely because time remains. Real OCR/backend/provider/retrieval adapters, evaluator routing, execution-attempt provenance, review/publication workflow and production benchmark/E2E evidence remain open unless separately gated from authoritative inputs.
 

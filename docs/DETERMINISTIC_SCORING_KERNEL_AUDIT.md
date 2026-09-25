@@ -1,5 +1,8 @@
 # Deterministic Scoring Kernel — Closure Audit
 
+> **Public-history note:** Git author/committer metadata was privacy-normalized for first public publication. Commit identifiers shown in this public document refer to the privacy-normalized public history. Private verification packages retain the corresponding internal evidence identities.
+
+
 Date: 2026-09-18
 Status: technically accepted and frozen within the declared boundary.
 
@@ -30,19 +33,19 @@ Prior audit conclusions were treated as evidence, not product authority.
 
 Numeric/scoring foundation:
 
-`322807de9ec89c03fc074af9104e26a84f224751`
+`749f66768ebb5b9cd95fbbfc85f26c87434d46ba`
 
 Deterministic question scoring:
 
-`3065d1428fca948d0eb3f84efbcb865f90ded682`
+`b1d2f9bdffe1118c04cedeac61a64555034dbce7`
 
 Qualified verification environment declaration:
 
-`d7f12bb10825f80faf7e0cb188c3bc949585e5c4`
+`a5072ab25f45c670b9b7663ce85f556b7d264df6`
 
 Deterministic paper aggregation:
 
-`e6c7cb71b33120b6cdeeb2b4176a3f33a8580869`
+`6b0c089aaf934e32e853ef627a657be2cc508da6`
 
 Paper-aggregation tree:
 

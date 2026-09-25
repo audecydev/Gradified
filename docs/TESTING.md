@@ -485,7 +485,28 @@ Accepted test claim: N2 admits one bounded canonical unitless finite-decimal stu
 
 Current complete qualified regression baseline after N2 freeze: **1242/1242**.
 
-N3 deterministic comparison has earned BUILD by prerequisite inspection but has no qualified executable evidence yet; planned N3 results must not be recorded here until run in the qualified environment.
+## NUMERIC N3 deterministic comparison boundary — frozen
+
+Implementation identity:
+
+- commit: `490c94751ea330ff31b298477f2507500d75bef8`;
+- parent: `9034fc96e3b2c5fd068ff4828b368cf5ae88da62`;
+- committed tree: `edf2c4ee7c320b4257cd9f4187163e459a7e79f6`.
+
+Qualified Windows x64 / CPython 3.11.9 evidence:
+
+- targeted N3 deterministic comparison + hostile hardening: **57/57**;
+- complete qualified pre-commit repository regression: **1299/1299**;
+- exact five-path staged/committed tree matched `edf2c4ee7c320b4257cd9f4187163e459a7e79f6`;
+- committed path set was exactly the two N3 production files and three N3 test files;
+- complete qualified post-commit repository regression: **1299/1299**;
+- post-commit working tree: clean.
+
+Accepted test claim: N3 deterministically evaluates only the already-approved unitless N1 exact/inclusive-absolute-tolerance relation against one already-admitted N2 scalar using exact bounded integer/scale arithmetic. It returns only `SATISFIED | NOT_SATISFIED` plus authority/evidence provenance; malformed/binding/technical failures never become academic not-satisfied outcomes. It does not emit criterion judgments, calculate marks, implement units or establish production NUMERIC quality.
+
+Current complete qualified regression baseline after N3 freeze: **1299/1299**.
+
+N4 whole-question judgment composition has earned BUILD by prerequisite inspection but has no qualified executable evidence yet; planned N4 results must not be recorded here until run in the qualified environment.
 
 
 ## S2 test-design rules

@@ -296,71 +296,53 @@ Frozen consequences:
 - do not create EXACT RED, implementation, or normalization infrastructure;
 - reopen EXACT only if new authoritative, approved-workload, or verified-integration evidence materially changes a recorded defer basis.
 
-### NUMERIC / UNIT — N1 + N2 FROZEN; N3 DETERMINISTIC COMPARISON BUILD AUTHORIZED
+### NUMERIC / UNIT — N1 + N2 + N3 FROZEN; N4 WHOLE-QUESTION COMPOSITION BUILD AUTHORIZED
 
-N1 authority is CLOSED/FROZEN.
+N1 authority is frozen at commit `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f` / tree `d5410673f76b321e19ae97cc75b5aa538e11e135`.
 
-Frozen N1 identity:
+N2 student evidence admission is frozen at commit `455d7cf1b20c2479fd9d702cb2f4a9c140672559` / tree `bf529655c7527a12e1f005486f49f1db81448fa6` after 95/95 targeted and 1242/1242 complete qualified pre/post-commit regression.
 
-- commit: `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f`;
-- parent: `328f131281c554f798e944c27a5177a43900f3bd`;
-- tree: `d5410673f76b321e19ae97cc75b5aa538e11e135`;
-- targeted/hostile: **110/110**;
-- complete qualified pre/post-commit regression: **1147/1147**;
-- clean post-commit working tree.
+N3 deterministic unitless comparison is frozen at commit `490c94751ea330ff31b298477f2507500d75bef8` / tree `edf2c4ee7c320b4257cd9f4187163e459a7e79f6` after 57/57 targeted and 1299/1299 complete qualified pre/post-commit regression.
 
-N2 student evidence admission is CLOSED/FROZEN at commit `455d7cf1b20c2479fd9d702cb2f4a9c140672559` / tree `bf529655c7527a12e1f005486f49f1db81448fa6`, with 95/95 targeted and 1242/1242 complete qualified pre/post-commit regression. N3 prerequisite decision: `BUILD` for narrow deterministic unitless scalar comparison only. N4/UNIT remain unauthorized.
+N4 prerequisite decision: `BUILD` for the smallest whole-question NUMERIC judgment-composition boundary.
 
-N3 implementation scope:
+N4 objective:
 
-- exact current `ResolvedNumericAuthority` + exact current `AdmittedNumericScalar` only;
-- exact numerical equality and inclusive approved absolute tolerance only;
-- exact integer/scale arithmetic over bounded canonical decimal strings; no binary float or ambient `Decimal` arithmetic;
-- OR semantics across approved conditions; no winner selection because condition order is non-authoritative and all conditions share the same satisfied projection;
-- output only a versioned deterministic `SATISFIED | NOT_SATISFIED` evaluation artifact with exact authority/evidence provenance;
-- failures in authority/evidence validation or binding are errors, never academic `NOT_SATISFIED`;
-- no criterion judgments/marks/scoring composition, units, scientific notation, fractions, relative tolerance, review policy or publication.
+Run the actual frozen N1 resolver, N2 scalar admission and N3 deterministic evaluator, then map the resulting `SATISFIED | NOT_SATISFIED` state to the corresponding already-approved complete N1 criterion projection and emit existing `EvaluatedCriterionJudgment` values for unchanged S1/B2/B3 processing.
 
-N4 remains separately gated until N3 proves a complete safe deterministic outcome boundary. Production NUMERIC auto-release remains blocked on representative numeric benchmark/calibration evidence.
+N4 required v1 behavior:
 
+- no caller-supplied N3 result input; the trusted N1 -> N2 -> N3 chain executes inside the N4 boundary;
+- exact `NOT_AUTHORIZED` remains non-academic and cannot become a not-satisfied projection;
+- exact projection selection only: satisfied -> `satisfied_projection`, not-satisfied -> `not_satisfied_projection`;
+- exact approved criterion order and level IDs are inherited from the N1 resolver's current ACTIVE/scoring cross-check;
+- every emitted judgment references the exact admitted N2 evidence block;
+- deterministic evaluator metadata/reason codes contain no score or hidden academic rule;
+- technical/source/admission/binding failures propagate as failures rather than becoming judgments;
+- integration tests must prove the resulting judgments pass the existing S1 evidence verifier and existing B2/B3 scoring path without modifying frozen scoring code.
 
-N3 objective:
+N4 exclusions:
 
-Build the smallest deterministic mechanism that proves whether one already-admitted N2 scalar satisfies at least one already-approved N1 exact/absolute-tolerance condition. It must not select criterion levels, calculate marks, or claim production NUMERIC quality.
+- no generic partial-judgment merger;
+- no mixed NUMERIC + method/semantic composition;
+- no UNIT/conversion or broader numeric grammar;
+- no scoring arithmetic, marks, review/release policy or publication;
+- no capability registry/routing framework;
+- no claim of benchmark/calibration or production auto-release quality.
 
-N3 required v1 behavior:
-
-- exact current `ResolvedNumericAuthority` boundary and exact current `AdmittedNumericScalar` boundary;
-- recompute/revalidate the current authority fingerprint and binding before comparison;
-- exact question identity binding between N1 and N2 artifacts;
-- exact finite-decimal arithmetic via bounded integer coefficient/scale operations, independent of binary float and ambient `Decimal` context;
-- exact equality and inclusive absolute tolerance only;
-- OR semantics across alternatives, with no condition winner/order authority;
-- versioned immutable result carrying authority fingerprint plus evidence provenance and only `SATISFIED | NOT_SATISFIED`;
-- all malformed/forged/binding/technical failures remain errors and never become academic `NOT_SATISFIED`.
-
-N3 exclusions:
-
-- criterion projections/judgments, reducer/scoring composition or marks;
-- UNIT/conversion, scientific notation, fractions, relative tolerance or symbolic equivalence;
-- OCR/backend authentication or historical source immutability;
-- using a constructible result object as proof that evaluator execution occurred;
-- benchmark/calibration or auto-release claims.
-
-N3 sequence:
+N4 sequence:
 
 contract closure + governance checkpoint
-→ causal RED
-→ verify failure is the missing N3 boundary
+→ causal RED after valid N1/N2/N3 prerequisites
 → minimal GREEN
-→ hostile binding/current-state/exact-arithmetic hardening
-→ N1/N2 + related regression
+→ hostile provenance/not-authorized/failure hardening
+→ real N4 -> S1 -> B2/B3 integration tests
 → complete regression
 → exact source/staging/tree custody
 → commit + post-commit complete regression
-→ freeze N3
+→ freeze N4
 
-Only after N3 freezes should N4 receive a fresh prerequisite gate for criterion-judgment composition into the existing S1/B2/B3 path.
+After N4 freezes, perform a fresh dependency/value gate. Do not automatically broaden to UNIT or mixed composition. Production integration slices may have higher immediate delivery value.
 
 ### CROSS-CUTTING AUTHORITY PREREQUISITE — COMPLETE / FROZEN
 
@@ -398,11 +380,11 @@ Broader semantic Release-1 work remains open and still requires production provi
 
 Do not interpret this slice as academic-quality validation, production-provider closure, retry/idempotency closure, OCR/backend integration, or review/publication authority.
 
-### NEXT CANDIDATE — N3 DETERMINISTIC NUMERIC COMPARISON RED AUTHORIZED
+### NEXT CANDIDATE — N4 WHOLE-QUESTION NUMERIC COMPOSITION RED AUTHORIZED
 
-N3 is the selected next capability gate on top of frozen N1 authority and frozen N2 evidence admission. Begin causal RED for the bounded exact/inclusive-absolute-tolerance comparison contract above.
+N4 is the selected next capability gate on top of frozen N1/N2/N3. Begin causal RED for the bounded judgment-composition contract above.
 
-Do not start N4/UNIT or broaden N1/N2 during this batch. If frozen N1/N2 contracts expose a concrete contradiction, stop on that contradiction rather than weakening the fail-closed scope.
+Do not start UNIT, mixed partial composition, generic routing or broader integration work inside the N4 batch. If the frozen prerequisites expose a concrete contradiction, stop on that contradiction rather than weakening fail-closed behavior.
 
 ## Mathematical / Derivation Evaluation — OPEN
 

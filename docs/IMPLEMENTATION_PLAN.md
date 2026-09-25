@@ -310,61 +310,47 @@ N4 runs the actual N1 -> N2 -> N3 path and maps only the actual deterministic ou
 
 After N4 freeze, the dependency/value gate selected IF1 over UNIT expansion.
 
-### IF1 — VERSIONED EVALUATOR CAPABILITY RECORD + EXACT RESOLUTION BUILD AUTHORIZED
+### IF1 — VERSIONED EVALUATOR CAPABILITY RECORD + EXACT RESOLUTION FROZEN
 
-Exact audit baseline:
+IF1 is CLOSED/FROZEN at commit `60caf64f77120bb91434dcd4fe95d1981b405e68` / tree `db932cc7c1f444bd4fdaf171718256da6e126161`. Qualified evidence is 87/87 targeted plus 1404/1404 complete pre/post-commit regression with a clean final tree.
 
-- commit `0f926c4055f71bbca80e507a6729db95b5fff525`;
-- tree `5afa6521f1a0ccea6ac3d613bce18109983f8724`;
-- exact source archive SHA-256 `194cd51bb2f908c63e2d07b1314f0d08199108d467272e947183c9537b893e9d`.
+The frozen scope is versioned capability-record validation and exact caller-selected record resolution only. IF1 is not question routing, execution authorization, benchmark truth, evaluator-execution proof or publication authority.
 
-Audit result:
+### IF2 — EXACT QUESTION-CLASSIFICATION -> CAPABILITY SELECTION DEFERRED
 
-- `EvaluatorMetadata` is the existing shared evaluator identity contract and must be reused;
-- deterministic CHOICE and NUMERIC already emit system-owned evaluator IDs/versions;
-- DIRECT-text already emits composition-owned `EvaluatorMetadata` and attempt correlation;
-- no registry/record resolver or authoritative question-to-capability selector exists;
-- S2a still accepts supplied judgments and does not prove evaluator-attempt/run provenance;
-- no real OCR/backend/provider contract exists in the audited repository.
+Decision: `DEFER` implementation because the Gradified-owned deterministic/versioned mapping from authoritative question classification to exact evaluator capability identity has not yet been specified. This is an internal routing-policy authority gap, not a reason to wait for an external backend. No caller-supplied evaluator identity, capability status, answer-shape inference or implicit default may become selection authority. No behavior-defining IF2 RED is authorized yet.
 
-IF1 v1 objective:
+### REF-1 — REFERENCE CONTEXT MATERIALIZATION + PROVENANCE BUILD AUTHORIZED
 
-Create a versioned, immutable evaluator-capability record plus an exact lookup/resolution boundary for a caller-supplied evaluator identity and record version. IF1 describes/resolves capability metadata; it does not select a capability for a question and does not grant execution/publication authority.
+Source audit is complete against the exact post-IF1 tree. Existing `ContextPolicy` and `ResolvedQuestionAuthority` are REUSE inputs; no existing production reference-context port/contract/resolver was found.
 
-Required IF1 behavior:
+REF-1 v1 objective:
 
-- reuse exact `EvaluatorMetadata` for evaluator ID/version;
-- add an explicit positive capability-record version and record-schema version;
-- represent `VALIDATED | PILOT | DISABLED` plus supported answer types/languages/modalities, tested grade/domain scope, verification mechanisms, benchmark version, known failure modes, cost profile and latency profile;
-- preserve unavailable/unasserted optional scope/profile facts explicitly; absence never means wildcard/all;
-- require an exact caller-supplied capability reference; no omitted version and no latest/highest/newest behavior;
-- exact source lookup only; zero matches => missing, more than one => ambiguity, wrong identity => binding failure;
-- revalidate exact current record state at resolution so post-construction mutation is rejected;
-- reject foreign/subclass materialization before dispatch into it;
-- source execution failure remains distinct from missing capability;
-- no built-in production evaluator inventory or status inferred from repository tests.
+Create the smallest backend/search-independent reference-context materialization boundary that derives an exact request from `ResolvedQuestionAuthority`, rejects `ContextPolicy.DIRECT` before source invocation, invokes a configured polymorphic source for reference-aware policies, cross-checks the returned spec/question/policy binding, preserves per-chunk `content + source_id + source_version + opaque provenance_hash`, enforces bounded resources, and returns an independent immutable snapshot. A successful empty chunk tuple is a valid factual context result.
 
-Explicitly deferred from IF1:
+Required REF-1 behavior is frozen in `docs/REF1_REFERENCE_CONTEXT_CONTRACT_V1.md`.
 
-- question/criterion -> capability routing;
-- subject/question/evidence/language/modality inference for evaluator selection;
-- automatic fallback/substitution;
-- status-based execution authorization or publication policy;
-- implementation binary/code hash binding;
-- runtime provider health/cost/latency telemetry;
-- concrete OCR/backend/reference/provider adapters without verified external contracts;
-- UNIT and mixed-capability expansion.
+Explicitly deferred from REF-1:
 
-IF1 sequence:
+- concrete database/vector/search/backend adapters;
+- tenant/class/subject authentication/authorization implementation;
+- reference approval lifecycle/authentication;
+- hash-algorithm/content-hash inference or version ordering/latest selection;
+- chunk identity/deduplication/ranking/search scores;
+- automatic DIRECT fallback or review/publication decisions;
+- reference-aware semantic evaluator execution;
+- evaluator routing and execution-attempt provenance.
 
-contract freeze + N4/IF1 governance checkpoint
--> causal RED after valid existing `EvaluatorMetadata`
--> minimal GREEN
--> hostile exact-identity/ambiguity/mutation/source-failure hardening
+REF-1 sequence:
+
+contract + IF1/IF2/REF-1 governance checkpoint
+-> causal RED after valid existing ContextPolicy/grading-spec prerequisites
+-> minimal GREEN only after RED review
+-> hostile binding/mutation/source-failure/resource/snapshot hardening
 -> complete regression
 -> exact staging/tree custody
 -> commit + post-commit complete regression
--> freeze IF1
+-> freeze REF-1
 
 ### CROSS-CUTTING AUTHORITY PREREQUISITE — COMPLETE / FROZEN
 
@@ -402,19 +388,19 @@ Broader semantic Release-1 work remains open and still requires production provi
 
 Do not interpret this slice as academic-quality validation, production-provider closure, retry/idempotency closure, OCR/backend integration, or review/publication authority.
 
-### NEXT CANDIDATE — IF1 CAPABILITY RECORD / EXACT RESOLUTION RED AUTHORIZED
+### NEXT CANDIDATE — REF-1 REFERENCE CONTEXT CAUSAL RED AUTHORIZED
 
-IF1 is the selected next integration gate on top of frozen N4. Begin causal RED for the bounded versioned capability-record and exact-resolution contract above.
+REF-1 is the selected next integration gate on top of frozen IF1. Begin only the two causal REDs for the missing Gradified-owned reference-context contract and materialization/resolution seam.
 
-Do not start automatic routing, UNIT, mixed composition or concrete external adapters inside IF1. If the exact source audit assumptions are contradicted by implementation evidence, stop rather than inventing selection authority.
+Do not start search/ranking infrastructure, concrete external adapters, reference approval/authentication, automatic fallback, reference-aware semantic grading, evaluator routing or UNIT expansion inside the RED batch. If the existing authority assumptions are contradicted by executable evidence, stop rather than inventing provenance or trust semantics.
 
 ## Mathematical / Derivation Evaluation — OPEN
 
 Implement only the capability subset supported by explicit contracts and benchmark data. Unsupported patterns must fail/review safely.
 
-## Approved Reference Context — OPEN
+## Reference Context Materialization / Provenance — REF-1 BUILD
 
-Reference retrieval must be tenant/version scoped and record exact source provenance. Do not invent retrieval infrastructure before real backend/reference contracts are available.
+The backend-independent REF-1 boundary is BUILD-authorized and causal RED is authorized. Concrete retrieval/search/backend adapters remain open and must later prove tenant/version scope and real provenance against actual integration contracts.
 
 ## Production Provider Adapter — OPEN
 

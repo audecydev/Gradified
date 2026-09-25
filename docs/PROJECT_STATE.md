@@ -4,7 +4,7 @@ Status date: 2026-09-25
 
 ## Current milestone
 
-**Synthetic E2E S1, S2a, and S2b-1 remain closed/frozen. Deterministic single-select CHOICE v1 remains closed/frozen at its historical **853/853** post-commit baseline. Release-1 EXACT remains closed at `DEFER_EXACT`. The evaluator-facing ACTIVE question-authority boundary and DIRECT-text semantic slice remain frozen; the verified ACTIVE-exposure integrity defect remains repaired/frozen at commit `ba951af9081a5459464f4985074f5f113e62ad6b`. NUMERIC N1 academic authority remains CLOSED/FROZEN at commit `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f` / tree `d5410673f76b321e19ae97cc75b5aa538e11e135`. NUMERIC N2 student evidence admission remains CLOSED/FROZEN at commit `455d7cf1b20c2479fd9d702cb2f4a9c140672559` / tree `bf529655c7527a12e1f005486f49f1db81448fa6`. NUMERIC N3 deterministic unitless comparison remains CLOSED/FROZEN at commit `490c94751ea330ff31b298477f2507500d75bef8` / tree `edf2c4ee7c320b4257cd9f4187163e459a7e79f6`. NUMERIC N4 whole-question judgment composition is CLOSED/FROZEN at commit `0f926c4055f71bbca80e507a6729db95b5fff525` / tree `5afa6521f1a0ccea6ac3d613bce18109983f8724`, with **18/18** targeted qualification and **1317/1317** complete qualified pre/post-commit regression. The next selected integration gate is IF1: versioned evaluator-capability record validation and exact caller-selected record resolution. Automatic question routing, execution authorization policy, UNIT support, mixed partial composition, production NUMERIC quality and auto-release remain unauthorized.**
+**Synthetic E2E S1, S2a, and S2b-1 remain closed/frozen. Deterministic single-select CHOICE v1 remains closed/frozen at its historical **853/853** post-commit baseline. Release-1 EXACT remains closed at `DEFER_EXACT`. The evaluator-facing ACTIVE question-authority boundary and DIRECT-text semantic slice remain frozen; the verified ACTIVE-exposure integrity defect remains repaired/frozen at commit `ba951af9081a5459464f4985074f5f113e62ad6b`. NUMERIC N1 academic authority remains CLOSED/FROZEN at commit `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f` / tree `d5410673f76b321e19ae97cc75b5aa538e11e135`. NUMERIC N2 student evidence admission remains CLOSED/FROZEN at commit `455d7cf1b20c2479fd9d702cb2f4a9c140672559` / tree `bf529655c7527a12e1f005486f49f1db81448fa6`. NUMERIC N3 deterministic unitless comparison remains CLOSED/FROZEN at commit `490c94751ea330ff31b298477f2507500d75bef8` / tree `edf2c4ee7c320b4257cd9f4187163e459a7e79f6`. NUMERIC N4 whole-question judgment composition is CLOSED/FROZEN at commit `0f926c4055f71bbca80e507a6729db95b5fff525` / tree `5afa6521f1a0ccea6ac3d613bce18109983f8724`, with **18/18** targeted qualification and **1317/1317** complete qualified pre/post-commit regression. IF1 evaluator-capability record validation/exact resolution is now CLOSED/FROZEN at commit `60caf64f77120bb91434dcd4fe95d1981b405e68` / tree `db932cc7c1f444bd4fdaf171718256da6e126161`, with 87/87 targeted and 1404/1404 complete qualified pre/post-commit regression. IF2 exact question-classification -> capability selection is deferred for a Gradified-owned routing-policy authority gap. REF-1 reference-context materialization/provenance is the selected BUILD gate and causal RED is authorized. Automatic routing, execution-attempt provenance, UNIT support, mixed partial composition, production NUMERIC quality and auto-release remain unauthorized.**
 
 Current immutable S1 anchor:
 
@@ -19,7 +19,7 @@ Current immutable S1 anchor:
 - committed acceptance artifact SHA-256:
   `7ff52d81346094f9c361ce9625107a4dfe1330a947f18a482f4599a3d5382f32`
 
-The earlier S2b-2 implementation-eligibility inspection is complete, but S2b-2 remains incomplete as an executable Release-1 capability: Gradified still needs an explicit versioned platform/default policy decision and the current S2b-1 observation profile is intentionally narrower than the complete risk/impact input space described by the Engineering Source of Truth. No recommendation behavior is frozen. Release-1 EXACT remains closed with `DEFER_EXACT`. NUMERIC N1, N2, N3 and N4 are now frozen: N1 supplies the exact approved unitless scalar academic authority, N2 supplies one conservative admitted unitless finite-decimal observation with evidence provenance, N3 proves only `SATISFIED | NOT_SATISFIED` for the approved exact/inclusive-absolute-tolerance relation, and N4 maps only that actual N3 result to the already-approved complete N1 projection before unchanged S1/B2/B3 processing. UNIT semantics, mixed/partial composition and production-readiness claims remain gated. IF1 is BUILD-authorized only for versioned capability-record validation and exact resolution of a caller-supplied evaluator identity; it must not infer question routing, fallback, execution authorization or production validation. Representative workload evidence remains required for parser/evaluator breadth, benchmark coverage and production-quality claims. Frozen CHOICE, S1, B2/B3, DIRECT, G1 and scoring Numeric Profile v1 remain unchanged. No frozen source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
+The earlier S2b-2 implementation-eligibility inspection is complete, but S2b-2 remains incomplete as an executable Release-1 capability: Gradified still needs an explicit versioned platform/default policy decision and the current S2b-1 observation profile is intentionally narrower than the complete risk/impact input space described by the Engineering Source of Truth. No recommendation behavior is frozen. Release-1 EXACT remains closed with `DEFER_EXACT`. NUMERIC N1, N2, N3 and N4 are now frozen: N1 supplies the exact approved unitless scalar academic authority, N2 supplies one conservative admitted unitless finite-decimal observation with evidence provenance, N3 proves only `SATISFIED | NOT_SATISFIED` for the approved exact/inclusive-absolute-tolerance relation, and N4 maps only that actual N3 result to the already-approved complete N1 projection before unchanged S1/B2/B3 processing. UNIT semantics, mixed/partial composition and production-readiness claims remain gated. IF1 is now frozen at its qualified 1404/1404 baseline; IF2 routing selection remains deferred for a Gradified-owned authority gap; REF-1 is the current BUILD/RED-authorized seam. Representative workload evidence remains required for parser/evaluator breadth, benchmark coverage and production-quality claims. Frozen CHOICE, S1, B2/B3, DIRECT, G1 and scoring Numeric Profile v1 remain unchanged. No frozen source or accepted-test change is authorized without a verified defect, authority contradiction, or changed requirement.
 
 ## Frozen / accepted boundaries
 
@@ -459,45 +459,33 @@ N4 does **not** establish:
 - OCR/backend authentication, historical source immutability or whole-answer scope authentication;
 - production numeric benchmark/calibration, auto-release eligibility or real-paper E2E quality.
 
-### IF1 evaluator capability registry — source audit complete / BUILD authorized
+### IF1 evaluator capability registry — CLOSED / FROZEN
 
-Exact source audit baseline:
+IF1 decision: `CLOSED / FROZEN`.
 
-- commit: `0f926c4055f71bbca80e507a6729db95b5fff525`;
-- tree: `5afa6521f1a0ccea6ac3d613bce18109983f8724`;
-- archive SHA-256: `194cd51bb2f908c63e2d07b1314f0d08199108d467272e947183c9537b893e9d`.
+- implementation commit: `60caf64f77120bb91434dcd4fe95d1981b405e68`;
+- parent governance checkpoint: `17cb1a6360fb4d97ff147745a913bb2a5a1bafeb`;
+- committed tree: `db932cc7c1f444bd4fdaf171718256da6e126161`;
+- targeted IF1 contract + resolver + hostile hardening: **87/87**;
+- complete qualified pre-commit regression: **1404/1404**;
+- complete qualified post-commit regression: **1404/1404**;
+- post-commit working tree: clean.
 
-Source-audit findings:
+IF1 reuses exact `EvaluatorMetadata`, adds a versioned immutable capability record and exact caller-supplied record resolution, rejects missing/ambiguous/malformed/mutated/wrong-identity source results, snapshots source-owned state, and contains no built-in evaluator inventory, subject/question/evidence inference, fallback, or implicit latest/newest selection. `VALIDATED | PILOT | DISABLED` remain source-declared metadata; IF1 does not prove benchmark truth, execution authorization, evaluator execution or publication authority.
 
-- `EvaluatorMetadata` already provides the common evaluator identity pair (`evaluator_id`, `version`) and is emitted by CHOICE, NUMERIC and DIRECT-text evaluation paths;
-- deterministic CHOICE/NUMERIC own fixed implementation identity constants, while DIRECT-text receives composition-owned evaluator metadata;
-- `SemanticEvaluationResult` already carries `evaluation_attempt_id` and execution context, but current S2a explicitly does not authenticate evaluator-attempt/run provenance for arbitrary supplied judgments;
-- no evaluator capability registry, versioned capability record, exact capability-record resolver, answer-type router, production evaluator inventory or production authorization mechanism exists;
-- the existing DIRECT provider seam and rubric-provider replay/provenance machinery are reusable adjacent patterns, but they are not an evaluator capability registry.
+### IF2 exact question-classification -> capability selection — DEFERRED / GRADIFIED AUTHORITY GAP
 
-IF1 decision: `BUILD` only the smallest versioned evaluator-capability record and exact record-resolution boundary.
+IF2 implementation is deferred because the executable system does not yet define the deterministic, versioned Gradified-owned mapping from authoritative question classification to one exact evaluator capability identity/record. This is **not** an external-backend dependency. `QuestionSpec.answer_type`/context classification and IF1 capability identities exist conceptually, but neither an arbitrary caller assertion nor capability metadata may be promoted into selection authority. No IF2 behavior-defining RED is authorized until that routing-policy authority is explicitly defined.
 
-IF1 must:
+Execution-attempt/judgment provenance remains causally downstream of authoritative selection and is not authorized merely to work around this gap.
 
-- reuse existing `EvaluatorMetadata` identity rather than create a second evaluator identity vocabulary;
-- require an explicit caller-supplied evaluator identity and explicit capability-record version;
-- validate one versioned immutable capability record containing the SRS-required status/scope/evidence/profile fields;
-- resolve exactly that record from a configured source, rejecting missing, duplicate/ambiguous, malformed, mutated or identity-mismatched materialization;
-- treat descriptive scope as metadata only; empty/absent scope claims are never wildcard support;
-- keep `VALIDATED | PILOT | DISABLED` as source-declared capability metadata, not a second ACTIVE lifecycle and not automatic execution/publication authority;
-- make no inference from passing repository tests to production/benchmark validation status;
-- contain no built-in evaluator inventory, subject routing, question-text routing, evidence-shape routing, parse-success routing, automatic fallback or implicit latest/highest-version selection.
+### REF-1 reference context materialization + provenance — BUILD / causal RED authorized
 
-IF1 does **not** authorize:
+Exact post-IF1 source inspection found existing `ContextPolicy` and ACTIVE-question authority projection but no production reference-context contract/port/resolver. The accepted architecture explicitly requires a backend-independent RetrievalPort-style seam and per-chunk `source_id`, version and hash provenance.
 
-- question -> evaluator routing;
-- automatic execution admission based on capability status;
-- production-provider selection/health/cost/telemetry policy;
-- implementation-binary/code-hash identity;
-- concrete OCR/backend/retrieval/provider adapters without verified external contracts;
-- UNIT or mixed-capability expansion.
+REF-1 v1 is authorized only for the boundary frozen in `docs/REF1_REFERENCE_CONTEXT_CONTRACT_V1.md`: derive an immutable request from the exact current `ResolvedQuestionAuthority`; reject `DIRECT` before source invocation; invoke a configured polymorphic source for the three reference-aware policies; exact-type admit and binding-check returned Gradified-owned materialization/chunks; preserve opaque provenance and source order; enforce resource bounds; and return an independent immutable context snapshot. Empty chunks are a valid factual result.
 
-Representative approved/anonymized workload and numeric benchmark evidence remain required before broadening NUMERIC scope or claiming production auto-release quality.
+REF-1 does **not** authenticate tenant/reference approval, invent hash/version semantics, implement retrieval ranking/search infrastructure, choose fallback/review/publication behavior, or perform semantic grading. Concrete backend/search adapters remain separate integration work.
 
 ## Current blockers / open decisions
 
@@ -645,11 +633,11 @@ S1's earlier empty-evidence defect remains the standing example that full-suite 
 
 ## Next task
 
-Begin the **IF1 versioned evaluator-capability registry causal RED batch** from the exact frozen N4 baseline `0f926c4055f71bbca80e507a6729db95b5fff525` / tree `5afa6521f1a0ccea6ac3d613bce18109983f8724`.
+Begin the **REF-1 reference-context materialization/provenance causal RED batch** from exact frozen IF1 commit `60caf64f77120bb91434dcd4fe95d1981b405e68` / tree `db932cc7c1f444bd4fdaf171718256da6e126161`.
 
-The first RED must prove the existing `EvaluatorMetadata` identity contract is valid before failing causally at the missing IF1 capability-record contract. The second RED must prove an exact evaluator identity prerequisite is valid before failing causally at the missing exact registry-resolution boundary.
+The first RED must prove the existing `ContextPolicy`/ACTIVE-question prerequisites before failing only at the missing REF-1 contract. The second RED must prove existing grading-spec/context-policy prerequisites before failing only at the missing REF-1 resolution seam. Do not implement search/ranking, tenant/auth logic, reference approval lifecycle, semantic evaluation or workflow fallback in REF-1.
 
-Do not add automatic question routing, subject/language/modality inference, fallback, implicit latest/newest selection, execution-authorization policy, production capability inventory, OCR/backend/provider adapters, UNIT support or generic evaluator orchestration in IF1.
+Do not add automatic question routing, tenant/authentication inference, retrieval ranking/search infrastructure, reference approval lifecycle, semantic evaluation, OCR/backend/provider adapters, UNIT support or generic evaluator orchestration inside the REF-1 RED batch.
 
 ## Documentation rule
 

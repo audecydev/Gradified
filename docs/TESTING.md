@@ -531,7 +531,30 @@ Accepted test claim: N4 invokes the real N1 resolver, N2 admission and N3 evalua
 
 Current complete qualified regression baseline after N4 freeze: **1317/1317**.
 
-IF1 evaluator-capability registry exact source audit has selected BUILD for a versioned capability record plus exact caller-selected record resolution only. No IF1 executable evidence exists yet; do not record planned IF1 test results as passed.
+## IF1 evaluator-capability registry / exact resolution — frozen
+
+Implementation identity:
+
+- commit: `60caf64f77120bb91434dcd4fe95d1981b405e68`;
+- parent: `17cb1a6360fb4d97ff147745a913bb2a5a1bafeb`;
+- committed tree: `db932cc7c1f444bd4fdaf171718256da6e126161`.
+
+Qualified Windows x64 / CPython 3.11.9 evidence:
+
+- pytest `9.1.1`;
+- Hypothesis `6.167.1`;
+- `pip check`: clean;
+- targeted IF1 contract/resolver + hostile hardening: **87/87**;
+- complete qualified pre-commit repository regression: **1404/1404**;
+- exact six-path staged/committed tree matched `db932cc7c1f444bd4fdaf171718256da6e126161`;
+- complete qualified post-commit repository regression: **1404/1404**;
+- post-commit working tree: clean.
+
+Accepted test claim: IF1 validates and resolves one exact versioned caller-selected evaluator capability record, distinguishes source/missing/ambiguity/binding failures, snapshots source-owned state and contains no implicit routing/fallback/latest behavior. It does not prove benchmark claims, selection authority, evaluator execution, or publication authority.
+
+Current complete qualified regression baseline after IF1 freeze: **1404/1404**.
+
+IF2 exact question-classification -> capability selection is deferred for a Gradified-owned routing-policy authority gap. REF-1 source audit is complete and causal RED is authorized only for the missing reference-context contract/materialization seam. No REF-1 executable evidence exists yet; do not record planned REF-1 results as passed.
 
 
 ## S2 test-design rules

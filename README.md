@@ -12,16 +12,17 @@ If you are new to the project, read these documents in this order:
 
 1. [`docs/README.md`](docs/README.md) — documentation map: what every document is for and who should read it.
 2. [`docs/INTEGRATION_START_HERE.md`](docs/INTEGRATION_START_HERE.md) — plain-language system overview and integration order.
-3. [`docs/REPOSITORY_STRUCTURE.md`](docs/REPOSITORY_STRUCTURE.md) — where code, contracts, tests, and engineering documents live.
-4. [`docs/INTEGRATION_TEST_PLAN.md`](docs/INTEGRATION_TEST_PLAN.md) — step-by-step tests the integration team should run.
-5. Your integration-specific guide:
+3. [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — the corrected final Release 1 target architecture, current implemented path, and open boundaries.
+4. [`docs/REPOSITORY_STRUCTURE.md`](docs/REPOSITORY_STRUCTURE.md) — where code, contracts, tests, shared test helpers, and engineering documents live.
+5. [`docs/INTEGRATION_TEST_PLAN.md`](docs/INTEGRATION_TEST_PLAN.md) — step-by-step tests the integration team should run.
+6. Your integration-specific guide:
    - [`docs/OCR_INTEGRATION_GUIDE.md`](docs/OCR_INTEGRATION_GUIDE.md)
    - [`docs/BACKEND_INTEGRATION_GUIDE.md`](docs/BACKEND_INTEGRATION_GUIDE.md)
    - [`docs/REFERENCE_INTEGRATION_GUIDE.md`](docs/REFERENCE_INTEGRATION_GUIDE.md)
    - [`docs/SEMANTIC_PROVIDER_INTEGRATION_GUIDE.md`](docs/SEMANTIC_PROVIDER_INTEGRATION_GUIDE.md)
-6. [`docs/SCORING_KERNEL_BLACK_BOX.md`](docs/SCORING_KERNEL_BLACK_BOX.md) — deterministic scoring boundary and invariants.
-7. [`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md) and [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) — exact engineering state and remaining Release 1 work.
-8. [`docs/TESTING.md`](docs/TESTING.md) — detailed verification history and non-claims.
+7. [`docs/SCORING_KERNEL_BLACK_BOX.md`](docs/SCORING_KERNEL_BLACK_BOX.md) — deterministic scoring boundary and invariants.
+8. [`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md) and [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) — exact engineering state and remaining Release 1 work.
+9. [`docs/TESTING.md`](docs/TESTING.md) — detailed verification history and non-claims.
 
 ## What is implemented and frozen
 

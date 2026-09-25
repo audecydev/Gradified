@@ -506,7 +506,32 @@ Accepted test claim: N3 deterministically evaluates only the already-approved un
 
 Current complete qualified regression baseline after N3 freeze: **1299/1299**.
 
-N4 whole-question judgment composition has earned BUILD by prerequisite inspection but has no qualified executable evidence yet; planned N4 results must not be recorded here until run in the qualified environment.
+## NUMERIC N4 whole-question judgment composition — frozen
+
+Implementation identity:
+
+- commit: `0f926c4055f71bbca80e507a6729db95b5fff525`;
+- parent: `04a106f0818fe115776cb63b731ac31980f87640`;
+- committed tree: `5afa6521f1a0ccea6ac3d613bce18109983f8724`.
+
+Qualified Windows x64 / CPython 3.11.9 evidence:
+
+- pytest `9.1.1`;
+- Hypothesis `6.167.1`;
+- `pip check`: clean;
+- causal RED proved the existing N1 -> N2 -> N3 path before failing only at missing `grading.numeric_judgments`;
+- targeted N4 composition + integration qualification: **18/18**;
+- complete qualified pre-commit repository regression: **1317/1317**;
+- exact four-path staged/committed tree matched `5afa6521f1a0ccea6ac3d613bce18109983f8724`;
+- committed path set was exactly one N4 production module plus three N4 test modules;
+- complete qualified post-commit repository regression: **1317/1317**;
+- post-commit working tree: clean.
+
+Accepted test claim: N4 invokes the real N1 resolver, N2 admission and N3 evaluator, then maps only the actual deterministic N3 outcome to the corresponding already-approved complete N1 projection and emits existing `EvaluatedCriterionJudgment` values for unchanged S1/B2/B3 processing. It does not accept a caller-supplied N3 result as execution proof, add scoring arithmetic, implement UNIT semantics or establish production NUMERIC quality.
+
+Current complete qualified regression baseline after N4 freeze: **1317/1317**.
+
+IF1 evaluator-capability registry exact source audit has selected BUILD for a versioned capability record plus exact caller-selected record resolution only. No IF1 executable evidence exists yet; do not record planned IF1 test results as passed.
 
 
 ## S2 test-design rules

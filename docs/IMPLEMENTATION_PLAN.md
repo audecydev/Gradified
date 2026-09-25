@@ -296,7 +296,7 @@ Frozen consequences:
 - do not create EXACT RED, implementation, or normalization infrastructure;
 - reopen EXACT only if new authoritative, approved-workload, or verified-integration evidence materially changes a recorded defer basis.
 
-### NUMERIC / UNIT — N1 + N2 + N3 FROZEN; N4 WHOLE-QUESTION COMPOSITION BUILD AUTHORIZED
+### NUMERIC / UNIT — N1 + N2 + N3 + N4 FROZEN
 
 N1 authority is frozen at commit `f28d11d1a20a25944f0d3dcc9320ea0149fbe46f` / tree `d5410673f76b321e19ae97cc75b5aa538e11e135`.
 
@@ -304,45 +304,67 @@ N2 student evidence admission is frozen at commit `455d7cf1b20c2479fd9d702cb2f4a
 
 N3 deterministic unitless comparison is frozen at commit `490c94751ea330ff31b298477f2507500d75bef8` / tree `edf2c4ee7c320b4257cd9f4187163e459a7e79f6` after 57/57 targeted and 1299/1299 complete qualified pre/post-commit regression.
 
-N4 prerequisite decision: `BUILD` for the smallest whole-question NUMERIC judgment-composition boundary.
+N4 whole-question judgment composition is frozen at commit `0f926c4055f71bbca80e507a6729db95b5fff525` / tree `5afa6521f1a0ccea6ac3d613bce18109983f8724` after 18/18 targeted qualification and 1317/1317 complete qualified pre/post-commit regression.
 
-N4 objective:
+N4 runs the actual N1 -> N2 -> N3 path and maps only the actual deterministic outcome to the corresponding already-approved whole-question N1 projection before unchanged S1/B2/B3 processing. It does not add score arithmetic, accept a caller-supplied N3 result as execution proof, implement UNIT semantics or create a generic merger.
 
-Run the actual frozen N1 resolver, N2 scalar admission and N3 deterministic evaluator, then map the resulting `SATISFIED | NOT_SATISFIED` state to the corresponding already-approved complete N1 criterion projection and emit existing `EvaluatedCriterionJudgment` values for unchanged S1/B2/B3 processing.
+After N4 freeze, the dependency/value gate selected IF1 over UNIT expansion.
 
-N4 required v1 behavior:
+### IF1 — VERSIONED EVALUATOR CAPABILITY RECORD + EXACT RESOLUTION BUILD AUTHORIZED
 
-- no caller-supplied N3 result input; the trusted N1 -> N2 -> N3 chain executes inside the N4 boundary;
-- exact `NOT_AUTHORIZED` remains non-academic and cannot become a not-satisfied projection;
-- exact projection selection only: satisfied -> `satisfied_projection`, not-satisfied -> `not_satisfied_projection`;
-- exact approved criterion order and level IDs are inherited from the N1 resolver's current ACTIVE/scoring cross-check;
-- every emitted judgment references the exact admitted N2 evidence block;
-- deterministic evaluator metadata/reason codes contain no score or hidden academic rule;
-- technical/source/admission/binding failures propagate as failures rather than becoming judgments;
-- integration tests must prove the resulting judgments pass the existing S1 evidence verifier and existing B2/B3 scoring path without modifying frozen scoring code.
+Exact audit baseline:
 
-N4 exclusions:
+- commit `0f926c4055f71bbca80e507a6729db95b5fff525`;
+- tree `5afa6521f1a0ccea6ac3d613bce18109983f8724`;
+- exact source archive SHA-256 `194cd51bb2f908c63e2d07b1314f0d08199108d467272e947183c9537b893e9d`.
 
-- no generic partial-judgment merger;
-- no mixed NUMERIC + method/semantic composition;
-- no UNIT/conversion or broader numeric grammar;
-- no scoring arithmetic, marks, review/release policy or publication;
-- no capability registry/routing framework;
-- no claim of benchmark/calibration or production auto-release quality.
+Audit result:
 
-N4 sequence:
+- `EvaluatorMetadata` is the existing shared evaluator identity contract and must be reused;
+- deterministic CHOICE and NUMERIC already emit system-owned evaluator IDs/versions;
+- DIRECT-text already emits composition-owned `EvaluatorMetadata` and attempt correlation;
+- no registry/record resolver or authoritative question-to-capability selector exists;
+- S2a still accepts supplied judgments and does not prove evaluator-attempt/run provenance;
+- no real OCR/backend/provider contract exists in the audited repository.
 
-contract closure + governance checkpoint
-→ causal RED after valid N1/N2/N3 prerequisites
-→ minimal GREEN
-→ hostile provenance/not-authorized/failure hardening
-→ real N4 -> S1 -> B2/B3 integration tests
-→ complete regression
-→ exact source/staging/tree custody
-→ commit + post-commit complete regression
-→ freeze N4
+IF1 v1 objective:
 
-After N4 freezes, perform a fresh dependency/value gate. Do not automatically broaden to UNIT or mixed composition. Production integration slices may have higher immediate delivery value.
+Create a versioned, immutable evaluator-capability record plus an exact lookup/resolution boundary for a caller-supplied evaluator identity and record version. IF1 describes/resolves capability metadata; it does not select a capability for a question and does not grant execution/publication authority.
+
+Required IF1 behavior:
+
+- reuse exact `EvaluatorMetadata` for evaluator ID/version;
+- add an explicit positive capability-record version and record-schema version;
+- represent `VALIDATED | PILOT | DISABLED` plus supported answer types/languages/modalities, tested grade/domain scope, verification mechanisms, benchmark version, known failure modes, cost profile and latency profile;
+- preserve unavailable/unasserted optional scope/profile facts explicitly; absence never means wildcard/all;
+- require an exact caller-supplied capability reference; no omitted version and no latest/highest/newest behavior;
+- exact source lookup only; zero matches => missing, more than one => ambiguity, wrong identity => binding failure;
+- revalidate exact current record state at resolution so post-construction mutation is rejected;
+- reject foreign/subclass materialization before dispatch into it;
+- source execution failure remains distinct from missing capability;
+- no built-in production evaluator inventory or status inferred from repository tests.
+
+Explicitly deferred from IF1:
+
+- question/criterion -> capability routing;
+- subject/question/evidence/language/modality inference for evaluator selection;
+- automatic fallback/substitution;
+- status-based execution authorization or publication policy;
+- implementation binary/code hash binding;
+- runtime provider health/cost/latency telemetry;
+- concrete OCR/backend/reference/provider adapters without verified external contracts;
+- UNIT and mixed-capability expansion.
+
+IF1 sequence:
+
+contract freeze + N4/IF1 governance checkpoint
+-> causal RED after valid existing `EvaluatorMetadata`
+-> minimal GREEN
+-> hostile exact-identity/ambiguity/mutation/source-failure hardening
+-> complete regression
+-> exact staging/tree custody
+-> commit + post-commit complete regression
+-> freeze IF1
 
 ### CROSS-CUTTING AUTHORITY PREREQUISITE — COMPLETE / FROZEN
 
@@ -380,11 +402,11 @@ Broader semantic Release-1 work remains open and still requires production provi
 
 Do not interpret this slice as academic-quality validation, production-provider closure, retry/idempotency closure, OCR/backend integration, or review/publication authority.
 
-### NEXT CANDIDATE — N4 WHOLE-QUESTION NUMERIC COMPOSITION RED AUTHORIZED
+### NEXT CANDIDATE — IF1 CAPABILITY RECORD / EXACT RESOLUTION RED AUTHORIZED
 
-N4 is the selected next capability gate on top of frozen N1/N2/N3. Begin causal RED for the bounded judgment-composition contract above.
+IF1 is the selected next integration gate on top of frozen N4. Begin causal RED for the bounded versioned capability-record and exact-resolution contract above.
 
-Do not start UNIT, mixed partial composition, generic routing or broader integration work inside the N4 batch. If the frozen prerequisites expose a concrete contradiction, stop on that contradiction rather than weakening fail-closed behavior.
+Do not start automatic routing, UNIT, mixed composition or concrete external adapters inside IF1. If the exact source audit assumptions are contradicted by implementation evidence, stop rather than inventing selection authority.
 
 ## Mathematical / Derivation Evaluation — OPEN
 

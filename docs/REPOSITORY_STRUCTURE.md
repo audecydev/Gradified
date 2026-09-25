@@ -44,9 +44,7 @@ Gradified/
     ├── RELEASE_SCOPE.md
     ├── SCORING_KERNEL_BLACK_BOX.md
     ├── PROJECT_STATE.md
-    ├── TESTING.md
-    └── assets/
-        └── release-1-target-architecture.png
+    └── TESTING.md
 ```
 
 ## Why `tests/support/` exists

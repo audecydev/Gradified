@@ -47,13 +47,11 @@ These are more detailed. Read them when you are changing or debugging the corres
 | [`TESTING.md`](TESTING.md) | Detailed verification history, test counts, and explicit non-claims. |
 | [`SRS_TRACEABILITY.md`](SRS_TRACEABILITY.md) | Shows how grading requirements map to the implemented core and deferred boundaries. |
 
-## Architecture image
+## Architecture diagram
 
-The image below is the **target Release 1 architecture**, not a claim that every box is already implemented:
+The canonical Release 1 architecture is rendered directly from Mermaid source inside [`ARCHITECTURE.md`](ARCHITECTURE.md). This keeps every arrow reviewable in Git history and avoids preserving an ambiguous raster diagram.
 
-[`assets/release-1-target-architecture.png`](assets/release-1-target-architecture.png)
-
-The exact current implementation status is explained in [`ARCHITECTURE.md`](ARCHITECTURE.md) and [`RELEASE_SCOPE.md`](RELEASE_SCOPE.md).
+`ARCHITECTURE.md` clearly separates the **target Release 1 architecture** from the **currently implemented core**. [`RELEASE_SCOPE.md`](RELEASE_SCOPE.md) gives the corresponding implementation-status summary.
 
 ## Why many filenames use CAPITAL LETTERS
 

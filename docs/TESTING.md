@@ -554,7 +554,31 @@ Accepted test claim: IF1 validates and resolves one exact versioned caller-selec
 
 Current complete qualified regression baseline after IF1 freeze: **1404/1404**.
 
-IF2 exact question-classification -> capability selection is deferred for a Gradified-owned routing-policy authority gap. REF-1 source audit is complete and causal RED is authorized only for the missing reference-context contract/materialization seam. No REF-1 executable evidence exists yet; do not record planned REF-1 results as passed.
+## REF-1 reference-context materialization / provenance — frozen
+
+Implementation identity:
+
+- commit: `70235688c18d584efb4084cbb246fc6b573ba0dc`;
+- parent: `ae60373c20f1193c2324e8fc72ddc46236f49c57`;
+- committed tree: `fa2c047e5891e9930512c245ba7e8231532e21bd`.
+
+Qualified Windows x64 / CPython 3.11.9 evidence:
+
+- pytest `9.1.1`;
+- Hypothesis `6.167.1`;
+- `pip check`: clean;
+- targeted REF-1 contract/resolver + hostile hardening: **95/95**;
+- complete qualified pre-commit repository regression: **1499/1499**;
+- exact seven-path staged/committed tree matched `fa2c047e5891e9930512c245ba7e8231532e21bd`;
+- `compileall` and `git diff --check`: clean;
+- complete qualified post-commit repository regression: **1499/1499**;
+- post-commit working tree: clean.
+
+Accepted test claim: REF-1 derives reference-context requests from current ACTIVE question authority, blocks `DIRECT` before source invocation, cross-checks source-returned spec/question/policy binding, preserves opaque per-chunk provenance and source order, applies frozen resource limits, and returns an independent snapshot. Empty context is valid. REF-1 does not prove tenant/reference approval, provenance truth, historical backend immutability, retrieval completeness, academic relevance, semantic reference grading or concrete-adapter correctness.
+
+Current complete qualified regression baseline after REF-1 freeze: **1499/1499**.
+
+IF2 exact question-classification -> capability selection remains deferred for a Gradified-owned routing-policy authority gap. Concrete reference/OCR/backend/provider integration and release-level E2E/benchmark evidence remain open.
 
 
 ## S2 test-design rules

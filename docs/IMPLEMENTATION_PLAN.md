@@ -320,19 +320,17 @@ The frozen scope is versioned capability-record validation and exact caller-sele
 
 Decision: `DEFER` implementation because the Gradified-owned deterministic/versioned mapping from authoritative question classification to exact evaluator capability identity has not yet been specified. This is an internal routing-policy authority gap, not a reason to wait for an external backend. No caller-supplied evaluator identity, capability status, answer-shape inference or implicit default may become selection authority. No behavior-defining IF2 RED is authorized yet.
 
-### REF-1 — REFERENCE CONTEXT MATERIALIZATION + PROVENANCE BUILD AUTHORIZED
+### REF-1 — REFERENCE CONTEXT MATERIALIZATION + PROVENANCE FROZEN
 
-Source audit is complete against the exact post-IF1 tree. Existing `ContextPolicy` and `ResolvedQuestionAuthority` are REUSE inputs; no existing production reference-context port/contract/resolver was found.
+REF-1 is CLOSED/FROZEN at commit `70235688c18d584efb4084cbb246fc6b573ba0dc` / tree `fa2c047e5891e9930512c245ba7e8231532e21bd`. Qualified evidence is **95/95** targeted plus **1499/1499** complete pre/post-commit regression with a clean final working tree.
 
-REF-1 v1 objective:
+The frozen v1 boundary derives an exact request from `ResolvedQuestionAuthority`, rejects `ContextPolicy.DIRECT` before source invocation, invokes a configured polymorphic source for reference-aware policies, cross-checks returned spec/question/policy binding, preserves per-chunk `content + source_id + source_version + opaque provenance_hash`, enforces versioned resource bounds, and returns an independent immutable snapshot. A successful empty chunk tuple is a valid factual context result.
 
-Create the smallest backend/search-independent reference-context materialization boundary that derives an exact request from `ResolvedQuestionAuthority`, rejects `ContextPolicy.DIRECT` before source invocation, invokes a configured polymorphic source for reference-aware policies, cross-checks the returned spec/question/policy binding, preserves per-chunk `content + source_id + source_version + opaque provenance_hash`, enforces bounded resources, and returns an independent immutable snapshot. A successful empty chunk tuple is a valid factual context result.
+Configured-source exception semantics preserve Gradified-owned REF-1 contract/resource categories raised during REF-1 value construction; other adapter exceptions remain source-execution failures. Post-return validation is not blanket-wrapped.
 
-Required REF-1 behavior is frozen in `docs/REF1_REFERENCE_CONTEXT_CONTRACT_V1.md`.
+Still open after REF-1:
 
-Explicitly deferred from REF-1:
-
-- concrete database/vector/search/backend adapters;
+- concrete database/vector/search/backend adapters and real tenant/version/provenance conformance;
 - tenant/class/subject authentication/authorization implementation;
 - reference approval lifecycle/authentication;
 - hash-algorithm/content-hash inference or version ordering/latest selection;
@@ -340,17 +338,6 @@ Explicitly deferred from REF-1:
 - automatic DIRECT fallback or review/publication decisions;
 - reference-aware semantic evaluator execution;
 - evaluator routing and execution-attempt provenance.
-
-REF-1 sequence:
-
-contract + IF1/IF2/REF-1 governance checkpoint
--> causal RED after valid existing ContextPolicy/grading-spec prerequisites
--> minimal GREEN only after RED review
--> hostile binding/mutation/source-failure/resource/snapshot hardening
--> complete regression
--> exact staging/tree custody
--> commit + post-commit complete regression
--> freeze REF-1
 
 ### CROSS-CUTTING AUTHORITY PREREQUISITE — COMPLETE / FROZEN
 
@@ -388,19 +375,19 @@ Broader semantic Release-1 work remains open and still requires production provi
 
 Do not interpret this slice as academic-quality validation, production-provider closure, retry/idempotency closure, OCR/backend integration, or review/publication authority.
 
-### NEXT CANDIDATE — REF-1 REFERENCE CONTEXT CAUSAL RED AUTHORIZED
+### NEXT MILESTONE — DEADLINE INTEGRATION HANDOFF / RELEASE-GAP RECONCILIATION
 
-REF-1 is the selected next integration gate on top of frozen IF1. Begin only the two causal REDs for the missing Gradified-owned reference-context contract and materialization/resolution seam.
+Do not automatically start another medium-sized feature after REF-1 freeze. Prepare the integration handoff from the exact frozen capabilities, record what external adapters and release evidence remain open, run the final qualified complete regression, capture exact Git custody, and package reproducible evidence.
 
-Do not start search/ranking infrastructure, concrete external adapters, reference approval/authentication, automatic fallback, reference-aware semantic grading, evaluator routing or UNIT expansion inside the RED batch. If the existing authority assumptions are contradicted by executable evidence, stop rather than inventing provenance or trust semantics.
+A further implementation slice requires its own authority/dependency gate and must not consume the protected verification/handoff buffer.
 
 ## Mathematical / Derivation Evaluation — OPEN
 
 Implement only the capability subset supported by explicit contracts and benchmark data. Unsupported patterns must fail/review safely.
 
-## Reference Context Materialization / Provenance — REF-1 BUILD
+## Reference Context Materialization / Provenance — REF-1 COMPLETE / FROZEN
 
-The backend-independent REF-1 boundary is BUILD-authorized and causal RED is authorized. Concrete retrieval/search/backend adapters remain open and must later prove tenant/version scope and real provenance against actual integration contracts.
+The backend-independent REF-1 boundary is frozen at commit `70235688c18d584efb4084cbb246fc6b573ba0dc` / tree `fa2c047e5891e9930512c245ba7e8231532e21bd`. Concrete retrieval/search/backend adapters remain open and must later prove tenant/version scope and real provenance against actual integration contracts.
 
 ## Production Provider Adapter — OPEN
 

@@ -56,7 +56,7 @@ Protocol conformance is not authentication. The composition root/backend remains
 
 REF-1 must never derive tenant/class/subject/reference authorization from student evidence, answer text, question text, or other untrusted content.
 
-The adapter invocation is the only broad source-execution exception boundary. Exceptions raised by the configured source are contained as source-execution failures. REF-1's own post-return validation/snapshot code must not be wrapped in a blanket `except Exception` that would disguise programming defects as hostile input.
+The adapter invocation is the only broad source-execution exception boundary. Ordinary exceptions raised during configured-source execution are contained as `ReferenceContextSourceExecutionError`. If the configured source constructs a Gradified-owned REF-1 domain value and that construction raises a REF-1 contract/resource exception, the resolver preserves the corresponding materialization/resource category. REF-1's own post-return validation/snapshot code must not be wrapped in a blanket `except Exception` that would disguise programming defects as hostile input.
 
 ## 6. Materialization envelope
 

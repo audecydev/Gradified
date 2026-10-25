@@ -23,7 +23,7 @@ from grading.numeric_judgments import (
     NumericNotAuthorizedForQuestionError,
     evaluate_numeric_question_to_judgments,
 )
-from tests.unit.test_numeric_authority_resolution_red import (
+from tests.unit.test_numeric_authority_resolution_regression import (
     _AuthoritySource,
     _BindingSource,
     _ExplodingAuthoritySource,
@@ -32,7 +32,7 @@ from tests.unit.test_numeric_authority_resolution_red import (
     _bound_setup,
     _resolved_active,
 )
-from tests.unit.test_numeric_evidence_admission_red import _block, _bundle, _question
+from tests.unit.test_numeric_evidence_admission_regression import _block, _bundle, _question
 
 
 def _evaluate(content: str):

@@ -175,7 +175,7 @@ class ReplayRubricProvider:
 
 @dataclass(frozen=True, slots=True)
 class ProviderGeneratedRubricCandidate:
-    """Provider provenance plus the still-unapproved deterministic G1a candidate."""
+    """Provider provenance plus the still-unapproved deterministic rubric authoring candidate."""
 
     request_fingerprint: str
     provider_profile_version: str
@@ -209,9 +209,9 @@ def generate_rubric_with_provider(
     provider: RubricGenerationProvider,
     ingress_limits: RubricProviderIngressLimits,
 ) -> ProviderGeneratedRubricCandidate:
-    """Generate one unapproved candidate through frozen G1b then frozen G1a.
+    """Generate one unapproved candidate through frozen rubric provider ingress then frozen rubric authoring.
 
-    Provider bytes remain untrusted until admitted by G1b. This function performs
+    Provider bytes remain untrusted until admitted by rubric provider ingress. This function performs
     no compilation, approval, activation, or reducer-authority construction.
     """
 

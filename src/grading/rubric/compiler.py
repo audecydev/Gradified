@@ -34,7 +34,7 @@ def _require_sha256_hex(value: object, field_name: str) -> None:
 
 @dataclass(frozen=True, slots=True)
 class CompiledRubricCandidate:
-    """Validated deterministic candidate; not itself B2-admissible authority.
+    """Validated deterministic candidate; not itself criterion scoring-admissible authority.
 
     Release 1 grading authority is exposed only from an ACTIVE lifecycle version.
     Reducer-facing contracts are deliberately not exposed on this pre-ACTIVE

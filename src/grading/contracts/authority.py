@@ -25,7 +25,7 @@ class QuestionScoringAuthority:
     """Immutable reducer input with defensive structural/reference validation.
 
     This boundary validates shape, question/max alignment, rule references and
-    dependency acyclicity. It deliberately does not replace the Slice 2 rubric
+    dependency acyclicity. It deliberately does not replace the rubric-authoring rubric
     linter/compiler, which owns global marks reconciliation and activation-time
     semantic validation. The reducer still enforces final score bounds at run
     time as defense in depth.

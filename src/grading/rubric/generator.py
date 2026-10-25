@@ -150,7 +150,7 @@ class RubricGenerationInput:
     """Trusted normalized inputs used to compose one rubric-generation candidate.
 
     The object binds the exact school-authorized question/model-answer text and
-    trusted scoring/policy inputs used by this deterministic G1 composition
+    trusted scoring/policy inputs used by this deterministic rubric generation composition
     boundary. It does not authenticate where those inputs came from.
     """
 

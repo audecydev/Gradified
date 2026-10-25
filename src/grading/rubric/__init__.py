@@ -20,6 +20,19 @@ from grading.rubric.linter import (
     lint_rubric_collection,
     lint_rubric_content,
 )
+from grading.rubric.regeneration_custody import (
+    AuthorizedRegenerationRead,
+    AuthorizedRegenerationSource,
+    ConditionalDraftStore,
+    ConditionalDraftWrite,
+    CustodyOutcome,
+    CustodyState,
+    DraftWriteReceipt,
+    DraftWriteState,
+    propose_and_persist_regeneration,
+    recover_regeneration_write,
+)
+from grading.rubric.regeneration import (RegenerationDisposition, RegenerationProposal, propose_regenerated_draft)
 from grading.rubric.models import (
     AuthoringCapRule,
     AuthoringCriterion,
@@ -63,4 +76,17 @@ __all__ = [
     "retire_version",
     "revise_version",
     "validate_version",
+    "AuthorizedRegenerationRead",
+    "AuthorizedRegenerationSource",
+    "ConditionalDraftStore",
+    "ConditionalDraftWrite",
+    "CustodyOutcome",
+    "CustodyState",
+    "DraftWriteReceipt",
+    "DraftWriteState",
+    "propose_and_persist_regeneration",
+    "recover_regeneration_write",
+    "RegenerationDisposition",
+    "RegenerationProposal",
+    "propose_regenerated_draft",
 ]

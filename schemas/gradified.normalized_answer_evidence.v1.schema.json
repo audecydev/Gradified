@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:gradified:normalized-answer-evidence:v1",
+  "title": "Gradified Normalized Answer Evidence Wire v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "submission_ref", "ocr_provenance", "questions"],
+  "properties": {
+    "schema_version": {"const": "1"},
+    "submission_ref": {"$ref": "#/$defs/identifier"},
+    "ocr_provenance": {"$ref": "#/$defs/identifier"},
+    "questions": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/question"}
+    }
+  },
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The normalized evidence admission parser also rejects identifiers with leading or trailing Unicode whitespace. This check is implemented in Python rather than a JSON Schema regex because the Unicode whitespace definitions are not identical across regex implementations."
+    },
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["question_id", "answer_scope_ref", "blocks", "warnings"],
+      "properties": {
+        "question_id": {"$ref": "#/$defs/identifier"},
+        "answer_scope_ref": {"$ref": "#/$defs/identifier"},
+        "blocks": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/block"}
+        },
+        "warnings": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "block": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "block_id",
+        "type",
+        "content",
+        "language",
+        "confidence",
+        "confidence_status",
+        "state",
+        "page",
+        "location",
+        "reading_order",
+        "asset_ref"
+      ],
+      "properties": {
+        "block_id": {"$ref": "#/$defs/identifier"},
+        "type": {"enum": ["TEXT", "MATH", "TABLE", "FIGURE", "CODE", "OTHER"]},
+        "content": {"type": "string"},
+        "language": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "string", "minLength": 1}
+          ]
+        },
+        "confidence": {"type": ["number", "null"]},
+        "confidence_status": {"enum": ["PRESENT", "UNAVAILABLE"]},
+        "state": {"enum": ["ACTIVE", "CROSSED_OUT", "UNCERTAIN"]},
+        "page": {"type": "integer"},
+        "location": {"$ref": "#/$defs/location"},
+        "reading_order": {"type": "integer"},
+        "asset_ref": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "string", "minLength": 1}
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {"confidence_status": {"const": "UNAVAILABLE"}},
+            "required": ["confidence_status"]
+          },
+          "then": {"properties": {"confidence": {"type": "null"}}}
+        },
+        {
+          "if": {
+            "properties": {"confidence_status": {"const": "PRESENT"}},
+            "required": ["confidence_status"]
+          },
+          "then": {"properties": {"confidence": {"type": "number"}}}
+        }
+      ]
+    },
+    "location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "bbox"],
+      "properties": {
+        "status": {"enum": ["PRESENT", "PARTIAL", "UNAVAILABLE"]},
+        "bbox": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "array", "items": {"type": "number"}}
+          ]
+        }
+      }
+    }
+  }
+}

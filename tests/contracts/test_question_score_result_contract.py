@@ -61,14 +61,14 @@ def _import_result_module():
     except ModuleNotFoundError as exc:
         if exc.name == "grading.contracts.result":
             pytest.fail(
-                "B2 RED-2A: grading.contracts.result does not exist yet.",
+                "Question-score contract module grading.contracts.result is missing.",
                 pytrace=False,
             )
         raise
 
 
 def test_b2_result_and_provenance_contract_surface_exists() -> None:
-    """B2 exposes the frozen immutable result/provenance surface."""
+    """criterion scoring exposes the frozen immutable result/provenance surface."""
 
     result_module = _import_result_module()
 
@@ -173,7 +173,7 @@ def test_score_out_of_range_error_is_a_scoring_domain_failure() -> None:
     error_type = getattr(errors_module, "ScoreOutOfRangeError", None)
 
     assert error_type is not None, (
-        "B2 RED-2A: ScoreOutOfRangeError does not exist yet."
+        "Required ScoreOutOfRangeError is missing."
     )
     assert issubclass(error_type, ScoringError)
 

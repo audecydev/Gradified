@@ -23,7 +23,7 @@ from tests.integration.test_direct_text_semantic_evaluator_hostile import (
     _raw_response,
     _resolved_question_authority,
 )
-from tests.integration.test_direct_text_semantic_evaluator_red import _paper_authority
+from tests.integration.test_direct_text_semantic_evaluator_regression import _paper_authority
 
 
 def _execute_semantic_result(*, semantic_result, authority, evidence):
@@ -76,7 +76,7 @@ def test_real_direct_text_semantic_result_flows_through_s1_b2_b3() -> None:
 
     # Deliberately return provider criteria in reverse order and give them
     # different semantic payloads/levels. The semantic evaluator must canonicalize
-    # by criterion ID before S1/B2, never by response position.
+    # by criterion ID before deterministic scoring/criterion scoring, never by response position.
     provider = _Provider(
         _raw_response(
             judgments=[

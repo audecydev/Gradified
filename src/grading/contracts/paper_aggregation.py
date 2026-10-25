@@ -75,7 +75,7 @@ def _validate_scoring_decimal_structure(
     field_name: str,
     error_type: type[_ErrorT],
 ) -> ScoringDecimal:
-    """Re-admit a possibly forged exact ScoringDecimal through the B1 boundary."""
+    """Re-admit a possibly forged exact ScoringDecimal through the numeric scoring profile boundary."""
 
     if type(value) is not ScoringDecimal:
         _raise(error_type, f"{field_name} must be an exact ScoringDecimal.")
@@ -219,7 +219,7 @@ def _validate_scoring_policy_ref(
 
 @dataclass(frozen=True, slots=True)
 class GradingSpecRef:
-    """Immutable scoring-specification reference preserved as B3 provenance."""
+    """Immutable scoring-specification reference preserved as scoring aggregation provenance."""
 
     id: str
     version: int
@@ -294,7 +294,7 @@ def _validate_expected_question_result(
 
 @dataclass(frozen=True, slots=True)
 class ResolvedPaperScoringAuthority:
-    """Structurally validated resolved paper composition consumed by B3."""
+    """Structurally validated resolved paper composition consumed by scoring aggregation."""
 
     grading_spec_ref: GradingSpecRef
     expected_questions: tuple[ExpectedQuestionResult, ...]

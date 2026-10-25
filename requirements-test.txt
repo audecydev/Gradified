@@ -1,8 +1,6 @@
-# Gradified Slice 1 authoritative verification environment
-# Qualified runtime: Windows x64 / CPython 3.11.9
-#
-# Direct verification dependencies and their fully pinned
-# transitive closure from the accepted 430-test environment.
+# Gradified grading engine test dependencies
+# Pinned versions used by the established Windows/Python 3.11 verification environment.
+# This file records test tools, not a certification of the current source tree.
 
 colorama==0.4.6
 hypothesis==6.167.1

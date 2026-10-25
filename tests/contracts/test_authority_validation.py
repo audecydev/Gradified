@@ -230,7 +230,7 @@ def test_authority_graph_is_deeply_immutable() -> None:
 
 
 def test_authority_wrapper_does_not_replace_slice2_marks_reconciliation() -> None:
-    # Batch A validates structural/cross-reference safety only. The Slice 2
+    # Admission validates structural and cross-reference safety only. Rubric authoring
     # linter/compiler must reject impossible authoring-time mark allocations
     # before activation; the reducer independently enforces final bounds.
     high_contribution_rubric = CompiledQuestionRubric(

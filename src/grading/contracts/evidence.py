@@ -72,7 +72,7 @@ class EvidenceLocation:
             if type(self.bbox) is not tuple:
                 raise TypeError("EvidenceLocation.bbox must be a tuple or None.")
             if any(
-                type(value) not in (int, float)
+                not (type(value) is int or type(value) is float)
                 for value in self.bbox
             ):
                 raise TypeError(
@@ -118,7 +118,7 @@ class EvidenceBlock:
                     "EvidenceBlock.confidence must be None when confidence_status is UNAVAILABLE."
                 )
         else:
-            if type(self.confidence) not in (int, float):
+            if not (type(self.confidence) is int or type(self.confidence) is float):
                 raise TypeError(
                     "EvidenceBlock.confidence must be numeric when confidence_status is PRESENT."
                 )

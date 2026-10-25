@@ -16,7 +16,7 @@ from grading.verification.evidence import (
 
 
 class InvalidGradingExecutionError(ValueError):
-    """Raised when S2 execution admission or identity binding fails."""
+    """Raised when scoring verification execution admission or identity binding fails."""
 
 
 def _require_identifier(value: object, field_name: str) -> None:
@@ -204,7 +204,7 @@ def execute_grading_from_evaluations(
     questions: tuple[QuestionExecutionInput, ...],
     paper_authority: ResolvedPaperScoringAuthority,
 ) -> GradingExecutionResult:
-    """Execute the S2a grading vertical from supplied evaluator judgments."""
+    """Execute the grading flow from supplied evaluator judgments."""
 
     canonical_questions = _validate_execution_inputs(
         context=context,

@@ -59,7 +59,7 @@ def evaluate_numeric_question_to_judgments(
     executes the trusted resolver, evidence admission, and deterministic
     evaluator in-process, then maps the resulting SATISFIED/NOT_SATISFIED state
     to the already-approved N1 complete criterion projection.  It does not
-    calculate marks or bypass the existing S1/B2/B3 verification/scoring path.
+    calculate marks or bypass the existing deterministic question scoring and paper aggregation verification/scoring path.
     """
 
     resolved_or_not = resolve_numeric_authority(

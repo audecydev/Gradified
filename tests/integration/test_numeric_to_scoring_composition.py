@@ -14,7 +14,7 @@ from grading.contracts.scoring_decimal import ScoringDecimal
 from grading.execution import GradingExecutionContext, QuestionExecutionInput, execute_grading_from_evaluations
 from grading.numeric_judgments import evaluate_numeric_question_to_judgments
 from grading.verification.evidence import EvidenceVerificationError
-from tests.unit.test_numeric_authority_resolution_red import (
+from tests.unit.test_numeric_authority_resolution_regression import (
     _AuthoritySource,
     _BindingSource,
     _Materialized,
@@ -22,7 +22,7 @@ from tests.unit.test_numeric_authority_resolution_red import (
     _paper,
     _resolved_active,
 )
-from tests.unit.test_numeric_evidence_admission_red import _block, _bundle, _question
+from tests.unit.test_numeric_evidence_admission_regression import _block, _bundle, _question
 
 
 def _setup(*, content: str, authority: NumericEvaluationAuthority | None = None):

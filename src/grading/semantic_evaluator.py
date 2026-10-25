@@ -32,7 +32,7 @@ class DirectTextSemanticError(Exception):
 
 
 class DirectTextSemanticUnsupportedInputError(DirectTextSemanticError):
-    """The supplied question/evidence is outside the supported DIRECT-text slice."""
+    """The supplied question/evidence is outside the supported DIRECT-text evaluation capability."""
 
 
 class DirectTextSemanticBindingError(DirectTextSemanticError):
@@ -571,14 +571,19 @@ class DirectTextSemanticEvaluator:
         object.__setattr__(self, "_limits", limits)
         object.__setattr__(self, "_evaluator_metadata", evaluator_metadata)
 
-    def evaluate(
+    def preflight_local(
         self,
         *,
         authority: ResolvedQuestionAuthority,
         evidence: AnswerEvidenceBundle,
         execution_context: GradingExecutionContext,
         evaluation_attempt_id: str,
-    ) -> SemanticEvaluationResult:
+    ) -> tuple[tuple[DirectTextSemanticCriterion, ...], tuple[DirectTextSemanticEvidenceBlock, ...]]:
+        """Validate deterministic DIRECT evidence/capability before provider contact.
+
+        This is not model-answer-source admission or permission to grade.
+        The same check is called again by evaluate to guard the execution point.
+        """
         if type(authority) is not ResolvedQuestionAuthority:
             raise TypeError("authority must be an exact ResolvedQuestionAuthority.")
         if type(evidence) is not AnswerEvidenceBundle:
@@ -694,12 +699,39 @@ class DirectTextSemanticEvaluator:
                 "Semantic request exceeds max_total_request_characters before model-answer materialization."
             )
 
-        # Resolve model-answer material only after cheap deterministic capability
-        # and binding checks have succeeded. No fallback/source search exists here.
+        return semantic_criteria, tuple(visible_blocks)
+
+    def prepare_request(
+        self,
+        *,
+        authority: ResolvedQuestionAuthority,
+        evidence: AnswerEvidenceBundle,
+        execution_context: GradingExecutionContext,
+        evaluation_attempt_id: str,
+    ) -> DirectTextSemanticRequest:
+        """Materialize the exact request without contacting the semantic provider.
+
+        The installed model-answer source must be a qualified, side-effect-free
+        academic reader. This method does not authenticate that external reader.
+        """
+        semantic_criteria, visible_blocks = self.preflight_local(
+            authority=authority, evidence=evidence,
+            execution_context=execution_context,
+            evaluation_attempt_id=evaluation_attempt_id,
+        )
+
+        # The source callback receives a separate request record. A callback
+        # must not be able to mutate the academic reference against which its
+        # own returned model answer is verified.
+        bound_spec = GradingSpecRef(
+            authority.grading_spec_ref.id, authority.grading_spec_ref.version,
+        )
+        bound_question_id = authority.question_id
+        source_spec = GradingSpecRef(bound_spec.id, bound_spec.version)
         try:
             materialized = self._model_answer_source.resolve_model_answer(
-                grading_spec_ref=authority.grading_spec_ref,
-                question_id=authority.question_id,
+                grading_spec_ref=source_spec,
+                question_id=bound_question_id,
             )
         except Exception as exc:
             raise DirectTextSemanticModelAnswerSourceExecutionError(
@@ -719,6 +751,30 @@ class DirectTextSemanticEvaluator:
             ) from exc
 
         _validate_grading_spec_ref(
+            source_spec,
+            field_name="model_answer.source_grading_spec_ref",
+            error_type=DirectTextSemanticBindingError,
+        )
+        _validate_grading_spec_ref(
+            authority.grading_spec_ref,
+            field_name="authority.grading_spec_ref",
+            error_type=DirectTextSemanticBindingError,
+        )
+        if (type(authority.question_id) is not str
+                or authority.question_id != bound_question_id):
+            raise DirectTextSemanticBindingError(
+                "Model-answer source changed the original question identity."
+            )
+        if (source_spec.id != bound_spec.id
+                or type(source_spec.version) is not type(bound_spec.version)
+                or source_spec.version != bound_spec.version
+                or authority.grading_spec_ref.id != bound_spec.id
+                or type(authority.grading_spec_ref.version) is not type(bound_spec.version)
+                or authority.grading_spec_ref.version != bound_spec.version):
+            raise DirectTextSemanticBindingError(
+                "Model-answer source changed the admitted academic specification."
+            )
+        _validate_grading_spec_ref(
             materialized_spec_ref,
             field_name="model_answer.grading_spec_ref",
             error_type=DirectTextSemanticBindingError,
@@ -728,11 +784,11 @@ class DirectTextSemanticEvaluator:
             field_name="model_answer.question_id",
             error_type=DirectTextSemanticBindingError,
         )
-        if materialized_spec_ref != authority.grading_spec_ref:
+        if materialized_spec_ref != bound_spec:
             raise DirectTextSemanticBindingError(
                 "Materialized model answer is bound to a different grading spec."
             )
-        if validated_model_question_id != authority.question_id:
+        if validated_model_question_id != bound_question_id:
             raise DirectTextSemanticBindingError(
                 "Materialized model answer is bound to a different question."
             )
@@ -757,6 +813,22 @@ class DirectTextSemanticEvaluator:
                 "Semantic request exceeds max_total_request_characters."
             )
 
+        return request
+
+    def evaluate(
+        self,
+        *,
+        authority: ResolvedQuestionAuthority,
+        evidence: AnswerEvidenceBundle,
+        execution_context: GradingExecutionContext,
+        evaluation_attempt_id: str,
+    ) -> SemanticEvaluationResult:
+        request = self.prepare_request(
+            authority=authority, evidence=evidence,
+            execution_context=execution_context,
+            evaluation_attempt_id=evaluation_attempt_id,
+        )
+        visible_blocks = request.evidence_blocks
         try:
             raw_response = self._provider.evaluate(request=request)
         except Exception as exc:

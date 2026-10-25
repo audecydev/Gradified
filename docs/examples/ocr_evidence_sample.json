@@ -1,0 +1,30 @@
+{
+  "schema_version": "1",
+  "submission_ref": "example-submission",
+  "ocr_provenance": "example-ocr-run",
+  "questions": [
+    {
+      "question_id": "Q1",
+      "answer_scope_ref": "example-Q1-region",
+      "blocks": [
+        {
+          "block_id": "Q1-block-1",
+          "type": "TEXT",
+          "content": "Evaporation causes cooling because faster particles leave the liquid.",
+          "language": "en",
+          "confidence": null,
+          "confidence_status": "UNAVAILABLE",
+          "state": "ACTIVE",
+          "page": 1,
+          "location": {
+            "status": "UNAVAILABLE",
+            "bbox": null
+          },
+          "reading_order": 1,
+          "asset_ref": null
+        }
+      ],
+      "warnings": []
+    }
+  ]
+}

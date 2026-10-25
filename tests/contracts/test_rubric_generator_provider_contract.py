@@ -159,7 +159,7 @@ def _raw(document: dict[str, object] | None = None) -> bytes:
 
 
 class _FakeProvider:
-    """Test-local provider double; it must cross the real frozen G1b ingress."""
+    """Test-local provider double; it must cross the real frozen rubric provider ingress ingress."""
 
     def __init__(
         self,

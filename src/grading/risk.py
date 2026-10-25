@@ -19,11 +19,11 @@ RISK_OBSERVATION_SCHEMA_VERSION = "1"
 
 
 class InvalidRiskObservationInputError(ValueError):
-    """Raised when S2b-1 cannot safely bind risk-observation inputs."""
+    """Raised when risk observation extraction cannot safely bind risk-observation inputs."""
 
 
 class RiskObservationCode(str, Enum):
-    """Risk observations currently supported by the S2b-1 profile."""
+    """Risk observations currently supported by the risk observation profile."""
 
     OCR_CONFIDENCE_UNKNOWN = "OCR_CONFIDENCE_UNKNOWN"
     EVALUATOR_UNCERTAINTY_REPORTED = "EVALUATOR_UNCERTAINTY_REPORTED"
@@ -209,7 +209,7 @@ def extract_risk_observations(
     execution: GradingExecutionResult,
     evidence: AnswerEvidenceBundle,
 ) -> RiskObservationSet:
-    """Extract supported S2b-1 risk observations without making review policy."""
+    """Extract supported risk observations without making review policy."""
 
     bound_questions = _validate_and_bind_inputs(
         execution=execution,

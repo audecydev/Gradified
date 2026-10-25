@@ -15,7 +15,7 @@ from grading.contracts.evaluation import EvaluatorMetadata
 
 
 class EvaluatorCapabilityResolutionError(Exception):
-    """Base class for expected IF1 exact-resolution failures."""
+    """Base class for expected evaluator capability resolution exact-resolution failures."""
 
 
 class EvaluatorCapabilitySourceExecutionError(EvaluatorCapabilityResolutionError):

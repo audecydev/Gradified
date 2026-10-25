@@ -13,7 +13,7 @@ MAX_CAPABILITY_DESCRIPTION_CHARACTERS = 512
 
 
 class EvaluatorCapabilityContractError(ValueError):
-    """Base class for expected IF1 capability-record contract failures."""
+    """Base class for expected evaluator capability resolution capability-record contract failures."""
 
 
 class InvalidEvaluatorCapabilityRefError(EvaluatorCapabilityContractError):
@@ -59,7 +59,7 @@ def _require_identifier(
         )
     if len(value) > MAX_CAPABILITY_IDENTIFIER_CHARACTERS:
         raise error_type(
-            f"{field_name} exceeds the IF1-v1 {MAX_CAPABILITY_IDENTIFIER_CHARACTERS}-character limit."
+            f"{field_name} exceeds the supported evaluator-capability {MAX_CAPABILITY_IDENTIFIER_CHARACTERS}-character limit."
         )
     return value
 
@@ -77,7 +77,7 @@ def _require_optional_description(
         )
     if len(value) > MAX_CAPABILITY_DESCRIPTION_CHARACTERS:
         raise InvalidEvaluatorCapabilityRecordError(
-            f"{field_name} exceeds the IF1-v1 {MAX_CAPABILITY_DESCRIPTION_CHARACTERS}-character limit."
+            f"{field_name} exceeds the supported evaluator-capability {MAX_CAPABILITY_DESCRIPTION_CHARACTERS}-character limit."
         )
     return value
 
@@ -94,7 +94,7 @@ def _require_string_tuple(
         )
     if len(value) > MAX_CAPABILITY_TUPLE_ENTRIES:
         raise InvalidEvaluatorCapabilityRecordError(
-            f"{field_name} exceeds the IF1-v1 {MAX_CAPABILITY_TUPLE_ENTRIES}-entry limit."
+            f"{field_name} exceeds the supported evaluator-capability {MAX_CAPABILITY_TUPLE_ENTRIES}-entry limit."
         )
 
     seen: set[str] = set()
@@ -105,7 +105,7 @@ def _require_string_tuple(
             )
         if len(item) > max_text_characters:
             raise InvalidEvaluatorCapabilityRecordError(
-                f"{field_name}[{index}] exceeds the IF1-v1 {max_text_characters}-character limit."
+                f"{field_name}[{index}] exceeds the supported evaluator-capability {max_text_characters}-character limit."
             )
         if item in seen:
             raise InvalidEvaluatorCapabilityRecordError(
@@ -179,7 +179,7 @@ class EvaluatorCapabilityRecord:
 
 
 def validate_evaluator_capability_ref(value: object) -> EvaluatorCapabilityRef:
-    """Validate the complete current state of one exact IF1 capability reference."""
+    """Validate the complete current state of one exact evaluator capability resolution capability reference."""
 
     if type(value) is not EvaluatorCapabilityRef:
         raise InvalidEvaluatorCapabilityRefError(
@@ -212,7 +212,7 @@ def validate_evaluator_capability_ref(value: object) -> EvaluatorCapabilityRef:
 
 
 def validate_evaluator_capability_record(value: object) -> EvaluatorCapabilityRecord:
-    """Validate the complete current state of one exact IF1 capability record."""
+    """Validate the complete current state of one exact evaluator capability resolution capability record."""
 
     if type(value) is not EvaluatorCapabilityRecord:
         raise InvalidEvaluatorCapabilityRecordError(
@@ -227,7 +227,7 @@ def validate_evaluator_capability_record(value: object) -> EvaluatorCapabilityRe
     )
     if type(schema_version) is not str or schema_version != EVALUATOR_CAPABILITY_RECORD_SCHEMA_VERSION:
         raise UnsupportedEvaluatorCapabilityRecordSchemaError(
-            "EvaluatorCapabilityRecord.schema_version must equal supported IF1 schema version '1'."
+            "EvaluatorCapabilityRecord.schema_version must equal supported evaluator capability schema version '1'."
         )
 
     capability_ref = _required_field(

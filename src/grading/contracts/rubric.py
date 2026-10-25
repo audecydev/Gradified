@@ -83,7 +83,7 @@ class CompiledQuestionRubric:
     """Immutable reducer-facing scoring projection of a compiled rubric.
 
     Scoring Semantics v1 intentionally carries only data required for numerical
-    reduction. Richer authoring/evaluation metadata remains a Slice 2 compiler
+    reduction. Richer authoring/evaluation metadata remains a rubric authoring compiler
     concern. This contract validates scoring shape and local identity
     constraints; full marks reconciliation and authoring-time semantic linting
     must pass before a rubric can become ACTIVE.

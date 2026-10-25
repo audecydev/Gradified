@@ -248,7 +248,7 @@ class QuestionScoreResult:
         )
 
 
-# Resolve the B3 provenance type only after the B2 result contracts needed by
+# Resolve the scoring aggregation provenance type only after the criterion scoring result contracts needed by
 # paper_aggregation have been defined.  paper_aggregation defines GradingSpecRef
 # before importing RubricRef/ScoringPolicyRef, making both clean import orders safe.
 from grading.contracts.paper_aggregation import GradingSpecRef
@@ -256,7 +256,7 @@ from grading.contracts.paper_aggregation import GradingSpecRef
 
 @dataclass(frozen=True, slots=True)
 class PaperScoreResult:
-    """Immutable numerical result of successful B3 paper aggregation."""
+    """Immutable numerical result of successful scoring aggregation paper aggregation."""
 
     grading_spec_ref: GradingSpecRef
     numeric_profile_version: str

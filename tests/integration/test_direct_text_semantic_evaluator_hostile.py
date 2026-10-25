@@ -17,7 +17,7 @@ from grading.contracts.evidence import (
 )
 from grading.contracts.paper_aggregation import GradingSpecRef
 from grading.execution import GradingExecutionContext
-from tests.integration.test_direct_text_semantic_evaluator_red import (
+from tests.integration.test_direct_text_semantic_evaluator_regression import (
     _MaterializedModelAnswer,
     _evidence,
     _provider_response,

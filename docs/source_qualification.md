@@ -1,11 +1,16 @@
 # Source qualification and publication
 
-The corrected documentation is tied to the installed Python source and tracked-file inventory. The source is not automatically production-certified merely because the documentation is consistent.
+## Published baseline (historical qualification)
 
-Before any Git stage or commit, independently record the resulting working-tree content tree, run the full tests on the target operating systems, and verify all intended paths are the only staged changes.
+The published baseline on `feature/Scoring-Algo-Engine` is commit `41fd7756a37e446a79051f349629f1fc514f2991`, with **468 project files** and Git tree `9fbcdb3fa2b93b20658edc331ce254e0b79a5dfa`. Pinned CPython 3.11.9 native Windows qualification passed 5,242 tests including 26 property tests, with cache-isolated execution and unchanged source identity. This does not prove real-system or academic acceptance; see [Testing](testing.md) and [Acceptance checks](acceptance_checks.md).
 
-**Windows Git case-folding warning:** this integration contains document paths renamed from uppercase to lowercase. The original repository records `core.ignorecase` behavior, and a normal `git add -A` in a Git worktree configured as case-insensitive may fail to stage some case-only name changes. A disposable alternate-index rehearsal with `core.ignorecase=false` staged the intended paths and produced the expected tree. Do not change the protected index during documentation installation; at the later approved staging step, inspect the complete staged path inventory and verify its Git tree before committing. Reconcile the branch against the original published GitHub branch without publishing unpublished internal commits accidentally.
+## Future grading-breadth changes
 
-Evidence from in-memory tests must be labelled **source behavior**. Evidence from genuine authenticated school services, the OCR vendor, the provider, the database and student-facing publication must be labelled **integration behavior** and retained in the receiving team's controlled evidence storage.
+1. Base new public-bound work on the **current published public branch**, never import unpublished local private-development commits as parent ancestry.
+2. Review actual source, tests and affected docs; do not silently alter frozen scoring, persisted names, original-operation custody, tenant authority or result publication policy.
+3. Run capability-focused tests throughout implementation. On final release candidate, independently hash the exact Git tree and execute pinned Windows/Linux/property/adverse and academic/integration conformance tests appropriate to supported scope.
+4. On Windows, verify case-sensitive and case-only paths explicitly before committing; ordinary `git add -A` under `core.ignorecase=true` can miss a case-only rename. Confirm the **actual proposed commit tree**, complete staged-path inventory, parent ancestry and commit metadata.
+5. Preserve private artifacts, credentials, backups, student records and qualification logs outside the Git source. Only the reviewed code, tests, schemas and current engineering docs belong in the source commit.
+6. Verify the published remote HEAD, parent and tree **after** any separately approved push. Never use force, mirror or push-all merely to bypass source or history checks.
 
-Source history, working packages and verification logs belong in the project's `artifacts` location, not in the Git source tree. Only review-approved source, tests, schemas and current engineering documents should be committed. See [Acceptance checks](acceptance_checks.md).
+Source-test evidence is **source behavior**. Authenticated school authority, live OCR, provider, database, student disclosure and teacher-labelled academic measurements require their own **integration/academic evidence**. The published baseline does not automatically qualify future feature additions.

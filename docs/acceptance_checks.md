@@ -4,7 +4,8 @@ This is the sign-off record for the **integrated system**, not a certificate iss
 
 | Check | Required evidence | Responsible owner | Current state |
 |---|---|---|---|
-| Source integrity | Exact final Git tree, full Linux and Windows/property pass | Engine + QA | Final-tree qualification pending |
+| Published foundation source integrity | Exact published tree and pinned native Windows/property suite | Engine + QA | **PASS:** 468 files, tree `9fbcdb3f...`, Windows 5,242 incl. 26 property, cache-isolated |
+| Next breadth release source integrity | New exact-tree Windows/Linux regression, property/adverse cases, complete declared supported-scope checks | Engine + QA | **PENDING:** breadth not yet implemented/qualified |
 | Approved paper and question | Authenticated, revisioned school source with effect-time revocation | Backend | Real adapter qualification pending |
 | OCR mapping | Real scanned answer sheets, page/question mapping and uncertainty outcomes | OCR | Real capture evidence pending |
 | Grading correctness | School-approved rubric and independent teacher-marked examples | Academic QA | Real benchmark evidence pending |

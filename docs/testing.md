@@ -4,7 +4,7 @@ The repository contains unit, contract, integration and property-based tests. Th
 
 ## Run the tests
 
-Use Python 3.11 and the pinned test dependencies when reproducing the original Windows qualification environment.
+Use **CPython 3.11.9** and the pinned test dependencies to reproduce the published Windows qualification environment.
 
 On Windows Command Prompt, from the repository root:
 
@@ -32,14 +32,14 @@ python docs\examples\paper_operation_demo.py
 
 The paper example uses synthetic providers and storage ports. It does not verify a deployed OCR service, real billing, institutional permissions, or student-visible publication.
 
-## Verification evidence and version scope
+## Published baseline verification and version scope
 
-- An earlier scoring-engine snapshot passed 5,242 Windows tests including Hypothesis property tests.
-- The integrated source after file and module renaming passed 5,216 Linux non-property tests. Subsequent API declaration renaming also passed 5,216 Linux non-property tests, with focused regression campaigns.
-- The API naming update renamed 40 Python declarations and updated dependent imports, tests, and documentation. This was a **source change**, even though scoring arithmetic and persisted protocol values were intentionally preserved.
-- The repository-language corrections update comments, descriptive class strings, developer-facing diagnostics and stale test messages. An earlier correction also restored exact frozen scoring-traceability identifiers accidentally changed during editing. Frozen enum/wire values and test traceability identifiers remain unchanged; diagnostic message text is not a protocol. Schema validation constraints and dependency pins are unchanged. Every source revision requires its own exact-tree test evidence rather than inheriting certification from an earlier candidate.
+- Published baseline: `feature/Scoring-Algo-Engine`, commit `41fd7756a37e446a79051f349629f1fc514f2991`, Git tree `9fbcdb3fa2b93b20658edc331ce254e0b79a5dfa` (468 files).
+- **Native Windows CPython 3.11.9:** pinned dependencies and `pip check` passed; cache-isolated execution passed 26 explicit property tests and the **full 5,242-test suite** (the 26 property tests are included in 5,242), with source/hash and protected Git custody intact before and after. OCR and paper examples passed.
+- Linux non-property campaigns established regression evidence for earlier candidates. Do **not** claim a complete native Linux test of this final published tree unless such evidence is separately produced.
+- These results establish source behavior for the stated supported subset. They do **not** establish real-school identity, OCR quality, model grading accuracy, provider billing, multiworker durability or official result publishing.
 
-Test counts from different snapshots or overlapping runs must not be added together. A passing synthetic test also does not replace real-school or real-provider acceptance evidence.
+The next breadth work changes the Git tree and requires fresh targeted unit/contract/integration/adverse tests as each capability closes. Run the complete pinned regression, property suite, source-integrity checks and genuine academic/integration acceptance on the **future exact release tree** before another publication. Never add overlapping test counts together or silently reuse older-tree qualification.
 
 ## What to record when a test fails
 

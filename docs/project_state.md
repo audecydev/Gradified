@@ -1,34 +1,19 @@
 # Project state
 
-Gradified's grading-engine source is installed in the linked local worktree `grading-engine-integration` on branch `integration/release1-grading-engine`. This worktree and the protected `repository` checkout share the **same Git repository and commit history**. They are not two independent projects. The protected checkout remains on the original development branch at commit `99df7eea272e861467135fc014ab1e3f392fed1a` according to the latest Windows verification supplied by the developer.
+The Grade Engine Release 1 foundation was published to `audecydev/Gradified` on branch `feature/Scoring-Algo-Engine` as commit `41fd7756a37e446a79051f349629f1fc514f2991`. Its Git source-content tree is `9fbcdb3fa2b93b20658edc331ce254e0b79a5dfa` (468 files). This identifies the **published baseline**, not any subsequent breadth-development changes.
 
-The integration worktree contains the current source and documentation as **uncommitted changes**. Nothing in the installation or editorial update stages, commits, publishes, or pushes those changes.
+## Source-qualified capabilities
 
-## What is included
+The published source implements versioned rubric and evidence checks, bounded single-select CHOICE, criterion-based DIRECT and unitless scalar NUMERIC evaluation, deterministic question/paper scoring, supported DIRECT+NUMERIC whole-paper execution and separate CHOICE-only paper execution. Attempt continuity, retry/accounting, review-decision custody, conditional scored-result effects and guarded release interfaces are also implemented. See [Capabilities and limitations](capabilities_and_limitations.md) and [Architecture](architecture.md).
 
-The integrated grading engine provides approved rubric and evidence checks, supported CHOICE, DIRECT and bounded unitless NUMERIC evaluation, deterministic question/paper scoring, supported paper execution, attempt continuity, regrade/retry controls, review-decision custody, and guarded release interfaces. Refer to [Capabilities and limitations](capabilities_and_limitations.md) for supported combinations and academic limits.
+Windows CPython 3.11.9 with the pinned test dependencies passed **5,242 tests including 26 property tests**, with cache-isolated source execution, examples and unchanged pre/post source identity on the published baseline. This does not establish real school-authorization, OCR, provider, database, academic-calibration or official student-release conformance. See [Testing](testing.md) and [Acceptance checks](acceptance_checks.md).
 
-The documentation includes a complete source declaration map, runnable OCR and synthetic paper examples, backend/OCR/frontend/provider integration responsibilities, scoring contracts and integration tests.
+## Remaining grading breadth
 
-## Source naming and compatibility
+Full school-authored model-answer-to-rubric generation; one paper combining CHOICE+DIRECT+NUMERIC; unit-aware quantities; bounded derivation and authorized alternative methods; teacher-corrected official-score recomputation; three independently sourced confidence domains and calibrated review routing; bounded diagram/structured grading; and academically justified feedback/grievance handling remain to be qualified. Unsupported input must fail safely or route to review rather than produce invented marks. Real integration, academic benchmarking and complete SRS platform delivery remain separate team responsibilities.
 
-The integration work included professional source filenames, test filenames and a subsequent rename of 40 Python declarations. Imports, affected tests and source references were updated together. Code using the previous Python names must update its imports. No external backend consumer of those older names has been independently qualified.
+## Future development and release
 
-The repository-language correction updates comments, docstrings, user-facing error messages, test assertions that match those messages, and verification metadata. Exact scoring-traceability test identifiers are retained. The change preserves persisted operation names, enum values, request IDs, exception classes and grading rules. Error-message text is diagnostic, not a stable application protocol; connected clients should use typed outcomes and error classes.
+New breadth development must branch from the published public baseline, not the separate historical private-development ancestry. Correctness, source authority, exact scoring arithmetic, tenant boundaries, original-attempt identity, provider UNKNOWN reconciliation and conditional publication remain immutable safety expectations. Future source trees require their **own** test evidence; previous 5,242-test evidence cannot be transferred by assertion. No further public push is authorized by this baseline qualification alone.
 
-The exact source identity is recorded in the external installation manifest and postcheck receipt. The complete current Git tree is not embedded in this tracked file because recording that hash here would change the tree itself.
-
-## Test evidence
-
-The renamed and API-adjusted earlier source snapshots passed full Linux non-property regression campaigns of 5,216 tests; a prior engine snapshot passed 5,242 Windows tests with property cases. These are separate snapshots. The exact current candidate still requires native Windows/property qualification and real connected-service acceptance. See [Testing](testing.md).
-
-## Work that the connected teams must qualify
-
-- Authentic OCR mapping from submitted pages to individual questions, with uncertainty and source provenance.
-- Current school, actor, paper, rubric, capability and policy authorization at each effect boundary.
-- Provider identity, actual physical attempt accounting, usage receipts and recovery after lost acknowledgments.
-- Durable storage and conditional score commits under concurrent workers, retries and restart.
-- Genuine teacher decision flow, report publication authorization and student-visible disclosure.
-- Held-out academic evaluation for supported written and numerical papers. General mathematical derivations, units, diagram grading and arbitrary all-family papers are **not established as supported** by this source.
-
-The grading engine is ready for controlled integration work within its verified capabilities. It is **not** a certified complete school examination product. See [Integration test plan](integration_test_plan.md) and [Acceptance checks](acceptance_checks.md) for the remaining evidence.
+The engine is ready for controlled integration of its **supported** subset, not certified as a complete school examination product. See [Integration test plan](integration_test_plan.md) and [Official release](official_release.md).

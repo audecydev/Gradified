@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradified - Smarter Grading. Better Learning.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Logo-Derived Primary Palette (from logo-full.webp) */
+        --color-logo-ink: #222731;
+        --color-logo-ink-facet: #2C313B;
+        --color-logo-sage: #9DAEA4;
+        --color-logo-sage-deep: #3F5E51;
+        --color-logo-sage-hover: #2E473D;
+        --color-logo-sage-soft: #EEF3F0;
+        --color-logo-sage-border: #C7D3CC;
+
+        /* Brand & Primary Interactive Actions */
+        --color-brand-primary: #3F5E51;
+        --color-brand-primary-hover: #2E473D;
+        --color-brand-primary-soft: #EEF3F0;
+        --color-brand-primary-border: #C7D3CC;
+
+        /* Sign Up & Primary Conversion CTA */
+        --color-signup-bg: #4361EE;
+        --color-signup-hover: #3651D4;
+        --color-signup-text: #FFFFFF;
+
+        /* Feature Card Themes (Flat Contrasting Logo Surfaces) */
+        --color-feature-eval-surface: #222731;
+        --color-feature-eval-border: #2C313B;
+        --color-feature-reports-surface: #FAF9F6;
+
+        /* Semantic Status */
+        --color-status-success: #3F5E51;
+        --color-status-warning: #D97706;
+        --color-status-danger: #E11D48;
+
+        /* Surfaces & Backgrounds */
+        --color-surface-page: #FFFFFF;
+        --color-surface-subtle: #F7F9F8;
+        --color-surface-preview: #F8FAF9;
+        --color-surface-preview-canvas: #F9FAF9;
+        --color-surface-auth-bg: #F4F6F5;
+        --color-surface-card: #FFFFFF;
+
+        /* Borders & Scrollbar */
+        --color-border-subtle: #EDF1EE;
+        --color-border-default: #DCE3DE;
+        --color-grid-rail: #D5DDD8;
+        --color-scrollbar-thumb: #C3CCC6;
+        --color-scrollbar-thumb-hover: #9DAEA4;
+
+        /* Text Hierarchy */
+        --color-text-primary: #222731;
+        --color-text-secondary: #475569;
+        --color-text-muted: #64748B;
+
+        /* Charts & Data Visualization (Logo Sage + Charcoal + Warm Contrast) */
+        --color-chart-primary: #3F5E51;
+        --color-chart-primary-soft: rgba(63, 94, 81, 0.14);
+        --color-chart-secondary: #222731;
+        --color-chart-sage: #9DAEA4;
+        --color-chart-accent: #D97706;
+        --color-chart-bar: #3F5E51;
+        --color-chart-bar-muted: #9DAEA4;
+        --color-chart-orange: #D97706;
+        --color-chart-track: #E5EAE7;
+        --color-chart-track-warm: #F1F3F2;
+
+        /* Illustration Accents */
+        --color-illust-shadow: #E5EAE7;
+        --color-illust-book-warm: #D97706;
+        --color-illust-book-warm-inner: #FEF3C7;
+        --color-illust-book-cool: #9DAEA4;
+        --color-illust-book-cool-inner: #EEF3F0;
+        --color-illust-cap-top: #222731;
+        --color-illust-cap-base: #2C313B;
+        --color-illust-pot: #DCE3DE;
+        --color-illust-leaf: #3F5E51;
+
+        /* OAuth Provider Mark */
+        --color-oauth-google-red: #EA4335;
+        --color-oauth-google-blue: #4285F4;
+        --color-oauth-google-yellow: #FBBC05;
+        --color-oauth-google-green: #34A853;
+
+        /* Paper Plane & Trail Arrow */
+        --color-cta-trail: #9DAEA4;
+        --color-cta-plane-light: #475569;
+        --color-cta-plane-dark: #222731;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Instrument Sans', system-ui, sans-serif;
+        background-color: var(--color-surface-page);
+        color: var(--color-text-primary);
+      }
+      h1, h2, h3, h4, .font-display {
+        font-family: 'Bricolage Grotesque', 'Instrument Sans', system-ui, sans-serif;
+        letter-spacing: -0.025em;
+      }
+      .font-mono {
+        font-family: 'IBM Plex Mono', monospace;
+        font-variant-numeric: tabular-nums;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--color-surface-subtle);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--color-scrollbar-thumb);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-scrollbar-thumb-hover);
+      }
+
+      /* Marquee Animation */
+      @keyframes schoolsMarquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .animate-schools-marquee {
+        display: flex;
+        width: max-content;
+        animation: schoolsMarquee 28s linear infinite;
+      }
+      .animate-schools-marquee:hover {
+        animation-play-state: paused;
+      }
+
+      /* Flat Architectural Backgrids (SVG Grid Pattern - Zero Gradients) */
+      .bg-backgrid {
+        background-color: var(--color-surface-page);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath d='M 36 0 L 0 0 0 36' fill='none' stroke='%23E7ECE9' stroke-width='1'/%3E%3C/svg%3E");
+      }
+      .bg-auth-backgrid {
+        background-color: var(--color-surface-auth-bg);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath d='M 36 0 L 0 0 0 36' fill='none' stroke='%23DCE3DF' stroke-width='1'/%3E%3C/svg%3E");
+      }
+
+      @media (min-width: 768px) {
+        .rail-guides {
+          border-left: 1px dashed var(--color-grid-rail);
+          border-right: 1px dashed var(--color-grid-rail);
+        }
+      }
+
+      /* Anti-Slop Global Micro-Interactions & Tactile Feedback */
+      button, a, input, select, textarea {
+        transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      button:active:not(:disabled) {
+        transform: scale(0.98);
+        transition: transform 60ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      :focus-visible {
+        outline: 2px solid var(--color-brand-primary);
+        outline-offset: 2px;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, ::before, ::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+      @keyframes gridCellShift {
+        0%, 100% {
+          background-color: var(--color-logo-sage-soft);
+          border-color: var(--color-logo-sage-border);
+        }
+        50% {
+          background-color: var(--color-surface-card);
+          border-color: var(--color-logo-sage);
+        }
+      }
+      @keyframes sageStrokePulse {
+        0%, 100% {
+          border-color: var(--color-border-default);
+        }
+        50% {
+          border-color: var(--color-logo-sage);
+        }
+      }
+      @keyframes dashTrailFlow {
+        0% {
+          stroke-dashoffset: 0;
+        }
+        100% {
+          stroke-dashoffset: -24;
+        }
+      }
+      @keyframes planeBob {
+        0%, 100% {
+          transform: translate3d(0, 0, 0);
+        }
+        50% {
+          transform: translate3d(3px, -3px, 0);
+        }
+      }
+      .animate-grid-cell {
+        animation: gridCellShift 6s ease-in-out infinite;
+      }
+      .animate-sage-border {
+        animation: sageStrokePulse 5s ease-in-out infinite;
+      }
+      .animate-dash-trail {
+        animation: dashTrailFlow 1.8s linear infinite;
+      }
+      .animate-plane-bob {
+        animation: planeBob 3.2s ease-in-out infinite;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Instrument Sans"', 'system-ui', 'sans-serif'],
+              display: ['"Bricolage Grotesque"', '"Instrument Sans"', 'system-ui', 'sans-serif'],
+              mono: ['"IBM Plex Mono"', 'monospace'],
+            },
+            colors: {
+              logo: {
+                ink: 'var(--color-logo-ink)',
+                'ink-facet': 'var(--color-logo-ink-facet)',
+                sage: 'var(--color-logo-sage)',
+                'sage-deep': 'var(--color-logo-sage-deep)',
+                'sage-soft': 'var(--color-logo-sage-soft)',
+                'sage-border': 'var(--color-logo-sage-border)',
+              },
+              brand: {
+                primary: 'var(--color-brand-primary)',
+                'primary-hover': 'var(--color-brand-primary-hover)',
+                soft: 'var(--color-brand-primary-soft)',
+                border: 'var(--color-brand-primary-border)',
+              },
+              signup: {
+                DEFAULT: 'var(--color-signup-bg)',
+                hover: 'var(--color-signup-hover)',
+                text: 'var(--color-signup-text)',
+              },
+              surface: {
+                page: 'var(--color-surface-page)',
+                subtle: 'var(--color-surface-subtle)',
+                preview: 'var(--color-surface-preview)',
+                'preview-canvas': 'var(--color-surface-preview-canvas)',
+                auth: 'var(--color-surface-auth-bg)',
+                card: 'var(--color-surface-card)',
+              },
+              feature: {
+                'eval-surface': 'var(--color-feature-eval-surface)',
+                'eval-border': 'var(--color-feature-eval-border)',
+                'reports-surface': 'var(--color-feature-reports-surface)',
+              },
+              chart: {
+                bar: 'var(--color-chart-bar)',
+                'bar-muted': 'var(--color-chart-bar-muted)',
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-surface-page text-slate-900 antialiased min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,1041 @@
+[
+  {
+    "question_id": "Q1",
+    "question_text": "The zero degree latitude is called:\n(a) Tropic of Cancer\n(b) Equator\n(c) Prime Meridian\n(d) Arctic Circle",
+    "type": "CHOICE",
+    "max_marks": 1,
+    "choice_spec": {
+      "correct_option": "B",
+      "options": [
+        "A: Tropic of Cancer",
+        "B: Equator",
+        "C: Prime Meridian",
+        "D: Arctic Circle"
+      ]
+    }
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "The Prime Meridian passes through:\n(a) India\n(b) USA\n(c) Greenwich\n(d) Japan",
+    "type": "CHOICE",
+    "max_marks": 1,
+    "choice_spec": {
+      "correct_option": "C",
+      "options": [
+        "A: India",
+        "B: USA",
+        "C: Greenwich",
+        "D: Japan"
+      ]
+    }
+  },
+  {
+    "question_id": "Q3",
+    "question_text": "Lines of latitude run from:\n(a) North to South\n(b) East to West\n(c) Diagonally\n(d) Circular vertically",
+    "type": "CHOICE",
+    "max_marks": 1,
+    "choice_spec": {
+      "correct_option": "B",
+      "options": [
+        "A: North to South",
+        "B: East to West",
+        "C: Diagonally",
+        "D: Circular vertically"
+      ]
+    }
+  },
+  {
+    "question_id": "Q4",
+    "question_text": "The grid formed by latitudes and longitudes helps in:\n(a) Farming\n(b) Trade\n(c) Locating places\n(d) Mining",
+    "type": "CHOICE",
+    "max_marks": 1,
+    "choice_spec": {
+      "correct_option": "C",
+      "options": [
+        "A: Farming",
+        "B: Trade",
+        "C: Locating places",
+        "D: Mining"
+      ]
+    }
+  },
+  {
+    "question_id": "Q5",
+    "question_text": "The Tropic of Cancer passes through which country?\n(a) Sri Lanka\n(b) India\n(c) Nepal\n(d) China",
+    "type": "CHOICE",
+    "max_marks": 1,
+    "choice_spec": {
+      "correct_option": "B",
+      "options": [
+        "A: Sri Lanka",
+        "B: India",
+        "C: Nepal",
+        "D: China"
+      ]
+    }
+  },
+  {
+    "question_id": "Q6",
+    "question_text": "What are latitudes? State their significance.",
+    "type": "DIRECT",
+    "max_marks": 2,
+    "model_answer": "Latitudes are imaginary horizontal lines drawn on the globe from east to west. They measure the distance of a place north or south of the Equator in degrees.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q6_def",
+          "description": "Definition of latitudes as imaginary horizontal east-west lines and angular distance from equator",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 2.0,
+              "description": "Completely explains imaginary horizontal lines and distance from Equator"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 1.5,
+              "description": "States lines on earth/globe running horizontal or imaginary nature"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 0.8,
+              "description": "Basic mention of lines on earth"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect explanation"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q7",
+    "question_text": "Define Prime Meridian and write its value.",
+    "type": "DIRECT",
+    "max_marks": 2,
+    "model_answer": "The Prime Meridian is the 0\u00b0 longitude passing through Greenwich. It divides the Earth into the Eastern and Western Hemispheres and helps calculate time.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q7_def",
+          "description": "Definition of Prime Meridian as 0 degree longitude passing through Greenwich dividing east and west",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 2.0,
+              "description": "Specifies 0 degree longitude, Greenwich location, and hemisphere division"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 1.5,
+              "description": "Mentions 0 degree longitude and reference meridian"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 0.8,
+              "description": "Mentions 0 degree line or longitude without full context"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect or irrelevant explanation"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q8",
+    "question_text": "What is a globe? State one advantage.",
+    "type": "DIRECT",
+    "max_marks": 2,
+    "model_answer": "A globe is a spherical three-dimensional model of the Earth. It shows continents, oceans, and countries in their correct relative shapes and positions.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q8_def",
+          "description": "Defines globe as spherical model of Earth showing accurate relative shapes and positions",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 2.0,
+              "description": "Defines spherical model of earth with continents/countries layout"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 1.5,
+              "description": "Defines model of earth or circular/spherical map representation"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 0.8,
+              "description": "Mentions circular map or model"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q9",
+    "question_text": "Differentiate between latitudes and longitudes with three key points.",
+    "type": "DIRECT",
+    "max_marks": 3,
+    "model_answer": "Latitudes are imaginary lines running east to west and measure distance north or south of the Equator. Longitudes run from north to south and measure distance east or west of the Prime Meridian. Latitudes are parallel circles while longitudes converge at the poles.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q9_diff",
+          "description": "Distinguishes east-west horizontal latitudes vs north-south vertical longitudes and their reference baselines",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 3.0,
+              "description": "Provides clear distinctions: direction, reference line, and parallel vs converging nature"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 2.25,
+              "description": "Correctly states horizontal vs vertical lines and reference points"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 1.2,
+              "description": "Basic identification of horizontal vs vertical lines"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q10",
+    "question_text": "Explain why longitudes are important for calculating local time.",
+    "type": "DIRECT",
+    "max_marks": 3,
+    "model_answer": "Longitudes are important for calculating local time because the Earth rotates 360 degrees in 24 hours, meaning it rotates 15 degrees every hour (or 1 degree every 4 minutes). As a result, different longitudes experience sunrise and sunset at different times.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q10_time",
+          "description": "Explains 360 rotation in 24 hours (1 degree per 4 min) and variation of sunrise/sunset across meridians",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 3.0,
+              "description": "Explains earth rotation rate and local time variation across longitudes"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 2.25,
+              "description": "Explains relation between rotation and longitude time differences"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 1.2,
+              "description": "Mentions that time changes with longitude"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Blank or incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q11",
+    "question_text": "Explain the rotation of the Earth and describe how it causes day and night.",
+    "type": "DIRECT",
+    "max_marks": 3,
+    "model_answer": "The Earth rotates on its axis from west to east once every twenty-four hours. The half facing the Sun experiences daylight, while the half turned away experiences night. This continuous rotation causes the alternate cycle of day and night.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q11_day_night",
+          "description": "Explains earth spinning on its axis (west to east in 24h) and half facing sun receiving light vs half turned away in darkness",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 3.0,
+              "description": "Accurately details axial rotation period and facing sunlight vs facing away causing day and night"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 2.25,
+              "description": "Accurately describes rotation causing sunlight on one side and darkness on the other"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 1.2,
+              "description": "Mentions earth rotation causes day and night without detail on axial half-facing mechanism"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect or irrelevant"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q12",
+    "question_text": "The main source of information about the past is:\n(a) Legends\n(b) Inscriptions and Coins\n(c) Fairy tales\n(d) Modern newspapers",
+    "type": "CHOICE",
+    "max_marks": 1,
+    "choice_spec": {
+      "correct_option": "B",
+      "options": [
+        "A: Legends",
+        "B: Inscriptions and Coins",
+        "C: Fairy tales",
+        "D: Modern newspapers"
+      ]
+    }
+  },
+  {
+    "question_id": "Q13",
+    "question_text": "Manuscripts in ancient India were written on:\n(a) Paper\n(b) Palm leaves and Birch bark\n(c) Plastic sheets\n(d) Metal plates only",
+    "type": "CHOICE",
+    "max_marks": 1,
+    "choice_spec": {
+      "correct_option": "B",
+      "options": [
+        "A: Paper",
+        "B: Palm leaves and Birch bark",
+        "C: Plastic sheets",
+        "D: Metal plates only"
+      ]
+    }
+  },
+  {
+    "question_id": "Q14",
+    "question_text": "The name 'Bharat' is mentioned in which ancient text?\n(a) Rigveda\n(b) Ramayana\n(c) Mahabharata\n(d) Arthashastra",
+    "type": "CHOICE",
+    "max_marks": 1,
+    "choice_spec": {
+      "correct_option": "A",
+      "options": [
+        "A: Rigveda",
+        "B: Ramayana",
+        "C: Mahabharata",
+        "D: Arthashastra"
+      ]
+    }
+  },
+  {
+    "question_id": "Q15",
+    "question_text": "The Harappan civilization is also known as:\n(a) Vedic Civilization\n(b) Mesopotamian Civilization\n(c) Indus-Sarasvati Civilization\n(d) Egyptian Civilization",
+    "type": "CHOICE",
+    "max_marks": 1,
+    "choice_spec": {
+      "correct_option": "C",
+      "options": [
+        "A: Vedic Civilization",
+        "B: Mesopotamian Civilization",
+        "C: Indus-Sarasvati Civilization",
+        "D: Egyptian Civilization"
+      ]
+    }
+  },
+  {
+    "question_id": "Q16",
+    "question_text": "The Great Bath was discovered at which Harappan site?\n(a) Harappa\n(b) Mohenjo-daro\n(c) Lothal\n(d) Kalibangan",
+    "type": "CHOICE",
+    "max_marks": 1,
+    "choice_spec": {
+      "correct_option": "B",
+      "options": [
+        "A: Harappa",
+        "B: Mohenjo-daro",
+        "C: Lothal",
+        "D: Kalibangan"
+      ]
+    }
+  },
+  {
+    "question_id": "Q17",
+    "question_text": "What is an inscription? Give one example.",
+    "type": "DIRECT",
+    "max_marks": 2,
+    "model_answer": "An inscription is writing engraved on hard surfaces such as stone, metal, or baked clay. An example is the Ashokan pillar edicts.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q17_def",
+          "description": "Defines inscription as writing engraved on hard surfaces like stone or metal with example",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 2.0,
+              "description": "Accurately defines engraving on stone/metal surfaces and gives valid example"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 1.5,
+              "description": "Defines writing carved on stone or metal"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 0.8,
+              "description": "Mentions old writing without material context"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect or off-topic answer"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q18",
+    "question_text": "Who is a historian? What do they study?",
+    "type": "DIRECT",
+    "max_marks": 2,
+    "model_answer": "A historian is a scholar who studies and interprets the past using sources like manuscripts, inscriptions, artifacts, and archaeological remains.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q18_def",
+          "description": "Defines historian as a person/scholar who studies history and past events using historical sources",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 2.0,
+              "description": "Completely explains study of past using artifacts, manuscripts, and evidence"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 1.5,
+              "description": "States a person who studies past events and history in depth"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 0.8,
+              "description": "Basic statement that historians study past"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q19",
+    "question_text": "What is meant by civilization? Mention two features.",
+    "type": "DIRECT",
+    "max_marks": 2,
+    "model_answer": "Civilization is an advanced stage of human social organization characterized by developed cities, trade networks, specialized labor, writing, and shared governance.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q19_def",
+          "description": "Defines civilization as advanced human society living together with organized living, technology, and culture",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 2.0,
+              "description": "Accurate definition with key features like organized urban living and technological development"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 1.5,
+              "description": "Explains groups of humans living together with technology and organized culture"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 0.8,
+              "description": "Mentions humans living together"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q20",
+    "question_text": "Explain the importance of historical sources in reconstructing the past.",
+    "type": "DIRECT",
+    "max_marks": 3,
+    "model_answer": "Historical sources are crucial because they provide concrete evidence about how people lived, their governance, economy, and culture. Inscriptions, coins, monuments, and manuscripts enable historians to establish chronology, verify historical events, and avoid speculation.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q20_importance",
+          "description": "Explains role of evidence (coins, inscriptions, tools, manuscripts) in establishing chronology and understanding ancient societies",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 3.0,
+              "description": "Comprehensive explanation of evidence, chronology reconstruction, and societal insights"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 2.25,
+              "description": "Accurately mentions sources providing evidence and reconstructing how people lived"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 1.2,
+              "description": "States sources show what happened in the past"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q21",
+    "question_text": "How does the phrase 'India, that is Bharat' reflect our cultural identity?",
+    "type": "DIRECT",
+    "max_marks": 3,
+    "model_answer": "The phrase 'India, that is Bharat' in Article 1 of the Constitution unites the ancient indigenous heritage (Bharat, rooted in ancient literature like Rigveda and Mahabharata) with the modern international identity (India, derived from the river Indus). It reflects civilizational continuity and national unity across linguistic and geographical diversity.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q21_identity",
+          "description": "Explains dual identity connecting ancient texts (Bharat/Bharatavarsha) with national cultural unity",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 3.0,
+              "description": "Clearly explains Bharatavarsha ancient roots and civilizational identity"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 2.25,
+              "description": "Mentions ancient texts, Bharatavarsha, and country identity"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 1.2,
+              "description": "Mentions that India and Bharat are two names of our country"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q22",
+    "question_text": "Describe the main features of the earliest Indian civilization.",
+    "type": "DIRECT",
+    "max_marks": 3,
+    "model_answer": "The earliest Indian civilization (Harappan/Indus-Sarasvati) featured advanced town planning with grid-pattern wide streets, underground covered drainage systems, fortifications with baked bricks, standardized weights and measures, productive agriculture, and extensive overseas trade with Mesopotamia.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q22_features",
+          "description": "Details planned cities, baked bricks, fortifications, trade with Mesopotamia, and agricultural support",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 3.0,
+              "description": "Describes city planning, baked bricks, trade networks (Mesopotamia), and agriculture"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 2.25,
+              "description": "Mentions town planning, brick construction, and trade"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 1.2,
+              "description": "Mentions old cities or bricks"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q23",
+    "question_text": "Explain the concept of timelines and how historians use them to study events.",
+    "type": "DIRECT",
+    "max_marks": 5,
+    "model_answer": "A timeline is a visual graphical representation that displays historical events in chronological order from earliest to latest. Historians use timelines to place events in proper sequence using BCE and CE designations, identify cause-and-effect relationships, track technological and social progress, and compare concurrent developments across different civilizations.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q23_timelines",
+          "description": "Explains chronological sequence of events, source-based verification (coins, inscriptions), and connections across eras",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 5.0,
+              "description": "Thoroughly explains sequential representation, chronological reconstruction, and finding connections"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 3.75,
+              "description": "Accurately explains sequence of events and using evidence to reconstruct past"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 2.0,
+              "description": "Mentions timeline shows order of events"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q24",
+    "question_text": "Describe the town planning, citadel, and drainage system of Harappan cities.",
+    "type": "DIRECT",
+    "max_marks": 5,
+    "model_answer": "Harappan cities were divided into two main sections: a raised Citadel on the west containing public buildings and granaries, and a Lower Town on the east where common citizens resided in houses made of baked bricks. Streets were laid out in a grid intersecting at right angles. The drainage system was remarkably sophisticated: drains from individual houses connected to street drains covered with stone slabs or bricks, equipped with inspection manholes.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q24_planning",
+          "description": "Details citadel vs lower town, wide grid streets, baked bricks, covered drainage systems, and trade",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 5.0,
+              "description": "Thoroughly details Citadel, lower town, grid streets, baked bricks, and drainage system"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 3.75,
+              "description": "Details citadel, lower town, wide streets, and drainage with minor omissions"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 2.0,
+              "description": "Mentions brick houses and planned cities"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q25",
+    "question_text": "The primary social unit of human society is:\n(a) School\n(b) Family\n(c) Village\n(d) Nation",
+    "type": "CHOICE",
+    "max_marks": 1,
+    "choice_spec": {
+      "correct_option": "B",
+      "options": [
+        "A: School",
+        "B: Family",
+        "C: Village",
+        "D: Nation"
+      ]
+    }
+  },
+  {
+    "question_id": "Q26",
+    "question_text": "Who is the head of the Gram Panchayat?\n(a) Mayor\n(b) Sarpanch\n(c) Collector\n(d) MLA",
+    "type": "CHOICE",
+    "max_marks": 1,
+    "choice_spec": {
+      "correct_option": "B",
+      "options": [
+        "A: Mayor",
+        "B: Sarpanch",
+        "C: Collector",
+        "D: MLA"
+      ]
+    }
+  },
+  {
+    "question_id": "Q27",
+    "question_text": "The voting age in India is:\n(a) 16 years\n(b) 21 years\n(c) 18 years\n(d) 25 years",
+    "type": "CHOICE",
+    "max_marks": 1,
+    "choice_spec": {
+      "correct_option": "C",
+      "options": [
+        "A: 16 years",
+        "B: 21 years",
+        "C: 18 years",
+        "D: 25 years"
+      ]
+    }
+  },
+  {
+    "question_id": "Q28",
+    "question_text": "Panchayati Raj is what level of local government?\n(a) Central\n(b) State\n(c) Rural / Local\n(d) International",
+    "type": "CHOICE",
+    "max_marks": 1,
+    "choice_spec": {
+      "correct_option": "C",
+      "options": [
+        "A: Central",
+        "B: State",
+        "C: Rural / Local",
+        "D: International"
+      ]
+    }
+  },
+  {
+    "question_id": "Q29",
+    "question_text": "In a democracy, ultimate power lies with:\n(a) The People\n(b) The Army\n(c) The Police\n(d) The Judges",
+    "type": "CHOICE",
+    "max_marks": 1,
+    "choice_spec": {
+      "correct_option": "A",
+      "options": [
+        "A: The People",
+        "B: The Army",
+        "C: The Police",
+        "D: The Judges"
+      ]
+    }
+  },
+  {
+    "question_id": "Q30",
+    "question_text": "What is a joint family? Name two members.",
+    "type": "DIRECT",
+    "max_marks": 2,
+    "model_answer": "A joint family is an extended family structure in which several generations (grandparents, parents, uncles, aunts, and cousins) reside together under one roof, sharing property, meals, and social responsibilities.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q30_joint_fam",
+          "description": "Defines joint family as multi-generational family living together (grandparents, parents, uncles/aunts, cousins)",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 2.0,
+              "description": "Accurately defines multi-generational co-residence and lists members"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 1.5,
+              "description": "Defines several generations living together with grandparents/parents/uncles"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 0.8,
+              "description": "Mentions big family living together"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q31",
+    "question_text": "Define Gram Sabha. Who can be its member?",
+    "type": "DIRECT",
+    "max_marks": 2,
+    "model_answer": "The Gram Sabha is a general body comprising all adult residents of a village who are eighteen years of age or older and registered in the village electoral roll.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q31_gram_sabha",
+          "description": "Defines Gram Sabha as village body of all adult registered voters",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 2.0,
+              "description": "Accurately defines body of all adult village members enrolled as voters"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 1.5,
+              "description": "Defines village body of adults or voters"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 0.8,
+              "description": "Mentions village people meeting"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q32",
+    "question_text": "What is democracy? State its fundamental principle.",
+    "type": "DIRECT",
+    "max_marks": 2,
+    "model_answer": "Democracy is a system of government of the people, by the people, and for the people, in which supreme power is vested in citizens who elect representatives through free and fair elections.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q32_democracy",
+          "description": "Defines democracy as system where citizens participate in decision-making and elect representatives",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 2.0,
+              "description": "Accurately defines government where citizens participate and elect representatives to make laws"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 1.5,
+              "description": "Explains citizens electing representatives to govern"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 0.8,
+              "description": "Mentions people voting"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q33",
+    "question_text": "Explain why the family is considered the foundation of society.",
+    "type": "DIRECT",
+    "max_marks": 3,
+    "model_answer": "The family is the oldest and most fundamental unit of human society because it provides emotional security, economic care, and primary socialization. Within the family, children learn essential moral virtues such as empathy, cooperation, sacrifice, respect, and civic responsibility.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q33_family",
+          "description": "Explains family as basic societal unit fostering love, care, cooperation, and moral values (ahimsa, service)",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 3.0,
+              "description": "Details fundamental unit of society, love/care/mutual dependence, and teaching moral values"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 2.25,
+              "description": "Explains basic unit teaching cooperation and moral responsibility"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 1.2,
+              "description": "Mentions family gives care and teaches values"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q34",
+    "question_text": "Describe the main functions and responsibilities of the Gram Panchayat.",
+    "type": "DIRECT",
+    "max_marks": 3,
+    "model_answer": "The Gram Panchayat is responsible for village-level governance, including maintaining local infrastructure (roads, drainage, streetlights), managing clean drinking water supply and sanitation, implementing government welfare schemes, promoting primary education and healthcare, and resolving local disputes.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q34_panchayat",
+          "description": "Details local level administration: roads, water, sanitation, development schemes, and accountability to Gram Sabha",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 3.0,
+              "description": "Comprehensive explanation of local civic duties (roads, water, sanitation) and implementing government schemes"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 2.25,
+              "description": "Mentions village level work, water, sanitation, and development"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 1.2,
+              "description": "Mentions village council or roads"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q35",
+    "question_text": "What is grassroots democracy? How does Panchayati Raj strengthen it?",
+    "type": "DIRECT",
+    "max_marks": 3,
+    "model_answer": "Grassroots democracy means decentralizing political power to the lowest community level so that ordinary citizens directly participate in planning and decision-making for their local communities. The Panchayati Raj system strengthens grassroots democracy by establishing a three-tier local governance structure where villagers elect their own representatives and hold them accountable.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q35_grassroots",
+          "description": "Explains bringing governance closer to citizens, three-tier structure, and active participation in decision-making",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 3.0,
+              "description": "Accurately details bringing governance close to people, three-tier system, and active villager participation"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 2.25,
+              "description": "Explains local decision-making and participation through Panchayati Raj"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 1.2,
+              "description": "Mentions people taking part in village democracy"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q36",
+    "question_text": "Discuss the roles of family and community in shaping a responsible citizen.",
+    "type": "DIRECT",
+    "max_marks": 5,
+    "model_answer": "Both the family and the wider community play complementary, vital roles in shaping individuals into responsible citizens. The family provides emotional security, ethical foundation, and teaches primary virtues like honesty, respect, and mutual service. The community broadens this horizon by instilling civic responsibility, tolerance, collective cooperation, and respect for public rules and diversity.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q36_citizen",
+          "description": "Discusses complementary roles of family (security, values, service) and community (belonging, mutual support, civic responsibility)",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 5.0,
+              "description": "In-depth discussion of both family (security, moral learning) and community (belonging, mutual support, responsible citizenship)"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 3.75,
+              "description": "Accurately discusses both family and community roles with good examples"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 2.0,
+              "description": "Discusses either family or community only, or basic overview"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "Q37",
+    "question_text": "Explain the three-tier structure of the Panchayati Raj system in detail.",
+    "type": "DIRECT",
+    "max_marks": 5,
+    "model_answer": "The Panchayati Raj system operates across a three-tier institutional hierarchy: 1. Gram Panchayat at the village level, responsible for local daily governance, amenities, and implementation. 2. Panchayat Samiti (Block Panchayat) at the intermediate block level, coordinating development programs across a cluster of villages. 3. Zilla Parishad at the apex district level, responsible for district-wide developmental planning, budget allocation, and administration. This structure empowers citizens at all levels.",
+    "rubric": {
+      "criteria": [
+        {
+          "criterion_id": "q37_three_tier",
+          "description": "Details the three-tier system: Village level (Gram Panchayat), Block level (Panchayat Samiti), and District level (Zilla Parishad), strengthening grassroots democracy",
+          "levels": [
+            {
+              "level_id": "EXCELLENT",
+              "points": 5.0,
+              "description": "Thoroughly details Village, Block, and District tiers and their governance roles in grassroots development"
+            },
+            {
+              "level_id": "GOOD",
+              "points": 3.75,
+              "description": "Names village, block, and district levels and explains decision-making for development"
+            },
+            {
+              "level_id": "PARTIAL",
+              "points": 2.0,
+              "description": "Mentions three levels without detailing functions"
+            },
+            {
+              "level_id": "INSUFFICIENT",
+              "points": 0.0,
+              "description": "Incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
